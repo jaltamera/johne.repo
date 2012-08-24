@@ -1,0 +1,45 @@
+<ExplanationProperites>
+  <!--
+
+  ExplanationText elements override the explanation text
+  found in the /resources/explanation.properties file eg:
+
+  <ExplanationText>
+    <Name>explanation.youRequested</Name>
+    <Value>some new value:</Value>
+  </ExplanationText>
+
+-->
+  <ExplanationText />
+  <!--
+
+  ExplanationTranslation elements are used to generate explanation filter values
+
+-->
+
+  <ExplanationTranslation>
+    <Path><![CDATA[Traffic/Location]]></Path>
+    <Value><![CDATA[Location]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[Traffic/Status]]></Path>
+    <Value><![CDATA[Status]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[Traffic/DateTime]]></Path>
+    <Value><![CDATA[DateTime]]></Value>
+  </ExplanationTranslation>
+
+
+
+
+
+  <ExplanationTranslation>
+    <Path><![CDATA[Traffic]]></Path>
+    <Value><![CDATA[Traffic]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[System/Inquire]]></Path>
+    <Value><![CDATA[Inquire]]></Value>
+  </ExplanationTranslation>
+</ExplanationProperites>

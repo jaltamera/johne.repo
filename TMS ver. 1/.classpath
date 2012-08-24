@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/AAP 5.0"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk7"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/Sybase365Utils.jar"/>
+	<classpathentry kind="lib" path="lib/google-gson-2.2.2-release/google-gson-2.2.2/gson-2.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/bcprov-jdk15on-147.jar"/>
+	<classpathentry kind="lib" path="lib/bcpkix-jdk15on-147.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
