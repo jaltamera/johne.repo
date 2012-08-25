@@ -34,7 +34,7 @@ public class InboundServlet extends HttpServlet {
 	}
 
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("OK!");
+		System.out.println("Sample Changes!");
 	}
 
 }
