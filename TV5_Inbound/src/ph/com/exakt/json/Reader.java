@@ -1,4 +1,4 @@
-package model;
+package ph.com.exakt.json;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
