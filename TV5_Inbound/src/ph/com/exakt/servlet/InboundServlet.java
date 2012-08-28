@@ -1,4 +1,4 @@
-package controller;
+package ph.com.exakt.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -34,7 +34,7 @@ public class InboundServlet extends HttpServlet {
 	}
 
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Sample Changes!");
+		
 	}
 
 }

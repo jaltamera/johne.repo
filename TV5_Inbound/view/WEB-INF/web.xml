@@ -13,7 +13,7 @@
     <description></description>
     <display-name>InboundServlet</display-name>
     <servlet-name>InboundServlet</servlet-name>
-    <servlet-class>controller.InboundServlet</servlet-class>
+    <servlet-class>ph.com.exakt.servlet.InboundServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>InboundServlet</servlet-name>
