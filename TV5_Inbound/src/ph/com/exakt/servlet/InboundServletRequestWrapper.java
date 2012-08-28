@@ -72,9 +72,6 @@ public class InboundServletRequestWrapper extends HttpServletRequestWrapper {
 		 */
 		private ByteArrayInputStream byteArrayInputStream;
 
-		/**
-		 * @param byteArrayInputStream {@link java.io.ByteArrayInputStream} object.
-		 */
 		CustomServletInputStream(ByteArrayInputStream byteArrayInputStream){
 			this.byteArrayInputStream = byteArrayInputStream;
 		}
