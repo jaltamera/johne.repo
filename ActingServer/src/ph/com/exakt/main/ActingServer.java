@@ -213,8 +213,6 @@ public class ActingServer {
 		/*
 		 * Read the AUTHORIZATION header
 		 */
-		
-		String userID = "";
 		String signature = "";
 		
 		String authHeader = connection.getHeaderField("Authorization");
@@ -229,7 +227,6 @@ public class ActingServer {
 
 	               int p = credentials.indexOf(":");
 	               if (p != -1) {
-	                  userID = credentials.substring(0, p);
 	                  signature = credentials.substring(p+1);
 	               }
 	            }
@@ -248,6 +245,7 @@ public class ActingServer {
 		byte[] byteSignedR = javax.xml.bind.DatatypeConverter.parseBase64Binary(signature);
 		
 		System.out.println("Verification: " + vsig.verify(byteSigned));
+		System.out.println(jsonR);
 	}
 
 }
