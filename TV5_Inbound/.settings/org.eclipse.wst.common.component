@@ -3,7 +3,7 @@
     <wb-module deploy-name="TV5_Inbound">
         <wb-resource deploy-path="/" source-path="/view" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="TV5_Inbound"/>
         <property name="java-output-path" value="/TV5_Inbound/build/classes"/>
+        <property name="context-root" value="exakt"/>
     </wb-module>
 </project-modules>

@@ -1,4 +1,4 @@
-package ph.com.exakt.rsa;
+package ph.com.exakt.auth;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -14,17 +14,13 @@ import java.security.Security;
 import java.security.Signature;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.xml.bind.DatatypeConverter;
 
-
 import org.bouncycastle.openssl.PEMReader;
 
-import ph.com.exakt.json.JSONModel;
-
-import com.google.gson.Gson;
+import ph.com.exakt.servlet.InboundServletRequestWrapper;
 
 
 public class AuthProcessor
@@ -75,91 +71,22 @@ public class AuthProcessor
 	private static SimpleDateFormat ISO8601FORMAT = new SimpleDateFormat("yyyyMMdd'T'HHmmss");
 	private static SimpleDateFormat RFC2822FORMAT = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss Z");
 	
-	public static Object[] sign(HttpServletRequest request, String signature, String[] params)throws Exception{
-		
-		java.util.Date current = Calendar.getInstance().getTime();
-				
-		//Instantiate GSON
-		Gson gson = new Gson();
-		
-		//Construct the JSON Object from String
-	      
-        /*String jsonString = new String("{" +
-							"\"from\":\"SU01\"," +   								//our ACCESS NUMBER : constant
-							"\"to\":\"" + params[1] + "\"," +						//user's MOBILE NUMBER
-							"\"content_type\":\"text/plain\"," +
-							"\"body\":\"" + params[0] + "\"," +						// output
-							"\"date\":\"" + ISO8601FORMAT.format(current) + "\"" +	//parse DateTime to ISO8601 Compliant format		
-							"}");*/
-		
-		JSONModel jsonModel = new JSONModel("54535", params[1], "text/plain", params[0], ISO8601FORMAT.format(current));
-		
-        //JSONObject jsonObject = (JSONObject)JSONSerializer.toJSON(jsonString);
-        String json = gson.toJson(jsonModel);
-		
-        //Parse DateTime to RFC 2822 Compliant format
-		String rfcDate = ISO8601FORMAT.format(ISO8601FORMAT.parse(ISO8601FORMAT.format(current)));
-		
-		//MD5 digest of the JSON encoded message body
-		MessageDigest md = MessageDigest.getInstance("MD5");
-		md.update(json.getBytes(), 0, json.length());
-		String md5String = new BigInteger(1, md.digest()).toString(16);
-		
-		int contentLength = json.length();
-		
-		if(json.length() == 0 || json.equals(null))
-			contentLength = 0;
-			
-		if(md5String.length() == 0 || md5String.equals(null))
-			md5String = "";
-		
-		//Construct stringToSign for Base64Encoded Signature
-		String stringToSign = 	AuthProcessor.METHOD + "\n" +
-								request.getRequestURI() + "\n" +
-								rfcDate + "\n" +
-								AuthProcessor.CONTENT_TYPE + "\n" +
-								contentLength + "\n" +
-								md5String;
-				
-		AuthProcessor.init();
-		
-		//Load the Private-Key file for signing
-		PrivateKey priv = readPrivateKeyPEMFile(PRIVATE_KEY_FILE);
-		Signature sig = Signature.getInstance(SIGNATURE_ALGORITHM, bc);
-		sig.initSign(priv);
-		sig.update(stringToSign.getBytes("UTF8"));
-		
-		byte[] byteSigned = sig.sign();
-		
-		//The signature is finally Base64 encoded
-		String b64Signed = DatatypeConverter.printBase64Binary(byteSigned);
-
-		return new Object[]{b64Signed, jsonModel};
-		
-	}
-	
 	private static void init(){
-		
 		bc = new org.bouncycastle.jce.provider.BouncyCastleProvider();	
 		Security.addProvider(bc);
-		
 	}
 	
-	
-	public static String createStringToSign(HttpServletRequest request, Object jsonObject) throws ParseException, NoSuchAlgorithmException{
+	public static String getStringToSign(HttpServletRequest request) throws ParseException, NoSuchAlgorithmException{
 		
-		Gson gson = new Gson();
-		String jsonString = gson.toJson((JSONModel)jsonObject);
+		InboundServletRequestWrapper isrw = (InboundServletRequestWrapper)request;
 		
 		//Parse DateTime to RFC 2822 Compliant format
-		String pattern = "EEE, dd MMM yyyy HH:mm:ss Z";
-		SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
-		String rfcDate = dateFormat.format(dateFormat.parse(dateFormat.format(dateFormat.parse(request.getHeader("Date")))));
+		//String rfcDate = RFC2822FORMAT.format(RFC2822FORMAT.parse(request.getHeader("Date")));
 			
 		//MD5 digest of the JSON encoded message body
 		MessageDigest md = MessageDigest.getInstance("MD5");
-		md.update(jsonString.getBytes(), 0, jsonString.length());
-		String md5String = new BigInteger(1, md.digest()).toString(16);
+		md.update(isrw.getBody().getBytes(), 0, isrw.getBody().length());
+		String md5String = DatatypeConverter.printBase64Binary(md.digest());
 					
 		if(md5String.length() == 0 || md5String.equals(null))
 			md5String = "";
@@ -167,9 +94,9 @@ public class AuthProcessor
 		//Construct stringToSign for Base64Encoded Signature
 		String stringToSign = 	request.getMethod() + "\n" +
 								request.getRequestURI() + "\n" +
-								rfcDate + "\n" +
+								request.getHeader("Date") + "\n" +
 								request.getHeader("Content-Type") + "\n" +
-								jsonString.length() + "\n" +
+								isrw.getBody().length() + "\n" +
 								md5String;
 		
 		return stringToSign;

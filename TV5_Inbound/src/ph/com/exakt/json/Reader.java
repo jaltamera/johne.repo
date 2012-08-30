@@ -52,7 +52,11 @@ public class Reader {
 		 
 				newJsonModel.setDate(reader.nextString());
 		 
-			  } else {
+			  }else if (attribute.equals("usagetype")) {
+					 
+					newJsonModel.setUsagetype(reader.nextString());
+			 
+			  }else {
 				reader.skipValue(); //avoid some unhandle events
 			  }
 			}

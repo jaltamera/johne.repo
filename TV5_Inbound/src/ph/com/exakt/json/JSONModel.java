@@ -8,21 +8,23 @@ public class JSONModel {
 	public static final String _CONTENT_TYPE = "content_type";
 	public static final String _BODY = "body";
 	public static final String _DATE = "date";
+	public static final String _USAGE_TYPE = "usagetype";
 
 	private String from = "";
 	private String to = "";
 	private String content_type = "";
 	private String body = "";
 	private String date = "";
-	
+	private String usagetype = "";
+
 	public JSONModel(){
 	}
-	
+
 	public JSONModel(String from,
-					 String to,
-					 String content_type,
-					 String body,
-					 String date){
+			String to,
+			String content_type,
+			String body,
+			String date){
 
 		this.from = from;
 		this.to = to;
@@ -30,7 +32,22 @@ public class JSONModel {
 		this.body = body;
 		this.date = date;
 	}
-	
+
+	public JSONModel(String from,
+			String to,
+			String content_type,
+			String body,
+			String date,
+			String usagetype){
+
+		this.from = from;
+		this.to = to;
+		this.content_type = content_type;
+		this.body = body;
+		this.date = date;
+		this.usagetype = usagetype;
+	}
+
 	public void setFrom(String from){
 		this.from = from;
 	}
@@ -54,26 +71,35 @@ public class JSONModel {
 	public String getFrom(){
 		return this.from;
 	}
-	
+
 	public String getTo(){
 		return this.to;
 	}
-	
+
 	public String getContentType(){
 		return this.content_type;
 	}
-	
+
 	public String getBody(){
 		return this.body;
 	}
-	
+
 	public String getDate(){
 		return this.date;
 	}
-	
+
+	public String getUsagetype() {
+		return usagetype;
+	}
+
+	public void setUsagetype(String usagetype) {
+		this.usagetype = usagetype;
+	}
+
+
 	/*@Override 
 	public String toString() {
-	    
+
 		String result = new String("{" +
 				"\"from\":\"" + this.from + "\"," +   								//our ACCESS NUMBER : constant
 				"\"to\":\"" + this.to + "\"," +							//user's MOBILE NUMBER

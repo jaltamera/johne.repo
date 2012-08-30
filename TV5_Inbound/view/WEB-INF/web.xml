@@ -19,4 +19,18 @@
     <servlet-name>InboundServlet</servlet-name>
     <url-pattern>/InboundServlet</url-pattern>
   </servlet-mapping>
+  
+
+  <filter>
+    <filter-name>InboundFilter</filter-name>
+    <filter-class>
+        ph.com.exakt.filter.InboundFilter
+    </filter-class>
+  </filter>
+  <filter-mapping>
+    	<filter-name>InboundFilter</filter-name>
+    	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+ 
+  
 </web-app>
