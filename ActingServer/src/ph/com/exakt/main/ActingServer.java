@@ -84,7 +84,7 @@ public class ActingServer {
 		 * Construct the JSONObject 
 		 */
 		Gson gson = new Gson();
-		JSONModel jsonModel = new JSONModel( phone, input, "text/plain", "54535", ISO8601FORMAT.format(current));
+		JSONModel jsonModel = new JSONModel( phone, "54535", "text/plain", input , ISO8601FORMAT.format(current));
 
 		String json = gson.toJson(jsonModel);
 
@@ -213,6 +213,8 @@ public class ActingServer {
 		/*
 		 * Read the AUTHORIZATION header
 		 */
+		
+		String userID = "";
 		String signature = "";
 		
 		String authHeader = connection.getHeaderField("Authorization");
@@ -227,6 +229,7 @@ public class ActingServer {
 
 	               int p = credentials.indexOf(":");
 	               if (p != -1) {
+	                  userID = credentials.substring(0, p);
 	                  signature = credentials.substring(p+1);
 	               }
 	            }
@@ -245,7 +248,6 @@ public class ActingServer {
 		byte[] byteSignedR = javax.xml.bind.DatatypeConverter.parseBase64Binary(signature);
 		
 		System.out.println("Verification: " + vsig.verify(byteSigned));
-		System.out.println(jsonR);
 	}
 
 }
