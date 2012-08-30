@@ -27,8 +27,8 @@ public class AuthProcessor
 {
 
 	private static final String SIGNATURE_ALGORITHM 	= "SHA1withRSA";
-	private static final String PRIVATE_KEY_FILE 		= "tv5/exakt-key.pem";
-	private static final String PUBLIC_KEY_FILE			= "tv5/xyber1.pkcs1.pub.pem";
+	private static final String PRIVATE_KEY_FILE 		= "/WEB_INF/lib/exakt-key.pem";
+	private static final String PUBLIC_KEY_FILE			= "/WEB_INF/lib/xyber1.pkcs1.pub.pem";
 	
 	public static final String CONTENT_TYPE 			= "application/vnd.net.wyrls.Message-v1+json";
 	public static final String METHOD 					= "POST";
