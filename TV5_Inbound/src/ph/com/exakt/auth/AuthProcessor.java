@@ -1,9 +1,9 @@
 package ph.com.exakt.auth;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.math.BigInteger;
 import java.security.KeyPair;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -22,31 +22,21 @@ import org.bouncycastle.openssl.PEMReader;
 
 import ph.com.exakt.servlet.InboundServletRequestWrapper;
 
-
 public class AuthProcessor
 {
 
 	private static final String SIGNATURE_ALGORITHM 	= "SHA1withRSA";
-	private static final String PRIVATE_KEY_FILE 		= "/WEB_INF/lib/exakt-key.pem";
-	private static final String PUBLIC_KEY_FILE			= "/WEB_INF/lib/xyber1.pkcs1.pub.pem";
+	//TODO switch to xyber1.pkcs1.pub.pem"
+	private static final String PUBLIC_KEY_FILE 		= "xyber1.pkcs1.pub.pem";//"exakt-key.pem";
 	
 	public static final String CONTENT_TYPE 			= "application/vnd.net.wyrls.Message-v1+json";
 	public static final String METHOD 					= "POST";
 	
 	private static Provider bc;
 	
-	// read PEM files starting with: -----BEGIN RSA PRIVATE KEY----- ...
-	private static PrivateKey readPrivateKeyPEMFile(final String filePath) throws Exception {
-        PEMReader pemr = new PEMReader(new BufferedReader(new InputStreamReader(new FileInputStream(filePath))));
-        KeyPair kp = (KeyPair)pemr.readObject();
-        pemr.close();
-        return kp.getPrivate();
-	}
-	
-	
 	// read PEM files starting with: -----BEGIN RSA PUBLIC KEY----- ...	
-	private static PublicKey readPublicKeyPEMFile(final String filePath) throws Exception {
-        PEMReader pemr = new PEMReader(new BufferedReader(new InputStreamReader(new FileInputStream(filePath))));
+	private static PublicKey readPublicKeyPEMFile(final String filepath) throws Exception {
+        PEMReader pemr = new PEMReader(new BufferedReader(new InputStreamReader(AuthProcessor.class.getResourceAsStream(filepath))));
         PublicKey pubKey = (PublicKey)pemr.readObject();
         pemr.close();
         return pubKey;
@@ -97,7 +87,7 @@ public class AuthProcessor
 								request.getHeader("Date") + "\n" +
 								request.getHeader("Content-Type") + "\n" +
 								isrw.getBody().length() + "\n" +
-								md5String;
+								md5String + "\n";
 		
 		return stringToSign;
 	}
