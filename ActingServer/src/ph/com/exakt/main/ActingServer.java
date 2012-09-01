@@ -87,7 +87,7 @@ public class ActingServer {
 		JSONModel jsonModel = new JSONModel( phone, "54535", "text/plain", input , ISO8601FORMAT.format(current));
 
 		String json = gson.toJson(jsonModel);
-
+		
 		/*
 		 * Construct the MD5 Digest
 		 */
@@ -109,14 +109,14 @@ public class ActingServer {
 		/*
 		 * Parse date to RFC compliant
 		 */
-		String rfcDate = ISO8601FORMAT.format(ISO8601FORMAT.parse(ISO8601FORMAT.format(current)));
+		String rfcDate = RFC2822FORMAT.format(RFC2822FORMAT.parse(RFC2822FORMAT.format(current)));
 
 		/*
 		 * Construct StringToSign
 		 */
 		String stringToSign = 	ActingServer.METHOD + "\n" +
-				"exakt/InboundServlet" + "\n" +
-				rfcDate + "\n" +
+				"/exakt/InboundServlet" + "\n" +
+				DateUtils.formatDate(DateUtils.parseDate(DateUtils.formatDate(current))) + "\n" +
 				ActingServer.CONTENT_TYPE + "\n" +
 				contentLength + "\n" +
 				md5String + "\n";
@@ -130,7 +130,7 @@ public class ActingServer {
 		/*
 		 * Load PrivateKey and sign the string
 		 */
-		PrivateKey priv = readPrivateKeyPEMFile("/resources/exakt-pri.pem");
+		PrivateKey priv = readPrivateKeyPEMFile("exakt-pri.pem");
 		Signature sig = Signature.getInstance(SIGNATURE_ALGORITHM, bc);
 		sig.initSign(priv);
 		sig.update(stringToSign.getBytes("UTF8"));
@@ -169,85 +169,17 @@ public class ActingServer {
 		jw.name(JSONModel._TO).value(jsonModel.getTo());
 		jw.name(JSONModel._CONTENT_TYPE).value(jsonModel.getContentType()); 
 		jw.name(JSONModel._BODY).value(jsonModel.getBody()); 
-		jw.name(JSONModel._DATE).value(jsonModel.getDate()); 			
+		jw.name(JSONModel._DATE).value(jsonModel.getDate()); 
+		jw.name(JSONModel._USAGE_TYPE).value(jsonModel.getUsagetype());
 
 		jw.endObject(); // }
 		jw.close();
 		writer.close();
-
-		System.out.println("Done ");
 		
-		/*
-		 * Read the response from the InputStream and wrap in BufferedReader
-		 */
-		InputStream inputStream = connection.getInputStream();
-		BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
-		Reader reader = new Reader(br);
+		System.out.println("JSON:" + json);
+		System.out.println("StringToSign: " + stringToSign);
+		System.out.println("Signature: " + b64Signed);
 		
-		/*
-		 * Parse the inputstream to json
-		 */
-		JSONModel jsonModelR = reader.parse();
-		String jsonR = gson.toJson(jsonModelR);
-		
-		outputStream.close();
-		inputStream.close();
-		//connection.disconnect();
-		
-		/*
-		 * Create an MD5 Digest of json
-		 */
-		md.update(jsonR.getBytes(), 0, jsonR.length());
-		String md5StringR = DatatypeConverter.printBase64Binary(md.digest());
-		
-		/*
-		 * Check StringToSign based on header fields
-		 */
-		String stringToSignR = 	connection.getRequestMethod() 		+ "\n" +
-								"/exakt/InboundServlet" 			+ "\n" +
-								connection.getHeaderField("Date") 	+ "\n" +
-								connection.getContentType()			+ "\n" +
-								connection.getContentLength() 		+ "\n" +
-								md5StringR 							+ "\n"; 
-		
-		/*
-		 * Read the AUTHORIZATION header
-		 */
-		
-		String userID = "";
-		String signature = "";
-		
-		String authHeader = connection.getHeaderField("Authorization");
-	      if (authHeader != null) {
-	         java.util.StringTokenizer st = new java.util.StringTokenizer(authHeader);
-	         if (st.hasMoreTokens()) {
-	            String authType = st.nextToken();
-
-	            if (authType.equalsIgnoreCase("MCWS")) {
-	               
-	            	String credentials = st.nextToken();
-
-	               int p = credentials.indexOf(":");
-	               if (p != -1) {
-	                  userID = credentials.substring(0, p);
-	                  signature = credentials.substring(p+1);
-	               }
-	            }
-	         }
-	      }
-	      
-		/*
-		 * Verify the request
-		 */
-		PublicKey pub = readPublicKeyPEMFile("/resources/exakt-key.pem");
-		
-		Signature vsig = Signature.getInstance(SIGNATURE_ALGORITHM, bc);
-		vsig.initVerify(pub);
-		vsig.update(stringToSign.getBytes("UTF8"));
-		
-		byte[] byteSignedR = javax.xml.bind.DatatypeConverter.parseBase64Binary(signature);
-		
-		System.out.println("Verification: " + vsig.verify(byteSigned));
+		System.out.println("Done " + connection.getResponseCode() + "\n\n");
 	}
-
 }
