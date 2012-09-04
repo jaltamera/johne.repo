@@ -138,6 +138,7 @@ public class InboundServlet extends HttpServlet {
 		PreparedStatement pstm = null;
 		
 		if(valid){
+			
 			try {
 				
 				final String query = "INSERT INTO tbl_inbound(input, number, received_date, flag) VALUES(?,?,?,?)";
@@ -148,6 +149,7 @@ public class InboundServlet extends HttpServlet {
 				pstm.setString(2, jsonModel.getFrom());
 				pstm.setString(3, jsonModel.getDate());
 				pstm.setInt(4, 0);
+				pstm.executeUpdate();
 				
 			} catch (SQLException e) {
 				System.out.println("InboundServlet error # 6: " + e);
@@ -160,7 +162,6 @@ public class InboundServlet extends HttpServlet {
 				}
 			}
 		}
-
 	}
 
 	private Connection getConnection() 

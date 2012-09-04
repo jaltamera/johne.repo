@@ -13,9 +13,10 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="view/WEB-INF/lib/google-gson-2.2.2-release/google-gson-2.2.2/gson-2.2.2.jar"/>
 	<classpathentry kind="lib" path="view/WEB-INF/lib/bcpkix-jdk15on-147.jar"/>
 	<classpathentry kind="lib" path="view/WEB-INF/lib/bcprov-jdk15on-147.jar"/>
 	<classpathentry kind="lib" path="view/WEB-INF/lib/Sybase365Utils.jar"/>
+	<classpathentry kind="lib" path="view/WEB-INF/lib/gson-2.2.2.jar"/>
+	<classpathentry kind="lib" path="view/WEB-INF/lib/sajdbc.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
