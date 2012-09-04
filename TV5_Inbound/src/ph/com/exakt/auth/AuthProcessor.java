@@ -27,7 +27,7 @@ public class AuthProcessor
 
 	private static final String SIGNATURE_ALGORITHM 	= "SHA1withRSA";
 	//TODO switch to xyber1.pkcs1.pub.pem"
-	private static final String PUBLIC_KEY_FILE 		= "xyber1.pkcs1.pub.pem";//"exakt-key.pem";
+	private static final String PUBLIC_KEY_FILE 		= "exakt-key.pem";
 	
 	public static final String CONTENT_TYPE 			= "application/vnd.net.wyrls.Message-v1+json";
 	public static final String METHOD 					= "POST";

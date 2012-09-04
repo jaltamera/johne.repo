@@ -68,6 +68,7 @@ public class InboundServlet extends HttpServlet {
 		/*
 		 * Wrap the InputStream so we can read it more than once
 		 */
+		
 		Reader reader = null;
 
 		try {
@@ -115,9 +116,9 @@ public class InboundServlet extends HttpServlet {
 			}
 		}
 
-		/*System.out.println("JSON Received: " + json);
+		System.out.println("JSON Received: " + json);
 		System.out.println("StringToSign: " + stringToSign);
-		System.out.println("Signature: " + signature);*/
+		System.out.println("Signature: " + signature);
 
 		/*
 		 * Verify the request
