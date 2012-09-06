@@ -1,14 +1,18 @@
-<%@ page contentType="text/html" pageEncoding="UTF-8" %>
-<%@ page import= "java.util.*"%>
-<%@ page import= "com.dejima.core.io.Context"%>
-<%@ page import= "com.dejima.core.io.AgentNetworkOutput"%>
-<%@ page import= "com.dejima.core.kernel.ChainIdentifier"%>
-<%@ page import= "com.dejima.core.nlp.text.action.InterpretationActuation"%>
-<%@ page import= "com.ianywhere.aap.io.*"%>
-<%@ page import= "com.interaksyon.formatter.*" %>
+<%@ page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"%>
+<%@ page import="com.dejima.core.io.Context"%>
+<%@ page import="com.dejima.core.io.AgentNetworkOutput"%>
+<%@ page import="com.dejima.core.kernel.ChainIdentifier"%>
+<%@ page
+	import="com.dejima.core.nlp.text.action.InterpretationActuation"%>
+<%@ page import="com.ianywhere.aap.io.*"%>
+<%@ page import="com.interaksyon.formatter.*"%>
+<%@ page import="java.io.DataOutputStream"%>
 
-<jsp:useBean id="agentNetwork" class="com.dejima.sdk.AgentNetwork" scope="application"/>
-<jsp:useBean id="agentNetworkOutput" class="com.dejima.core.io.AgentNetworkOutput" scope="session"/>
+<jsp:useBean id="agentNetwork" class="com.dejima.sdk.AgentNetwork"
+	scope="application" />
+<jsp:useBean id="agentNetworkOutput"
+	class="com.dejima.core.io.AgentNetworkOutput" scope="session" />
 
 <%
     String resultString = "";
@@ -46,11 +50,9 @@
 		}
 		
 		//Parse the request to retrieve the user input request
-		String input = request.getParameter("message");
+		String input = request.getParameter("input");
         String phone = request.getParameter("phone");
-
-
-
+        
 		// Process request
 		UserSessionManager userSessMgr = UserSessionManager.getUserSessionManager();		
         if(agentNetwork.getOpalName() != null && input != null && input.length() > 0){   
@@ -74,11 +76,13 @@
 		        resultString = resultString.replaceAll("<LF>", "<br/>");
 			
 				System.out.println(resultString);
-			
+				
+				DataOutputStream dos = new DataOutputStream(response.getOutputStream());
+				dos.writeBytes(resultString);
+				dos.flush();
+				dos.close();
 			//}			
 		}
-	
-       	
 	}
 	catch(Exception e)
 	{
@@ -87,16 +91,13 @@
 		e.printStackTrace();
 	}
 %>
-<div style="width: 252px; height:448px;">
-<img src="bigphone.jpg"/>
-	<div style="margin: -356px 0px 0px 46px; 
-			overflow: auto; overflow-x: hidden; 
-			height: 220px; width: 164px; 
-			font-family: arial; font-size: 70%;
-			font-weight: bold; white-space: -moz-pre-wrap; 
-			word-wrap: break-word;">
-			<br/><% out.println(resultString); %>
+<div style="width: 252px; height: 448px;">
+	<img src="bigphone.jpg" />
+	<div
+		style="margin: -356px 0px 0px 46px; overflow: auto; overflow-x: hidden; height: 220px; width: 164px; font-family: arial; font-size: 70%; font-weight: bold; white-space: -moz-pre-wrap; word-wrap: break-word;">
+		<br />
+		<% out.println(resultString); %>
 	</div>
 </div>
-				
+
 
