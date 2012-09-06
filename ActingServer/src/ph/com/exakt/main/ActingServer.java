@@ -49,7 +49,7 @@ public class ActingServer {
 
 	// read PEM files starting with: -----BEGIN RSA PRIVATE KEY----- ...
 	private static PrivateKey readPrivateKeyPEMFile(final String filePath) throws Exception {
-		PEMReader pemr = new PEMReader(new BufferedReader(new InputStreamReader(new FileInputStream(filePath))));
+		PEMReader pemr = new PEMReader(new BufferedReader(new InputStreamReader(ActingServer.class.getResourceAsStream(filePath))));
 		KeyPair kp = (KeyPair)pemr.readObject();
 		pemr.close();
 		return kp.getPrivate();

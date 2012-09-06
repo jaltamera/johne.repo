@@ -2,8 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk7"/>
-	<classpathentry kind="lib" path="/TV5_Inbound/view/WEB-INF/lib/google-gson-2.2.2-release/google-gson-2.2.2/gson-2.2.2.jar"/>
 	<classpathentry kind="lib" path="/TV5_Inbound/view/WEB-INF/lib/bcpkix-jdk15on-147.jar"/>
 	<classpathentry kind="lib" path="/TV5_Inbound/view/WEB-INF/lib/bcprov-jdk15on-147.jar"/>
+	<classpathentry kind="lib" path="/TV5_Inbound/view/WEB-INF/lib/gson-2.2.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
