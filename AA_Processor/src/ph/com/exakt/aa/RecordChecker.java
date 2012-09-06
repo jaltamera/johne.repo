@@ -20,6 +20,6 @@ public class RecordChecker {
 	
 	public static void main(String args[]){
 		Timer timer = new Timer();
-		timer.scheduleAtFixedRate(new RecordTask(), 0, 1000);
+		timer.schedule(new RecordTask(), 0);//scheduleAtFixedRate(new RecordTask(), 0, 1000);
 	}
 }
