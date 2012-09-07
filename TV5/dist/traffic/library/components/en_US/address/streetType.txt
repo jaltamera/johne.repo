@@ -1,0 +1,6 @@
+blvd
+ave
+street
+rd
+expwy
+hwy

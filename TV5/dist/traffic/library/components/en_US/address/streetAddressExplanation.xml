@@ -1,0 +1,47 @@
+<ExplanationProperites>
+  <ExplanationTranslation>
+    <Path><![CDATA[StreetAddress/StreetLocation/StreetNumber/Integer]]></Path>
+    <Value><![CDATA[Street Number]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[StreetAddress/StreetLocation/Street]]></Path>
+    <Value><![CDATA[Street]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[StreetAddress/StreetLocation/Road]]></Path>
+    <Value><![CDATA[Road]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[StreetAddress/StreetLocation/Highway]]></Path>
+    <Value><![CDATA[Highway]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[StreetAddress/StreetLocation/Expressway]]></Path>
+    <Value><![CDATA[Expressway]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[StreetAddress/StreetLocation/Driveway]]></Path>
+    <Value><![CDATA[Driveway]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[StreetAddress/StreetLocation/Boulvard]]></Path>
+    <Value><![CDATA[Boulvard]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[StreetAddress/StreetLocation/Avenue]]></Path>
+    <Value><![CDATA[Avenue]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[StreetAddress/StreetLocation/AptNumber/Integer]]></Path>
+    <Value><![CDATA[Apt Number]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[StreetAddress/PostCode]]></Path>
+    <Value><![CDATA[Zip]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[StreetAddress/Neighberhood]]></Path>
+    <Value><![CDATA[Neighberhood]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation component="address/explanation.xml" library="true" />
+</ExplanationProperites>

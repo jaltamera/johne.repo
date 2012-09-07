@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<CASES CoreVersion="4.0.2.136 " SDKVersion="4.0.2.136 ">
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[www.dejima.com]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[www.dejima.com]]&gt;&lt;/url:Url&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[www.dejima.com]]&gt;&lt;/url:Url&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[http://www.fifa.com/game40]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[http://www.fifa.com/game40]]&gt;&lt;/url:Url&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[http://www.fifa.com/game40]]&gt;&lt;/url:Url&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[http://www.fifa.com/game40/]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[http://www.fifa.com/game40/]]&gt;&lt;/url:Url&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[http://www.fifa.com/game40/]]&gt;&lt;/url:Url&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[http://www.fifa.com/game40/index.jsp]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[http://www.fifa.com/game40/index.jsp]]&gt;&lt;/url:Url&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[http://www.fifa.com/game40/index.jsp]]&gt;&lt;/url:Url&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[www.dejima.net]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[www.dejima.net]]&gt;&lt;/url:Url&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[www.dejima.net]]&gt;&lt;/url:Url&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[file://D:/nts.log]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[file://D:/nts.log]]&gt;&lt;/url:Url&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[file://D:/nts.log]]&gt;&lt;/url:Url&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[www.blah.com:8103]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[www.blah.com:8103]]&gt;&lt;/url:Url&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[www.blah.com:8103]]&gt;&lt;/url:Url&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[www.blah.com/blah.asp?sort=ASC]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[www.blah.com/blah.asp?sort=ASC]]&gt;&lt;/url:Url&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[www.blah.com/blah.asp?sort=ASC]]&gt;&lt;/url:Url&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[www.blah.com/blah.htm#blah]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[www.blah.com/blah.htm#blah]]&gt;&lt;/url:Url&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[www.blah.com/blah.htm#blah]]&gt;&lt;/url:Url&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[www.state.ga]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[www.state.ga]]&gt;&lt;/url:Url&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[www.state.ga]]&gt;&lt;/url:Url&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[http://www.blah.ru]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[http://www.blah.ru]]&gt;&lt;/url:Url&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[http://www.blah.ru]]&gt;&lt;/url:Url&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[https://192.168.0.2:80/users/~fname.lname/file.ext]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[https://192.168.0.2:80/users/~fname.lname/file.ext]]&gt;&lt;/url:Url&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[https://192.168.0.2:80/users/~fname.lname/file.ext]]&gt;&lt;/url:Url&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[ftp://www.domain.com]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[ftp://www.domain.com]]&gt;&lt;/url:Url&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[ftp://www.domain.com]]&gt;&lt;/url:Url&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[ftp://]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[ftp://]]&gt;&lt;/url:Url&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[ftp://]]&gt;&lt;/url:Url&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[www.dejima.com is a website]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[www.dejima.com]]&gt;&lt;/url:Url&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[www.dejima.com]]&gt;&lt;/url:Url&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[the web site www.dejima.com is well known]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[www.dejima.com]]&gt;&lt;/url:Url&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[www.dejima.com]]&gt;&lt;/url:Url&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[www]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[Unable to interpret input
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[Unable to interpret input
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[www.dejima]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[Unable to interpret input
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[Unable to interpret input
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer"></PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean"></DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[http://www.fifa.com/game40/clips.ram for the url]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[http://www.fifa.com/game40/clips.ram]]&gt;&lt;/url:Url&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;url:Url xmlns:url="url"&gt;&lt;![CDATA[http://www.fifa.com/game40/clips.ram]]&gt;&lt;/url:Url&gt;
+]]></ACTUAL>
+</CASE>
+<PRESENTATIONORDER>
+</PRESENTATIONORDER>
+</CASES>

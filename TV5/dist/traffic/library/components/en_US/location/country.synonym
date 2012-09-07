@@ -1,0 +1,22 @@
+#use comma as a preposition
+in: at, with, \, , in the
+
+#equals to synonyms:
+equal: =, :, equals, contains
+isEqualTo: =, :, equals, contains
+
+#synonyms for +
++: and, or
+
+#Countries
+Australia: Commonwealth of Australia, Australian
+India: Republic of India, Indian
+Indonesia: Republic of Indonesia, Dutch East Indies, Indonesian
+Malaysia: Malaya, Malaysian
+Philippines: Republic of the Philippines, Philippine
+Singapore: Singapore
+China: Hong Kong SAR\, PRC, Hong Kong
+Taiwan Region: Taiwan
+Thailand: Kingdom of Thailand, Siam, Thai
+United States: United States of America, States, USA, U.S.A., US
+United Kingdom: UK, U.K., Britain, Great Britain, England

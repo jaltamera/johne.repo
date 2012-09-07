@@ -1,0 +1,26 @@
+extends name.template;
+
+middleInitialOnly:
+	('a'|'b'|'c'|'d'|'e'|'f'|'g'|'h'|'i'|'j'|'k'|'l'|'m'|'n'|'o'|'p'|'q'|'r'|'s'|'t'|'u'|'v'|'w'|'x'|'y'|'z')
+   {attributes: 'private'}
+	{action: *}
+;
+
+middleInitial:
+	middleInitialOnly ['.']
+   {attributes: 'private'}
+   {action: com.dejima.core.nlp.text.action.FieldActuation: 
+       setTag('MiddleName'), addAttribute('type', 'field'), addAttribute('preference', ''), setDefaultSlotFilling(''), setSingleSlot(true), addCData(middleInitialOnly)}
+;
+
+title:
+	('dr' | 'prof' | 'mr' | 'ms' | 'mrs') ['.']
+   {attributes: 'private'}
+;
+fields:
+    ([title] (fieldFirstName&|fieldLastName)) | ([title] fieldFirstName [fieldMiddleName|middleInitial] fieldLastName) | ([title] fieldLastName [','] fieldFirstName)
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.NameActuation:
+    	setFirstName(fieldFirstName), setMiddleName(fieldMiddleName), setMiddleName(middleInitial), setLastName(fieldLastName), 
+    	fieldFirstName, fieldMiddleName, middleInitial, fieldLastName}
+;

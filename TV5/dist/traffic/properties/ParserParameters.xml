@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<!DOCTYPE Policy:ParserParameters SYSTEM "ParserParameters.dtd">
+
+<Policy:ParserParameters
+	xmlns:Policy="http://www.dejima.com">
+
+<!-- 
+	Define the legal alphabet for the parser.
+	The alphabet is defined by ranges of characters.  
+	Any number of character ranges can be used.
+-->
+
+<Policy:Alphabet>
+<Policy:CharacterRange lowerLimit="a" upperLimit="z" />
+<Policy:CharacterRange lowerLimit="A" upperLimit="Z" />
+<Policy:CharacterRange lowerLimit="&#x00c0;" upperLimit="&#x0233;" />
+<Policy:CharacterRange lowerLimit="&#x3000;" upperLimit="&#xffee;" />
+</Policy:Alphabet>
+
+<Policy:Numeric>
+<Policy:CharacterRange lowerLimit="0" upperLimit="9" />
+</Policy:Numeric>
+
+<Policy:Symbols>
+<Policy:CharacterRange lowerLimit="!" upperLimit="/" />
+<Policy:CharacterRange lowerLimit=":" upperLimit="@" />
+<Policy:CharacterRange lowerLimit="[" upperLimit="`" />
+<Policy:CharacterRange lowerLimit="{" upperLimit="~" />
+</Policy:Symbols>
+
+<!--
+	Substring conditions
+	threshold: Two tokens are matched with a substring matcher only if their length ratio (in characters) is less than this percentage
+	leastLength: Two tokens are matched with a substring matcher only if their length is more than this (in characters)
+ -->
+
+<Policy:SubstringConditions threshold="80" leastLength="3" />
+
+<!--
+	CommonWords
+	fileName: where the common tokens are read from
+	mimimumNonNoiseTokenSize (or defaultMaxLength for backward compatiblity): Any token with length (in characters) less 
+	   than this will be considered a common token by default
+-->
+
+<Policy:CommonWords filename="common.txt" minimumNonNoiseTokenSize="3" />
+
+<!--
+      TokenMatchers:
+      One or more token matchers may be assigned. Available token matchers are
+      "exact", "substring", "fuzzy", and "numeric". The token 
+      matchers will be used on token conditions (literals, files or database) 
+      with no token matchers.
+      Example:
+
+ 	The usage of fast token matchers is now deprecated.
+	Fast token matchers are: exact and substring.
+	So instead of:
+	<Policy:TokenMatchers value="fast" />
+
+	Use:
+
+      	<Policy:TokenMatchers/>
+	<Policy:TokenMatcher type="exact" />
+	<Policy:TokenMatcher type="substring" />
+	</Policy:TokenMatchers>
+	
+	Use the "fuzzy" type to turn on the fuzzy token matching:
+
+      	<Policy:TokenMatchers/>
+	<Policy:TokenMatcher type="exact" />
+	<Policy:TokenMatcher type="fuzzy" />
+	</Policy:TokenMatchers>
+
+	Fuzzy token matcher:
+	One or more string comparers may be assigned. The string comparers will be 
+	used in all conditions that a fuzzy matcher is applied but 
+	the string comparers are not specified.
+
+	Example fuzzy token matcher definition:
+	<Policy:FuzzyMatchers>
+	<Policy:FuzzyComparer
+		className="EditDistance"
+		threshold="90" 
+	/>
+	<Policy:FuzzyComparer
+		className="Soundex" 
+		threshold="60" 
+	/>
+	</Policy:FuzzyMatchers>
+
+	Example policy that will use the fuzzy matchers declared here: <fuzzy> 'occasional'
+	
+	Accent Ignoring:
+	Accents can be ignored by adding the parameter "ignoreAccent" to the matchers "exact", 
+	"substring", "fuzzy", and "numeric". For example:
+	
+       	<Policy:TokenMatchers>
+	<Policy:TokenMatcher 
+		type="exact"
+		parameter="ignoreAccent"
+	/>
+
+-->
+
+      <Policy:TokenMatchers>
+	<Policy:TokenMatcher type="numeric" />
+	<Policy:TokenMatcher type="substring" />
+      </Policy:TokenMatchers>
+
+	<Policy:FuzzyMatchers>
+	<Policy:FuzzyComparer
+		name="RestrictedEditDistance"
+		threshold="75" 
+	/>
+	</Policy:FuzzyMatchers>
+
+<!--
+	Tokenizer
+-->
+
+<Policy:Tokenizer className="com.dejima.core.nlp.text.USEnglishTextTokenizer" />
+
+<!--
+	CharacterEncoding
+	encoding: the character encoding used to read information from files. This string is used when constructing
+	the Java InputStreamReader. For information on character encoding see the JavaDoc for this class. If an 
+	<accent> matcher is used, the encoding type will need to be set appropriately
+
+-->
+
+<Policy:CharacterEncoding encoding="Cp1252" />
+
+<!-- 
+	Accents 
+	Defines the mapping that is peformed from accented characters to unaccented characters.
+	character: the unaccented character
+	lowerLimit: the lower character range to be transformed to the unaccented character 
+	upperLimit: the upper character range to be transformed to the unaccented character
+	
+	The default mapping below is a mapping from the Unicode Latin-1 Supplement to the Basic
+	Latin characters:
+	
+		<Policy:Accents>
+		<Policy:Accent character="a" lowerLimit="&#x00e0;" upperLimit="&#x00e5;" />
+		<Policy:Accent character="c" lowerLimit="&#x00e7;" upperLimit="&#x00e7;" />
+		<Policy:Accent character="e" lowerLimit="&#x00e8;" upperLimit="&#x00eb;" />
+		<Policy:Accent character="i" lowerLimit="&#x00ec;" upperLimit="&#x00ef;" />
+		<Policy:Accent character="n" lowerLimit="&#x00f1;" upperLimit="&#x00f1;" />
+		<Policy:Accent character="o" lowerLimit="&#x00f2;" upperLimit="&#x00f6;" />
+		<Policy:Accent character="o" lowerLimit="&#x00f8;" upperLimit="&#x00f8;" />
+		<Policy:Accent character="u" lowerLimit="&#x00f9;" upperLimit="&#x00fc;" />
+		<Policy:Accent character="y" lowerLimit="&#x00fd;" upperLimit="&#x00fd;" />
+		<Policy:Accent character="y" lowerLimit="&#x00ff;" upperLimit="&#x00ff;" />
+		</Policy:Accents>
+		
+	Note that characters are converted to lower case in a locale sensitive manner
+	before accents are removed, so the above mapping also handles uppercase accented
+	characters as well.
+	
+	Also note that if there are multiple possible transformations specified for a character,
+	only the first will be performed.
+-->
+
+<Policy:Accents>
+<Policy:Accent character="a" lowerLimit="&#x00e0;" upperLimit="&#x00e5;" />
+<Policy:Accent character="c" lowerLimit="&#x00e7;" upperLimit="&#x00e7;" />
+<Policy:Accent character="e" lowerLimit="&#x00e8;" upperLimit="&#x00eb;" />
+<Policy:Accent character="i" lowerLimit="&#x00ec;" upperLimit="&#x00ef;" />
+<Policy:Accent character="n" lowerLimit="&#x00f1;" upperLimit="&#x00f1;" />
+<Policy:Accent character="o" lowerLimit="&#x00f2;" upperLimit="&#x00f6;" />
+<Policy:Accent character="o" lowerLimit="&#x00f8;" upperLimit="&#x00f8;" />
+<Policy:Accent character="u" lowerLimit="&#x00f9;" upperLimit="&#x00fc;" />
+<Policy:Accent character="y" lowerLimit="&#x00fd;" upperLimit="&#x00fd;" />
+<Policy:Accent character="y" lowerLimit="&#x00ff;" upperLimit="&#x00ff;" />
+</Policy:Accents>
+
+
+<!-- 
+    The Recursive and Combo Conditions have poor performance when they process
+    large number of claims. In order to ensure good interpretation times, the
+    maximum number of claims that they process can be set here. The default
+    values are 30 and 50 for the Recursive and Combo conditions respectively. Lower
+    settings may produce faster intepretation times (depending on the input), however the chance
+    of producing incorrect interpretation results increases for smaller settings.
+    
+    Negative values (eg "-1") turn off the claim limiting.
+    
+    These settings take over the role of the old ComputationalExplosion parameter.
+-->
+<Policy:RecursiveCondition claimLimit="30" />
+<Policy:ComboCondition claimLimit="50" />
+
+<!--
+The Actuation class which will be used by default in the policy {action:...} and {ambiguity action:...}
+This class will be instantiated whenever an Actuation class is not given in the action clauses of a policy.
+-->
+<Policy:Actuation class="com.dejima.core.nlp.text.action.XmlActuation" />
+
+<!--
+The Priority class which will be used by default in the policy {priority:...} 
+This class will be instantiated whenever a Priority class is not given in the priority clause of a policy.
+-->
+<Policy:Priority class="com.dejima.core.nlp.text.FollowupPriority" />
+
+</Policy:ParserParameters>

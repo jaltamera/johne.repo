@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<CASES CoreVersion="4.0.2.157 " SDKVersion="4.0.2.157 ">
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>1</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[30 minutes]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:minute&gt;30&lt;/duration:minute&gt;&lt;/duration:Duration&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:minute&gt;30&lt;/duration:minute&gt;&lt;/duration:Duration&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>2</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[2 hours]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:hour&gt;2&lt;/duration:hour&gt;&lt;/duration:Duration&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:hour&gt;2&lt;/duration:hour&gt;&lt;/duration:Duration&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>3</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[half an hour]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:minute&gt;30&lt;/duration:minute&gt;&lt;/duration:Duration&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:minute&gt;30&lt;/duration:minute&gt;&lt;/duration:Duration&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>4</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[2 days 3 hours and 30 mins]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:hour&gt;3&lt;/duration:hour&gt;&lt;duration:minute&gt;30&lt;/duration:minute&gt;&lt;duration:day&gt;2&lt;/duration:day&gt;&lt;/duration:Duration&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:hour&gt;3&lt;/duration:hour&gt;&lt;duration:minute&gt;30&lt;/duration:minute&gt;&lt;duration:day&gt;2&lt;/duration:day&gt;&lt;/duration:Duration&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>5</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[3 weeks]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:week&gt;3&lt;/duration:week&gt;&lt;/duration:Duration&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:week&gt;3&lt;/duration:week&gt;&lt;/duration:Duration&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>6</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[4 months 2 weeks]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:month&gt;4&lt;/duration:month&gt;&lt;duration:week&gt;2&lt;/duration:week&gt;&lt;/duration:Duration&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:month&gt;4&lt;/duration:month&gt;&lt;duration:week&gt;2&lt;/duration:week&gt;&lt;/duration:Duration&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>7</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[5 months and 3 days]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:month&gt;5&lt;/duration:month&gt;&lt;duration:day&gt;3&lt;/duration:day&gt;&lt;/duration:Duration&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:month&gt;5&lt;/duration:month&gt;&lt;duration:day&gt;3&lt;/duration:day&gt;&lt;/duration:Duration&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>8</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[1 month 2 weeks 4 days 3 hours and 20 mins]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:hour&gt;3&lt;/duration:hour&gt;&lt;duration:minute&gt;20&lt;/duration:minute&gt;&lt;duration:month&gt;1&lt;/duration:month&gt;&lt;duration:week&gt;2&lt;/duration:week&gt;&lt;duration:day&gt;4&lt;/duration:day&gt;&lt;/duration:Duration&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:hour&gt;3&lt;/duration:hour&gt;&lt;duration:minute&gt;20&lt;/duration:minute&gt;&lt;duration:month&gt;1&lt;/duration:month&gt;&lt;duration:week&gt;2&lt;/duration:week&gt;&lt;duration:day&gt;4&lt;/duration:day&gt;&lt;/duration:Duration&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>9</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[6 mnths]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:month&gt;6&lt;/duration:month&gt;&lt;/duration:Duration&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:month&gt;6&lt;/duration:month&gt;&lt;/duration:Duration&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>2</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[1 year 4 months 2 weeks 2 days 6 hours and 34 mins]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:hour&gt;6&lt;/duration:hour&gt;&lt;duration:minute&gt;34&lt;/duration:minute&gt;&lt;duration:year&gt;1&lt;/duration:year&gt;&lt;duration:month&gt;4&lt;/duration:month&gt;&lt;duration:week&gt;2&lt;/duration:week&gt;&lt;duration:day&gt;2&lt;/duration:day&gt;&lt;/duration:Duration&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:hour&gt;6&lt;/duration:hour&gt;&lt;duration:minute&gt;34&lt;/duration:minute&gt;&lt;duration:year&gt;1&lt;/duration:year&gt;&lt;duration:month&gt;4&lt;/duration:month&gt;&lt;duration:week&gt;2&lt;/duration:week&gt;&lt;duration:day&gt;2&lt;/duration:day&gt;&lt;/duration:Duration&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>3</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[three qtrs]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:quarter&gt;3&lt;/duration:quarter&gt;&lt;/duration:Duration&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:quarter&gt;3&lt;/duration:quarter&gt;&lt;/duration:Duration&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>4</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[two years and four months]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:year&gt;2&lt;/duration:year&gt;&lt;duration:month&gt;4&lt;/duration:month&gt;&lt;/duration:Duration&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:year&gt;2&lt;/duration:year&gt;&lt;duration:month&gt;4&lt;/duration:month&gt;&lt;/duration:Duration&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>5</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[2 years three months]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:year&gt;2&lt;/duration:year&gt;&lt;duration:month&gt;3&lt;/duration:month&gt;&lt;/duration:Duration&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:year&gt;2&lt;/duration:year&gt;&lt;duration:month&gt;3&lt;/duration:month&gt;&lt;/duration:Duration&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>6</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[three quarters and 2 days 30 mins]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:minute&gt;30&lt;/duration:minute&gt;&lt;duration:quarter&gt;3&lt;/duration:quarter&gt;&lt;duration:day&gt;2&lt;/duration:day&gt;&lt;/duration:Duration&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:minute&gt;30&lt;/duration:minute&gt;&lt;duration:quarter&gt;3&lt;/duration:quarter&gt;&lt;duration:day&gt;2&lt;/duration:day&gt;&lt;/duration:Duration&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[an hour and a half]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:hour&gt;1&lt;/duration:hour&gt;&lt;duration:minute&gt;30&lt;/duration:minute&gt;&lt;/duration:Duration&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:hour&gt;1&lt;/duration:hour&gt;&lt;duration:minute&gt;30&lt;/duration:minute&gt;&lt;/duration:Duration&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[two and a half hours]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:hour&gt;2&lt;/duration:hour&gt;&lt;duration:minute&gt;30&lt;/duration:minute&gt;&lt;/duration:Duration&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:hour&gt;2&lt;/duration:hour&gt;&lt;duration:minute&gt;30&lt;/duration:minute&gt;&lt;/duration:Duration&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[a month]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:month&gt;1&lt;/duration:month&gt;&lt;/duration:Duration&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:month&gt;1&lt;/duration:month&gt;&lt;/duration:Duration&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[month]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[Unable to interpret input
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[Unable to interpret input
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer"></PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean"></DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[90 mins]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:minute&gt;90&lt;/duration:minute&gt;&lt;/duration:Duration&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;duration:Duration xmlns:duration="duration"&gt;&lt;duration:minute&gt;90&lt;/duration:minute&gt;&lt;/duration:Duration&gt;
+]]></ACTUAL>
+</CASE>
+<PRESENTATIONORDER>
+</PRESENTATIONORDER>
+</CASES>

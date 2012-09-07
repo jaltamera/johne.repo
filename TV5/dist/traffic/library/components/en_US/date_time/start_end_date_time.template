@@ -1,0 +1,14 @@
+extends library object.template;
+
+constant String type = '';
+
+/** 
+ * Overridden simply so fieldStart will appear before fieldEnd in the output xml.
+ */
+fields:
+    <merge(fieldStart,fieldEnd)>
+    {attributes: 'private'}
+    {action: com.dejima.library.date.DateTimeRangeActuation:
+         fieldStart, fieldEnd, combineStartAndEndDates()}
+;
+

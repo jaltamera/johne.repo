@@ -1,0 +1,92 @@
+String currentDate = ''; /*'07.26.2001 11:08 AM'*/
+Boolean disableDateConversion = false;
+Boolean mapToBusinessHours = true;
+Boolean displayTime = true;
+Boolean displayDate = true;
+/** What is the tag used when elements are ORed. Usually you should not need to change the value of this property */
+String orTag = 'or';
+Condition orKeyword = 'or';
+
+theHour:
+	HourNumbers
+	{attributes: 'private'}
+	{action: setTag('Date'),
+            addAction(setTag('absoluteDate'), '/Date'),
+            addAction(setTag('hour'), '/Date/absoluteDate'),
+            addAction(addCData(HourNumbers), '/Date/absoluteDate/hour')}
+;
+
+fromLowerBound: 
+   [Morning|Afternoon] ~ 'from' ~ (TheDate | theHour)
+	{attributes: 'private'}
+	{action: setTag('ge'), TheDate, theHour, addAction(Morning, '/ge/Date/absoluteDate'), addAction(Afternoon, '/ge/Date/absoluteDate')}
+;
+
+betweenLowerBound: 
+   [Morning|Afternoon] ~ 'between' ~ (TheDate | theHour)
+	{attributes: 'private'}
+	{action: setTag('ge'), TheDate, theHour, addAction(Morning, '/ge/Date/absoluteDate'), addAction(Afternoon, '/ge/Date/absoluteDate')}
+;
+
+upperBound: 
+   TheDate | theHour
+	{attributes: 'private'}
+	{action: setTag('le'), TheDate, theHour}
+;
+
+between:
+   (betweenLowerBound ~ ('and'|'-'|'to') ~ upperBound) | (fromLowerBound ~ ('to'|'-') ~ upperBound)
+	{attributes: 'private, atomic'}
+	{action: betweenLowerBound, fromLowerBound, upperBound}
+;
+
+time: 
+   [TheDate] AfterTime | [TheDate] BeforeTime | (BeforeTime AfterTime) | (AfterTime BeforeTime) | TheDate | between
+	{action: setTag(this.tag), TheDate, BeforeTime, AfterTime, between}
+;
+
+currentDateTime:
+   '(' ('currentDateTime'|'currentTime'|'currentDate') '=' ? ')'
+   {attributes: 'private, atomic'}
+;
+
+/**
+ * Here we use the handleDate method in the DateActuation to convert 
+ * the date string to an absolute date or a date range. The empty slots 
+ * in the date string will be replaced with current date. 
+ * Use the setCurrentDate to test the network against a constant time.
+ * The last argument of handleDate is to disable date conversion. Set this argument
+ * to true if you want to debug or if the date XML string is to be handled elsewhere.
+ */
+timeObject: 
+  time [currentDateTime]
+	{attributes: 'private'}
+	{action: 
+        com.dejima.library.date.DateActuation:
+        setTag(this.tag),  
+        setCurrentDate(this.currentDate), 
+		  setDisableDateConversion(this.disableDateConversion),
+		  setMapToBusinessHours(this.mapToBusinessHours),
+		  setDisplayTime(this.displayTime),
+        setDisplayDay(this.displayDate),
+        setCurrentDate(?),
+        handleDate(time)}
+;
+
+orTime:
+	this.orKeyword timeObject
+	{attributes: 'private, atomic'}
+;
+
+orTimes:
+	timeObject ^ orTime
+	{attributes: 'private'}
+	{action: com.dejima.core.nlp.text.action.EntityActuation: 
+         setTag(this.orTag), setOR(true), timeObject, orTime}
+;
+
+times:
+	(currentDateTime|orTimes|timeObject)+
+	{action: orTimes, timeObject}
+;
+

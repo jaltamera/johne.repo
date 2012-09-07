@@ -1,0 +1,27 @@
+<DisplayProperties>
+  <Object name="Traffic">
+    <DisplayFields>
+      <Path value="Traffic" />
+      <Displayable value="true" />
+      <FormField value="false" />
+    </DisplayFields>
+    <DisplayFields>
+      <Path value="Traffic/Location" />
+      <Displayable value="true" />
+      <FormField value="false" />
+    </DisplayFields>
+    <DisplayFields>
+      <Path value="Traffic/Status" />
+      <Displayable value="true" />
+      <FormField value="false" />
+    </DisplayFields>
+    <DisplayFields>
+      <Path value="Traffic/DateTime" />
+      <Displayable value="true" />
+      <FormField value="false" />
+    </DisplayFields>
+
+
+
+  </Object>
+</DisplayProperties>

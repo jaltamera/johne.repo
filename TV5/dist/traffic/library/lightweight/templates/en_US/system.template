@@ -1,0 +1,69 @@
+/**
+  Light Weight system.template
+*/
+
+/** What is the role of this template/agent? This is going to be used as an XML attribute associated to the XML element created by this template*/
+constant String type = 'intent';
+
+/** Should the policies support ambiguity? */
+Boolean supportAmbiguity = true;
+
+/** Should the policies support for replacing commands in the original request 
+    using followups? */
+Boolean supportReplace = true;
+
+/** The keyword used for replacing a constraint used in the previous command */
+Condition replaceKeyword = ('make that'|'make it');
+
+/** This template method translates into multiple policies (a policy per down chain agent). 
+    Each policy refers to one of the down chain agents. 
+    Assigns highest priority to the policy referring to a down chain agent which is part of the topic.
+    If a down chain is not part of the toppic then recency is used to assign a priority to the policy.
+    The policies reffeing to agents used more recently in the dialogue will receive more priority.
+*/
+topic(this.children):
+   this.children[.]
+   {attributes: 'private'}
+   {priority: topicScope(this.children[.], true)}
+   {action: this.children[.]}
+;
+
+/** This template method translates into multiple policies (one per each topic policy - see above).
+    Each policy represents a command known to the system.
+    Each policy also detects any ambguity which a command may have with other commands */
+command(this.children):
+    topic(this.children[.]) | (this.supportAmbiguity & (topic(this.children[.]) :: (topic(this.children[#]):op(|))))
+   {attributes: 'private'}
+   {ambiguity action: com.dejima.core.nlp.text.action.CommandActuation: 
+       setTag(this.ambiguityTag), topic(this.children)}
+;
+
+commands:
+   command(this.children):op(,)
+   {attributes: 'private'}
+   {action: command(this.children)}
+;
+
+/** Policy to support replacing a constraint with followups */
+replaceCommands:
+    this.supportReplace & (this.replaceKeyword ~ commands)
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.CommandsActuation: 
+         setTag(this.tag), addAttribute('type', this.type), 
+         replaceCommand(commands)
+    }
+;
+
+/** Policy to support adding a constraint with followups */
+narrowDownCommands:
+    commands
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.CommandsActuation: 
+        setTag(this.tag), addAttribute('type', this.type), 
+        narrowDownCommand(commands)
+    }
+;
+
+main:
+    (replaceCommands|narrowDownCommands)
+;

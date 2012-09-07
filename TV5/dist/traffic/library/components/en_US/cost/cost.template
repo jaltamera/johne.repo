@@ -1,0 +1,8 @@
+extends library field.template;
+
+constant String type = '';
+
+data:
+    super.data | Amount ~ Currency | Currency ~ Amount
+    {attributes: 'private, atomic'}
+;

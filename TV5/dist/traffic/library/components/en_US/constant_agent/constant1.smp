@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CASES>
+<CASE>
+<SCENARIO><![CDATA[s0]]></SCENARIO>
+<CASENAME> show me the price is $20</CASENAME>
+<INPUT><![CDATA[ show me the price is $20]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[s0]]></FUNCTIONALPOINT>
+<EXPECTED parsing="no"><![CDATA[&lt;priceRange&gt;&lt;equal&gt;$20&lt;/equal&gt;&lt;/priceRange&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[s1]]></SCENARIO>
+<CASENAME> expensive items.</CASENAME>
+<INPUT><![CDATA[ expensive items.]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[s1]]></FUNCTIONALPOINT>
+<EXPECTED parsing="no"><![CDATA[&lt;priceRange&gt;&lt;more&gt;$100&lt;/more&gt;&lt;/priceRange&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[s2]]></SCENARIO>
+<CASENAME> I want cheap one.</CASENAME>
+<INPUT><![CDATA[ I want cheap one.]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[s2]]></FUNCTIONALPOINT>
+<EXPECTED parsing="no"><![CDATA[&lt;priceRange&gt;&lt;less&gt;$30&lt;/less&gt;&lt;/priceRange&gt;
+]]></EXPECTED>
+</CASE>
+<PRESENTATIONORDER>
+</PRESENTATIONORDER>
+</CASES>

@@ -1,0 +1,244 @@
+/**
+  Light Weight componentProxy.template
+*/
+
+/** What is the keyword that identifies this component? */
+String keyword = this.tag;
+
+/** What is the preposition for this component? (e.g. 'in' or 'at' are used for a place)*/
+String preposition;
+
+/** What is the role of this template/agent? This is going to be used as an XML attribute associated to the XML element created by this template*/
+constant String type = 'componentProxy';
+
+/** These flags are used to set or reset certain features in the polcies created by this template*/
+
+/** Should the policies support implicit matches? (that is when a component is referenced in the input but the keyword used for
+    that component is not referenced) */
+Boolean implicitMatch = true;
+/** Should the agent make a claim if a keyword is matched but no data is matched? */
+Boolean supportKeywordOnlyMatch = true;
+/** Should the policies support value ranges (eg. gt, lt, ge, le)? */
+Boolean supportValueRange = false;
+
+/** This condition is used to match explicit claims on exact matches to a <i>field</i> value.<br>
+    Should be a combination of any string literal, preposition, and kwd.<br>
+  */
+Condition equalsTo = [preposition] ~ kwd ~ (['is'] ~ ['equal' ~ ['to']]|'isEqualTo'|'=');
+/** This condition is used to match explicit claims on contains matches to a <i>field</i> value.<br>
+    Should be a combination of any string literal, preposition, and kwd.<br>
+  */
+Condition contains = [preposition] ~ kwd ~ ('contains'|'containing'|'include'|'including');
+/** This condition is used to match explicit claims on starts with matches to a <i>field</i> value.<br>
+    Should be a combination of any string literal, preposition, and kwd.<br>
+  */
+Condition startsWith = [preposition] ~ kwd ~ ('startsWith'|'starts with'|'starting with'|'which start with'|'that start with'|'which starts with'|'that starts with');
+/** This condition is used to match explicit claims on ends with  matches to a <i>field</i> value.<br>
+    Should be a combination of any string literal, preposition, and kwd.<br>
+  */
+Condition endsWith = [preposition] ~ kwd ~ ('endsWith'|'ends with'|'ending with'|'which end with'|'that end with'|'which ends with'|'that ends with');
+
+/** The condition used to match explicit claims on the exact value this agent is representing.<br>
+    Should be a combination of any string literal and kwd.
+  */
+Condition isValueOf = ('isValueOf' | ('is' ~ ['the'] ~ 'value of')) kwd;
+
+/** The condition used to match explicit claims on the part of the value this agent is representing.<br>
+    Should be a combination of any string literal and kwd.
+  */
+Condition isPartOf = ('isPartOf' | ('is part of')) kwd;
+
+/** The condition used to match explicit claims on the start of the value this agent is representing.<br>
+    Should be a combination of any string literal and kwd.
+  */
+Condition isStartOf = ('isStartOf' | ('is start of')) kwd;
+/** The condition used to match explicit claims on the end of the value this agent is representing.<br>
+    Should be a combination of any string literal and kwd.
+  */
+Condition isEndOf = ('isEndOf' | ('is end of')) kwd;
+
+/** conditions that come before and after a value */
+Condition beforeValue = '';
+Condition afterValue = '';
+
+preposition:
+    this.preposition
+    {attributes: 'private, atomic'}
+    {action: ''}
+;
+
+/** Claims keywords used for this field */
+keyword:
+    this.keyword
+    {attributes: 'private, atomic'}
+    {action: addAttribute('explicit', 'true')}
+;
+
+/** Claims keywords optionally following a preposition */
+kwd:
+    [preposition] ~ keyword
+    {attributes: 'private, atomic'}
+    {action: 
+         addAttribute('explicit', 'true')}
+;
+
+/** Actuated when the user references this component without referencing any values */
+onlyKwd:
+    this.supportKeywordOnlyMatch & kwd
+    {attributes: 'private, atomic'}
+    {priority: topicScope(this)}
+    {action: com.dejima.core.nlp.text.action.ComponentProxyActuation: 
+         setTag(this.tag), addAttribute('type', this.type), kwd}
+;
+
+/** There should only be one down-chain agent referenced by this component*/
+referencedComponent:
+    [preposition] ~ (this.children)
+    {attributes: 'private'}
+    {action: this.children}
+;
+
+gtValue:
+    this.supportValueRange & (['is'] ~ 'gt' ~ referencedComponent)
+    {attributes: 'private, atomic'}
+    {action: com.dejima.core.nlp.text.action.EntityActuation: 
+         addAttribute('op','gt'), referencedComponent}
+;
+
+ltValue:
+    this.supportValueRange & (['is'] ~ 'lt' ~ referencedComponent)
+    {attributes: 'private, atomic'}
+    {action: com.dejima.core.nlp.text.action.EntityActuation: 
+         addAttribute('op','lt'), referencedComponent}
+;
+
+geValue:
+    this.supportValueRange & (['is'] ~ 'ge' ~ referencedComponent)
+    {attributes: 'private, atomic'}
+    {action: com.dejima.core.nlp.text.action.EntityActuation: 
+         addAttribute('op','ge'), referencedComponent}
+;
+
+leValue:
+    this.supportValueRange & (['is'] ~ 'le' ~ referencedComponent)
+    {attributes: 'private, atomic'}
+    {action: com.dejima.core.nlp.text.action.EntityActuation:
+         addAttribute('op','le'), referencedComponent}
+;
+
+beforeValue:
+    this.beforeValue
+    {attributes: 'private, atomic'}
+;
+
+afterValue:
+    this.afterValue
+    {attributes: 'private, atomic'}
+;
+
+equalsTo:
+    this.equalsTo
+    {attributes: 'private, atomic'}
+;
+
+startsWith:
+    this.startsWith
+    {attributes: 'private, atomic'}
+    {action: addAttribute('match','startsWith')}
+;
+
+endsWith:
+    this.endsWith
+    {attributes: 'private, atomic'}
+    {action: addAttribute('match','endsWith')}
+;
+
+contains:
+    this.contains
+    {attributes: 'private, atomic'}
+    {action: addAttribute('match','contains')}
+;
+
+isValueOf:
+    this.isValueOf
+    {attributes: 'private, atomic'}
+;
+
+isStartOf:
+    this.isStartOf
+    {attributes: 'private, atomic'}
+    {action: addAttribute('match','startsWith')}
+;
+
+isEndOf:
+    this.isEndOf
+    {attributes: 'private, atomic'}
+    {action: addAttribute('match','endsWith')}
+;
+
+isPartOf:
+    this.isPartOf
+    {attributes: 'private, atomic'}
+    {action: addAttribute('match','contains')}
+;
+
+leadingMatchCondition:
+   equalsTo | startsWith | endsWith | contains
+   {attributes: 'private, atomic'}
+;
+
+trailingMatchCondition:
+   isValueOf | isStartOf | isEndOf | isPartOf
+   {attributes: 'private, atomic'}
+;
+   
+/** This policy makes claims if the input explicitly refers to this field (field keywords are used in the input) */
+certainlyExplicit:
+    (beforeValue ~ referencedComponent ~ afterValue) | 
+    (leadingMatchCondition ~ referencedComponent) | 
+    (referencedComponent ~ trailingMatchCondition) |
+    ([preposition] ~ (keyword) (
+       gtValue | ltValue | geValue | leValue
+    ))
+    {attributes: 'private, atomic'}
+    {priority: 10001}
+    {action: leadingMatchCondition, trailingMatchCondition, keyword, referencedComponent, beforeValue, afterValue, gtValue, ltValue, geValue, leValue}
+;
+
+maybeExplicit:
+    (equalsTo & referencedComponent) | (referencedComponent & isValueOf)
+    {attributes: 'private'}
+    {action: equalsTo, isValueOf, referencedComponent}
+;
+
+explicit: 
+   certainlyExplicit | maybeExplicit
+   {attributes: 'private'}
+;
+
+
+/** This policy makes claims if implicit matching is supported */
+implicit:
+   this.implicitMatch & (
+      referencedComponent |
+      gtValue | ltValue | geValue | leValue 
+   )
+   {attributes: 'private'}
+   {action: referencedComponent, gtValue, ltValue, geValue, leValue}
+;
+
+aComponent:
+    explicit | implicit
+    {attributes: 'private'}
+;
+
+component:
+    aComponent
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.ComponentProxyActuation: 
+         setTag(this.tag), addAttribute('type', this.type), aComponent}
+;
+
+main:
+    (onlyKwd | component)+
+;

@@ -1,0 +1,7 @@
+#
+# Network test suite
+#
+NETWORK=openendedsearch.opal
+CORPUS=oesearch1.smp
+NETWORK=openendedsearch.opal
+CORPUS=oesearch2.smp

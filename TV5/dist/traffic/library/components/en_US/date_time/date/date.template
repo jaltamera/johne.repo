@@ -1,0 +1,92 @@
+String currentDate = ''; /*'07.26.2001 11:08 AM'*/
+Boolean disableDateConversion = false;
+Boolean mapToBusinessHours = true;
+Boolean displayTime = true;
+Boolean displayDate = true;
+
+/**should we default the day to future (ie. 'monday' is next monday if today is tuesday, but monday is tomorrow if today is sunday)*/
+Boolean defaultDayToFuture = false;
+/** should we default the day to past (eg. 'monday' is previous monday by default). Used only if defaultDayToFuture is false.  */
+Boolean defaultDayToPast = false;
+/** What is the tag used when elements are ORed. Usually you should not need to change the value of this property */
+String orTag = 'or';
+
+lowerBound: 
+   TheDate
+	{attributes: 'private'}
+	{action: setTag('ge'), TheDate}
+;
+
+absoluteDayUpperBound:
+   DATE_DAY
+	{attributes:'private, atomic'}
+	{action: setTag('le'), 
+            addAction(setTag('Date'), '/'), 
+            addAction(setTag('absoluteDate'), 'Date'), 
+            addAction(DATE_DAY, 'Date/absoluteDate')}
+;
+
+upperBound: 
+   TheDate
+	{attributes: 'private'}
+	{action: setTag('le'), TheDate}
+;
+
+between:
+	(['between'] ~ lowerBound ~ ('and'|'-') ~ upperBound) | 
+   ('between' ~ lowerBound ~ ('and'|'-') ~ absoluteDayUpperBound)
+	{attributes: 'private, atomic'}
+	{action: lowerBound, upperBound, absoluteDayUpperBound}
+;
+
+time: 
+   AfterDate | BeforeDate | (BeforeDate AfterDate) | (AfterDate BeforeDate) | TheDate | between
+	{action: setTag(this.tag), TheDate, BeforeDate, AfterDate, between}
+;
+
+currentDateTime:
+   '(' ('currentDateTime'|'currentTime'|'currentDate') '=' ? ')'
+   {attributes: 'private, atomic'}
+;
+
+/**
+ * Here we use the handleDate method in the DateActuation to convert 
+ * the date string to an absolute date or a date range. The empty slots 
+ * in the date string will be replaced with current date. 
+ * Use the setCurrentDate to test the network against a constant time.
+ * The last argument of handleDate is to disable date conversion. Set this argument
+ * to true if you want to debug or if the date XML string is to be handled elsewhere.
+ */
+timeObject: 
+  time [currentDateTime]
+	{attributes: 'private, atomic'}
+	{action: 
+     com.dejima.library.date.DateActuation: 
+        setTag(this.tag), 
+        setCurrentDate(this.currentDate), 
+		setDisableDateConversion(this.disableDateConversion),
+		setMapToBusinessHours(this.mapToBusinessHours),
+		setDisplayTime(this.displayTime),
+        setDisplayDay(this.displayDate),
+        setDefaultDayToFuture(this.defaultDayToFuture),
+        setDefaultDayToPast(this.defaultDayToPast),
+        setCurrentDate(?),
+        handleDate(time)}
+;
+
+orTime:
+	'+' timeObject
+	{attributes: 'private, atomic'}
+;
+
+orTimes:
+	timeObject ^ orTime
+	{attributes: 'private'}
+	{action: com.dejima.core.nlp.text.action.EntityActuation: 
+         setTag(this.orTag), setOR(true), timeObject, orTime}
+;
+
+times:
+	(currentDateTime|orTimes|timeObject)+
+	{action: orTimes, timeObject}
+;

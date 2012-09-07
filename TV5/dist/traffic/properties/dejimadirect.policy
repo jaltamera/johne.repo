@@ -1,0 +1,8 @@
+grant {
+    permission java.security.AllPermission;
+    permission java.net.SocketPermission "*:*", "connect,accept";
+    permission java.net.SocketPermission "127.0.0.1:*", "connect,accept";
+    permission java.util.PropertyPermission "*.*", "read,write";
+    permission java.io.FilePermission "*.*", "read, write";
+    permission java.lang.RuntimePermission "shutdownHooks";
+};

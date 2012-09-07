@@ -1,0 +1,257 @@
+/**
+GENERAL
+-------
+This template is used to represent the system (product) utilized by dejima's 
+interpretation agents.
+
+This template joins commands (e.g. find, edit, create, etc.) and handles followups
+to add, remove or narrow down the commands. The template is designed so 
+a single xml tag surrounds all commands. 
+
+SUPPORTED FEATURES
+------------------
+The template supports TYPE, MULTIPLE_COMMANDS, AMBIGUITY, ADD, REMOVE, 
+NARROW DOWN and RECENCY.
+
+TYPE is an xml attribute which defines the role of this template. The type attribute of 
+this template is 'intent' (do not change the value of this attribute).
+
+If MULTIPLE_COMMANDS is supported then claims can include multiple commands.
+For example a system output for finding and editing contacts will look like:
+<System>
+  <Find>
+    <Contact>...</Contact>
+  </Find>
+  <Edit>
+    <Contact>...</Contact>
+  </Edit>
+</System>
+
+If MULTIPLE_COMMANDS is not supported then each claim made by this agent 
+will include at most one command (i.e. either the Find command or the Edit command
+but not both). 
+
+If AMBIGUITY is supported then ambiguoities are detected and ambiguous actuations are generated.
+
+With NARROW DOWN users can disambiguate or modify their previous command in any way using a followup input. 
+For example if the user asked for "search for a contact with first name john", the user can then modify the 
+search query by saying: "..last name brooks". which is equivalant to asking for "search for a contact with 
+first name john and last name brooks". Narrow down can be performed using any of (or a combination of) ADD, 
+ADD_NEW, REMOVE or REPLACE modifiers (explained later). Users can either be explicit or implicit about the type of 
+NARROW_DOWN query they want to perform. 
+
+Implicit narrow downs attempts slot filling based on the slot filling properties of each element. By default 
+all objects (elements created by object.template), relations (elements created by relation.template) and fields
+(elements created by field.template) use REPLACE as their default slot filling property value. So if user asks for "search 
+for contact with first name john" and followups with "..first name david" it will be equivalant to "search for 
+contact with first name david". But if you change the default filling of the FirstName to 'add'. Then the field 
+values will be added on narrow down. So "search for contact with first name john" followed up with "..first name 
+david" will result into "search for contact with first name john and first name david". You can also change how 
+different slots are added or replaced by using the isSingleSlot property in objects or relations. By default any 
+field is considered to be a single slot. But you can change that so an object (holding one or more fields) to become 
+a single slot. For example you can make a Name object to be a single slot (instead of using the FirstName or LastName 
+fields as single slot). If so then the input "search for a contact with first name john" followed up by "..last name 
+brooks" will be handled as "search for contact with first name john and for (another) contact with last name brooks". 
+(instead of handling it as "search for contact with first name john and last name brooks")
+
+Explicit narrow down occurs when users are explicit about the type of narrow down they want to perform. In this case 
+users should use one of the ADD_KEYWORD, ADD_NEW_KEYWORD, REMOVE_KEYWORD or REPLACE _KEYWORD in their request. 
+
+If ADD is supported then users can expand their previous input by adding new slots to their previous command. For 
+example lets say the user asked for "search for a contact with name john brooks", the user can then expand his search 
+query by saying: "..and david smith". so the search query will now be equal to saying "search for contacts named john 
+brooks and david smith". Note that the slots added to the previous query are at the field level by default but you can 
+change that using the isSingleSlot property in the field, object and relation templates.
+
+If ADD NEW is supported then users can expand their previous input by adding a new command to the previous commands. 
+For example lets say the user asked for "search for a contact with name john brooks", the user can then expand his search 
+query by saying: "..add new search for david smith". so the search query will now be equal to saying "search for contact 
+named john brooks and search for contact named david smith". 
+
+If REMOVE is checked as supported, then users can correct their previous input by removing a command from the previous 
+commands. For example, if the user asked for "search for a contact with name john brooks and edit contact robert", the user 
+can then modify the search query by saying: "don't edit" (assuming that 'don't' is made a synonym for '-').
+
+If REPLACE is supported then users can modify their previous input by replacing slots used in their previous command. For 
+example lets say the user asked for "search for a contact with name john brooks", the user can then modify his search query 
+by saying: "..make that david smith". so the search query will now be equal to saying "search for contact named david smith". 
+Note that the slots will be added (at the field level) if the user references a slot that is not part of the previous input. 
+For example lets say the user asked for "search for a contact who live in san jose", and then follows up with "..no make 
+that john". This will result into a search query equal to a query on "contact john who lives in san jose".
+
+De-referencing mechanism is attempted on any followup in which either the command or the object of a command is changed. For 
+instance when user says: "find contact Tom" and followups with "..send an email to him" (where the "find" command is switched 
+to "send" command) or when the user says: "Tom" and followups with "..did I receive any emails from him today?" (where the "find" 
+object is changed from "contact" to "email"). The library templates by default include attributes that define what type of command 
+and object is present in each interpretation. These attributes can be seen in the XML interpretation for "..did I receive any 
+emails from him today?" (below): type="command" and type="object". It is these attributes that checked for changes in CommandActuation 
+class whenever a narrow down is attempted.</para>
+		  
+<DejimaInterpretation>
+    <Input><![CDATA[.. did I receive any emails from him today?]]></Input>
+    <Understood><![CDATA[receive emails from him today]]></Understood>
+    <System>
+        <Find type="command">
+            <Message type="object" explicit="true">
+                <Received explicit="true">
+                    <date_time:DateTime xmlns:date_time="date_time">
+                        <date:Date xmlns:date="date">
+                            <date:day><![CDATA[27]]></date:day>
+                            <date:month><![CDATA[7]]></date:month>
+                            <date:year><![CDATA[2004]]></date:year>
+                        </date:Date>
+                    </date_time:DateTime>
+                    <From explicit="true">
+                        <Contact type="object" reference="him">
+                            <name:Name xmlns:name="name">
+                                <name:FirstName><![CDATA[Tom]]></name:FirstName>
+                            </name:Name>
+                        </Contact>
+                    </From>
+                </Received>
+            </Message>
+        </Find>
+    </System>
+ </DejimaInterpretation> 
+
+Note that in the above interpretation the token "him" is added as a reference attribute for the Contact element, 
+and is de-referenced to the interpretation for "Tom". This additional interpretation XML is inserted into 
+the current interpretation XML under the Contact element, resulting in the displayed interpretation above. 
+
+If RECENCY is supported the down chain agents that have been actuated more recently will be
+given higher priority. The recency of actuation is determined by examining the previous actuation 
+in the context (tags in the previous actuation relative to the down chain of this agent - the tags 
+should appear right Under a tag made by this agent). 
+
+INTERPRETATION
+--------------
+By default recently mentioned commands will have more priority. So for example 
+if the user asks for "find appointment with john" and then asks for "..david" 
+it will be assumed that 'david' is a reference to finding an appointment 
+(rather than editing or creating) as find command has been mentioned in the 
+previous input.
+*/
+
+/** What is the role of this template/agent? This is going to be used as an XML attribute associated to the XML element created by this template*/
+constant String type = 'intent';
+
+/** These flags are used to set or reset certain features in the polcies 
+    created by this template*/
+
+/** Should the policies support referencing multiple commands? If false then multiple commands will cause an ambiguity. */
+Boolean supportMultipleCommands = false;
+/** Should the policies support ambiguity? */
+Boolean supportAmbiguity = true;
+/** Should the policies support for adding fields to the fields in the original request 
+    using followups? */
+Boolean supportAdd = true;
+/** Should the policies support for adding new commands to the original request 
+    using followups? */
+Boolean supportAddNew = true;
+/** Should the policies support for filtering commands from the original request 
+    using followups? */
+Boolean supportRemove = true;
+/** Should the policies support for replacing commands in the original request 
+    using followups? */
+Boolean supportReplace = true;
+/** Should the polcies referring to recently referenced actions get higher priority? */
+Boolean supportRecency = true;
+/** The keyword used for adding new constraints to the constraints used in the previous command */
+Condition addKeyword = ('+'|'add'|'and'|'&');
+/** The keyword used for adding new constraints to the constraints used in the previous command */
+Condition addNewKeyword = (('+'|'add'|'and'|'&') ~ 'new');
+/** The keyword used for removing a constraint from the contstraints used in the previous command*/
+Condition removeKeyword = ('-'|'not');
+/** The keyword used for replacing a constraint used in the previous command */
+Condition replaceKeyword = ('make that'|'make it');
+/** Should explicit references be prefered to implicit references. If yes then the ambiguous elements of the command are examined and the ambiguity choices
+    that are implicitly referenced are removed if there is one or more ambiguity choice which is explicitly referenced. */
+Boolean preferExplicitReferences = true;
+
+/** This template method translates into multiple policies (a policy per down chain agent). 
+    Each policy refers to one of the down chain agents. 
+    Assigns highest priority to the policy referring to a down chain agent which is part of the topic.
+    If a down chain is not part of the toppic then recency is used to assign a priority to the policy.
+    The policies reffeing to agents used more recently in the dialogue will receive more priority.
+*/
+topic(this.children):
+   this.children[.]
+   {attributes: 'private'}
+   {priority: topicScope(this.children[.], this.supportRecency)}
+   {action: this.children[.]}
+;
+
+/** This template method translates into multiple policies (one per each topic policy - see above).
+    Each policy represents a command known to the system.
+    Each policy also detects any ambguity which a command may have with other commands */
+command(this.children):
+    topic(this.children[.]) | this.supportAmbiguity & (<mergeIfAmbiguous(topic(this.children[.]),topic(this.children[#]):op(,))>)
+   {attributes: 'private'}
+   {ambiguity action: com.dejima.core.nlp.text.action.CommandActuation: 
+       setTag(this.ambiguityTag), topic(this.children)}
+;
+
+commands:
+   true <^ (<merge(command(this.children):op(,))>)
+   {attributes: 'private'}
+   {action: command(this.children)}
+;
+
+/** Policy to support removing a constraint with followups */
+removeCommands:
+    this.supportRemove & (this.removeKeyword ~ commands)
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.CommandsActuation: 
+        setTag(this.tag), addAttribute('type', this.type), 
+        setPreferExplicitReference(this.preferExplicitReferences),
+        setSupportMultipleCommands(this.supportMultipleCommands),
+        removeCommand(commands)}
+;
+
+/** Policy to support adding a constraint with followups */
+addCommands:
+    this.supportAdd & (this.addKeyword ~ commands)
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.CommandsActuation: 
+         setTag(this.tag), addAttribute('type', this.type), 
+         setPreferExplicitReference(this.preferExplicitReferences),
+         setSupportMultipleCommands(this.supportMultipleCommands),
+         addCommand(commands)}
+;
+
+/** Policy to support adding a constraint with followups */
+addNewCommands:
+    this.supportAddNew & (this.addNewKeyword ~ commands)
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.CommandsActuation: 
+         setTag(this.tag), addAttribute('type', this.type), 
+         setPreferExplicitReference(this.preferExplicitReferences),
+         setSupportMultipleCommands(this.supportMultipleCommands),
+         addNewCommand(commands)}
+;
+
+/** Policy to support replacing a constraint with followups */
+replaceCommands:
+    this.supportReplace & (this.replaceKeyword ~ commands)
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.CommandsActuation: 
+         setTag(this.tag), addAttribute('type', this.type), 
+         setPreferExplicitReference(this.preferExplicitReferences),
+         setSupportMultipleCommands(this.supportMultipleCommands),
+         replaceCommand(commands)}
+;
+
+/** Policy to support adding a constraint with followups (also supports de-referencing)*/
+narrowDownCommands:
+    commands
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.CommandsActuation: 
+        setTag(this.tag), addAttribute('type', this.type), 
+        setPreferExplicitReference(this.preferExplicitReferences),
+        setSupportMultipleCommands(this.supportMultipleCommands),
+        narrowDownCommand(commands)}
+;
+
+main:
+    (removeCommands|addCommands|addNewCommands|replaceCommands|narrowDownCommands)
+;

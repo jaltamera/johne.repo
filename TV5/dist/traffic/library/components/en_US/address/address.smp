@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<CASES CoreVersion="4.5.0.125 " SDKVersion="4.5.0.125 ">
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>1</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[addresses in san jose ca 95113 usa]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[addresses in san jose ca 95113 usa]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[in san jose ca 95113 usa]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[san jose]]&gt;&lt;/address:City&gt;
+      &lt;address:Country type="field"&gt;&lt;![CDATA[usa]]&gt;&lt;/address:Country&gt;
+      &lt;address:PostCode type="field"&gt;&lt;![CDATA[95113]]&gt;&lt;/address:PostCode&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[ca]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[addresses in san jose ca 95113 usa]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[in san jose ca 95113 usa]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[san jose]]&gt;&lt;/address:City&gt;
+      &lt;address:Country type="field"&gt;&lt;![CDATA[usa]]&gt;&lt;/address:Country&gt;
+      &lt;address:PostCode type="field"&gt;&lt;![CDATA[95113]]&gt;&lt;/address:PostCode&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[ca]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>2</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[seattle washington 92345]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[seattle washington 92345]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[seattle washington 92345]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[seattle]]&gt;&lt;/address:City&gt;
+      &lt;address:PostCode type="field"&gt;&lt;![CDATA[92345]]&gt;&lt;/address:PostCode&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[WA]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[seattle washington 92345]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[seattle washington 92345]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[seattle]]&gt;&lt;/address:City&gt;
+      &lt;address:PostCode type="field"&gt;&lt;![CDATA[92345]]&gt;&lt;/address:PostCode&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[WA]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>3</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[rochester new york 95113 united states]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[rochester new york 95113 united states]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[rochester new york 95113 united states]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[rochester]]&gt;&lt;/address:City&gt;
+      &lt;address:Country type="field"&gt;&lt;![CDATA[united states]]&gt;&lt;/address:Country&gt;
+      &lt;address:PostCode type="field"&gt;&lt;![CDATA[95113]]&gt;&lt;/address:PostCode&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[NY]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[rochester new york 95113 united states]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[rochester new york 95113 united states]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[rochester]]&gt;&lt;/address:City&gt;
+      &lt;address:Country type="field"&gt;&lt;![CDATA[united states]]&gt;&lt;/address:Country&gt;
+      &lt;address:PostCode type="field"&gt;&lt;![CDATA[95113]]&gt;&lt;/address:PostCode&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[NY]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>4</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[addresses in dallas texas us with zip 23456]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[addresses in dallas texas us with zip 23456]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[in dallas texas us with zip 23456]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[dallas]]&gt;&lt;/address:City&gt;
+      &lt;address:Country type="field"&gt;&lt;![CDATA[us]]&gt;&lt;/address:Country&gt;
+      &lt;address:PostCode type="field" explicit="true"&gt;&lt;![CDATA[23456]]&gt;&lt;/address:PostCode&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[TX]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[addresses in dallas texas us with zip 23456]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[in dallas texas us with zip 23456]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[dallas]]&gt;&lt;/address:City&gt;
+      &lt;address:Country type="field"&gt;&lt;![CDATA[us]]&gt;&lt;/address:Country&gt;
+      &lt;address:PostCode type="field" explicit="true"&gt;&lt;![CDATA[23456]]&gt;&lt;/address:PostCode&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[TX]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>5</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[new york in the united states]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[new york in the united states]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[new york united states]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:Country type="field"&gt;&lt;![CDATA[united states]]&gt;&lt;/address:Country&gt;
+      &lt;address:Ambiguity&gt;
+        &lt;address:City type="field"&gt;&lt;![CDATA[new york]]&gt;&lt;/address:City&gt;
+        &lt;address:State type="field"&gt;&lt;![CDATA[NY]]&gt;&lt;/address:State&gt;
+      &lt;/address:Ambiguity&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+  &lt;address:Hints&gt;
+    &lt;address:Question&gt;
+      &lt;address:Ambiguity&gt;
+        &lt;address:City type="field"&gt;&lt;![CDATA[new york]]&gt;&lt;/address:City&gt;
+        &lt;address:State type="field"&gt;&lt;![CDATA[NY]]&gt;&lt;/address:State&gt;
+      &lt;/address:Ambiguity&gt;
+    &lt;/address:Question&gt;
+  &lt;/address:Hints&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[new york in the united states]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[new york united states]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:Country type="field"&gt;&lt;![CDATA[united states]]&gt;&lt;/address:Country&gt;
+      &lt;address:Ambiguity&gt;
+        &lt;address:City type="field"&gt;&lt;![CDATA[new york]]&gt;&lt;/address:City&gt;
+        &lt;address:State type="field"&gt;&lt;![CDATA[NY]]&gt;&lt;/address:State&gt;
+      &lt;/address:Ambiguity&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+  &lt;address:Hints&gt;
+    &lt;address:Question&gt;
+      &lt;address:Ambiguity&gt;
+        &lt;address:City type="field"&gt;&lt;![CDATA[new york]]&gt;&lt;/address:City&gt;
+        &lt;address:State type="field"&gt;&lt;![CDATA[NY]]&gt;&lt;/address:State&gt;
+      &lt;/address:Ambiguity&gt;
+    &lt;/address:Question&gt;
+  &lt;/address:Hints&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>6</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[sydney australia]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[sydney australia]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[sydney australia]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[sydney]]&gt;&lt;/address:City&gt;
+      &lt;address:Country type="field"&gt;&lt;![CDATA[australia]]&gt;&lt;/address:Country&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[sydney australia]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[sydney australia]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[sydney]]&gt;&lt;/address:City&gt;
+      &lt;address:Country type="field"&gt;&lt;![CDATA[australia]]&gt;&lt;/address:Country&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>7</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[addresses with postcode 95113 in california]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[addresses with postcode 95113 in california]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[with postcode 95113 in california]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:PostCode type="field" explicit="true"&gt;&lt;![CDATA[95113]]&gt;&lt;/address:PostCode&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[CA]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[addresses with postcode 95113 in california]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[with postcode 95113 in california]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:PostCode type="field" explicit="true"&gt;&lt;![CDATA[95113]]&gt;&lt;/address:PostCode&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[CA]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>8</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[dallas or san francisco in california or texas]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[dallas or san francisco in california or texas]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[dallas or san francisco in california or texas]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[dallas]]&gt;&lt;/address:City&gt;
+      &lt;address:City type="field" join="or"&gt;&lt;![CDATA[san francisco]]&gt;&lt;/address:City&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[CA]]&gt;&lt;/address:State&gt;
+      &lt;address:State type="field" join="or"&gt;&lt;![CDATA[TX]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[dallas or san francisco in california or texas]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[dallas or san francisco in california or texas]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[dallas]]&gt;&lt;/address:City&gt;
+      &lt;address:City type="field" join="or"&gt;&lt;![CDATA[san francisco]]&gt;&lt;/address:City&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[CA]]&gt;&lt;/address:State&gt;
+      &lt;address:State type="field" join="or"&gt;&lt;![CDATA[TX]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>2</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[addresses in jersey city in new jersey us]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[addresses in jersey city in new jersey us]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[in jersey city in new jersey us]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field" explicit="true"&gt;&lt;![CDATA[jersey]]&gt;&lt;/address:City&gt;
+      &lt;address:Country type="field"&gt;&lt;![CDATA[us]]&gt;&lt;/address:Country&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[NJ]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[addresses in jersey city in new jersey us]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[in jersey city in new jersey us]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field" explicit="true"&gt;&lt;![CDATA[jersey]]&gt;&lt;/address:City&gt;
+      &lt;address:Country type="field"&gt;&lt;![CDATA[us]]&gt;&lt;/address:Country&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[NJ]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>3</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[address with postcode 123]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[address with postcode 123]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[address with postcode 123]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:PostCode type="field" explicit="true"&gt;&lt;![CDATA[123]]&gt;&lt;/address:PostCode&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[address with postcode 123]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[address with postcode 123]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:PostCode type="field" explicit="true"&gt;&lt;![CDATA[123]]&gt;&lt;/address:PostCode&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>4</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[address with postcode 95113 in sunnyvale california]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[address with postcode 95113 in sunnyvale california]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[address with postcode 95113 in sunnyvale california]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address explicit="true"&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[sunnyvale]]&gt;&lt;/address:City&gt;
+      &lt;address:PostCode type="field" explicit="true"&gt;&lt;![CDATA[95113]]&gt;&lt;/address:PostCode&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[CA]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[address with postcode 95113 in sunnyvale california]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[address with postcode 95113 in sunnyvale california]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address explicit="true"&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[sunnyvale]]&gt;&lt;/address:City&gt;
+      &lt;address:PostCode type="field" explicit="true"&gt;&lt;![CDATA[95113]]&gt;&lt;/address:PostCode&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[CA]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>5</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[seattle washington 12345 in country usa]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[seattle washington 12345 in country usa]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[seattle washington 12345 in country usa]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[seattle]]&gt;&lt;/address:City&gt;
+      &lt;address:Country type="field" explicit="true"&gt;&lt;![CDATA[usa]]&gt;&lt;/address:Country&gt;
+      &lt;address:PostCode type="field"&gt;&lt;![CDATA[12345]]&gt;&lt;/address:PostCode&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[WA]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[seattle washington 12345 in country usa]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[seattle washington 12345 in country usa]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[seattle]]&gt;&lt;/address:City&gt;
+      &lt;address:Country type="field" explicit="true"&gt;&lt;![CDATA[usa]]&gt;&lt;/address:Country&gt;
+      &lt;address:PostCode type="field"&gt;&lt;![CDATA[12345]]&gt;&lt;/address:PostCode&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[WA]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>2</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[address in adelaide in australia]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[address in adelaide in australia]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[address in adelaide in australia]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address explicit="true"&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[adelaide]]&gt;&lt;/address:City&gt;
+      &lt;address:Country type="field"&gt;&lt;![CDATA[australia]]&gt;&lt;/address:Country&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[address in adelaide in australia]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[address in adelaide in australia]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address explicit="true"&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[adelaide]]&gt;&lt;/address:City&gt;
+      &lt;address:Country type="field"&gt;&lt;![CDATA[australia]]&gt;&lt;/address:Country&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>3</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[address in buffalo new york 12234]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[address in buffalo new york 12234]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[address in buffalo new york 12234]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address explicit="true"&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[buffalo]]&gt;&lt;/address:City&gt;
+      &lt;address:PostCode type="field"&gt;&lt;![CDATA[12234]]&gt;&lt;/address:PostCode&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[NY]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[address in buffalo new york 12234]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[address in buffalo new york 12234]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address explicit="true"&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[buffalo]]&gt;&lt;/address:City&gt;
+      &lt;address:PostCode type="field"&gt;&lt;![CDATA[12234]]&gt;&lt;/address:PostCode&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[NY]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>4</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[123]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation" unableToInterpret="true" info="Unable to interpret input. Keeping the context."&gt;
+  &lt;address:Input&gt;&lt;![CDATA[123]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood /&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation" unableToInterpret="true" info="Unable to interpret input. Keeping the context."&gt;
+  &lt;address:Input&gt;&lt;![CDATA[123]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood /&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>5</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[95113]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[95113]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[95113]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:PostCode type="field"&gt;&lt;![CDATA[95113]]&gt;&lt;/address:PostCode&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[95113]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[95113]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:PostCode type="field"&gt;&lt;![CDATA[95113]]&gt;&lt;/address:PostCode&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>6</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[sunnyvale california and rochester new york]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[sunnyvale california and rochester new york]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[sunnyvale california and rochester new york]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[sunnyvale]]&gt;&lt;/address:City&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[CA]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+    &lt;address:Address join="and"&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[rochester]]&gt;&lt;/address:City&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[NY]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[sunnyvale california and rochester new york]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[sunnyvale california and rochester new york]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[sunnyvale]]&gt;&lt;/address:City&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[CA]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+    &lt;address:Address join="and"&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[rochester]]&gt;&lt;/address:City&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[NY]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>7</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[address in mexico or australia]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[address in mexico or australia]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[address in mexico or australia]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address explicit="true"&gt;
+      &lt;address:Country type="field"&gt;&lt;![CDATA[mexico]]&gt;&lt;/address:Country&gt;
+      &lt;address:Country type="field" join="or"&gt;&lt;![CDATA[australia]]&gt;&lt;/address:Country&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[address in mexico or australia]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[address in mexico or australia]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address explicit="true"&gt;
+      &lt;address:Country type="field"&gt;&lt;![CDATA[mexico]]&gt;&lt;/address:Country&gt;
+      &lt;address:Country type="field" join="or"&gt;&lt;![CDATA[australia]]&gt;&lt;/address:Country&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>8</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[everything in texas with zip 123]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[everything in texas with zip 123]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[in texas with zip 123]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:PostCode type="field" explicit="true"&gt;&lt;![CDATA[123]]&gt;&lt;/address:PostCode&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[TX]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[everything in texas with zip 123]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[in texas with zip 123]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:PostCode type="field" explicit="true"&gt;&lt;![CDATA[123]]&gt;&lt;/address:PostCode&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[TX]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>9</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[dallas texas in mexico]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[dallas texas in mexico]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[dallas texas in mexico]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[dallas]]&gt;&lt;/address:City&gt;
+      &lt;address:Country type="field"&gt;&lt;![CDATA[mexico]]&gt;&lt;/address:Country&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[TX]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[dallas texas in mexico]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[dallas texas in mexico]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[dallas]]&gt;&lt;/address:City&gt;
+      &lt;address:Country type="field"&gt;&lt;![CDATA[mexico]]&gt;&lt;/address:Country&gt;
+      &lt;address:State type="field"&gt;&lt;![CDATA[TX]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[salt lake city utah]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[salt lake city utah]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[salt lake city utah]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[salt lake]]&gt;&lt;/address:City&gt;
+    &lt;/address:Address&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field" explicit="true"&gt;&lt;![CDATA[utah]]&gt;&lt;/address:City&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[salt lake city utah]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[salt lake city utah]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field"&gt;&lt;![CDATA[salt lake]]&gt;&lt;/address:City&gt;
+    &lt;/address:Address&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field" explicit="true"&gt;&lt;![CDATA[utah]]&gt;&lt;/address:City&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[works in city]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[works in city]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[in city]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field" explicit="true" /&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[works in city]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[in city]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field" explicit="true" /&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[in city "jangool", state "bangool"]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[in city "jangool", state "bangool"]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[in city "jangool", state "bangool"]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field" explicit="true"&gt;&lt;![CDATA[jangool]]&gt;&lt;/address:City&gt;
+      &lt;address:State type="field" explicit="true"&gt;&lt;![CDATA[bangool]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;address:DejimaInterpretation xmlns:address="address" type="interpretation"&gt;
+  &lt;address:Input&gt;&lt;![CDATA[in city "jangool", state "bangool"]]&gt;&lt;/address:Input&gt;
+  &lt;address:Understood&gt;&lt;![CDATA[in city "jangool", state "bangool"]]&gt;&lt;/address:Understood&gt;
+  &lt;address:System type="intent"&gt;
+    &lt;address:Address&gt;
+      &lt;address:City type="field" explicit="true"&gt;&lt;![CDATA[jangool]]&gt;&lt;/address:City&gt;
+      &lt;address:State type="field" explicit="true"&gt;&lt;![CDATA[bangool]]&gt;&lt;/address:State&gt;
+    &lt;/address:Address&gt;
+  &lt;/address:System&gt;
+&lt;/address:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<PRESENTATIONORDER>
+</PRESENTATIONORDER>
+</CASES>

@@ -1,0 +1,13 @@
+/**
+GENERAL
+-------
+This template is the default template used for component network agents.
+There should only be one down chain agent to the component network agent
+*/
+
+/** What is the role of this template/agent? This is going to be used as an XML attribute associated to the XML element created by this template*/
+constant String type = 'component';
+
+main:
+    (this.children)+
+;

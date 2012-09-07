@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<CASES CoreVersion="5.0.0.134 " SDKVersion="5.0.0.134 ">
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[123 aspen street]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[123 aspen street]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[123 aspen street]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;123&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[aspen Street]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[123 aspen street]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[123 aspen street]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;123&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[aspen Street]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[1250 central expressway]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[1250 central expressway]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[1250 central expressway]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;1250&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[central Expressway]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[1250 central expressway]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[1250 central expressway]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;1250&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[central Expressway]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[120 W Santa Clara st #102]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[120 W Santa Clara st #102]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[120 W Santa st #102]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;120&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[West Santa Clara Street]]&gt;&lt;/streetAddress:StreetName&gt;
+      &lt;streetAddress:AptNumber type="field" explicit="true"&gt;102&lt;/streetAddress:AptNumber&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[120 W Santa Clara st #102]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[120 W Santa st #102]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;120&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[West Santa Clara Street]]&gt;&lt;/streetAddress:StreetName&gt;
+      &lt;streetAddress:AptNumber type="field" explicit="true"&gt;102&lt;/streetAddress:AptNumber&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[1 sybase dr]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[1 sybase dr]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[1 sybase dr]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;1&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[sybase Drive]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[1 sybase dr]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[1 sybase dr]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;1&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[sybase Drive]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[1 sybase drive, 94568]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[1 sybase drive, 94568]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[1 sybase drive, 94568]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;1&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[sybase Drive]]&gt;&lt;/streetAddress:StreetName&gt;
+      &lt;streetAddress:PostCode type="field"&gt;&lt;![CDATA[94568]]&gt;&lt;/streetAddress:PostCode&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[1 sybase drive, 94568]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[1 sybase drive, 94568]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;1&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[sybase Drive]]&gt;&lt;/streetAddress:StreetName&gt;
+      &lt;streetAddress:PostCode type="field"&gt;&lt;![CDATA[94568]]&gt;&lt;/streetAddress:PostCode&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[95112]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[95112]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[95112]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:PostCode type="field"&gt;&lt;![CDATA[95112]]&gt;&lt;/streetAddress:PostCode&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[95112]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[95112]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:PostCode type="field"&gt;&lt;![CDATA[95112]]&gt;&lt;/streetAddress:PostCode&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[190 O'Farrell St]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[190 O'Farrell St]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[190 Farrell St]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;190&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[O'Farrell Street]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[190 O'Farrell St]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[190 Farrell St]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;190&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[O'Farrell Street]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[480 First Street East]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[480 First Street East]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[480 First Street East]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;480&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[East First Street]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[480 First Street East]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[480 First Street East]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;480&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[East First Street]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[Fort Mason Center]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[Fort Mason Center]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[Mason Center]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[Fort Mason Center]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[Fort Mason Center]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[Mason Center]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[Fort Mason Center]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[777 Bridgeway]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[777 Bridgeway]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[777 Bridgeway]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[777 Bridgeway]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[777 Bridgeway]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[777 Bridgeway]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[777 Bridgeway]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[320 Village Lane]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[320 Village Lane]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[320 Village Lane]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;320&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[Village Lane]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[320 Village Lane]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[320 Village Lane]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;320&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[Village Lane]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[223 Corte Madera Town Center]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[223 Corte Madera Town Center]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[223 Town Center]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;223&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[Corte Madera Town Center]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[223 Corte Madera Town Center]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[223 Town Center]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;223&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[Corte Madera Town Center]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[101 Spear Street, Suite 222]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[101 Spear Street, Suite 222]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[101 Spear Street, Suite 222]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;101&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[Spear Street]]&gt;&lt;/streetAddress:StreetName&gt;
+      &lt;streetAddress:AptNumber type="field" explicit="true"&gt;222&lt;/streetAddress:AptNumber&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[101 Spear Street, Suite 222]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[101 Spear Street, Suite 222]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;101&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[Spear Street]]&gt;&lt;/streetAddress:StreetName&gt;
+      &lt;streetAddress:AptNumber type="field" explicit="true"&gt;222&lt;/streetAddress:AptNumber&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[NH425 Highway 580]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[NH425 Highway 580]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[Highway 580]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[580 Highway]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[NH425 Highway 580]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[Highway 580]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[580 Highway]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[address 4 temp st palo alto ca]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[address 4 temp st palo alto ca]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[address 4 temp st]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress explicit="true"&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;4&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[temp Street]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[address 4 temp st palo alto ca]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[address 4 temp st]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress explicit="true"&gt;
+      &lt;streetAddress:StreetNumber type="field"&gt;4&lt;/streetAddress:StreetNumber&gt;
+      &lt;streetAddress:StreetName type="field"&gt;&lt;![CDATA[temp Street]]&gt;&lt;/streetAddress:StreetName&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<PRESENTATIONORDER>
+</PRESENTATIONORDER>
+</CASES>

@@ -1,0 +1,18 @@
+<ExplanationProperites>
+  <ExplanationTranslation>
+    <Path><![CDATA[CityAddress/City]]></Path>
+    <Value><![CDATA[City]]></Value>
+  </ExplanationTranslation>
+ <ExplanationTranslation>
+    <Path><![CDATA[CityAddress/State]]></Path>
+    <Value><![CDATA[State]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[CityAddress/PostCode]]></Path>
+    <Value><![CDATA[Zip]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[CityAddress/Country]]></Path>
+    <Value><![CDATA[Country]]></Value>
+  </ExplanationTranslation>
+</ExplanationProperites>

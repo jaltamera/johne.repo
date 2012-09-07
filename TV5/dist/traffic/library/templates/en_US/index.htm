@@ -1,0 +1,400 @@
+<html>
+
+<head>
+<title>Library Template Reference</title>
+</head>
+
+<body>
+<h2 id="an-agent-policies-templates"> Agent Templates </h2>
+		<p id="an-creation-para-55157741">Agent policies dictate how agents react to an input. The agent&rsquo;s role in the network (command, object, field, and so on) will, to a great extent, determine what the agent policies should be. The Answers Anywhere Platform comes with a set of policy templates that can be used to generate agent policies. The policy templates are located under the Answers Anywhere Platform installation directory, under the <i>IDE\library\templates</i> directory.</p>
+		<p id="an-creation-para-5515777">The most useful agent templates are: <i>top.template</i>, <i>system.template</i>, <i>command.template</i>, <i>object.template</i>, <i>componentProxy.template</i>, <i>relation.template</i>, and <i>field.template</i>. Agent policies are generated once templates are imported (click Import on the Template tab of a TemplatizedAgent editor).</p>
+<p>Descriptions of the templates found in the template library are given below.</p>
+		<h3 id="an-creation-sect3-3946351"> TOP.TEMPLATE </h3>
+		  <p id="an-creation-para-5515779">The template used for the top-most Interpretation agent. This template expects only one downchain agent (for example, the System agent). The template keeps the previous context when a user input is not recognized and restarts the context when a user explicitly asks for a dialogue restart. Explicit context restart is recognized when user types "new" as the input. Synonyms should be added for the &ldquo;new&rdquo; keyword in the synonym table.</p>
+		  <p id="an-creation-para-5515781">A followupCondition is used to reset the context if the input is not a followup. By default, the followup condition checks for the following symbols at the beginning of the input:</p>
+		  <ul>
+			 <li>
+				<p id="an-creation-p-5578033"><i>..</i> or <i>;</i> (general followup indicator)</p>
+			 </li>
+			 <li>
+				<p id="an-creation-p-5579484"><i>+ </i>(indicates adding new constraints)</p>
+			 </li>
+			 <li>
+				<p id="an-creation-p-5579811"><i>-</i> (indicates removing a constraint)</p>
+			 </li>
+			 <li>
+				<p id="an-creation-p-5580392"><i>/</i> (indicates replacing a constraint)</p>
+			 </li>
+		  </ul>
+		  <p id="an-creation-para-5515790">It is recommended that you add synonyms for each of the above symbols. Note that followupCondition is a special property that has a special meaning for TemplatizedAgent. The condition is tested before any downchain agents start interpretation.</p>
+		  <p id="an-creation-p-37849641">If the condition is not met and the input is not a followup, then by default the context is cleared before delegating to downchains (note that this agent remains aware of the original context).</p>
+		  <p id="an-creation-p-3784964">You can set the followupCondition to true so the system considers any input a followup. Even in this case the system is smart in recognizing what is a followup and what is not: the input will not be considered a followup if a user changes the subject by explicitly referring to a command or to another object (unless explicit references such as him, her, or the are used). The following chart shows a typical example of when an input is considered a followup when the followupCondition is set to true. Note that proper templates and template properties should be assigned to agents to make this example work. In this example Find, Create, and Delete are commands, while Contact and Company are objects, FirstName and LastName are fields of Contact, and him is used as an explicit reference for Contact:</p>
+<pre>
+"find contact with first name john"
+followup: no
+
+"last name is cheyer"
+followup: yes
+
+"find david"
+followup: no
+
+"Delete him"
+followup: yes
+
+"find company ibm"
+followup: yes
+
+</pre>
+		  <p id="an-creation-para-4270412">The following table shows example behavior of the same system when default values are used for the followupCondition:</p>
+<pre>
+"find contact with first name john" 
+followup: no 
+
+"..last name cheyer" 
+followup: yes 
+
+"find david" 
+followup: no 
+
+"last name cheyer" 
+followup: no
+
+"+last name smith"
+followup: yes 
+</pre>
+		  <p id="an-creation-p-4122154"></p>
+		  <p id="an-creation-para-4270414">The top template also supports <i>explicit synonym learning</i>. Users can associate a new synonym to a phrase, they can remove a synonym, remove all synonyms, or list all learned synonyms. The ProfileManager class is used to make learned synonyms persistent. You can change the ProfileManager class to use your own custom profile manager. The Answers Anywhere Platform comes with two implementations of the profile manager: the DefaultProfileManager, which saves learned synonyms in memory, and the FileBasedProfileManager, which saves learned synonyms in a text file.</p>
+		  <p id="an-creation-para-5515795">You can add a recency attribute to all elements of the intent XML produced by the agent network by using the addRecencyAttribute property of this template. The recency value is 0 for the first input and increases by 1 for each followup to the system.</p>
+		<h3 id="an-creation-sect3-3946355"> SYSTEM.TEMPLATE </h3>
+		  <h4 id="an-creation-h4-3904078">General</h4> 
+		  <p id="an-creation-para-5515797">This template is used to represent the system (application) utilized by Answers Anywhere interpretation agents.</p>
+		  <p id="an-creation-para-5515798">This system is an upchain to commands (such as find, edit, and create) and handles followups to add, remove, or narrow down the commands.</p>
+		  <h4 id="an-creation-h4-3904080">Supported features</h4> 
+		  <p id="an-creation-para-5515801">The template supports MULTIPLE COMMANDS, ADD, REMOVE, NARROW DOWN, RECENCY, and AMBIGUITY.</p>
+		  <p id="an-creation-para-5515802">If MULTIPLE COMMANDS is selected, then claims can include multiple instances of each command. In other words, this system supports more than one command per user request. For example, a system output for finding and creating contacts could look like:</p>
+		  <pre>&lt;System&gt;
+
+	&lt;Find&gt;
+
+		&lt;Contact&gt;...&lt;/Contact&gt;
+
+	&lt;/Find&gt;
+
+	&lt;Create&gt;
+
+		&lt;Contact&gt;...&lt;/Contact&gt;
+
+	&lt;/Create&gt;
+
+&lt;/System&gt;</pre>
+		  <p id="an-creation-para-5515806">If MULTIPLE COMMANDS is not supported, then each claim made by this agent will include at most one command, and all other commands will be wrapped inside an ignored XML tag. For example, a system output for finding and creating contacts could look like:</p>
+		  <pre>&lt;System&gt;
+
+	&lt;Find&gt;
+
+		&lt;Contact&gt;...&lt;/Contact&gt;
+
+	&lt;/Find&gt;
+
+	&lt;Ignored&gt;
+
+		&lt;Create&gt;
+
+ 			&lt;Contact&gt;...&lt;/Contact&gt;
+
+		&lt;/Create&gt;
+
+	&lt;/Ignored&gt;
+
+&lt;/System&gt;</pre>
+		  <p id="an-creation-para-5515810">If AMBIGUITY is selected, then ambiguities are detected and ambiguous actuations are generated.</p>
+		  <p>With NARROW DOWN, users can disambiguate or modify their previous command in any way using a followup input. For example if a user asked for "search for a contact with first name john", a user can then modify the search query by saying: "..last name brooks", which is equivalent to asking for "search for a contact with first name john and last name brooks". Narrow down can be performed with any (or a combination) of ADD, ADD_NEW, REMOVE, or REPLACE queries. Users can either be explicit about the type of NARROW DOWN query they want to perform or they can be implicit.</p>
+		  <p><i>Implicit narrow downs</i> attempt slot filling based on the slot filling properties of each element. By default, all objects (elements created by <i>object.template</i>), relations (elements created by <i>relation.template</i>), and fields (elements created by <i>field.template</i>) use REPLACE as their slot filling mechanism. If a user asks for "search for contact with first name john" and follows up with "..first name david", it will be equivalent to "search for contact with first name david". However, if the default filling of the FirstName is changed to 'add', then the field values are added on narrow down. This means "search for contact with first name john" followed up by "..first name david" will result in "search for contact with first name john and first name david". You can also change where different slots are added or replaced using the isSingleSlot property in objects or relations. For example, if you make a name a single slot (instead of first name or last name as a single slot), then the input "search for a contact with first name john" followed up with "..last name brooks" will be handled as "search for contact with first name john and for contact with last name brooks". </p>
+		  <p><i>Explicit narrow down</i> occurs when users are explicit about the type of narrow down they want to perform. In this case users should use one of ADD_KEYWORD, ADD_NEW_KEYWORD, REMOVE_KEYWORD, or REPLACE _KEYWORD in their request. </p>
+		  <p>If ADD is selected, then users can expand their previous input by adding new slots to their previous command. For example, suppose a user asks for "search for a contact with name john brooks", a user can then expand their search query by saying: "..and david smith", so the search query is equivalent to saying "search for contacts named john brooks and david smith". Note that the slots added to the previous query are at the field level by default, but can changed using the isSingleSlot property in the field, object, and relation templates. </p>
+		  <p>If ADD NEW is selected, then users can expand their previous input by adding a new command to the previous commands. For example, a user asks for "search for a contact with name john brooks". A user can then expand the search query by saying: "..add new search for david smith" so the search query becomes the same as "search for contact named john brooks and search for contact named david smith". </p>
+		  <p id="an-creation-para-5515855">If REMOVE is selected, then users can correct their previous input by removing a command from the previous commands. For example, if a user asked for "search for a contact with name john brooks and edit contact robert", a user can then modify the search query by saying: "don't edit" (assuming that don't is made a synonym for -).</p>
+		  <p>If REPLACE is selected then users can modify their previous input by replacing slots used in their previous command. For example, suppose a user asked for "search for a contact with name john brooks". A user can then modify the search query by saying: "..make that david smith" so the search query becomes the equivalent of "search for contact named david smith". Note that the slots are added (at the field level) if a user references a slot that is not part of the previous input. For example, if a user asked for "search for a contact who live in san jose", and then followed up with "..no make that john", this would result in a search query equivalent to a query on "contact john who lives in san jose".</p>
+
+		  <p>A <i>dereferencing</i> mechanism is attempted on any followup in which either the command or the object of a command is changed. For example, when a user says: "find contact Tom" and follows up with "..send an email to him" (where the "find" command is switched to the "send" command) or when a user says "Tom" and follows up with "..did I receive any emails from him today?" (where the "find" object is changed from "contact" to "email"), the library templates include attributes that define what type of command and object is present in each interpretation by default. These attributes can be seen in the XML interpretation for "..did I receive any emails from him today?" (below): type="command" and type="object". It is these attributes that are checked for changes in CommandActuation class whenever a narrow down is attempted.</p>
+		  <pre>&lt;DejimaInterpretation type="interpretation"&gt;
+
+   &lt;Input&gt;&lt;![CDATA[.. did I receive any emails from him today?]]&gt;&lt;/Input&gt;
+
+   &lt;Understood&gt;&lt;![CDATA[receive emails from him today]]&gt;&lt;/Understood&gt;
+
+   &lt;System type="intent"&gt;
+
+   &lt;Find type="command"&gt;
+
+       &lt;Message type="object" explicit="true"&gt;
+
+</pre>
+		  <pre>          &lt;Received explicit="true"&gt;
+
+               &lt;date_time:DateTime xmlns:date_time="date_time"&gt;
+
+                  &lt;date:Date xmlns:date="date"&gt;
+
+                     &lt;date:day&gt;&lt;![CDATA[27]]&gt;&lt;/date:day&gt;
+
+                   &lt;date:month&gt;&lt;![CDATA[7]]&gt;&lt;/date:month&gt;
+
+                   &lt;date:year&gt;&lt;![CDATA[2004]]&gt;&lt;/date:year&gt;
+
+                &lt;/date:Date&gt;
+
+             &lt;/date_time:DateTime&gt;
+</pre>
+		  <pre>               &lt;From explicit="true"&gt;
+
+                  &lt;Contact type="object" reference="him"&gt;
+
+                   &lt;name:Name xmlns:name="name"&gt;
+
+                        &lt;name:FirstName&gt;&lt;![CDATA[Tom]]&gt;&lt;/name:FirstName&gt;
+
+                     &lt;/name:Name&gt;
+
+                  &lt;/Contact&gt;
+</pre>
+		  <pre>               &lt;/From&gt;
+
+            &lt;/Received&gt;
+
+         &lt;/Message&gt;
+
+      &lt;/Find&gt;
+
+   &lt;/System&gt;
+
+&lt;/DejimaInterpretation&gt;</pre>
+		  <p id="an-creation-para-5515854">Note that in the above interpretation the token "him" is added as a reference attribute for the Contact element, and is de-referenced in the interpretation for "Tom". This additional interpretation XML is inserted into the current interpretation XML under the Contact element, resulting in the interpretation above.</p>
+		  <p id="an-creation-para-5515857">If RECENCY is selected, the downchain agents that have been actuated more recently are given a higher priority. The recency of an actuation is determined by examining the previous actuation in the context, such as tags in the previous actuation relative to the downchain of this agent. Recency assigns priority to claims made by downchains. When recency is enabled, the recently mentioned commands will have more priority. For example, if a user asks for "find appointment with john" and then asks for "..david", it is assumed that david is a reference to finding an appointment as opposed to editing or creating. This is because the find command has been mentioned in the previous input.</p>
+		  <p id="an-creation-para-5515859">The template also supports ambiguity recognition and disambiguation of claims made by downchain agents (if MULTIPLE COMMANDS is selected).</p>
+
+
+		<h3 id="an-creation-sect3-3946361"> COMMAND.TEMPLATE </h3>
+		  <p id="an-creation-para-5515862">This template is used to model commands or transactions that can be performed on objects in the system (such as Find, Send, and Schedule). </p>
+		  <h4 id="an-creation-h4-3904088">Supported features</h4> 
+		  <p id="an-creation-para-5515864">This template supports KEYWORD, IMPLICIT MATCH, SUPPORT KEYWORD ONLY MATCH, SUPPORT JOIN, FILTER, GUESS (variables), RECENCY, PREFERENCE, TYPE, AMBIGUITY, and CONTEXT LOOKUP.</p>
+		  <p id="an-creation-para-5515865">KEYWORD is the word that best describes this command. It is recommended that you always set the keyword to the agent name (use synonyms to add other words that can describe the field).</p>
+		  <p>If IMPLICIT MATCH is selected, the agent will make a claim even if the keyword or its synonyms do not appear in the input. By default, IMPLICIT MATCH is on.</p>
+		  <p id="an-creation-para-5515867">If SUPPORT KEYWORD ONLY MATCH is not selected, the agent does not make a claim if the keyword or any of its synonyms are matched, but no downchain claim is made.</p>
+		  <p id="an-creation-para-5515868">If SUPPORT JOIN is not selected, then each claim made by the agent will include at most one instance of each downchain <i>actionable</i> object (that is, objects that can be transacted upon using this agent). If SUPPORT JOIN is selected, then claims can include multiple instances of each actionable object. JOIN uses the orKeyword and AndKeyword (both are template properties) to recognize different type of joins. For example, a find command on an appointment and an OR of two contacts and an AND of three tasks will look as follows:</p>
+		  <pre>&lt;Find&gt;
+
+ 	&lt;Appointment&gt;...&lt;/Appointment&gt;
+
+		&lt;Contact&gt;...&lt;/Contact&gt;
+
+		&lt;Contact op="or"&gt;...&lt;/Contact&gt;
+
+  &lt;Task&gt;...&lt;/Task&gt;
+
+  &lt;Task op="and"&gt;...&lt;/Task&gt;
+
+  &lt;Task op="and"&gt;...&lt;/Task&gt;
+
+&lt;/Find&gt;</pre>
+		  <p id="an-creation-para-5515874">If GUESS is selected, then variables are used to guess what a user is commanding. This is most useful for out-of-scope commands where the actionable object is not recognized. Support for GUESS can help in providing a proper response for out-of-scope commands, such as performing an open-ended search on the web. All parameters for making a guess (min variable size, max variable size, and noise parameters) are customizable in this template.</p>
+		  <p id="an-creation-para-5515875">If RECENCY is selected, the downchain agents that have been actuated more recently are given a higher priority. The recency of an actuation is determined by examining the previous actuation in the context, that is, tags in the previous actuation relative to the downchain of this agent. Recency assigns priority to claims made by downchains. If recency is enabled then actionable objects mentioned more recently have a higher priority. For example, if a user asks for "appointment with john" and then asks for "..david", it is assumed that david is a reference to an appointment rather than contact name or email recipient. This is because appointment has been mentioned in the previous input.</p>
+		  <p id="an-creation-para-5515877">PREFERENCE is an XML attribute that is associated to the actuation of the agent. The PREFERENCE value can be examined outside the agent network to resolve ambiguities. For example the input "san francisco" can cause an ambiguity between Find and Map commands. The agent network will report the ambiguity, but the IO mode can examine the priority attribute associated with the XML generated by Find and Map to decide which of Find or Map has preference over the other. For example, Find may have a higher Preference than Map and so the system can carry out the Find command, but also give a hint on the ambiguity that occurred so a user could disambiguate (for example, by saying "map it").</p>
+		  <p id="an-creation-para-5515878">If AMBIGUITY is selected, then ambiguities are detected and ambiguous actuations are generated.</p>
+		  <p id="an-creation-para-5515880">TYPE is an XML attribute that defines the role of this template. The type attribute of this template is <i>command</i> (do not change the value of this attribute).</p>
+		  <p id="an-creation-para-5515881">If CONTEXT LOOKUP is selected, the agent uses context as a decision criteria. In this case, the agent uses all elements within the agent's XML tag as an additional decision criteria. For example, assume that the following is part of the previous action:</p>
+		  <pre>&lt;Find&gt;
+
+	&lt;![CDATA[book]]&gt;
+
+&lt;/Find&gt;
+
+&lt;Find&gt;
+
+	&lt;Name&gt;
+
+ 		&lt;![CDATA[Pegah]]&gt;
+
+	&lt;/Name&gt;
+
+&lt;/Find&gt;</pre>
+		  <p id="an-creation-para-5515885">A Find agent will then use the book data and try to match it with the input. This is useful for claiming what has been guessed by this agent using the variable condition on a previous input.</p>
+		  <note>Note
+			 <p id="an-creation-para-3903849">The CONTEXT LOOKUP support only applies to the previous action.</p>
+		  </note> 
+		  <p id="an-creation-para-5515889">The template also supports ambiguity recognition and disambiguation.</p>
+
+
+		<h3 id="an-creation-sect3-3946367"> OBJECT.TEMPLATE </h3>
+		  <p id="an-creation-para-5515893">This template is used for objects, such as Email, Contact, and Appointment.</p>
+		  <h4 id="an-creation-h4-3904093">Supported features</h4> 
+		  <p id="an-creation-para-5515895">This template supports IMPLICIT MATCH, SUPPORT KEYWORD ONLY MATCH, SUPPORT JOIN, GUESS (variables), RECENCY, PREFERENCE, TYPE, AMBIGUITY, REFERENCES, DEFAULT SLOT FILLING, and CONTEXT LOOKUP.</p>
+		  <p>KEYWORD is the word that best describes this object. It is recommended that you always set the keyword to the agent name (use synonyms to add other words that can describe the field). </p>
+		  <p>PREPOSITION is a word that can come immediately before the data (with in "with john smith"), or it can come immediately before a keyword (with in "with contact") or it can come immediately before a reference ("with him").</p>
+		  <p>If IMPLICIT MATCH is selected, the agent makes a claim even if the object's keyword or its synonyms do not appear in the input.</p>
+		  <p id="an-creation-para-5515900">If SUPPORT KEYWORD ONLY MATCH is selected, the agent does not make a claim if the keyword or any of its synonyms are matched, but no downchain claim is made.</p>
+		  <p id="an-creation-para-5515909">If SUPPORT JOIN is not selected, then each claim made by this agent includes at most one instance of each downchain actionable object. If SUPPORT JOIN is selected, then claims can include multiple instances of each actionable object. JOIN uses the orKeyword and AndKeyword template properties to recognize different type of joins. For example, a reference to a contact name and an OR of two addresses and an AND of three phone numbers will look like the following:</p>
+		  <pre>&lt;Contact&gt;
+
+ &lt;Name&gt;...&lt;/Name&gt;
+
+ &lt;Address&gt;...&lt;/Address&gt;
+
+ &lt;Address op="or"&gt;...&lt;/Address&gt;
+
+ &lt;PhoneNumber&gt;...&lt;/PhoneNumber&gt;
+
+ &lt;PhoneNumber op="and"&gt;...&lt;/PhoneNumber&gt;
+
+ &lt;PhoneNumber op="and"&gt;...&lt;/PhoneNumber&gt;
+
+&lt;/Contact&gt;</pre>
+		  <p id="an-creation-para-5515913">If GUESS is selected, variables are used to guess a field. This is mostly useful for out-of-scope commands where a field is not recognized. Support for guess can help give proper responses to out-of-scope requests, such as giving a hint or an error message. All parameters for making a guess (min variable size, max variable size, and noise parameters) are customizable in this template.</p>
+		  <p id="an-creation-para-5515915">If RECENCY is selected, the downchain agents that have been actuated more recently are given a higher priority. The recency of an actuation is determined by examining the previous actuation in the context; that is, tags in the previous actuation relative to the downchain of this agent. Recency assigns priority to claims made by downchains. If recency is enabled, then objects mentioned more recently have a higher priority. If a user asks for "emails to john" and then asks for "..david", then david is claimed as a recipient (as opposed to a sender) because sender was mentioned in the previous input.</p>
+		  <p id="an-creation-para-5515916">PREFERENCE is an XML attribute that is associated to the actuation of the agent. The PREFERENCE value can be examined outside the agent network to resolve ambiguities. For example the input "san francisco" can cause an ambiguity between the Find and Map commands. The agent network will report the ambiguity, but the IO mode can examine the priority attribute associated with the XML generated by Find and Map to decide which of Find or Map has preference over the other. For example, Find may have a higher Preference than Map and so the system can carry out the Find command, but also give a hint on the ambiguity that occurred so a user could disambiguate (for example, by saying "map it").</p>
+		  <p id="an-creation-para-5515920">If AMBIGUITY is selected, then ambiguities are detected and ambiguous actuations are generated.</p>
+		  <p id="an-creation-para-5515921">The REFERENCES feature allows an object to be referenced using non-keyword reference words such as this, the, him, and it. In this case the reference attribute will be added to the generated XML with the type of reference. This attribute will be used for dereferencing (see the comments in system.template).</p>
+		  <p id="an-creation-para-5515923">If SINGLE SLOT is selected then the object is considered as a single slot (as opposed to considering each field of this object as a single slot). For example, it may make sense to consider a Name object as a single slot as opposed to considering each Name field (FirstName and LastName) a single slot. Suppose a user first enters the command: "find john smith" and then follows up with "..make that david". The user can either mean to replace the name "john smith" with david or to replace the first name john with david (ending up with a query equivalent to "find david smith"). The former is assumed if the Name object is a singleSlot, otherwise the latter is assumed.</p>
+		  <p>The DEFAULT SLOT FILLING property determines how the XML element associated with this object will be used to narrow down the previous input (when narrow down is implicit and this object is set to be a single slot). Valid values are: add, addNew, and replace. If the property value is set to replace (the default), then the old element associated with the object is removed when new element associated with the object is added. If the value is set to add, then the new object element is added along with the old object element. If the value is set to addNew, then a new command is added and this object is part of the object referenced in the new command (the old command is kept in the output as well).</p>
+		  <p>If CONTEXT LOOKUP is selected, then the agent uses context as a decision criteria. In this case the agent can use all elements within the agent's XML tag as decision criteria for its claiming process. For example, assume that the following is part of the previous action of a Context:</p>
+		  <pre>&lt;Name&gt;
+
+ &lt;FirstName&gt;&lt;![CDATA[Siamak]]&gt;&lt;/FirstName&gt;
+
+&lt;/Name&gt;
+
+&lt;Name&gt;
+
+ &lt;![CDATA[Babak]]&gt;
+
+&lt;/Name&gt;
+
+&lt;Name&gt;
+
+ &lt;![CDATA[Pegah]]&gt;
+
+&lt;/Name&gt;</pre>
+		  <p id="an-creation-para-5515933">A Name agent will use Babak and Pegah (but not Siamak) as data and will try to match them to the input. This is useful for claiming what has been guessed by this agent using the variable condition on a previous input.</p>
+		  <note>Note 
+			 <p id="an-creation-para-3903885">The CONTEXT LOOKUP support only applies to the previous action.</p>
+		  </note> 
+		  <p id="an-creation-para-5515937">The template also supports ambiguity recognition and disambiguation.</p>
+
+
+		<h3 id="an-creation-sect3-3946373"> FIELD.TEMPLATE </h3>
+		  <p id="an-creation-para-5515941">This template is used for data fields. The values of a data field can be stored in a file, matched using live interpretation, matched using a downchain data source agent, or matched using keywords and variables. The template also supports synchronization files, which can be synchronized with the master data source for the field every time a session with is started. The main difference between linking a data field with a file versus a synchronization file is that the data in the file is typically more static (such as English first names, State names, and so on) while synchronization file entries may change more regularly (such as sales opportunity names, daily weather reports, and so on). If field values are dynamic and can change frequently, then a live interpretation table or a datasource agent should be used.</p>
+		  <h4 id="an-creation-h4-3904098">Supported features</h4> 
+		  <p id="an-creation-para-5515943">The template supports KEYWORD, PREPOSITION, IMPLICIT MATCH, SUPPORT KEYWORD ONLY MATCH, SUPPORT JOIN, GUESS (variables), PREFERENCE, ON NARROW DOWN, FIELD VALUE SELECTOR, VALUE RANGE, REFERENCES, DEFAULT SLOT FILLING, and CONTEXT LOOKUP.</p>
+		  <p id="an-creation-para-5515946">KEYWORD is the word that best describes this field. It is recommended that you always set the keyword to the agent name (use synonyms to add other words that can describe the field).</p>
+		  <p>PREPOSITION is a word that can come immediately before the data (for example, the word 'in' in 'in san francisco'), or it can come immediately before a keyword (for example, the word 'in' in 'in city') or it can come immediately before a reference (for example 'in there').</p>
+		  <p>If IMPLICIT MATCH is selected, the agent makes a claim even if the object's keyword or its synonyms do not appear in the input.</p>
+		  <p id="an-creation-para-5515948">If SUPPORT KEYWORD ONLY MATCH is not selected, the agent will not make a claim if the keyword or any of its synonyms is matched, but no downchain claim is made.</p>
+		  <p id="an-creation-para-55159491">If SUPPORT JOIN is not selected, then each claim made by this agent will include at most one instance of each downchain actionable object. If SUPPORT JOIN is selected, then claims can include multiple instances of each actionable object. JOIN uses the orKeyword and AndKeyword template properties to recognize different type of joins. For example, a reference to three first name fields that are ORed will produce XML that looks like the following:</p>
+		  <pre>&lt;FirstName&gt;...&lt;/FirstName&gt;
+
+&lt;FirstName op="or"&gt;...&lt;/FirstName&gt;
+
+&lt;FirstName op="or"&gt;...&lt;/FirstName&gt;</pre>
+		  <p id="an-creation-para-5515949">If GUESS is selected, then variables will be used to guess the field value. This is mostly useful for searching a value when live interpretation is not possible or when user needs to know if a field value exists. GUESS is used to claim field values by matching the input using one of the following patterns:</p>
+		  <ul> 
+			 <li>Right Guess: assumes the words on the right side of an <li>equalsTo</li> pattern are a field value.
+			 <li>Left Guess: assumes that words on the left side of a <i>valueOf</i> pattern are a field value.
+			 <li>Middle Guess: assumes the words between a <i>Before Value</i> and an <i>After Value</i> pattern are a field value.
+		  </ul> 
+		  <p id="an-creation-para-55159541">All parameters for making a guess (min variable size, max variable size, and noise parameters) are customizable in this template.</p>
+		  <p id="an-creation-para-5515956">PREFERENCE is an XML attribute that is associated to the actuation of the agent. The PREFERENCE value can be examined outside the agent network to resolve ambiguities. For example the input "san francisco" can cause an ambiguity between the Find and Map commands. The agent network will report the ambiguity, but the IO mode can examine the priority attribute associated with the XML generated by Find and Map to decide which of Find or Map has preference over the other. For example, Find may have a higher Preference than Map so the system can carry out the Find command, but also give a hint on the ambiguity that occurred so a user could disambiguate (for example, by saying "map it").</p>
+		  <p id="an-creation-para-5515957">The onNarrowDown property indicates what should happen to the field when a narrow down followup is entered with a new value for the field. Possible values are preserve and discard. If the onNarrowDown property is set to preserve, then the previous value will be preserved and the new value of the field will be added to the previous value. If the onNarrowDown property is not set (or is set to discard) then the previous value will be discarded (the new value of the field will replace the previous value).</p>
+		  <p id="an-creation-para-5515959">The FieldValueSelector property can be used to specify what should appear in the CDATA text. Options are:</p>
+		  <ul> 
+			 <li> 0) inputMatched (default): The part of the input that has been matched.
+			 <li> 1) patternMatched: The pattern that the input has been matched to.
+                         <li> 2) targetPattern: The pattern target. 
+                   </ul>
+<p>
+For example, suppose the word 'san francisco' in the input is matched with the pattern: 'SF: San Francisco'. Then the inputMatched is: 'san francisco', the patternTarget is: 'SF', and the patternMatched is: 'San Francisco'.</p>
+
+		  <p id="an-creation-para-5515966">If VALUE RANGE is selected, then upper bounds (greater than and greater than or equal) and lower bounds (less than and less than or equal) are understood. You may want to add synonyms for the keywords used to interpret upper bounds (gt and ge) and lower bounds (lt and le) in the agent's synonym table (for example, assign &gt;, &gt;=, &lt;, and &lt;= to the value range keywords).</p>
+		  <p id="an-creation-para-5515967">The REFERENCES feature allows a field to be referenced using non-keyword reference words such as 'this', 'the', 'him' and it. In this case the reference attribute will be added to the generated XML with the type of reference. This attribute will be used for dereferencing.</p>
+		  <p id="an-creation-para-5515969">The DEFAULT SLOT FILLING property determines how the value of this field is used to narrow down the previous input (when narrow down is implicit). Valid values are add, addNew, and replace. If the property value is set to replace (which is the default if no values are associated with this property) then the old field value is removed when new field value is added. If the value is set to add, then the new field value are added along with the old field value. If the value is set to addNew, then a new command will be added and this field is part of the field referenced in the new command (the old command is kept in the output as well).</p>
+		  <p>As an example, for a pizza object, the size and crust fields can be seen as fields that should always be replaced on followup. If a user says "small pizza" and then follows up with "..large pizza", then you don't want to end up with a pizza that is both small and large. However you may decide that new toppings should always be added to old toppings when users followup. For example: "pepperoni pizza", "..ham". In this case, you want to end up with "pepperoni and ham pizza". As another example you may decide that the count for a pizza always means that a new order is coming: so the input "1 pepperoni pizza" followed up with "..2 small ones" and "..and one large pizza" should end up with three orders for five pizzas (one pepperoni, two small, and one large).</p>
+		  <p>If CONTEXT LOOKUP is selected, the agent uses context as a data source. In this case the agent uses all elements with the agent's XML tag as data source.</p>
+		  <p id="an-creation-para-5515971">For example, assume the following is part of the previous action of a Context:</p>
+		  <pre>&lt;Name&gt;
+
+ &lt;FirstName&gt;&lt;![CDATA[Siamak]]&gt;&lt;/FirstName&gt;
+
+&lt;/Name&gt;
+
+&lt;Name&gt;
+
+ &lt;FirstName&gt;&lt;![CDATA[Babak]]&gt;&lt;/FirstName&gt;
+
+&lt;/Name&gt;
+
+&lt;Name&gt;
+
+ &lt;![CDATA[Pegah]]&gt;
+
+&lt;/Name&gt;</pre>
+		  <p id="an-creation-para-5515974">The FirstName agent will use Siamak and Babak (but not 'Pegah') as decision criteria, and will try to match those to the input. This is useful for claiming what has been guessed by this agent using the variable condition on a previous input. The guesses will not be claimed by the other data sources (file, database, and so on).</p>
+		  <note>Note 
+			 <p id="an-creation-para-3903929">The CONTEXT LOOKUP support only applies to the previous action.</p>
+		  </note> 
+
+		<h3 id="an-creation-sect3-3946379"> COMPONENTPROXY.TEMPLATE </h3>
+		  <p id="an-creation-para-5515979">This template is used for agents that link to a <i>component network</i>. A component network is an agent network that is reused in other agent networks. For example, a contact name is linked to the Name component. This template can be used to customize a component network. For example a Name component network used as an Email Sender may be customized to accept "from" as a keyword (&ldquo;from&rdquo; is not part of the keywords used in the component network).</p>
+		  <h4 id="an-creation-h4-3904106">Supported features</h4> 
+		  <p id="an-creation-para-5515983">The template supports KEYWORD, IMPLICIT MATCH, SUPPORT KEYWORD ONLY MATCH, SUPPORT JOIN, GUESS (variables), PREFERENCE, VALUE RANGE, REFERENCES, SINGLE SLOT, DEFAULT SLOT FILLING, and CONTEXT LOOKUP.</p>
+		  <p id="an-creation-para-5515985">KEYWORD is the word that best describes this component proxy. It is recommended that you always set the keyword to the agent name (use synonyms to add other words that can describe the field). </p>
+		  <p>If IMPLICIT MATCH is selected, the agent will make a claim even if the object's keyword or its synonyms do not appear in the input.</p>
+		  <p id="an-creation-para-5515987">If the SUPPORT KEYWORD ONLY MATCH is not selected, the agent will not make a claim if the keyword or any of its synonyms is matched, but no downchain claim is made.</p>
+		  <p id="an-creation-para-5515988">If SUPPORT JOIN is not selected, then each claim made by this agent will include at most one instance of each downchain actionable object. If SUPPORT JOIN is selected, then claims can include multiple instances of each actionable object. JOIN uses the orKeyword and AndKeyword template properties to recognize different type of joins. For example, a reference to three Name fields when OR is supported will produce XML like the following:</p>
+		  <pre>&lt;Name&gt;...&lt;/Name&gt;
+
+&lt;Name op="or"&gt;...&lt;/Name&gt;
+
+&lt;Name op="or"&gt;...&lt;/Name&gt;</pre>
+		  <p id="an-creation-para-3903944">If GUESS is selected, then variables will be used to guess the field value. This is mostly useful for searching a value when live interpretation is not possible or when user needs to know if a field value exists. GUESS is used to claim field values by matching the input using one of the following patterns:</p>
+		  <ul> 
+			 <li>Right Guess: assumes the words on the right side of an <li>equalsTo</li> pattern are a field value.
+			 <li>Left Guess: assumes that words on the left side of a <i>valueOf</i> pattern are a field value.
+			 <li>Middle Guess: assumes the words between a <i>Before Value</i> and an <i>After Value</i> pattern are a field value.
+		  </ul> 
+
+		  <p id="an-creation-para-5515954">All parameters for making a guess (min variable size, max variable size, and noise parameters) are customizable in this template.</p>
+		  <p id="an-creation-para-5515995">PREFERENCE is an XML attribute that is associated to the actuation of the agent. The PREFERENCE value can be examined outside the agent network to resolve ambiguities. For example the input "san francisco" can cause an ambiguity between Find and Map commands. The agent network will report the ambiguity, but the IO mode can examine the priority attribute associated with the XML generated by Find and Map to decide which of Find or Map has preference over the other. For example, Find may have a higher Preference than Map so the system can carry out the Find command but also give a hint on the ambiguity that occurred so a user could disambiguate (for example, by saying, "map it").</p>
+		  <p id="an-creation-para-5515998">If VALUE RANGE is selected then upper bounds (greater than and greater than or equal) and lower bounds (less than and less than or equal) are understood. You may want to add synonyms for the keywords used to interpret upper bounds (gt and ge) and lower bounds (lt and le) in the synonym table of the agent (for example, assign &gt;, &gt;=, &lt;, and &lt;= to the value range keywords).</p>
+		  <p id="an-creation-para-5515999">The REFERENCES feature allows a field to be referenced using non-keyword reference words such as this, the, him, and it. In this case the reference attribute is added to the generated XML with the type of reference. This attribute is used for dereferencing.</p>
+		  <p id="an-creation-para-5516000">If SINGLE SLOT is selected, then the component referenced by the proxy is considered as a single slot (as opposed to considering each field of the component a single slot). For example, it may make sense to consider a Name component as a single slot as opposed to considering each Name field (FirstName and LastName) a single slot. Suppose a user first enters the command: "find john smith" and then follows up with "..make that david". Here a user can mean replace the name "john smith" with david or to replace the first name john with david (ending up with a query equivalent to "find david smith"). The former is assumed if the Name object is a singleSlot; otherwise, the latter is assumed.</p>
+		  <p>The DEFAULT SLOT FILLING property determines how the XML element associated with this object will be used to narrow down the previous input (when narrow down is implicit and this object is set to be a single slot). Valid values are: add, addNew, and replace. If the property value is set to replace (the default if no values are associated with this property), then the old element associated with the object will be removed when new element associated with the object is added. If the value is set to add then the new object element will be added along with the old object element. If the value is set to addNew then a new command is added and this object is part of the object referenced in the new command (the old command is kept in the output as well).</p>
+		  <p>If CONTEXT LOOKUP is selected, then the agent uses context as a decision criteria. In this case, the agent uses all elements within the agent's XML tag as decision criteria. For instance, assume that the following is part of the previous action of a Context:</p>
+		  <pre>&lt;Name&gt;
+
+ &lt;FirstName&gt;&lt;![CDATA[Siamak]]&gt;&lt;/FirstName&gt;
+
+&lt;/Name&gt;
+
+&lt;Name&gt;
+
+ &lt;![CDATA[Babak]]&gt;
+
+&lt;/Name&gt;
+
+&lt;Name&gt;
+
+ &lt;![CDATA[Pegah]]&gt;
+
+&lt;/Name&gt;</pre>
+		  <p id="an-creation-para-5516004">In this case, a Name agent will use Babak and Pegah (but not Siamak) as decision criteria and will try to match them to the input. This is useful for claiming what has been guessed by this agent using the variable condition on a previous input.</p>
+		  <note>Note 
+			 <p id="an-creation-para-3903960">The CONTEXT LOOKUP support only applies to the previous action.</p>
+		  </note> 
+
+		<h3 id="an-creation-sect3-3946383"> RELATION.TEMPLAT </h3>
+		  <p id="an-creation-para-5516008">This template is used on the agent that makes a relation between two agents with object templates. This template is the same as the object template, except that it adds a relevance attribute to the intent XML. The type attribute defines the role of the agent and is set to relation (you should not change this value). The relevance attribute defines the relevance of the two objects joint using this relation. This can be any integer between -100 and +100. The default relevance setting is 0.</p>
+		<h3 id="an-creation-sect3-3946385"> BOOLEANFIELD.TEMPLATE </h3>
+		  <p id="an-creation-para-5516009">This template is used for boolean data fields (that is, fields with only two possible values such as true and false). For example, this template can be used for a person's gender: male or female.</p>
+		  <p id="an-creation-para-5516011">If REFERENCES is selected, then the object can be referenced using this, the, and it. In this case, a reference attribute is added to the generated XML with the type of reference (it, the, or this). The it reference is defined in the template properties as the itKeyword. You can use the synonym file to add synonyms to it (for example, have "itKeyword = 'him'" in the template properties and have "him: her" in the synonym table).</p>
+	 </body>
+</html>

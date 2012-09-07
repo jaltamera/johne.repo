@@ -1,0 +1,10 @@
+/**
+  Light Weight component.template
+*/
+
+/** What is the role of this template/agent? This is going to be used as an XML attribute associated to the XML element created by this template*/
+constant String type = 'component';
+
+main:
+    (this.children)+
+;

@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CASES>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>case 001</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[finding something using yahoo search]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\yahoo.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[find "something" on yahoo]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[yahoo]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://search.yahoo.com/bin/search?p=something]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>case 002</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[finding something using yahoo search]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\yahoo.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[search yahoo for something]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[yahoo]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://search.yahoo.com/bin/search?p=something]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>case 003</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[finding something using yahoo search]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\yahoo.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[yahoo search: something]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[yahoo]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://search.yahoo.com/bin/search?p=something]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>case 004</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[finding something using yahoo search]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\yahoo.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[look for "something" categories]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[yahoo]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[Unable to interpret input
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>case 005</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[finding something using yahoo search]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\yahoo.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[search categories for something]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[yahoo]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[Unable to interpret input
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>case 006</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[finding something using yahoo search]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\yahoo.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[search all categories for something]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[yahoo]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[Unable to interpret input
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>case 007</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[finding something using yahoo search]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\yahoo.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[search subcategories for something]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[yahoo]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[Unable to interpret input
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>case 008</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[finding something using yahoo search]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\yahoo.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[search the web for something]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[yahoo]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.google.com/search?hl=en&amp;q=something]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 002]]></SCENARIO>
+<CASENAME>case 001</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[finding something using google]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\google.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[google something]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[google]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.google.com/search?hl=en&amp;q=something]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 002]]></SCENARIO>
+<CASENAME>case 002</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[finding something using google]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\google.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[something]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[google]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[Unable to interpret input
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 002]]></SCENARIO>
+<CASENAME>case 003</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[finding something using google]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\google.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[search the web for something]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[google]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.google.com/search?hl=en&amp;q=something]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 002]]></SCENARIO>
+<CASENAME>case 004</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[finding something using google]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\google.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[I'm looking for something]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[google]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[Unable to interpret input
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 002]]></SCENARIO>
+<CASENAME>case 005</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[finding something using google]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\google.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[I want something]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[google]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[Unable to interpret input
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 002]]></SCENARIO>
+<CASENAME>case 006</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[finding something using google]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\google.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[get something]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[google]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[Unable to interpret input
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 002]]></SCENARIO>
+<CASENAME>case 007</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[finding something using google]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\google.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[search something]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[google]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[Unable to interpret input
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 002]]></SCENARIO>
+<CASENAME>case 008</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[finding something using google]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\google.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[find info about something]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[google]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[Unable to interpret input
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 003]]></SCENARIO>
+<CASENAME>case 001</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a dictionary]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\dictionary.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[what does word mean?]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[dictionary]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.dictionary.com/search?q=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 003]]></SCENARIO>
+<CASENAME>case 002</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a dictionary]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\dictionary.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[look up word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[dictionary]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.dictionary.com/search?q=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 003]]></SCENARIO>
+<CASENAME>case 003</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a dictionary]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\dictionary.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[find meaning of word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[dictionary]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.dictionary.com/search?q=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 003]]></SCENARIO>
+<CASENAME>case 004</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a dictionary]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\dictionary.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[definition for word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[dictionary]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.dictionary.com/search?q=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 003]]></SCENARIO>
+<CASENAME>case 005</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a dictionary]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\dictionary.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[define word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[dictionary]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.dictionary.com/search?q=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 003]]></SCENARIO>
+<CASENAME>case 006</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a dictionary]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\dictionary.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[get pronunciation for word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[dictionary]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.dictionary.com/search?q=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 003]]></SCENARIO>
+<CASENAME>case 007</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a dictionary]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\dictionary.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[etymology for word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[dictionary]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.dictionary.com/search?q=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 003]]></SCENARIO>
+<CASENAME>case 008</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a dictionary]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\dictionary.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[origin for word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[dictionary]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.dictionary.com/search?q=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 003]]></SCENARIO>
+<CASENAME>case 009</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a dictionary]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\dictionary.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[how is word spelled]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[dictionary]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.dictionary.com/search?q=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 003]]></SCENARIO>
+<CASENAME>case 010</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a dictionary]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\dictionary.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[how would you define word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[dictionary]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.dictionary.com/search?q=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 003]]></SCENARIO>
+<CASENAME>case 011</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a dictionary]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\dictionary.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[dict word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[dictionary]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.dictionary.com/search?q=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 004]]></SCENARIO>
+<CASENAME>case 001</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a thesaurus]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\thesaurus.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[what's another word for word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[thesaurus]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.thesaurus.com/cgi-bin/search?config=roget&amp;words=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 004]]></SCENARIO>
+<CASENAME>case 002</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a thesaurus]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\thesaurus.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[syn word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[thesaurus]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.thesaurus.com/cgi-bin/search?config=roget&amp;words=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 004]]></SCENARIO>
+<CASENAME>case 003</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a thesaurus]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\thesaurus.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[find all synonyms for word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[thesaurus]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.thesaurus.com/cgi-bin/search?config=roget&amp;words=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 004]]></SCENARIO>
+<CASENAME>case 004</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a thesaurus]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\thesaurus.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[what's the opposite of word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[thesaurus]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.thesaurus.com/cgi-bin/search?config=roget&amp;words=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 004]]></SCENARIO>
+<CASENAME>case 005</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a thesaurus]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\thesaurus.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[thesaurus: word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[thesaurus]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.thesaurus.com/cgi-bin/search?config=roget&amp;words=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 004]]></SCENARIO>
+<CASENAME>case 006</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a thesaurus]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\thesaurus.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[syn: word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[thesaurus]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.thesaurus.com/cgi-bin/search?config=roget&amp;words=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 004]]></SCENARIO>
+<CASENAME>case 007</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a thesaurus]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\thesaurus.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[thes: word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[thesaurus]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.thesaurus.com/cgi-bin/search?config=roget&amp;words=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 004]]></SCENARIO>
+<CASENAME>case 008</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a thesaurus]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\thesaurus.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[I want a word that means the same as word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[thesaurus]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.thesaurus.com/cgi-bin/search?config=roget&amp;words=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 004]]></SCENARIO>
+<CASENAME>case 009</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a thesaurus]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\thesaurus.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[synonymous to word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[thesaurus]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.thesaurus.com/cgi-bin/search?config=roget&amp;words=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 004]]></SCENARIO>
+<CASENAME>case 010</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[looking a word up in a thesaurus]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\thesaurus.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[similar meanings to word]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[thesaurus]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.thesaurus.com/cgi-bin/search?config=roget&amp;words=word]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 005]]></SCENARIO>
+<CASENAME>case 001</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[any query on the web]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\anything.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[who is the author of book]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[all else]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.ask.com/main/askjeeves.asp?ask=who+is+the+author+of+book]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 005]]></SCENARIO>
+<CASENAME>case 002</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[any query on the web]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\anything.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[why is the sky blue]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[all else]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.ask.com/main/askjeeves.asp?ask=why+is+the+sky+blue]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 005]]></SCENARIO>
+<CASENAME>case 003</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[any query on the web]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\anything.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[what's the best way to XXX]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[all else]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.ask.com/main/askjeeves.asp?ask=what's+the+best+way+to+XXX]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 005]]></SCENARIO>
+<CASENAME>case 004</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[any query on the web]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\anything.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[Find references for yyy]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[all else]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[Unable to interpret input
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 005]]></SCENARIO>
+<CASENAME>case 005</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[any query on the web]]></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\startscreen.jpg</BEFOREPIC>
+<AFTERPIC>D:\apps\src\com\dejima\apps\examples\advanced\OpenEndedSearch\opal\anything.jpg</AFTERPIC>
+<USER>Adam</USER>
+<ADMIN>Babak</ADMIN>
+<INPUT><![CDATA[how many abc did...]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[all else]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[Unable to interpret input
+]]></EXPECTED>
+</CASE>
+<PRESENTATIONORDER>
+<USED>0</USED>
+<USED>1</USED>
+<USED>2</USED>
+<USED>3</USED>
+<USED>4</USED>
+</PRESENTATIONORDER>
+</CASES>

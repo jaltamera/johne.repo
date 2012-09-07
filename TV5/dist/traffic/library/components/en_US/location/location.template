@@ -1,0 +1,27 @@
+extends library object.template;
+
+constant String type = '';
+
+/** Here the slots are combined as much as possible - the idea here is to create groups of slots, which is a way of handling compound inputs
+ */
+fields:
+    <mergeIfAdjacent(field(this.children):op(,))>
+   {attributes: 'private, atomic'}
+	{action: com.dejima.library.AmbiguityResolutionActuation: field(this.children), processAmbiguities()}
+;
+
+/** same as super but just changed the actuation to LocationActuation */
+object:
+    anObject
+    {attributes: 'private'}
+    {action: com.dejima.library.location.LocationActuation: 
+         setTag(this.tag), setTableName(this.tableName), setColumnName(this.columnName), setDefaultColumnName(this.defaultColumnName), setDownChainJoin(this.downChainJoin), setDownChainColumn(this.downChainColumn), setPrimaryKey(this.primaryKey), addAttribute('type', this.type), addAttribute('groups', this.groups), addAttribute('preference', this.preference), setDefaultSlotFilling(this.defaultSlotFilling), setSingleSlot(this.singleSlot), anObject}
+;
+
+/** same as super but just changed the actuation to LocationActuation */
+joinedObject:
+    this.supportJoin & (joinOperation ~ anObject)
+    {attributes: 'private'}
+    {action: com.dejima.library.location.LocationActuation: 
+         setTag(this.tag), setTableName(this.tableName), setColumnName(this.columnName), setDefaultColumnName(this.defaultColumnName), setDownChainJoin(this.downChainJoin), setDownChainColumn(this.downChainColumn), setPrimaryKey(this.primaryKey), addAttribute('type', this.type), addAttribute('groups', this.groups), addAttribute('preference', this.preference), setDefaultSlotFilling(this.defaultSlotFilling), setSingleSlot(this.singleSlot), joinOperation, anObject}
+;

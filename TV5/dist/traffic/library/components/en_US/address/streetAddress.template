@@ -1,0 +1,11 @@
+extends library object.template;
+
+/** 
+ * Handle joining different fields.
+ */
+fields:
+    <mergeIfAdjacent(field(this.children):op(,))>
+    {attributes: 'private'}
+    {action: field(this.children)}
+;
+

@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<CASES CoreVersion="4.0.2.118 " SDKVersion="4.0.2.118 ">
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>1</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[1]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[1]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[1]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;1&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[1]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[1]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;1&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>2</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[253]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[253]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[253]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;253&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[253]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[253]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;253&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>3</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[one]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[one]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[one]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;1&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[one]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[one]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;1&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>4</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[two hundred and fifty three]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[two hundred and fifty three]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[two hundred and fifty three]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;253&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[two hundred and fifty three]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[two hundred and fifty three]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;253&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>5</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[thirteen hundred and two]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[thirteen hundred and two]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[thirteen hundred and two]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;1302&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[thirteen hundred and two]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[thirteen hundred and two]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;1302&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>6</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[zero]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[zero]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[zero]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;0&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[zero]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[zero]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;0&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>7</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[ninety nine hundred and ninety nine]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[ninety nine hundred and ninety nine]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[ninety nine hundred and ninety nine]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;9999&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[ninety nine hundred and ninety nine]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[ninety nine hundred and ninety nine]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;9999&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>8</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[1,245]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[1,245]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[1,245]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;1245&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[1,245]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[1,245]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;1245&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>9</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[-1]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[Not supported]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation" unableToInterpret="true" info="Unable to interpret input. Keeping the context."&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[-1]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood /&gt;
+&lt;/integers:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation" unableToInterpret="true" info="Unable to interpret input. Keeping the context."&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[-1]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood /&gt;
+&lt;/integers:Top&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>2</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[four hundred and two]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[four hundred and two]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[four hundred and two]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;402&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[four hundred and two]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[four hundred and two]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;402&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>3</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[234,23]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[234,23]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[234 23]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;234&lt;/integers:Integer&gt;
+    &lt;integers:Integer&gt;23&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[234,23]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[234 23]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;234&lt;/integers:Integer&gt;
+    &lt;integers:Integer&gt;23&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>4</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[twenty three]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[twenty three]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[twenty three]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;23&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[twenty three]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[twenty three]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;23&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>5</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[12,234]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[12,234]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[12,234]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;12234&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[12,234]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[12,234]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;12234&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>6</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[twelve hundred and thirty two]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[twelve hundred and thirty two]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[twelve hundred and thirty two]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;1232&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;integers:Top xmlns:integers="integers" type="interpretation"&gt;
+  &lt;integers:Input&gt;&lt;![CDATA[twelve hundred and thirty two]]&gt;&lt;/integers:Input&gt;
+  &lt;integers:Understood&gt;&lt;![CDATA[twelve hundred and thirty two]]&gt;&lt;/integers:Understood&gt;
+  &lt;integers:System type="intent"&gt;
+    &lt;integers:Integer&gt;1232&lt;/integers:Integer&gt;
+  &lt;/integers:System&gt;
+&lt;/integers:Top&gt;
+]]></ACTUAL>
+</CASE>
+<PRESENTATIONORDER>
+</PRESENTATIONORDER>
+</CASES>

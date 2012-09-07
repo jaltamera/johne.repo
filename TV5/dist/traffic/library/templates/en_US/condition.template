@@ -1,0 +1,31 @@
+extends library relation.template;
+
+/** The agent will only make interpretations if the triggerCondition is met. */
+Condition triggerCondition;
+/** The agent wont allow its downchains to claim on the input matched by a certain splitCondition, 
+ * so it will split the input based on matches on the splitCondition, and send interpretation messages 
+ * to down-chains on the remainder of the input.  
+ */
+Condition splitCondition;
+
+antecedent:
+   fields
+   {attributes: 'private'}
+   {action: com.dejima.core.nlp.text.action.ObjectActuation: 
+		setTag('Antecedent'), fields}
+;
+
+consequent:
+   fields
+   {attributes: 'private'}
+   {action: com.dejima.core.nlp.text.action.ObjectActuation: 
+		setTag('Consequent'), fields}
+;
+
+objectCandidate:
+    ([equalsTo|isValueOf|reference] ~ (antecedent) ~ [this.splitCondition] ~ (consequent)) |
+    ([equalsTo|isValueOf|reference] ~ (antecedent) < [this.splitCondition] < (consequent))
+    {attributes: 'private'}
+    {action: equalsTo, isValueOf, reference, antecedent, consequent}
+;
+

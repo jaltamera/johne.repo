@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+   The data source definitions.
+-->
+<ds:DataSourceList xmlns:ds="http://www.dejima-japan.com/agent/DataSourceAgent"
+                   xmlns:csvds="http://www.dejima-japan.com/agent/datasource/CsvDataSource"
+>
+
+  <!-- The definition for ds1 -->
+  <ds:DataSource name="ds1">
+ 
+   <!-- The class name of the data provider -->
+    <ds:ClassName>com.dejima.library.datasource.util.CsvDataSource</ds:ClassName>
+
+    <!-- The configuration of the data provider -->
+    <ds:Config>
+      <!-- The format of CSV(MS Excel CSV) file. -->
+      <csvds:Csv name="Data for agent DS1" src="ds1_data.csv">
+        <csvds:KeyColumns>1</csvds:KeyColumns>
+        <csvds:TokenColumns>2</csvds:TokenColumns>
+      </csvds:Csv>
+    </ds:Config>
+  </ds:DataSource>
+
+  <!-- The definition for ds2 -->
+  <ds:DataSource name="ds2">
+
+    <!-- The class name of the data provider -->
+    <ds:ClassName>com.dejima.library.datasource.util.CsvDataSource</ds:ClassName>
+
+    <!-- The configuration of the data provider -->
+    <ds:Config>
+      <!-- The format of CSV(MS Excel CSV) file -->
+      <csvds:Csv name="Data for agent DS2" src="ds2_data.csv">
+        <csvds:KeyColumns>1</csvds:KeyColumns>
+        <csvds:TokenColumns>2</csvds:TokenColumns>
+      </csvds:Csv>
+    </ds:Config>
+  </ds:DataSource>
+
+</ds:DataSourceList>
+
+
+
+
+

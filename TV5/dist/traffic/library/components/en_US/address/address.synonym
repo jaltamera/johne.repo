@@ -1,0 +1,8 @@
+city: city of
+country: country of
++: or
+address: location
+equal: =, :, equals, contains
+in: at, with, \,
+isEqualTo: =, :, equals, contains
+postcode: zip,  zipcode, post code, zipcode of, postcode of, post code of

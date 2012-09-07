@@ -1,0 +1,11 @@
+#
+# Network test suite
+#
+NETWORK=date_time.opal
+CORPUS=date_time.smp
+NETWORK=date_time.opal
+CORPUS=date_time_extra.smp
+NETWORK=start_end_date_time.opal
+CORPUS=start_end_date_time.smp
+SUITE=date/date.nts
+SUITE=time/time.nts

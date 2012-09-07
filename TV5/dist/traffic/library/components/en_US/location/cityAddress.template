@@ -1,0 +1,20 @@
+extends library object.template;
+
+constant String type = '';
+
+/** Here the slots are combined as much as possible - the idea here is to create groups of slots, which is a way of handling compound inputs
+ *  Note also context is mainted using the replacePrevious, so that if there is no mention of a slot, it is maintained
+ */
+fields:
+    <merge(field(this.children):op(,))>
+    {attributes: 'private'}
+	 {action: com.dejima.library.AmbiguityResolutionActuation: field(this.children), processAmbiguities()}
+;
+
+explicitObject:
+    <includes (explicitIndication)> objectCandidate |
+    (equalsTo|reference) ~ (objectCandidate) |
+	objectCandidate ~ isValueOf
+    {attributes: 'private'}
+    {action: equalsTo, isValueOf, reference, objectCandidate}
+;

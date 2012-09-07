@@ -1,0 +1,188 @@
+/**
+GENERAL
+-------
+Template used for the top most interpretation agent.
+This template expects only one down chain agent (commands). 
+This template keeps the previous context when the user input is not recognized 
+and Restarts the context when the user explicitly asks for a dialog restart. 
+Explicit context restart is recognized when user says "new". Synonyms 
+should be added for the restartDialog keyword in the synonym table.
+
+A followupCondition is used to reset the context if the input is not a followup. 
+By default the followup condition Checks for the following symbols at the 
+beginning of the input:
+
+1) .. or ; (general followup indicator)
+2) + (indicates adding new constraints)
+3) - (indicates removing a constraint)
+4) / (indicates replacing a constraint) 
+
+It is recommended to add synonyms for each of the above symbols. Note that 
+followupCondition is a special property which has a special meaning for 
+TemplatizedAgent. The condition is tested before any down chain agents start 
+interpretation. 
+
+If the condition is not met and the input is not a followup by default then 
+the context will be cleared before deleagating to down chains.
+(note that this agent will still be aware of the original context)
+
+The template also supports explicit synonym learning. Users can associate a new synonym 
+to a phrase, they can remove a synonym, remove all synonyms or list all learned synonyms.
+The ProfileManager class is used to make learned synonyms persistent. You can change the 
+ProfileManager class to use your own custom profile manager. The Dejima Direct Platform
+comes with two implementations of the profile manager: the DefaultProfileManager (which 
+saves the synonyms in the memory) and the FileBasedProfileManager (saves the synonyms in
+a text file)
+*/
+
+
+/** The condition used to detect if an input is a followup. <br>
+    This is a special property that is handled by the Templatized agent internally. <br>
+    The condition is tested before any down chain agents start interpretation or actuation. <br>
+    If the condition is not met and the input is not a followup by default then the context <br>
+    will be cleared before deleagating to down chains. <br>
+    (note that this agent will still be aware of the original context)<br>
+
+    This policy should not reference other policies or down chain agents */
+
+Condition followupCondition = /BOI ('+'|'-'|';'|'..');
+
+/** Tag used to surround the input */
+String inputTag = 'Input';
+/** Tag used to surround the understood element */
+String understoodTag = 'Understood';
+
+/** This attribute defines the role of the template (a constant) */
+constant String type = 'interpretation';
+
+/** Should the agent support learning? */
+Boolean supportLearning = true;
+/** Should the rececny attribute be added to the output? */
+Boolean addRecencyAttribute = false;
+/** What is the minimum number of tokens that should be used as a variable. <br> Used only if supportLearning is true */
+Integer minLearningVariableSize = 1; 
+/** What is the maximum number of tokens that should be used as a variable. <br>Used only if supportLearning is true */
+Integer maxLearningVariableSize = 20; 
+/** What is the minimum size of a non-noise token (in characters) that can be used as a LearningVariable. <br>Used only if supportLearning is true */
+Integer minLearningVariableNonNoiseTokenSize = 1; 
+/** What is the file used to list noise words. <br>Noise words will not be claimed as part of a LearningVariable. <br>Used only if supportLearning is true */
+File LearningVariableNoiseFile; 
+
+/**
+ * This policy is here so users can explicitly restart a dialogue.
+ * Right now every input is a follow-up by default unless the users would explicitly restart the dialogue.
+ */
+restart:
+      'restart'
+      {attributes: 'private'}
+      {action: addAttribute('contextReset','true'), addAttribute('info','Resetting the context.'),clearContext()}
+;
+
+/**
+ * We want to keep the context when the system is unable to interpret the input
+ */
+keepContext:
+      true
+      {attributes: 'private'}
+      {action: addAttribute('unableToInterpret','true'), addAttribute('info','Unable to interpret input. Keeping the context.'), addPrevious(this.children)}
+;
+
+commands:
+     this.children+
+     {attributes: 'private'}
+     {action: this.children}
+;
+
+srcVariable: 
+  this.supportLearning & (?:(this.minLearningVariableSize,this.maxLearningVariableSize):this.minLearningVariableNonNoiseTokenSize:this.LearningVariableNoiseFile | ('\''  ?  '\'') | ('"'  ?  '"'))
+  {attributes: 'private'}
+  {action: ?}
+;
+
+targetVariable:
+  this.supportLearning & (?:(this.minLearningVariableSize,this.maxLearningVariableSize):this.minLearningVariableNonNoiseTokenSize:this.LearningVariableNoiseFile | ('\''  ?  '\'') | ('"'  ?  '"'))
+  {attributes: 'private'}
+  {action: ?}
+;
+
+targetMatched:
+  this.supportLearning & (this.children)
+  {attributes: 'private'}
+  {action: *}
+;
+
+target: 
+  this.supportLearning & (targetMatched | targetVariable)
+  {attributes: 'private'}
+  {action: targetMatched, targetVariable}
+;
+  
+
+learnSynonym1:
+   this.supportLearning & (srcVariable ~ (('is a synonym for') | 'means' | ( ('means'|'is') ~ 'the same' ~ ['thing'] ~ 'as') | (['is'] ~ 'equals' ~ ['to'])) ~ target)
+   {attributes: 'private'}
+   {priority: 2}
+	{action: com.dejima.core.nlp.text.action.SynonymsActuation: 
+            set('synonym','add'; '',srcVariable,' :: ', target),
+            setLearntSynonym(srcVariable, target, this.learnTag, this.sourceTag, this.targetTag)}
+;
+
+learnSynonym2:
+   this.supportLearning & (( ('create'|'remember'|'learn'|'let') ~ ['the'|'a'|'that'] ~ ['synonym'] | 'when i' ~ ('say'|'write') ) ~ srcVariable ~ ( 'be a synonym for' | (['it'] ~ 'means') | ( ['it'] ~ ('means'|'is') ~ 'the same' ~ ['thing'] ~ 'as') | (['is'] ~ 'equals' ~ ['to'])) ~ target)
+   {attributes: 'private'}
+   {priority: 2}
+	{action: com.dejima.core.nlp.text.action.SynonymsActuation:
+	        set('synonym','add'; '',srcVariable,' :: ', target),
+            setLearntSynonym(srcVariable, target, this.learnTag, this.sourceTag, this.targetTag)}
+;
+
+removeSynonym:
+    this.supportLearning & ((('remove' ~ ['the'] ~ ['learnt'] ~ 'synonym' ~ [':']) | ('unlearn')) ~ srcVariable)
+    {attributes: 'private'}
+    {priority: 1}
+	 {action: com.dejima.core.nlp.text.action.SynonymsActuation:
+            set('synonym','remove'; '', srcVariable),
+			setForgottenSynonym(srcVariable, get('data', 'TestSynonymExists'), this.forgetTag, this.sourceTag, this.targetTag)}
+;
+
+clearAllSynonyms:
+    this.supportLearning & ('remove' ~ 'all' ~ ['learnt'] ~ 'synonyms' ~ <exact> ['in' ~ ['my'] ~ 'profile'])
+    {attributes: 'private'}
+    {priority: 1}
+    {action: com.dejima.core.nlp.text.action.SynonymsActuation:
+            set('synonym','clear'; ''),
+            setForgetAll(this.forgetTag, this.allSynonymsTag)}
+;
+
+showSynonyms:
+    this.supportLearning & ('show' ~ ['me'] ~ ['all'] ~ (['my'] | ['the']) ~ ['learnt'] ~ 'synonyms')
+    {attributes: 'private'}
+    {priority: 1}
+	{action: com.dejima.core.nlp.text.action.SynonymsActuation:
+	        setLearntSynonyms(get('__THE_SYNONYM_LIST__'), this.learntSynonymsTag, this.sourceTag, this.targetTag)}
+;
+
+learning:
+    (learnSynonym1 | learnSynonym2 | removeSynonym | clearAllSynonyms | showSynonyms)	
+    {attributes: 'private'}
+;
+
+/**
+ * Sets the XML root node tag to DejimaInterpretation and adds the understood and input elements to the output XML
+ */
+interpretation: 
+    (commands|keepContext|restart|learning)
+    {action: com.dejima.core.nlp.text.action.InterpretationActuation:         
+         setTag(this.tag), addAttribute('type', this.type), addElement(this.inputTag, addInput()), 
+         addElement(this.understoodTag, addCData(*)), setUnderstood(*),  
+         commands, keepContext, restart, learning,
+         setUsedSynonyms(get('data', 'UsedSynonyms'), this.usedSynonymsTag, this.sourceTag, this.targetTag)}
+;
+
+/**
+ * This policy is used to add recency attributes to the interpretation if needed
+ */
+main:
+   this.addRecencyAttribute & interpretation
+   {action: interpretation, addRecencyAttributeToAll()}
+;

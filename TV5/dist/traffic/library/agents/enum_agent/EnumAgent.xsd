@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!--
+  $Id: EnumAgent.xsd,v 1.1 2007/09/19 18:42:19 siamak Exp $
+  Copyright 2002 - Dejima Japan, Inc.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.dejima-japan.com/agent/EnumAgent"
+    targetNamespace="http://www.dejima-japan.com/agent/EnumAgent"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+
+<xsd:annotation>
+  <xsd:documentation xml:lang="en">
+  This schema defines the structure of configuration file for the EnumAgent.
+  Copyright 2002 - Dejima Japan, Inc.
+  </xsd:documentation>
+</xsd:annotation>
+
+<!-- name -->
+<xsd:simpleType name="nameType">
+  <xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+<!-- token -->
+<xsd:simpleType name="tokenType">
+  <xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+<!-- grammar -->
+<xsd:simpleType name="grammarType">
+  <xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+<!-- file -->
+<xsd:simpleType name="fileType">
+  <xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+<!-- dictionary -->
+<xsd:complexType name="dictionaryType">
+  <xsd:attribute name="name" type="nameType" use="required"/>
+  <xsd:attribute name="file" type="fileType" use="required"/>
+</xsd:complexType>
+
+<!-- agent -->
+<xsd:simpleType name="agentType">
+  <xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+<!-- enum list -->
+<xsd:element name="EnumList" type="enumListType"/>
+
+<xsd:complexType name="enumListType">
+  <xsd:sequence>
+    <xsd:element name="Enum" type="enumType" minOccurs="1" maxOccurs="unbounded"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+<!-- enum -->
+<xsd:complexType name="enumType">
+  <xsd:sequence>
+    <xsd:element name="Value" type="valueType" minOccurs="1" maxOccurs="unbounded"/>
+  </xsd:sequence>
+  <xsd:attribute name="name" type="nameType" use="required"/>
+</xsd:complexType>
+
+<!-- value range -->
+<xsd:simpleType name="valueRangeType">
+  <xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+<!-- value -->
+<xsd:complexType name="valueType">
+  <xsd:sequence>
+    <xsd:element name="ValueRange" type="valueRangeType" minOccurs="0"/>
+    <xsd:element name="Phrase" type="phraseType"/>
+  </xsd:sequence>
+  <xsd:attribute name="name" type="nameType" use="required"/>
+</xsd:complexType>
+
+<!-- an item of a value range -->
+<xsd:complexType name="rangeItemType">
+  <xsd:sequence/>
+  <xsd:attribute name="name" type="nameType" use="required"/>
+</xsd:complexType>
+
+<!-- phrase -->
+<xsd:complexType name="phraseType">
+  <xsd:sequence>
+    <xsd:element name="Agent" type="agentType" minOccurs="0" maxOccurs="unbounded"/>
+    <xsd:element name="Token" type="tokenType" minOccurs="0" maxOccurs="unbounded"/>
+    <xsd:element name="Grammar" type="grammarType" minOccurs="0" maxOccurs="unbounded"/>
+    <xsd:element name="Dictionary" type="dictionaryType" minOccurs="0" maxOccurs="unbounded"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+</xsd:schema>
+
+
+
+
+
+
+

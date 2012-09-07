@@ -1,0 +1,9 @@
+#
+# Network test suite
+#
+NETWORK=cityAddress.opal
+CORPUS=cityAddress.smp
+NETWORK=streetAddress.opal
+CORPUS=streetAddress.smp
+NETWORK=location.opal
+CORPUS=location.smp

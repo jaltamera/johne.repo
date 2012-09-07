@@ -1,0 +1,5 @@
+#
+# Network test suite for date_time
+#
+NETWORK=enum1.opal
+CORPUS=enum1.smp

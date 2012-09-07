@@ -1,0 +1,33 @@
+extends library field.template;
+/**
+This template is used for boolean data fields.
+For example this template can be used for a person's gender (male, female).
+*/
+
+/** The word that used for matching the true state (e.g. female)*/
+String trueStateKeyword;
+/** The word that used for matching the false state (e.g. male)*/
+String falseStateKeyword;
+/** What is the value associated with the true state (e.g. 0). This value will appear in the xml output. */
+String trueStateOutput;
+/** What is the value associated with the false state (e.g. 1). This value will appear in the xml output. */
+String falseStateOutput;
+
+/** This policy is used to claim the true state */
+trueState:
+   <exact> this.trueStateKeyword
+   {attributes: 'private'}
+   {action: addField(*, *.matched, this.trueStateOutput, this.fieldValueSelector)}
+;
+
+/** This policy is used to claim the false state */
+falseState:
+    <exact> this.falseStateKeyword
+    {attributes: 'private'}
+    {action: addField(*, *.matched, this.falseStateOutput, this.fieldValueSelector)}
+;
+
+data: 
+   [preposition] ~ (dbData | datasource | trueState | falseState)
+   {attributes: 'private, atomic'}
+;

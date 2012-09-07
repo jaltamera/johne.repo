@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<CASES CoreVersion="5.0.0.319 " SDKVersion="5.0.0.319 ">
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>1</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[2:12]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[2]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[12]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[2]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[12]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>2</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[12:15]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[0]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[15]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[0]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[15]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>4</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[four ninteen]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[4]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[19]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[4]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[19]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>5</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[12 am]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[0]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[0]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[am]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[0]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[0]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[am]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>6</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[6:45 pm]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[6]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[45]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[6]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[45]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>8</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[11:30 am]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[11]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[30]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[am]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[11]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[30]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[am]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>9</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[eight am]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[8]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[0]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[am]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[8]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[0]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[am]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>2</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[seven fifteen am]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[7]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[15]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[am]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[7]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[15]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[am]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>3</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[seven 45 am]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[7]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[45]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[am]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[7]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[45]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[am]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>10</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[midday]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[0]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[0]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[0]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[0]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>11</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[mignight]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[0]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[0]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[am]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[0]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[0]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[am]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>12</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[half past one]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[1]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[30]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[1]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[30]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>13</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[noon]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[0]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[0]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[0]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[0]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>14</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[half past midnight]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[0]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[30]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[am]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[0]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[30]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[am]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>15</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[twelve 15 am]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[0]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[15]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[am]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[0]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[15]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[am]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>16</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[2:30 pm]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[2]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[30]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[2]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[30]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>17</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[15:23]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[3]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[23]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[3]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[23]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>18</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[one am]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[1]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[0]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[am]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[1]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[0]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[am]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>19</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[21:23]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[9]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[23]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[9]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[23]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>4</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[11]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[Unable to interpret input
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[Unable to interpret input
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[3:30 to 4:30]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[3]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[30]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;&lt;time:Time&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[4]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[30]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[3]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[30]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;&lt;time:Time&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[4]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[30]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[from 2:30 to 4:00]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:ge&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[2]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[30]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:ge&gt;&lt;time:le&gt;&lt;time:day&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[4]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[0]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:le&gt;&lt;/time:Time&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;time:Time xmlns:time="time"&gt;&lt;time:ge&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[2]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[30]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:ge&gt;&lt;time:le&gt;&lt;time:day&gt;&lt;![CDATA[8]]&gt;&lt;/time:day&gt;&lt;time:month&gt;&lt;![CDATA[10]]&gt;&lt;/time:month&gt;&lt;time:year&gt;&lt;![CDATA[2008]]&gt;&lt;/time:year&gt;&lt;time:hour&gt;&lt;![CDATA[4]]&gt;&lt;/time:hour&gt;&lt;time:minute&gt;&lt;![CDATA[0]]&gt;&lt;/time:minute&gt;&lt;time:am_pm&gt;&lt;![CDATA[pm]]&gt;&lt;/time:am_pm&gt;&lt;/time:le&gt;&lt;/time:Time&gt;
+]]></ACTUAL>
+</CASE>
+<PRESENTATIONORDER>
+</PRESENTATIONORDER>
+</CASES>

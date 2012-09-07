@@ -1,0 +1,176 @@
+/**
+  Light Weight object.template
+*/
+
+/** What is the keyword that identifies this object? */
+String keyword = this.tag;
+
+/** What is the preposition for this object? (e.g. 'in' or 'at' are used for a place)*/
+String preposition;
+
+/** What is the role of this template/agent? This is going to be used as an XML attribute associated to the XML element created by this template*/
+constant String type = 'object';
+
+/** What groups does this object belongs to?<br>
+    This property is used in hints. The value can be any comma seperated list.<br>
+    Each item in the list will represent a group.<br>
+    For example Restaurant groups= "outdoor, food & drink" <br>
+*/
+String groups;
+
+/** These flags are used to set or reset certain features in the polcies created by this template*/
+
+/** Should the policies support implicit matches? (that is when an object field is referenced in the input but the keyword used for
+    that object is not referenced) */
+Boolean implicitMatch = true;
+/** Should the agent make a claim if a keyword is matched but no field is matched? */
+Boolean supportKeywordOnlyMatch = true;
+/** Should the policies support ambiguity? */
+Boolean supportAmbiguity = true;
+
+/** The condition used to match explicit claims on the object this agent is representing.<br>
+    Should be a combination of any string literal, preposition, kwd and adjacentReference
+  */
+Condition equalsTo = [preposition] ~ kwd ~ (['is'] ~ ['equal' ~ ['to']]|'isEqualTo'|'=');
+
+/** The condition used to match explicit claims on the object this agent is representing.<br>
+    Should be a combination of any string literal, kwd and adjacentReference
+  */
+Condition isValueOf = ('isValueOf' | ('is' ~ ['the'] ~ 'value of')) ~ kwd;
+
+/** Condition that comes before a value in the condition: (beforeValue value afterValue)*/
+Condition beforeValue = '';
+/** condition that comes after a value in the condition: (beforeValue value afterValue)*/
+Condition afterValue = '';
+
+/** Should the agent filter unvaluable (potentially problematic) down chain agent claims?
+  */
+Boolean enableFilterDownChainClaims = true;
+
+/** Should the agent filter unvaluable (potentially problematic) down chain agent claims?
+  */
+Boolean enableFilterDownChainAtomicSubclaims = true;
+
+/** Should the agent filter unvalueable non-field down chain agent subclaims?
+  */
+Boolean enableFilterNonFieldSubclaims = true;
+
+/** Should the agent filter non field down chain agent subclaims?
+  */
+Boolean enableFilterDownChainClaimsWithMoreRelations = true;
+
+preposition:
+    this.preposition
+    {attributes: 'private, atomic'}
+    {action: ''}
+;
+
+/** Claims keywords used for this field */
+kwd:
+    this.keyword
+    {attributes: 'private, atomic'}
+    {action: addAttribute('explicit', 'true')}
+;
+
+/** Actuated when the user references this object without referencing any of its fields.
+    Makes a claim only if either supportKeywordOnlyMatch is true or if this agent is part of a previous ambiguity.
+    */
+onlyKwd:
+    this.supportKeywordOnlyMatch & ([preposition] ~ kwd) | <check('previous_action', this)> & ([preposition] ~ kwd)
+    {attributes: 'private, atomic'}
+    {priority: topicScope(this, true)}
+    {action: com.dejima.core.nlp.text.action.ObjectActuation: 
+         setTag(this.tag), addAttribute('type', this.type), addAttribute('groups', this.groups), kwd}
+;
+beforeValue:
+    this.beforeValue
+    {attributes: 'private, atomic'}
+;
+
+afterValue:
+    this.afterValue
+    {attributes: 'private, atomic'}
+;
+
+equalsTo:
+    this.equalsTo
+    {attributes: 'private, atomic'}
+;
+
+isValueOf:
+    this.isValueOf
+    {attributes: 'private, atomic'}
+;
+
+/** want to give high priority to a topic, if any. If its not a topic, then recency is used, which 
+ *  gives priority to recently discussed items  */
+topic(this.children):
+    this.children[.]
+    {attributes: 'private'}
+    {priority: topicScope(this.children[.], true)}
+    {action: this.children[.]}
+;
+
+/** There is a pattern here: the _field represent the slot, which may or may not be ambiguous with other slots. */
+implicitField(this.children):
+    topic(this.children[.]) | (this.supportAmbiguity & (topic(this.children[.]) :: (topic(this.children[#]):op(|))))
+    {attributes: 'private'}
+    {ambiguity action: com.dejima.core.nlp.text.action.EntityActuation:  
+       setTag(this.ambiguityTag), topic(this.children)}
+;
+
+explicitField(this.children):
+    equalsTo ~ implicitField(this.children[.]) | 
+    [preposition] implicitField(this.children[.]) ~ isValueOf |
+    beforeValue ~ implicitField(this.children[.]) ~ afterValue
+    {priority: 10001}
+    {attributes: 'private, atomic'}
+    {action: equalsTo, isValueOf, beforeValue, afterValue, implicitField(this.children[.])}
+;
+
+field(this.children):
+     implicitField(this.children[.]) | explicitField(this.children[.])
+     {attributes: 'private'}
+     {action: implicitField(this.children[.]) , explicitField(this.children[.])}
+;
+
+/** 
+ * Handle joining different fields.
+ */
+fields:
+    field(this.children):op(&|)
+    {attributes: 'private'}
+    {action: field(this.children) }
+;
+explicitIndication:
+    (explicitField(this.children))
+    {attributes: 'private'}
+;
+
+explicitObject:
+    <includes (explicitIndication)> fields |
+    (equalsTo|isValueOf) & (fields)
+    {attributes: 'private'}
+    {action: equalsTo, isValueOf, fields}
+;
+
+implicitObject:
+    (this.implicitMatch | <check('previous_action',this)>) & (fields - explicitObject)
+    {attributes: 'private'}
+    {action: fields }
+;
+
+anObject:
+    explicitObject | implicitObject
+    {attributes: 'private'}
+;
+
+object:
+    anObject
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.ObjectActuation: 
+         setTag(this.tag), addAttribute('type', this.type), addAttribute('groups', this.groups), anObject }
+;
+main:
+    (onlyKwd | object)+
+;

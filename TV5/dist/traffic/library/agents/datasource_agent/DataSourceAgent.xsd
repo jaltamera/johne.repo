@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+  $Id: DataSourceAgent.xsd,v 1.1 2007/09/19 18:36:36 siamak Exp $
+  Copyright 2002 - Dejima Japan, Inc.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.dejima-japan.com/agent/DataSourceAgent"
+    targetNamespace="http://www.dejima-japan.com/agent/DataSourceAgent"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+
+<xsd:annotation>
+  <xsd:documentation xml:lang="en">
+  This schema defines the structure of configuration file for the DataSourceAgent.
+  Copyright 2002 - Dejima Japan, Inc.
+  </xsd:documentation>
+</xsd:annotation>
+
+<!-- data source name -->
+<xsd:simpleType name="nameType">
+  <xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+<!-- class name -->
+<xsd:simpleType name="classNameType">
+  <xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+<!-- data source list -->
+<xsd:element name="DataSourceList" type="dataSourceListType"/>
+
+<xsd:complexType name="dataSourceListType">
+  <xsd:sequence>
+    <xsd:element name="DataSource" type="dataSourceType" minOccurs="1" maxOccurs="unbounded"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+<!-- data source -->
+<xsd:complexType name="dataSourceType">
+  <xsd:sequence>
+    <xsd:element name="ClassName" type="classNameType"/>
+    <xsd:element name="Config" minOccurs="0"/>
+  </xsd:sequence>
+  <xsd:attribute name="name" type="nameType" use="required"/>
+</xsd:complexType>
+
+</xsd:schema>

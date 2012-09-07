@@ -1,0 +1,18 @@
+#
+# Network test suite
+#
+SUITE=components/en_US/address/address.nts
+SUITE=components/en_US/location/location.nts
+SUITE=components/en_US/constant_agent/constant_agent.nts
+SUITE=components/en_US/date_time/date_time.nts
+SUITE=components/en_US/duration/duration.nts
+SUITE=components/en_US/email/email.nts
+SUITE=components/en_US/url/url.nts
+SUITE=components/en_US/cost/cost.nts
+SUITE=components/en_US/name/name.nts
+SUITE=components/en_US/numbers/numbers.nts
+SUITE=components/en_US/open_ended_search/open_ended_search.nts
+SUITE=components/en_US/phone/us_phone.nts
+SUITE=agents/phrase_agent/phrase_agent.nts
+SUITE=agents/datasource_agent/datasource_agent.nts
+SUITE=agents/enum_agent/enum_agent.nts

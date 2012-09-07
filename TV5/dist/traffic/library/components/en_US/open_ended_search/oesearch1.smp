@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CASES>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>1</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[find movies using yahoo]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[yahoo]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://search.yahoo.com/bin/search?p=movies]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>2</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[look for movies on google]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[google]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.google.com/search?hl=en&amp;q=movies]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>3</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[what does the word movies mean?]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[dictionary]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.dictionary.com/search?q=movies]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>4</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[look up movies in a thesaurus]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[thesaurus]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.thesaurus.com/cgi-bin/search?config=roget&amp;words=movies]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>5</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[find me a map of san jose]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[all else]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.ask.com/main/askjeeves.asp?ask=find+me+a+map+of+san+jose]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>6</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[search dog food on yahoo]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[yahoo]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://search.yahoo.com/bin/search?p=dog food]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>7</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[google search clusters.jpeg]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[google]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.google.com/search?hl=en&amp;q=clusters.jpeg]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>8</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[meaning of exciteableness]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[dictionary]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.dictionary.com/search?q=exciteableness]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>9</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[synonyms for stoned]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[thesaurus]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.thesaurus.com/cgi-bin/search?config=roget&amp;words=stoned]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>10</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[where can I find a book on recent archialogical finds in the west indies and southern sahara]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[all else]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;openEndedSearch:OpenEndedSearch xmlns:openEndedSearch="openEndedSearch"&gt;&lt;openEndedSearch:site&gt;&lt;![CDATA[http://www.ask.com/main/askjeeves.asp?ask=where+can+I+find+a+book+on+recent+archialogical+finds+in+the+west+indies+and+southern+sahara]]&gt;&lt;/openEndedSearch:site&gt;&lt;/openEndedSearch:OpenEndedSearch&gt;
+]]></EXPECTED>
+</CASE>
+<PRESENTATIONORDER>
+</PRESENTATIONORDER>
+</CASES>

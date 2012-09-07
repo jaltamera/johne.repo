@@ -1,0 +1,9 @@
+#
+# Network test suite
+#
+NETWORK=integers.opal
+CORPUS=integers.smp
+NETWORK=ordinals.opal
+CORPUS=ordinals.smp
+NETWORK=decimals.opal
+CORPUS=decimals.smp

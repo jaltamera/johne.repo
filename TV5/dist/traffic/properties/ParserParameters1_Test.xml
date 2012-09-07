@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<!DOCTYPE Policy:ParserParameters SYSTEM "ParserParameters.dtd">
+
+<Policy:ParserParameters
+	xmlns:Policy="http://www.dejima.com">
+
+<!-- 
+	Define the legal alphabet for the parser.
+	The alphabet is defined by ranges of characters.  
+	Any number of character ranges can be used.
+-->
+
+<Policy:Alphabet>
+<Policy:CharacterRange lowerLimit="a" upperLimit="z" />
+<Policy:CharacterRange lowerLimit="A" upperLimit="Z" />
+</Policy:Alphabet>
+
+<Policy:Numeric>
+<Policy:CharacterRange lowerLimit="0" upperLimit="9" />
+</Policy:Numeric>
+
+<Policy:Symbols>
+<Policy:CharacterRange lowerLimit="!" upperLimit="/" />
+<Policy:CharacterRange lowerLimit=":" upperLimit="@" />
+</Policy:Symbols>
+
+<!--
+	Substring conditions
+	threshold: Two tokens are matched with a substring matcher only if their length ratio (in characters) is less than this percentage
+	leastLength: Two tokens are matched with a substring matcher only if their length is more than this (in characters)
+ -->
+
+<Policy:SubstringConditions threshold="80" leastLength="3" />
+
+<!--
+	CommonWords
+	fileName: where the common tokens are read from
+	defaultMaxLength: Any token with length (in characters) less than this will be considered a common token by default
+-->
+
+<Policy:CommonWords filename="common.txt" defaultMaxLength="3" />
+
+<!--
+      TokenMatchers:
+      One or more token matchers may be assigned. Available token matchers are
+      "exact", "substring" and "fuzzy". The token matchers will be used on
+      token conditions (literals, files or database) with no token matchers.
+      Example:
+
+ 	The usage of fast token matchers is now deprecated.
+	Fast token matchers are: exact and substring.
+	Example:
+	<Policy:TokenMatchers value="fast" />
+
+        <Policy:TokenMatchers/>
+	<Policy:TokenMatcher type="exact" />
+	<Policy:TokenMatcher type="fuzzy" />
+	</Policy:TokenMatchers>
+
+	Fuzzy token matcher:
+	One or more string comparers may be assigned. The string comparers will be 
+	used in all conditions that a fuzzy matcher is applied but 
+	the string comparers are not specified.
+
+	Example fuzzy token matcher definition:
+	<Policy:FuzzyMatchers>
+	<Policy:Matcher
+		className="EditDistance"
+		threshold="90" 
+	/>
+	<Policy:Matcher 
+		className="Soundex" 
+		threshold="60" 
+	/>
+	</Policy:FuzzyMatchers>
+
+	Example policy that will use the fuzzy matchers declared here: <fuzzy> 'occasional'
+
+-->
+
+      <Policy:TokenMatchers>
+	<Policy:TokenMatcher type="exact" />
+	<Policy:TokenMatcher type="fuzzy" />
+      </Policy:TokenMatchers>
+
+	<Policy:FuzzyMatchers>
+	<Policy:FuzzyComparer
+		name="EditDistance"
+		threshold="80" 
+	/>
+	<Policy:FuzzyComparer
+		name="Soundex"
+		threshold="70" 
+	/>
+	<Policy:FuzzyComparer
+		name="RestrictedEditDistance"
+	/>
+	</Policy:FuzzyMatchers>
+
+<!--
+	Tokenizer
+-->
+      <Policy:Tokenizer className="com.dejima.core.nlp.text.USTextTokenizer" />
+
+
+
+<!--
+	Assigned ErrorLogger per installation
+-->
+<Policy:ErrorLogger className="com.dejima.logger.SDKLogManager" />
+<!--
+	Join Keywords
+	List the tokens that can be used to construct a compound input 
+-->
+
+<!--
+<Policy:Joins>
+<Policy:Join value="and" />
+</Policy:Joins>
+-->
+
+</Policy:ParserParameters>

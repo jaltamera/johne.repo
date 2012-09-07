@@ -1,0 +1,10 @@
+<ExplanationProperites>
+  <ExplanationTranslation>
+    <Path><![CDATA[Cost/Amount/Integer]]></Path>
+    <Value><![CDATA[Amount]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[Cost/Currency]]></Path>
+    <Value><![CDATA[Currency]]></Value>
+  </ExplanationTranslation>
+</ExplanationProperites>

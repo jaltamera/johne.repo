@@ -1,0 +1,63 @@
+<ExplanationProperites>
+  <!--
+
+  ExplanationText elements override the explanation text
+  found in the /resources/explanation.properties file eg:
+
+  <ExplanationText>
+    <Name>explanation.youRequested</Name>
+    <Value>some new value:</Value>
+  </ExplanationText>
+
+-->
+  <ExplanationText />
+  <!--
+
+  ExplanationTranslation elements are used to generate explanation filter values
+
+-->
+  <ExplanationTranslation>
+    <Path><![CDATA[Exit/Bound]]></Path>
+    <Value><![CDATA[Bound]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[Exit/ExitName]]></Path>
+    <Value><![CDATA[To]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[Exit/Flow]]></Path>
+    <Value><![CDATA[Flow]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[Exit]]></Path>
+    <Value><![CDATA[Exit]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[Road/RoadName]]></Path>
+    <Value><![CDATA[RoadName]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[Road/ExitName]]></Path>
+    <Value><![CDATA[ExitName]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[Road/Flow]]></Path>
+    <Value><![CDATA[Flow]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[Road/Bound]]></Path>
+    <Value><![CDATA[Bound]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[Road]]></Path>
+    <Value><![CDATA[Road]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[System/Inquire]]></Path>
+    <Value><![CDATA[Inquire]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[Road/More]]></Path>
+    <Value><![CDATA[More]]></Value>
+  </ExplanationTranslation>
+</ExplanationProperites>

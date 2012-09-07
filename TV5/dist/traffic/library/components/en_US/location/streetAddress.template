@@ -1,0 +1,23 @@
+extends library object.template;
+
+/** What is the role of this template/agent? This is going to be used as an XML attribute associated to the XML element created by this template*/
+constant String type = '';
+
+/** 
+ * Handle joining street address fields.
+ * The address is either guessed using StreetNumber, StreetName and AptNumber fields or it is returned from the db using field Address.
+ * Note: We always need the street number so we can make a proper guess. 
+ */
+address:
+    equalsTo ~ (fieldLatitude ~ fieldLongitude | fieldLongitude ~ fieldLatitude) |
+    ( 
+        fieldAddress |
+        ([equalsTo] ~ [fieldStreetNumber [',']] ~ fieldStreetName ~ [[','] ~ fieldAptNumber] ) 
+    ) & [[','] fieldNeighborhood] & [[','] fieldPostCode]
+    {attributes: 'private, atomic'}
+;
+
+fields:
+    (address &| fieldNeighborhood &| fieldPostCode)
+    {attributes: 'private'}
+;

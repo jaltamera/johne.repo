@@ -1,0 +1,12 @@
+extends library object.template;
+
+/** 
+ * Handle joining street address fields.
+ */
+fields:
+    [['#'] ~ fieldStreetNumber] ~ (fieldHighway | fieldExpressway | fieldRoad | fieldStreet | fieldBoulvard | fieldDrive | fieldParkway| fieldAvenue | fieldCircle | fieldSquare) ~ [['#'] ~ fieldAptNumber]
+    {attributes: 'private, atomic'}
+;
+
+
+

@@ -1,0 +1,4 @@
+<ExplanationProperites>
+  <ExplanationTranslation component="location/cityAddressExplanation.xml" library="true" />
+  <ExplanationTranslation component="location/streetAddressExplanation.xml" library="true" />
+</ExplanationProperites>

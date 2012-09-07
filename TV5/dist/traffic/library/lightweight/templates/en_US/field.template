@@ -1,0 +1,289 @@
+/**
+  Light Weight field.template
+*/
+
+/** What is the keyword that identifies this field? */
+String keyword = this.tag;
+/** The name of the file where the field values stored */
+File file;
+/** The name of the noise file used for data values */
+File noiseFile = 'common.txt';
+/** The min noise file token length */
+Integer noiseMinTokenLength = 2;
+/** Name of the DataSourceAgent (should be a down chain agent) */
+Condition datasourceAgent = '';
+
+/** What is the preposition for this field? (e.g. 'in' or 'at' are used for a place)
+    preposition can come right before the data (e.g. 'in san francsisco'),
+    or it can come right before the keyword (e.g. 'in city;)
+    or it can come right before the reference (e.g. 'in there')*/
+String preposition;
+
+/** What is the role of this template/agent? This is going to be used as an XML attribute associated to the XML element created by this template*/
+constant String type = 'field';
+
+/** These flags are used to set or reset certain features in the polcies created by this template*/
+
+/** Should the policies support implicit matches? (that is when a field value is referenced in the input but the keyword used for
+    that field is not referenced) */
+Boolean implicitMatch = true;
+/** Should the policies support matches if they are not certainly explicit? (that is when a field and keyword are referenced in the input but they are not adjacent to eachother */
+Boolean maybeExplicitMatch = false;
+/** Should the agent make a claim if a keyword is matched but no data is matched? */
+Boolean supportKeywordOnlyMatch = true;
+/** Should the policies support value ranges (eg. gt, lt, ge, le)? */
+Boolean supportValueRange = false;
+
+/** This condition is used to match explicit claims on exact matches to a <i>field</i> value.<br>
+    Should be a combination of any string literal, preposition, kwd and adjacentReference.<br>
+  */
+Condition equalsTo = [preposition] ~ kwd ~ (['is'] ~ ['equal' ~ ['to']]|'isEqualTo'|'=');
+/** This condition is used to match explicit claims on contains matches to a <i>field</i> value.<br>
+    Should be a combination of any string literal, preposition, kwd and adjacentReference.<br>
+  */
+Condition contains = [preposition] ~ kwd ~ ('contains'|'containing'|'include'|'including');
+/** This condition is used to match explicit claims on starts with matches to a <i>field</i> value.<br>
+    Should be a combination of any string literal, preposition, kwd and adjacentReference.<br>
+  */
+Condition startsWith = [preposition] ~ kwd ~ ('startsWith'|'starts with'|'starting with'|'which start with'|'that start with'|'which starts with'|'that starts with');
+/** This condition is used to match explicit claims on ends with  matches to a <i>field</i> value.<br>
+    Should be a combination of any string literal, preposition, kwd and adjacentReference.<br>
+  */
+Condition endsWith = [preposition] ~ kwd ~ ('endsWith'|'ends with'|'ending with'|'which end with'|'that end with'|'which ends with'|'that ends with');
+
+/** The condition used to match explicit claims on the exact value this agent is representing.<br>
+    Should be a combination of any string literal, kwd and adjacentReference
+  */
+Condition isValueOf = ('isValueOf' | ('is' ~ ['the'] ~ 'value of')) kwd;
+
+/** The condition used to match explicit claims on the part of the value this agent is representing.<br>
+    Should be a combination of any string literal, kwd and adjacentReference
+  */
+Condition isPartOf = ('isPartOf' | ('is part of')) kwd;
+
+/** The condition used to match explicit claims on the start of the value this agent is representing.<br>
+    Should be a combination of any string literal, kwd and adjacentReference
+  */
+Condition isStartOf = ('isStartOf' | ('is start of')) kwd;
+/** The condition used to match explicit claims on the end of the value this agent is representing.<br>
+    Should be a combination of any string literal, kwd and adjacentReference
+  */
+Condition isEndOf = ('isEndOf' | ('is end of')) kwd;
+
+/** condition that comes before a value in the condition: (beforeValue value afterValue)*/
+Condition beforeValue = '';
+/** condition that comes after a value in the condition: (beforeValue value afterValue)*/
+Condition afterValue = '';
+
+/** condition used for claiming greater than value ranges */
+Condition gtCondition = (['is'] ~ ('gt'|'>') ~ value);
+/** condition used for claiming greater than or equal value ranges */
+Condition geCondition = (['is'] ~ ('ge'|'>=') ~ value);
+/** condition used for claiming less than value ranges */
+Condition ltCondition = (['is'] ~ ('lt'|'<') ~ value);
+/** condition used for claiming less than or equal value ranges */
+Condition leCondition = (['is'] ~ ('le'|'<=') ~ value);
+
+preposition:
+    this.preposition
+    {attributes: 'private, atomic'}
+    {action: ''}
+;
+
+/** Claims keywords used for this field */
+keyword:
+    this.keyword
+    {attributes: 'private, atomic'}
+    {action: addAttribute('explicit', 'true')}
+;
+
+/** Claims keywords optionally following a preposition */
+kwd:
+    [preposition] ~ keyword
+    {attributes: 'private, atomic'}
+;
+
+/** Actuated when the user references this field without referencing a value (data)
+    Makes a claim only if either supportKeywordOnlyMatch is true or if this agent is part of a previous ambiguity.
+    */
+onlyKwd:
+    this.supportKeywordOnlyMatch & kwd | <check('previous_action', this)> & kwd
+    {attributes: 'private, atomic'}
+    {priority: topicScope(this)}
+    {action: com.dejima.core.nlp.text.action.FieldActuation: 
+       setTag(this.tag), addAttribute('type', this.type), kwd}
+;
+
+/** Used when values can come from a down-chain DataSourceAgent */
+datasource:
+   this.datasourceAgent
+   {attributes: 'private, atomic'}
+	{action: this.datasourceAgent }
+;
+
+/** This policy claims by matching inputs to data in file, sync file, live interpretation or context */
+dbData:
+    <exact> /F:LINE this.file:this.noiseMinTokenLength:this.noiseFile
+    {attributes: 'private, atomic'}
+    {action: *}
+;
+
+data: 
+   [preposition] ~ (dbData | datasource)
+   {attributes: 'private, atomic'}
+	{ action: preposition,dbData,datasource }
+;
+   
+beforeValue:
+    this.beforeValue
+    {attributes: 'private, atomic'}
+;
+
+afterValue:
+    this.afterValue
+    {attributes: 'private, atomic'}
+;
+
+value:
+    data
+    {attributes: 'private, atomic'}
+;
+
+gtValue:
+    this.supportValueRange & (this.gtCondition)
+    {attributes: 'private, atomic'}
+    {action: com.dejima.core.nlp.text.action.FieldActuation:  
+       addAttribute('op','gt'), value}
+;
+
+ltValue:
+    this.supportValueRange & (this.ltCondition)
+    {attributes: 'private, atomic'}
+    {action: com.dejima.core.nlp.text.action.FieldActuation:  
+       addAttribute('op','lt'), value}
+;
+
+geValue:
+    this.supportValueRange & (this.geCondition)
+    {attributes: 'private, atomic'}
+    {action: com.dejima.core.nlp.text.action.FieldActuation:  
+       addAttribute('op','ge'), value}
+;
+
+leValue:
+    this.supportValueRange & (this.leCondition)
+    {attributes: 'private, atomic'}
+    {action: com.dejima.core.nlp.text.action.FieldActuation: 
+       addAttribute('op','le'), value}
+;
+
+equalsTo:
+    this.equalsTo
+    {attributes: 'private, atomic'}
+;
+
+startsWith:
+    this.startsWith
+    {attributes: 'private, atomic'}
+    {action: addAttribute('match','startsWith')}
+;
+
+endsWith:
+    this.endsWith
+    {attributes: 'private, atomic'}
+    {action: addAttribute('match','endsWith')}
+;
+
+contains:
+    this.contains
+    {attributes: 'private, atomic'}
+    {action: addAttribute('match','contains')}
+;
+
+isValueOf:
+    this.isValueOf
+    {attributes: 'private, atomic'}
+;
+
+isStartOf:
+    this.isStartOf
+    {attributes: 'private, atomic'}
+    {action: addAttribute('match','startsWith')}
+;
+
+isEndOf:
+    this.isEndOf
+    {attributes: 'private, atomic'}
+    {action: addAttribute('match','endsWith')}
+;
+
+isPartOf:
+    this.isPartOf
+    {attributes: 'private, atomic'}
+    {action: addAttribute('match','contains')}
+;
+
+leadingMatchCondition:
+   equalsTo | startsWith | endsWith | contains
+   {attributes: 'private, atomic'}
+;
+
+trailingMatchCondition:
+   isValueOf | isStartOf | isEndOf | isPartOf
+   {attributes: 'private, atomic'}
+;
+
+/** This policy makes claims if the input explicitly refers to this field (field keywords are used in the input) */
+certainlyExplicit:
+    ([preposition] ~ data ~ keyword) | /*eg. with high priority*/
+    (beforeValue ~ data ~ afterValue) | 
+    (leadingMatchCondition ~ data) | 
+    (data ~ trailingMatchCondition) |
+    ([preposition] ~ (keyword) (
+       gtValue | ltValue | geValue | leValue
+    ))
+   {attributes: 'private, atomic'}
+   {priority: 10001}
+   {action: leadingMatchCondition, trailingMatchCondition, keyword, data, beforeValue, afterValue, gtValue, ltValue, geValue, leValue}
+;
+
+/** This policy makes claims if the input may be explicitly referencing to this field (field keywords are used in the input but they are not adjacent to field values) */
+maybeExplicit:
+    this.maybeExplicitMatch & (leadingMatchCondition & data | data & trailingMatchCondition)
+    {attributes: 'private'}
+    {action: leadingMatchCondition, trailingMatchCondition, data}
+;
+
+explicit: 
+   certainlyExplicit | maybeExplicit
+   {attributes: 'private'}
+;
+
+/** This policy makes claims if implicit matching is supported */
+implicit:
+    (this.implicitMatch | <check('previous_action',this)>) & (
+      data |
+      gtValue | ltValue | geValue | leValue
+    )
+   {attributes: 'private'}
+   {action: data, gtValue, ltValue, geValue, leValue }
+;
+
+/**
+ * A single field.
+ */
+aField:
+    explicit | implicit
+    {attributes: 'private'}
+;
+
+field:
+    aField
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.FieldActuation: 
+       setTag(this.tag), addAttribute('type', this.type), setSingleSlot(true), aField }
+;
+
+main:
+    (onlyKwd | field)+
+;

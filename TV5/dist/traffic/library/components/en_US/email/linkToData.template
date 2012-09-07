@@ -1,0 +1,119 @@
+/**
+This template is used for objects which link to a field (component network). 
+For example a Contact name is linked to the Name component.
+
+This template can be used to customize a component network. For example a Name component network used as an Email Sender may be 
+customized to accept "from" as a keyword (which is not part of the keywords used in the component network). 
+*/
+
+/** What is the keyword that identifies this object? */
+String keyword;
+/** What is the preposition for this object? (e.g. 'in' or 'at' are used for a place)*/
+String preposition;
+String domainKeyword;
+
+/** These flags are used to set or reset certain features in the polcies created by this template*/
+
+/** Should the policies support implicit matches? (that is when an object field is referenced in the input but the keyword used for
+    that object is not referenced) */
+Boolean implicitMatch = true;
+/** Should the policies support ORing fields? */
+Boolean supportOR = true;
+/** Should the policies support followups for removing a field from the fields used in previous query on this object*/
+Boolean supportClear = true;
+/** Should variables be used to guess the value of this object? */
+Boolean supportGuess = true;
+
+/** Claims keywords used for this object */
+kwd:
+	[this.domainKeyword] this.keyword
+	{action: setTag(this.tag)}
+;
+
+/** This policy is used when disambiguaing a previous input*/
+disambiguation:
+   kwd & <check('previous_action', this)>
+	{priority:1000}
+	{action: addPrevious(this)}
+;
+
+/** There should only be one down-chain agent used as the field of this object*/
+fields:
+   this.children
+	{action: addCData(this.children)}
+;
+
+equalsTo:
+   [this.domainKeyword] kwd ['is'] ['equal' ['to']]
+;
+
+/** This policy makes claims if the input explicitly refers to this object (object keywords are used in the input) */
+explicit:
+   equalsTo & fields
+   {attributes: 'private'}
+   {priority: 1001}
+   {action: fields}
+;
+
+/** This policy makes claims if implicit matching is supported */
+implicit:
+   this.implicitMatch & ([this.domainKeyword] [this.preposition] fields)
+   {attributes: 'private'}
+   {action: fields}
+;
+
+/** Makes a guess on the value of the object (if the guess feature is supported) */
+containsGuess:
+	this.supportGuess & equalsTo ?:(1,3):1:'variable_noise.txt' |
+   [this.domainKeyword] this.preposition ['the'] ?:(1,3):1:'variable_noise.txt' kwd
+        {attributes: 'private'}
+	{action: addCData(?)}
+;
+
+variableInQuotes:
+	this.supportGuess & ('\'' ? '\'' | '"' ? '"')
+	{attributes: 'private'}
+	{action: '"',?'"'}
+;
+
+/** Makes a guess on the exact value of the object (if the guess feature is supported). 
+    The guess will be made only on words surrounded by quotes
+  */
+exactGuess:
+	this.supportGuess & [this.domainKeyword] this.preposition ['the'] variableInQuotes kwd |
+   equalsTo variableInQuotes
+	{attributes: 'private'}
+	{action: addCData(variableInQuotes)}
+;
+
+object:
+   explicit | implicit | containsGuess | exactGuess
+	{action: setTag(this.tag), explicit, implicit, fields, containsGuess, exactGuess}
+;
+
+/** Policies to support ORing of fields */
+orObject:
+   this.supportOR & ('and'|'or'|',') ~ object
+	{attributes: 'private'}
+;
+
+orContinuation:
+   this.supportOR & <exists> (/BOI ('and'|'or')) < object ~^ [orObject] & <check('previous_action', this)>
+	{action: addPrevious(this), object, orObject}
+;
+
+orObjects:
+	this.supportOR & object ~^ orObject
+	{action: object, orObject}
+;
+
+/** Policies to support removing a field from the previous query on the object */
+clear(this.children):
+   'not' this.children[.]
+	{action: removeContext(this.children[.]), addPreviousContent(this)}
+;
+
+main:
+   (kwd | orObjects | orContinuation | object | clear(this.children))+
+   {action: kwd, orObjects, orContinuation, object, clear(this.children)}
+;

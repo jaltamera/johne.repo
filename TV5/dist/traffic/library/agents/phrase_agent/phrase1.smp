@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CASES>
+<CASE>
+<SCENARIO><![CDATA[s0]]></SCENARIO>
+<CASENAME>turn on tv</CASENAME>
+<INPUT><![CDATA[turn on tv]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[s0]]></FUNCTIONALPOINT>
+<EXPECTED parsing="no"><![CDATA[&lt;turn-on&gt;&lt;tv/&gt;&lt;/turn-on&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[s0]]></SCENARIO>
+<CASENAME>put on my box</CASENAME>
+<INPUT><![CDATA[put on my box]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[s0]]></FUNCTIONALPOINT>
+<EXPECTED parsing="no"><![CDATA[&lt;turn-on&gt;&lt;tv/&gt;&lt;/turn-on&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[s0]]></SCENARIO>
+<CASENAME>television power on</CASENAME>
+<INPUT><![CDATA[television power on]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[s0]]></FUNCTIONALPOINT>
+<EXPECTED parsing="no"><![CDATA[&lt;turn-on&gt;&lt;tv/&gt;&lt;/turn-on&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[s1]]></SCENARIO>
+<CASENAME>turn on vcr</CASENAME>
+<INPUT><![CDATA[turn on vcr]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[s1]]></FUNCTIONALPOINT>
+<EXPECTED parsing="no"><![CDATA[&lt;turn-on&gt;&lt;vcr/&gt;&lt;/turn-on&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[s1]]></SCENARIO>
+<CASENAME>video power on</CASENAME>
+<INPUT><![CDATA[video power on]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[s1]]></FUNCTIONALPOINT>
+<EXPECTED parsing="no"><![CDATA[&lt;turn-on&gt;&lt;vcr/&gt;&lt;/turn-on&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[s1]]></SCENARIO>
+<CASENAME>turn on tv recorder</CASENAME>
+<INPUT><![CDATA[turn on tv recorder]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[s1]]></FUNCTIONALPOINT>
+<EXPECTED parsing="no"><![CDATA[&lt;turn-on&gt;&lt;vcr/&gt;&lt;/turn-on&gt;
+]]></EXPECTED>
+</CASE>
+<PRESENTATIONORDER>
+</PRESENTATIONORDER>
+</CASES>

@@ -1,0 +1,53 @@
+extends name.template;
+
+middleInitialOnly:
+	('a'|'b'|'c'|'d'|'e'|'f'|'g'|'h'|'i'|'j'|'k'|'l'|'m'|'n'|'o'|'p'|'q'|'r'|'s'|'t'|'u'|'v'|'w'|'x'|'y'|'z')
+   {attributes: 'private'}
+	{action: *}
+;
+
+middleInitial:
+	middleInitialOnly ['.']
+   {attributes: 'private'}
+   {action: com.dejima.core.nlp.text.action.FieldActuation: 
+       setTag('MiddleName'), addAttribute('type', 'field'), addAttribute('preference', ''), setDefaultSlotFilling(''), setSingleSlot(true), addCData(middleInitialOnly)}
+;
+
+title:
+	('dr' | 'prof' | 'mr' | 'ms' | 'mrs') ['.']
+   {attributes: 'private'}
+;
+
+firstNameGuess:
+  ?:fn:(1,1):1:'variable_noise.txt'
+   {attributes: 'private'}
+  {action: setTag('FirstName'), addAttribute('type', 'field'), addAttribute('preference', ''), setDefaultSlotFilling(''), setSingleSlot(true),  addCData(?:fn)}
+;
+
+lastNameGuess:
+  ?:ln:(1,1):1:'variable_noise.txt'
+   {attributes: 'private'}
+  {action: setTag('LastName'), addAttribute('type', 'field'), addAttribute('preference', ''), setDefaultSlotFilling(''), setSingleSlot(true), addCData(?:ln)}
+;
+
+nameGuessed:
+    ((<exists>'with') [title] [firstNameGuess] [middleInitial] [lastNameGuess])
+    {attributes: 'private'}
+    {priority: 100001}
+    {action: com.dejima.core.nlp.text.action.NameActuation:
+      setFirstName(firstNameGuess), setMiddleName(middleInitial), setLastName(lastNameGuess),  
+      firstNameGuess, middleInitial, lastNameGuess}
+;
+
+nameMatched:
+    ([title] (fieldFirstName&|fieldLastName)) | ([title] fieldFirstName [fieldMiddleName|middleInitial] fieldLastName) | ([title] fieldLastName [','] fieldFirstName)
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.NameActuation:
+      setFirstName(fieldFirstName), setMiddleName(middleInitial), setLastName(fieldLastName),  
+    	fieldFirstName, fieldMiddleName, middleInitial, fieldLastName}
+;
+
+fields:
+    (nameGuessed - ['']) | (nameMatched - nameGuessed)
+    {attributes: 'private'}
+;

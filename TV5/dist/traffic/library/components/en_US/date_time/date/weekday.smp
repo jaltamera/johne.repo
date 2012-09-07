@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<CASES>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>1</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[]]></DESCRIPTION>
+<PROMPT><![CDATA[]]></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[Saturday (currentDate=03.10.2004 11:08 PM)]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[week day]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:day&gt;&lt;![CDATA[13]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[3]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2004]]&gt;&lt;/date:year&gt;&lt;/date:Date&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>2</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[]]></DESCRIPTION>
+<PROMPT><![CDATA[]]></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[Sunday (currentDate=03.10.2004 11:08 PM)]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[week day]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:day&gt;&lt;![CDATA[7]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[3]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2004]]&gt;&lt;/date:year&gt;&lt;/date:Date&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>3</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[]]></DESCRIPTION>
+<PROMPT><![CDATA[]]></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[Monday (currentDate=03.10.2004 11:08 PM)]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[week day]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:day&gt;&lt;![CDATA[8]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[3]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2004]]&gt;&lt;/date:year&gt;&lt;/date:Date&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>4</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[]]></DESCRIPTION>
+<PROMPT><![CDATA[]]></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[Tuesday (currentDate=03.10.2004 11:08 PM)]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[week day]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:day&gt;&lt;![CDATA[9]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[3]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2004]]&gt;&lt;/date:year&gt;&lt;/date:Date&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>5</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[]]></DESCRIPTION>
+<PROMPT><![CDATA[]]></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[Wednesday (currentDate=03.10.2004 11:08 PM)]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[week day]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:day&gt;&lt;![CDATA[10]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[3]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2004]]&gt;&lt;/date:year&gt;&lt;/date:Date&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>6</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[]]></DESCRIPTION>
+<PROMPT><![CDATA[]]></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[Thursday (currentDate=03.10.2004 11:08 PM)]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[week day]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:day&gt;&lt;![CDATA[11]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[3]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2004]]&gt;&lt;/date:year&gt;&lt;/date:Date&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>7</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"><![CDATA[]]></DESCRIPTION>
+<PROMPT><![CDATA[]]></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[Friday (currentDate=03.10.2004 11:08 PM)]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[week day]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:day&gt;&lt;![CDATA[12]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[3]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2004]]&gt;&lt;/date:year&gt;&lt;/date:Date&gt;
+]]></EXPECTED>
+</CASE>
+<PRESENTATIONORDER>
+</PRESENTATIONORDER>
+</CASES>

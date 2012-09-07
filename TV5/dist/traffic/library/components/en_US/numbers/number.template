@@ -1,0 +1,12 @@
+extends library object.template;
+
+constant String type = '';
+
+/** 
+ * Handle joining different fields.
+ */
+fields:
+    field(this.children):op(|)
+    {attributes: 'private'}
+    {action: field(this.children)}
+;

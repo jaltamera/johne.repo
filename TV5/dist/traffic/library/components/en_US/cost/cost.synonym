@@ -1,0 +1,5 @@
+cost: costs
+gt: greater than
+lt: less than
+ge: greater than or equal, gt or eq, greater than or eq, gt or equal, not less than, not lt, no less than
+le: less than or equal, lt or eq, less than or eq, lt or equal, not greater than, not gt, no more than

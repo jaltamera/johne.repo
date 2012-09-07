@@ -1,0 +1,14 @@
+<ExplanationProperites>
+  <ExplanationTranslation>
+    <Path><![CDATA[priceRange/more]]></Path>
+    <Value><![CDATA[Price Greater Than]]></Value>
+  </ExplanationTranslation>
+ <ExplanationTranslation>
+    <Path><![CDATA[priceRange/less]]></Path>
+    <Value><![CDATA[Price Less Than]]></Value>
+  </ExplanationTranslation>
+ <ExplanationTranslation>
+    <Path><![CDATA[priceRange/equal]]></Path>
+    <Value><![CDATA[Price]]></Value>
+  </ExplanationTranslation>
+</ExplanationProperites>

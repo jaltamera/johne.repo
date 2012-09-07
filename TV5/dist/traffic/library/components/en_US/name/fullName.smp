@@ -1,0 +1,985 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<CASES CoreVersion="4.6.0.128 " SDKVersion="4.6.0.128 ">
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>1</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[john smith]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[john smith]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[john smith]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="John" lastName="Smith"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[smith]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[john smith]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[john smith]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="John" lastName="Smith"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[smith]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>2</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[peter jones]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[peter jones]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[peter jones]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="Peter" lastName="Jones"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[peter]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[jones]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[peter jones]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[peter jones]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="Peter" lastName="Jones"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[peter]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[jones]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>3</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[john jones]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[john jones]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[john jones]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="John" lastName="Jones"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[jones]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[john jones]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[john jones]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="John" lastName="Jones"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[jones]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>4</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[andrew]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[andrew]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[andrew]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="Andrew"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[andrew]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[andrew]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[andrew]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="Andrew"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[andrew]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>5</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[jones]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[jones]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[jones]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name lastName="Jones"&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[jones]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[jones]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[jones]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name lastName="Jones"&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[jones]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>6</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[scott]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[scott]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[scott]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name lastName="Scott"&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[scott]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[scott]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[scott]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name lastName="Scott"&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[scott]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>7</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[firstname scott]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[firstname scott]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[firstname scott]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="Scott"&gt;
+      &lt;name:FirstName type="field" explicit="true"&gt;&lt;![CDATA[scott]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[firstname scott]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[firstname scott]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="Scott"&gt;
+      &lt;name:FirstName type="field" explicit="true"&gt;&lt;![CDATA[scott]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>8</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[firstname is scott]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[firstname is scott]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[firstname is scott]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="Scott"&gt;
+      &lt;name:FirstName type="field" explicit="true"&gt;&lt;![CDATA[scott]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[firstname is scott]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[firstname is scott]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="Scott"&gt;
+      &lt;name:FirstName type="field" explicit="true"&gt;&lt;![CDATA[scott]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>9</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[with firstname equal to scott]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[with firstname equal to scott]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[with firstname equal to scott]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="Scott"&gt;
+      &lt;name:FirstName type="field" explicit="true"&gt;&lt;![CDATA[scott]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[with firstname equal to scott]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[with firstname equal to scott]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="Scott"&gt;
+      &lt;name:FirstName type="field" explicit="true"&gt;&lt;![CDATA[scott]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>10</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[with lastname equal to scott]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[with lastname equal to scott]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[with lastname equal to scott]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name lastName="Scott"&gt;
+      &lt;name:LastName type="field" explicit="true"&gt;&lt;![CDATA[scott]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[with lastname equal to scott]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[with lastname equal to scott]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name lastName="Scott"&gt;
+      &lt;name:LastName type="field" explicit="true"&gt;&lt;![CDATA[scott]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>11</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[lastname scott]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[lastname scott]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[lastname scott]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name lastName="Scott"&gt;
+      &lt;name:LastName type="field" explicit="true"&gt;&lt;![CDATA[scott]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[lastname scott]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[lastname scott]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name lastName="Scott"&gt;
+      &lt;name:LastName type="field" explicit="true"&gt;&lt;![CDATA[scott]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>12</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[lastname is scott]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[lastname is scott]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[lastname is scott]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name lastName="Scott"&gt;
+      &lt;name:LastName type="field" explicit="true"&gt;&lt;![CDATA[scott]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[lastname is scott]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[lastname is scott]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name lastName="Scott"&gt;
+      &lt;name:LastName type="field" explicit="true"&gt;&lt;![CDATA[scott]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>2</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[firstname blah and lastname blah2]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[firstname blah and lastname blah2]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[firstname blah and lastname blah2]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="Blah"&gt;
+      &lt;name:FirstName type="field" explicit="true"&gt;&lt;![CDATA[blah]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+    &lt;name:Name join="and" lastName="Blah2"&gt;
+      &lt;name:LastName type="field" explicit="true"&gt;&lt;![CDATA[blah2]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[firstname blah and lastname blah2]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[firstname blah and lastname blah2]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="Blah"&gt;
+      &lt;name:FirstName type="field" explicit="true"&gt;&lt;![CDATA[blah]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+    &lt;name:Name join="and" lastName="Blah2"&gt;
+      &lt;name:LastName type="field" explicit="true"&gt;&lt;![CDATA[blah2]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>3</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[john with lastname blah]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[john with lastname blah]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[john with lastname blah]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="John" lastName="Blah"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:LastName type="field" explicit="true"&gt;&lt;![CDATA[blah]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[john with lastname blah]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[john with lastname blah]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="John" lastName="Blah"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:LastName type="field" explicit="true"&gt;&lt;![CDATA[blah]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>4</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[john blah]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[john blah]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[john]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="John"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[john blah]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[john]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="John"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>5</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[blah smith]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[blah smith]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[smith]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name lastName="Smith"&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[smith]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[blah smith]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[smith]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name lastName="Smith"&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[smith]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>6</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[blah blah2]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation" unableToInterpret="true" info="Unable to interpret input. Keeping the context."&gt;
+  &lt;name:Input&gt;&lt;![CDATA[blah blah2]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood /&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation" unableToInterpret="true" info="Unable to interpret input. Keeping the context."&gt;
+  &lt;name:Input&gt;&lt;![CDATA[blah blah2]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood /&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>8</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[somthing jones or john something]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[somthing jones or john something]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[jones or john]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name lastName="Jones"&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[jones]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+    &lt;name:Name join="or" firstName="John"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[somthing jones or john something]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[jones or john]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name lastName="Jones"&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[jones]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+    &lt;name:Name join="or" firstName="John"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>9</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[peter smith or betty sue]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[peter smith or betty sue]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[peter smith or betty sue]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="Peter" lastName="Smith"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[peter]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[smith]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+    &lt;name:Name join="or" firstName="Betty"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[betty]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+    &lt;name:Name firstName="Sue"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[sue]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[peter smith or betty sue]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[peter smith or betty sue]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="Peter" lastName="Smith"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[peter]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[smith]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+    &lt;name:Name join="or" firstName="Betty"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[betty]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+    &lt;name:Name firstName="Sue"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[sue]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[john]]><FOLLOWUP><![CDATA[..and david]]></FOLLOWUP></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[..and david]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[and david]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent" followup="add"&gt;
+    &lt;name:Name firstName="David"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[david]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+    &lt;name:Name firstName="John"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[..and david]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[and david]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent" followup="add"&gt;
+    &lt;name:Name firstName="David"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[david]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+    &lt;name:Name firstName="John"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[john and david]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[john and david]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[john and david]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="John"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+    &lt;name:Name join="and" firstName="David"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[david]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[john and david]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[john and david]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="John"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+    &lt;name:Name join="and" firstName="David"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[david]]&gt;&lt;/name:FirstName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[john e. smith]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[john e. smith]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[john e. smith]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="John" middleName="E" lastName="Smith"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:MiddleName type="field"&gt;&lt;![CDATA[e]]&gt;&lt;/name:MiddleName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[smith]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[john e. smith]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[john e. smith]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="John" middleName="E" lastName="Smith"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:MiddleName type="field"&gt;&lt;![CDATA[e]]&gt;&lt;/name:MiddleName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[smith]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[peter w jones]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[peter w jones]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[peter w jones]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="Peter" middleName="W" lastName="Jones"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[peter]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:MiddleName type="field"&gt;&lt;![CDATA[w]]&gt;&lt;/name:MiddleName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[jones]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[peter w jones]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[peter w jones]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="Peter" middleName="W" lastName="Jones"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[peter]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:MiddleName type="field"&gt;&lt;![CDATA[w]]&gt;&lt;/name:MiddleName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[jones]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[peter f smith and john r. jones]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[peter f smith and john r. jones]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[peter f smith and john r. jones]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="Peter" middleName="F" lastName="Smith"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[peter]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:MiddleName type="field"&gt;&lt;![CDATA[f]]&gt;&lt;/name:MiddleName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[smith]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+    &lt;name:Name join="and" firstName="John" middleName="R" lastName="Jones"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:MiddleName type="field"&gt;&lt;![CDATA[r]]&gt;&lt;/name:MiddleName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[jones]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[peter f smith and john r. jones]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[peter f smith and john r. jones]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="Peter" middleName="F" lastName="Smith"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[peter]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:MiddleName type="field"&gt;&lt;![CDATA[f]]&gt;&lt;/name:MiddleName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[smith]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+    &lt;name:Name join="and" firstName="John" middleName="R" lastName="Jones"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:MiddleName type="field"&gt;&lt;![CDATA[r]]&gt;&lt;/name:MiddleName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[jones]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer"></PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean"></DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[dr john smith]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[dr john smith]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[dr john smith]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="John" lastName="Smith"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[smith]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[dr john smith]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[dr john smith]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="John" lastName="Smith"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[smith]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer"></PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean"></DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[smith, john and jones, peter]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[smith, john and jones, peter]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[smith, john and jones, peter]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="John" lastName="Smith"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[smith]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+    &lt;name:Name join="and" firstName="Peter" lastName="Jones"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[peter]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[jones]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;name:DejimaInterpretation xmlns:name="name" type="interpretation"&gt;
+  &lt;name:Input&gt;&lt;![CDATA[smith, john and jones, peter]]&gt;&lt;/name:Input&gt;
+  &lt;name:Understood&gt;&lt;![CDATA[smith, john and jones, peter]]&gt;&lt;/name:Understood&gt;
+  &lt;name:System type="intent"&gt;
+    &lt;name:Name firstName="John" lastName="Smith"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[john]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[smith]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+    &lt;name:Name join="and" firstName="Peter" lastName="Jones"&gt;
+      &lt;name:FirstName type="field"&gt;&lt;![CDATA[peter]]&gt;&lt;/name:FirstName&gt;
+      &lt;name:LastName type="field"&gt;&lt;![CDATA[jones]]&gt;&lt;/name:LastName&gt;
+    &lt;/name:Name&gt;
+  &lt;/name:System&gt;
+&lt;/name:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<PRESENTATIONORDER>
+</PRESENTATIONORDER>
+</CASES>

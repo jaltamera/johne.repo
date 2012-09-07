@@ -1,0 +1,5 @@
+#
+# Network test suite for datasource_agent
+#
+NETWORK=datasource1.opal
+CORPUS=datasource1.smp

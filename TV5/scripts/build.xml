@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="traffic" default="war" basedir=".">
+    
+	<!-- root dir -->
+	<property name="root.dir" value="../" />
+
+	<!-- read the env variables into env property -->
+    <property environment="env"/>
+
+	<!-- Directory configurations -->
+    <property name="project.name" value="traffic" />
+	<property name="war.name" value="traffic" />
+    <property name="project.dir" value="${root.dir}" />
+    <property name="project.src" value="${project.dir}/src" />
+    <property name="project.db" value="${project.dir}/database" />
+    <property name="project.interface" value="${project.dir}/interface" />
+    <property name="project.network" value="${project.dir}/network" />
+    <property name="project.scripts" value="${project.dir}/scripts" />
+    <property name="project.lib" value="${project.dir}/lib" />
+	
+	<property name="build.dir" location="${root.dir}/build/${project.name}"/>
+	<property name="build.jar.file"  value="${build.dir}/lib/${project.name}.jar"/>
+
+	<!-- dist properties -->
+	<property name="dist.dir" value="${project.dir}/dist/${project.name}" />
+	<property name="logs.dir" value="${dist.dir}/logs" />
+	<property name="db.dir" value="${dist.dir}/database" />
+	<property name="webinf.dir" value="${dist.dir}/WEB-INF" />
+	<property name="dist.war.file" value="${project.dir}/dist/${war.name}.war"/>
+	
+	<!-- Path of external applications -->
+	<property name="aap.home" value="${env.AAP_HOME}" />
+    <property name="aap.library" value="${aap.home}/IDE/library" />
+    <property name="aap.properties" value="${aap.home}/IDE/properties" />
+    <property name="aap.lib" value="${aap.home}/IDE/include/lib" />
+    <property name="aap.classes" value="${aap.home}/IDE/include/classes" />
+
+	<!-- Compiler configurations -->
+	<property name="build.compiler" value="modern"/>
+	<property name="compile.debug" value="on"/>
+	<property name="compile.optimize" value="off"/>
+	<property name="compile.deprecation" value="off"/>
+	<property name="compile.source" value="1.5"/>
+	<property name="compile.target" value="1.5"/>
+
+    <!-- ================================= 
+          target: clean              
+         ================================= -->
+    <target name="clean" 
+      description="deletes the dist folder">
+      <delete dir="${build.dir}" />
+      <delete dir="${dist.dir}" />
+      <delete file="${dist.war.file}" />
+    </target>
+
+   <!-- ================================= 
+          target: compile  (project)
+         ================================= -->
+    <target name="compile"
+        description="compile the project source ">
+
+     <mkdir dir="${build.dir}/classes" />
+     <!-- Compile the java code from ${project.src} into ${build.dir} -->
+     <javac srcdir="${project.src}"
+           destdir="${build.dir}/classes"
+           classpath="${classpath}"
+	       debug="${compile.debug}"
+	       optimize="${compile.optimize}"
+	       deprecation="${compile.deprecation}"
+	       source="${compile.source}"
+	       target="${compile.target}">
+      <!-- set the classpath -->
+      <classpath>
+        <fileset dir="${aap.lib}">
+          <include name="*.jar"/>
+        </fileset>         
+        <fileset dir="${project.lib}">
+          <include name="*.jar"/>
+        </fileset>
+      </classpath>
+      <exclude name="**/*_Test.java" />
+    </javac>
+    </target>
+
+
+    <!-- ================================= 
+          target: build              
+         ================================= -->         
+    <target name="build" depends="compile"
+      description="creates a jar file">
+
+     <mkdir dir="${build.dir}/lib" />
+
+     <jar jarfile="${build.jar.file}"
+          basedir="${build.dir}/classes"/>
+    </target>
+	
+
+    <!-- ================================= 
+          target: dist
+         ================================= -->
+    <target name="dist" depends="clean, build"
+      description="creates the dist folder">
+
+	    <mkdir dir="${dist.dir}" />
+	    <mkdir dir="${logs.dir}" />
+	    <mkdir dir="${db.dir}" />
+        <mkdir dir="${webinf.dir}/classes" />
+    	<mkdir dir="${webinf.dir}/classes/resources" />
+        <mkdir dir="${webinf.dir}/lib" />
+		
+        <copy file="${build.jar.file}" todir="${webinf.dir}/lib"/>
+
+        <copy todir="${db.dir}">
+    	  <fileset dir="${project.db}">
+    	  </fileset>
+        </copy>
+	
+        <!-- ================================= 
+              include: jakarta_tld
+             ================================= -->
+    	
+    	<copy todir="${webinf.dir}">
+    	  <fileset dir="${project.scripts}">
+    	     <include name="**/*.tld"/>
+    	  </fileset>
+        </copy>
+    	
+    	
+        <copy todir="${webinf.dir}/classes">
+    	  <fileset dir="${build.dir}/classes">
+    	  </fileset>
+        </copy>
+	    <copy todir="${webinf.dir}/classes">
+    	  <fileset dir="${project.src}">
+    	     <include name="**/*.properties"/>
+    	  </fileset>
+        </copy>
+        <copy todir="${webinf.dir}/classes">
+    	  <fileset dir="${project.scripts}">
+    	     <include name="**/*.properties"/>
+   	  	     <exclude name="**/deploy.properties" />
+    	  </fileset>
+        </copy>
+        <copy todir="${webinf.dir}/classes/resources">
+    	  <fileset dir="${project.scripts}">
+    	     <include name="**/deploy.properties"/>
+    	  </fileset>
+        </copy>
+        <copy todir="${webinf.dir}/lib">
+    	  <fileset dir="${aap.lib}">
+    	    <include name="*.jar"/>
+    	  </fileset>
+        </copy>
+
+        <copy todir="${dist.dir}/scripts">
+    	  <fileset dir="${project.scripts}">
+    	    <include name="*.bat"/>
+    	    <include name="*.txt"/>
+    	  </fileset>
+        </copy>
+
+		  <copy todir="${dist.dir}/properties">
+		     <fileset dir="${aap.properties}"/>
+		  </copy>
+		  <copy todir="${dist.dir}/library">
+		     <fileset dir="${aap.library}"/>
+		  </copy>
+		  <copy todir="${dist.dir}/interface">
+		     <fileset dir="${project.interface}"/>
+		  </copy>
+		  <copy todir="${dist.dir}/network">
+		     <fileset dir="${project.network}"/>
+		  </copy>
+          <copy todir="${webinf.dir}/lib">
+		     <fileset dir="${project.lib}"/>
+		  </copy>
+	</target>
+
+    <!-- ================================= 
+          target: war              
+         ================================= -->
+    <target name="war" depends="dist"
+            description="creates a war file">
+		<war destfile="${dist.war.file}" webxml="${project.scripts}/web.xml" duplicate="preserve">
+          <fileset dir="${dist.dir}"/>
+		</war>
+    </target>
+</project>

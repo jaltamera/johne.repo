@@ -1,0 +1,24 @@
+aptNumber: suite, apt, unit, \#, no, number, no., suite \#, apt \#, unit \#,  suite no, apt no, unit no, suite number, apt number, unit number, suite no., apt no., unit no. 
+streetNumber: street number, street \#, street no, street no.
+postcode: zip,  zipcode, post code, zipcode of, postcode of, post code of
+StreetAddress: street address, address
+
+Avenue: ave, ave.
+Circle: circle
+Drive: dr, dr.
+Boulevard: blvd, blvd.
+Expressway: expwy, express way
+Highway: hwy, US highway, us hwy
+Parkway: parkway
+Road: rd, rd.
+Square: square, sq, sq.
+Street: st, st.
+Center: centre
+Court: ct, ct.
+Lane: ln, ln.
+
+North: N
+South: S
+East: E
+West: W
+

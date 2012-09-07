@@ -1,0 +1,43 @@
+/**
+  Light Weight top.template
+*/
+
+/** This attribute defines the role of the template (a constant) */
+constant String type = 'interpretation';
+
+/**
+ * This policy is here so users can explicitly restart a dialogue.
+ * Right now every input is a follow-up by default unless the users would explicitly restart the dialogue.
+ */
+restart:
+      'restart'
+      {attributes: 'private'}
+      {action: addAttribute('contextReset','true'), addAttribute('info','Resetting the context.'),''}
+;
+
+/**
+ * We want to keep the context when the system is unable to interpret the input
+ */
+keepContext:
+      ['']
+      {attributes: 'private'}
+      {action: addAttribute('unableToInterpret','true'), addAttribute('info','Unable to interpret input. Keeping the context.'), addPrevious(this.children)}
+;
+
+commands:
+     this.children+
+     {attributes: 'private'}
+     {action: this.children}
+;
+
+/**
+ * Sets the XML root node tag to DejimaInterpretation and adds the understood and input elements to the output XML
+ */
+interpretation: 
+    (commands|keepContext|restart)
+    {action: com.dejima.core.nlp.text.action.InterpretationActuation: 
+         setTag(this.tag), addAttribute('type', this.type), 
+         commands, keepContext, restart
+    }
+;
+

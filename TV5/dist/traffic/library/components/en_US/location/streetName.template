@@ -1,0 +1,64 @@
+extends library field.template;
+
+highwayKwd:
+   'Highway'
+    {attributes: 'private, atomic'}
+    {action: ' ', *.target}
+;
+
+nonHighwayKwd:
+   'Avenue'|'Boulevard'|'Circle'|'Drive'|'Expressway'|'Parkway'|'Road'|'Square'|'Street'|'Center'|'Court'|'Lane'|'Bridgeway'
+    {attributes: 'private, atomic'}
+    {action: ' ', *.target}
+;
+
+direction:
+     'North' | 'West' | 'East' | 'South'
+     {action: *.target, ' '}
+;
+
+streetNamePattern:
+    (this.supportLeftGuess & ([direction] ~ variable ~ nonHighwayKwd))  | /* South Mission Street*/
+    (this.supportLeftGuess & (variable ~ nonHighwayKwd ~ direction))  | /*e.g. First Street East */
+    (this.supportRightGuess & (highwayKwd ~ variable ~ [direction])) /*e.g. Hwy 101 */
+    {attributes: 'private, atomic'}
+    {action: direction, ?, highwayKwd, nonHighwayKwd}
+;
+
+streetNameVariable:
+     streetNamePattern | '\'' ~ streetNamePattern ~ '\'' | '"' ~ streetNamePattern ~ '"' 
+     {attributes: 'private, atomic'}
+	  {action: addCData(streetNamePattern)}
+;
+
+leadingMatchCondition:
+   (<exists> (highwayKwd|nonHighwayKwd) ~ 'name') ~ (equalsTo | startsWith | endsWith | contains)
+   {attributes: 'private, atomic'}
+;
+
+trailingMatchCondition:
+   (isValueOf | isStartOf | isEndOf | isPartOf) ~ (<exists> (highwayKwd|nonHighwayKwd) ~ 'name')
+   {attributes: 'private, atomic'}
+;
+
+middleVariable:
+    supportGuess & (beforeValue ? afterValue)
+    {attributes: 'private, atomic'}
+    {action: beforeValue, afterValue, addCData(?)}
+;
+   
+/** This policy makes claims if the input explicitly refers to this field (field keywords are used in the input) */
+certainlyExplicit:
+    ([preposition] ~ data ~ keyword) | /*eg. with high priority*/
+    (beforeValue ~ data ~ afterValue) | 
+    (leadingMatchCondition ~ data) | 
+    (data ~ trailingMatchCondition) |
+    (this.supportMiddleGuess & middleVariable) | 
+    ([preposition] ~ streetNameVariable) |
+    ([preposition] ~ (keyword|adjacentReference) (
+       gtValue | ltValue | geValue | leValue
+    ))
+   {attributes: 'private, atomic'}
+   {priority: 10001}
+   {action: leadingMatchCondition, trailingMatchCondition, keyword, data, middleVariable,  streetNameVariable, adjacentReference, beforeValue, afterValue, gtValue, ltValue, geValue, leValue}
+;

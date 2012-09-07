@@ -1,0 +1,55 @@
+extends library object.template;
+
+/** 
+  Light Weight relation.template
+*/
+
+
+/** The relevance of the two objects joint using this relation.
+    This can be any integer between -100 and +100.
+    0 is default relevance.
+*/
+String relevance = '0';
+
+/** This attribute defines the role of the template (do not change the value) */
+constant String type = 'relation';
+
+/** All down chain claim filtering rules are turned off. Filtering should take place
+    only in objects and commands 
+Boolean enableFilterDownChainClaims = false;
+/** All down chain claim filtering rules are turned off. Filtering should take place
+    only in objects and commands */
+Boolean enableFilterDownChainAtomicSubclaims = false;
+/** All down chain claim filtering rules are turned off. Filtering should take place
+    only in objects and commands */
+Boolean enableFilterNonFieldSubclaims = false;
+/** All down chain claim filtering rules are turned off. Filtering should take place
+    only in objects and commands */
+Boolean enableFilterDownChainClaimsWithMoreRelations = false;
+
+/** Actuated when the user references this relation without referencing any of its fields.
+    Makes a claim only if either supportKeywordOnlyMatch is true or if this agent is part of a previous ambiguity.
+    */
+onlyKwd:
+    this.supportKeywordOnlyMatch & kwd | <check('previous_action', this)> & ([preposition] kwd)
+    {attributes: 'private, atomic'}
+    {priority: topicScope(this, true)}
+    {action: com.dejima.core.nlp.text.action.EntityActuation: 
+        setTag(this.tag), addAttribute('type', this.type) }
+;
+
+/** 
+ * Handle joining different fields. fields are from different objects here... so we do not AND them together
+ */
+fields:
+    field(this.children)
+    {attributes: 'private'}
+    {action: field(this.children)}
+;
+
+object:
+    anObject
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.EntityActuation: 
+        setTag(this.tag), addAttribute('type', this.type), anObject}
+;

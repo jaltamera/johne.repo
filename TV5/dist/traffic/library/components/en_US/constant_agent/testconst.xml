@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!--
+   The constant definitions.
+-->
+<ConstantList xmlns="http://www.dejima-japan.com/agent/ConstantAgent">
+  <Constant name="PriceRange">
+    <Value name="expensive">$100</Value>
+    <Value name="cheap">$30</Value>
+  </Constant>
+</ConstantList>
+
+
+
+
+
+
+
+
+
+
+

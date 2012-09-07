@@ -1,0 +1,14 @@
+<ExplanationProperites>
+  <ExplanationTranslation>
+    <Path><![CDATA[Name]]></Path>
+    <Value><![CDATA[Name]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[FirstName]]></Path>
+    <Value><![CDATA[First Name]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[LastName]]></Path>
+    <Value><![CDATA[Last Name]]></Value>
+  </ExplanationTranslation>
+</ExplanationProperites>

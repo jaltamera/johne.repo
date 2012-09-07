@@ -1,0 +1,30 @@
+ALTER PROCEDURE "DBA"."proc_updateTable"(
+IN @main_input VARCHAR(50),
+IN @exit_input TEXT,
+IN @bound VARCHAR(2),
+IN @datepub TEXT,
+IN @flow VARCHAR(5),
+IN @GUID INTEGER
+)
+AS
+BEGIN
+DECLARE @main_id INTEGER
+
+    IF EXISTS (SELECT "ID" FROM tbl_main WHERE road_name = @main_input)
+        BEGIN
+            SELECT "ID" INTO @main_id FROM tbl_main WHERE road_name = @main_input
+            IF EXISTS (SELECT GUID FROM tbl_exit WHERE exit_name = @exit_input AND bound = @bound)
+                BEGIN
+                    UPDATE tbl_exit SET bound = @bound, datepub = @datepub, flow = @flow, GUID = @GUID WHERE exit_name = @exit_input AND bound = @bound
+                END
+            ELSE
+                BEGIN
+                    INSERT INTO tbl_exit (GUID, main_id, exit_name, bound, datepub, flow) VALUES(@GUID, @main_id, @exit_input, @bound, @datepub, @flow)
+                END
+        END
+    ELSE
+        BEGIN
+            INSERT INTO tbl_main(road_name) VALUES(@main_input)
+            INSERT INTO tbl_exit (GUID, main_id, exit_name, bound, datepub, flow) VALUES(@GUID, (SELECT "ID" from tbl_main where road_name = @main_input), @exit_input, @bound, @datepub, @flow)
+        END
+END

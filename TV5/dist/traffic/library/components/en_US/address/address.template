@@ -1,0 +1,12 @@
+extends library object.template;
+
+constant String type = '';
+
+/** Here the slots are combined as much as possible - the idea here is to create groups of slots, which is a way of handling compound inputs
+ *  Note also context is mainted using the replacePrevious, so that if there is no mention of a slot, it is maintained
+ */
+fields:
+   field(this.children):op(&|)
+   {attributes: 'private'}
+	{action: com.dejima.library.AmbiguityResolutionActuation: field(this.children), processAmbiguities()}
+;

@@ -1,0 +1,16 @@
+PACKAGES
+com.dejima.core.messages.
+
+MESSAGES
+com.dejima.core.messages.LogMessage
+com.dejima.core.messages.InterpretItMessage
+com.dejima.core.messages.StandardMessage
+com.dejima.core.messages.ActuationMessage
+com.dejima.core.messages.DelegationMessage
+com.dejima.core.messages.NoClaimMessage
+com.dejima.core.messages.ClaimMessage
+com.dejima.core.messages.SetMessage
+com.dejima.core.messages.GetMessage
+com.dejima.core.messages.InteractionMessage
+com.dejima.core.messages.InitiateInterpretationMessage
+com.dejima.core.messages.InteractionResultMessage

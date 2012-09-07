@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<CASES CoreVersion="4.0.2.127 " SDKVersion="4.0.2.127 ">
+<CASE>
+<SCENARIO><![CDATA[t1]]></SCENARIO>
+<CASENAME>hello world</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[hello world]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[t1]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[hello world]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[hello world]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="hello world"&gt;
+            &lt;id&gt;001&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[hello world]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[hello world]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="hello world"&gt;
+            &lt;id&gt;001&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[t1]]></SCENARIO>
+<CASENAME>java world vol2</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[java world vol2]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[t1]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[java world vol2]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[java world vol2]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field2 type="field"&gt;
+          &lt;idList match="java world vol2"&gt;
+            &lt;id&gt;102&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field2&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[java world vol2]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[java world vol2]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field2 type="field"&gt;
+          &lt;idList match="java world vol2"&gt;
+            &lt;id&gt;102&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field2&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[t1]]></SCENARIO>
+<CASENAME>what time is it now</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[what time is it now]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[t1]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[what time is it now]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[what time is it now]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="what time is it now"&gt;
+            &lt;id&gt;003&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[what time is it now]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[what time is it now]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="what time is it now"&gt;
+            &lt;id&gt;003&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[t1]]></SCENARIO>
+<CASENAME>the computer is expensive</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[the computer is expensive]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[t1]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[the computer is expensive]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[the computer is expensive]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="the computer is expensive"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[the computer is expensive]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[the computer is expensive]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="the computer is expensive"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[t1]]></SCENARIO>
+<CASENAME>java beans</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[java beans]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[t1]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[java beans]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[java beans]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="java beans"&gt;
+            &lt;id&gt;005&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[java beans]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[java beans]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="java beans"&gt;
+            &lt;id&gt;005&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[t1]]></SCENARIO>
+<CASENAME>good morning</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[good morning]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[t1]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[good morning]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[good morning]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field2 type="field"&gt;
+          &lt;idList match="good morning"&gt;
+            &lt;id&gt;103&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field2&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[good morning]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[good morning]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field2 type="field"&gt;
+          &lt;idList match="good morning"&gt;
+            &lt;id&gt;103&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field2&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[t1]]></SCENARIO>
+<CASENAME>yamada</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[yamada]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[t1]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[yamada]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[yamada]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field2 type="field"&gt;
+          &lt;idList match="yamada"&gt;
+            &lt;id&gt;104&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field2&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[yamada]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[yamada]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field2 type="field"&gt;
+          &lt;idList match="yamada"&gt;
+            &lt;id&gt;104&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field2&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[t2]]></SCENARIO>
+<CASENAME>world</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[world]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[t2]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[world]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[world]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Ambiguity&gt;
+          &lt;Field1 type="field"&gt;
+            &lt;idList match="world"&gt;
+              &lt;id&gt;001&lt;/id&gt;
+              &lt;id&gt;002&lt;/id&gt;
+            &lt;/idList&gt;
+          &lt;/Field1&gt;
+          &lt;Field2 type="field"&gt;
+            &lt;idList match="world"&gt;
+              &lt;id&gt;101&lt;/id&gt;
+              &lt;id&gt;102&lt;/id&gt;
+            &lt;/idList&gt;
+          &lt;/Field2&gt;
+        &lt;/Ambiguity&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+  &lt;Hints&gt;
+    &lt;Question&gt;
+      &lt;Ambiguity&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="world"&gt;
+            &lt;id&gt;001&lt;/id&gt;
+            &lt;id&gt;002&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+        &lt;Field2 type="field"&gt;
+          &lt;idList match="world"&gt;
+            &lt;id&gt;101&lt;/id&gt;
+            &lt;id&gt;102&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field2&gt;
+      &lt;/Ambiguity&gt;
+    &lt;/Question&gt;
+  &lt;/Hints&gt;
+&lt;/Interpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[world]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[world]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Ambiguity&gt;
+          &lt;Field1 type="field"&gt;
+            &lt;idList match="world"&gt;
+              &lt;id&gt;002&lt;/id&gt;
+              &lt;id&gt;001&lt;/id&gt;
+            &lt;/idList&gt;
+          &lt;/Field1&gt;
+          &lt;Field2 type="field"&gt;
+            &lt;idList match="world"&gt;
+              &lt;id&gt;101&lt;/id&gt;
+              &lt;id&gt;102&lt;/id&gt;
+            &lt;/idList&gt;
+          &lt;/Field2&gt;
+        &lt;/Ambiguity&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+  &lt;Hints&gt;
+    &lt;Question&gt;
+      &lt;Ambiguity&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="world"&gt;
+            &lt;id&gt;002&lt;/id&gt;
+            &lt;id&gt;001&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+        &lt;Field2 type="field"&gt;
+          &lt;idList match="world"&gt;
+            &lt;id&gt;101&lt;/id&gt;
+            &lt;id&gt;102&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field2&gt;
+      &lt;/Ambiguity&gt;
+    &lt;/Question&gt;
+  &lt;/Hints&gt;
+&lt;/Interpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[t2]]></SCENARIO>
+<CASENAME>java world</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[java world]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[t2]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[java world]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[java world]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Ambiguity&gt;
+          &lt;Field1 type="field"&gt;
+            &lt;idList match="java world"&gt;
+              &lt;id&gt;002&lt;/id&gt;
+            &lt;/idList&gt;
+          &lt;/Field1&gt;
+          &lt;Field2 type="field"&gt;
+            &lt;idList match="java world"&gt;
+              &lt;id&gt;102&lt;/id&gt;
+            &lt;/idList&gt;
+          &lt;/Field2&gt;
+        &lt;/Ambiguity&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+  &lt;Hints&gt;
+    &lt;Question&gt;
+      &lt;Ambiguity&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="java world"&gt;
+            &lt;id&gt;002&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+        &lt;Field2 type="field"&gt;
+          &lt;idList match="java world"&gt;
+            &lt;id&gt;102&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field2&gt;
+      &lt;/Ambiguity&gt;
+    &lt;/Question&gt;
+  &lt;/Hints&gt;
+&lt;/Interpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[java world]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[java world]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Ambiguity&gt;
+          &lt;Field1 type="field"&gt;
+            &lt;idList match="java world"&gt;
+              &lt;id&gt;002&lt;/id&gt;
+            &lt;/idList&gt;
+          &lt;/Field1&gt;
+          &lt;Field2 type="field"&gt;
+            &lt;idList match="java world"&gt;
+              &lt;id&gt;102&lt;/id&gt;
+            &lt;/idList&gt;
+          &lt;/Field2&gt;
+        &lt;/Ambiguity&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+  &lt;Hints&gt;
+    &lt;Question&gt;
+      &lt;Ambiguity&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="java world"&gt;
+            &lt;id&gt;002&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+        &lt;Field2 type="field"&gt;
+          &lt;idList match="java world"&gt;
+            &lt;id&gt;102&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field2&gt;
+      &lt;/Ambiguity&gt;
+    &lt;/Question&gt;
+  &lt;/Hints&gt;
+&lt;/Interpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[t2]]></SCENARIO>
+<CASENAME>good</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[good]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[t2]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[good]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[good]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Ambiguity&gt;
+          &lt;Field1 type="field"&gt;
+            &lt;idList match="good"&gt;
+              &lt;id&gt;006&lt;/id&gt;
+            &lt;/idList&gt;
+          &lt;/Field1&gt;
+          &lt;Field2 type="field"&gt;
+            &lt;idList match="good"&gt;
+              &lt;id&gt;103&lt;/id&gt;
+            &lt;/idList&gt;
+          &lt;/Field2&gt;
+        &lt;/Ambiguity&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+  &lt;Hints&gt;
+    &lt;Question&gt;
+      &lt;Ambiguity&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="good"&gt;
+            &lt;id&gt;006&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+        &lt;Field2 type="field"&gt;
+          &lt;idList match="good"&gt;
+            &lt;id&gt;103&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field2&gt;
+      &lt;/Ambiguity&gt;
+    &lt;/Question&gt;
+  &lt;/Hints&gt;
+&lt;/Interpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[good]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[good]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Ambiguity&gt;
+          &lt;Field1 type="field"&gt;
+            &lt;idList match="good"&gt;
+              &lt;id&gt;006&lt;/id&gt;
+            &lt;/idList&gt;
+          &lt;/Field1&gt;
+          &lt;Field2 type="field"&gt;
+            &lt;idList match="good"&gt;
+              &lt;id&gt;103&lt;/id&gt;
+            &lt;/idList&gt;
+          &lt;/Field2&gt;
+        &lt;/Ambiguity&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+  &lt;Hints&gt;
+    &lt;Question&gt;
+      &lt;Ambiguity&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="good"&gt;
+            &lt;id&gt;006&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+        &lt;Field2 type="field"&gt;
+          &lt;idList match="good"&gt;
+            &lt;id&gt;103&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field2&gt;
+      &lt;/Ambiguity&gt;
+    &lt;/Question&gt;
+  &lt;/Hints&gt;
+&lt;/Interpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[t3]]></SCENARIO>
+<CASENAME>is</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[is]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[t3]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;Interpretation type="interpretation" unableToInterpret="true" info="Unable to interpret input. Keeping the context."&gt;
+  &lt;Input&gt;&lt;![CDATA[is]]&gt;&lt;/Input&gt;
+  &lt;Understood /&gt;
+&lt;/Interpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;Interpretation type="interpretation" unableToInterpret="true" info="Unable to interpret input. Keeping the context."&gt;
+  &lt;Input&gt;&lt;![CDATA[is]]&gt;&lt;/Input&gt;
+  &lt;Understood /&gt;
+&lt;/Interpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[t3]]></SCENARIO>
+<CASENAME>the</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[the]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[t3]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;Interpretation type="interpretation" unableToInterpret="true" info="Unable to interpret input. Keeping the context."&gt;
+  &lt;Input&gt;&lt;![CDATA[the]]&gt;&lt;/Input&gt;
+  &lt;Understood /&gt;
+&lt;/Interpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;Interpretation type="interpretation" unableToInterpret="true" info="Unable to interpret input. Keeping the context."&gt;
+  &lt;Input&gt;&lt;![CDATA[the]]&gt;&lt;/Input&gt;
+  &lt;Understood /&gt;
+&lt;/Interpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[t4]]></SCENARIO>
+<CASENAME>the computer is</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[the computer is]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[t4]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[the computer is]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[the computer is]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="the computer is"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[the computer is]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[the computer is]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="the computer is"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[t4]]></SCENARIO>
+<CASENAME>the computer, computer, the computer</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[the computer, computer, the computer]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[t4]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[the computer, computer, the computer]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[the computer computer the computer]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="the computer"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="computer"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="the computer"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[the computer, computer, the computer]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[the computer computer the computer]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="the computer"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="computer"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="the computer"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[t4]]></SCENARIO>
+<CASENAME>the computer is is expensive, the computer expensive</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[the computer is is expensive, the computer expensive]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[t4]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[the computer is is expensive, the computer expensive]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[the computer is is expensive the computer expensive]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="the computer is"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="is expensive"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="the computer"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="expensive"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[the computer is is expensive, the computer expensive]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[the computer is is expensive the computer expensive]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="the computer is"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="is expensive"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="the computer"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="expensive"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[t4]]></SCENARIO>
+<CASENAME>expensive the is computer</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[expensive the is computer]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[t4]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[expensive the is computer]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[expensive computer]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="expensive"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="computer"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[expensive the is computer]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[expensive computer]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="expensive"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="computer"&gt;
+            &lt;id&gt;004&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[t4]]></SCENARIO>
+<CASENAME>is it now</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[is it now]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[t4]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[is it now]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[is it now]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="is it now"&gt;
+            &lt;id&gt;003&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;Interpretation type="interpretation"&gt;
+  &lt;Input&gt;&lt;![CDATA[is it now]]&gt;&lt;/Input&gt;
+  &lt;Understood&gt;&lt;![CDATA[is it now]]&gt;&lt;/Understood&gt;
+  &lt;System type="intent"&gt;
+    &lt;Command type="command"&gt;
+      &lt;Object type="object"&gt;
+        &lt;Field1 type="field"&gt;
+          &lt;idList match="is it now"&gt;
+            &lt;id&gt;003&lt;/id&gt;
+          &lt;/idList&gt;
+        &lt;/Field1&gt;
+      &lt;/Object&gt;
+    &lt;/Command&gt;
+  &lt;/System&gt;
+&lt;/Interpretation&gt;
+]]></ACTUAL>
+</CASE>
+<PRESENTATIONORDER>
+</PRESENTATIONORDER>
+</CASES>

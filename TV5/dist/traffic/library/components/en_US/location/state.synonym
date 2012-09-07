@@ -1,0 +1,78 @@
+state: state of
+
+#use comma as a preposition
+in: at, with, \, 
+
+#equals to synonyms:
+equal: =, :, equals, contains
+isEqualTo: =, :, equals, contains
+
+#synonyms for +
++: and, or
+
+#States
+Alabama: AL
+Alaska: AK
+Alberta: AB
+Arizona: AZ
+Arkansas: AR
+British Columbia: BC
+California: CA
+Charlotte: NC
+Colorado: CO
+Connecticut: CT
+Delaware: DE
+District Of Columbia: DC
+Florida: FL
+Georgia: GA
+Hawaii: HI
+Idaho: Idaho #,ID
+Illinois: IL
+Iowa: IA
+Kansas: KS
+Kentucky: KY
+Louisiana: Louisiana #,LA
+Maryland: MD
+Massachusetts: MA
+Michigan: MI
+Minnesota: MN
+Mississippi: MS
+Missouri: MO
+Montana: MT
+Nebraska: NE
+Nevada: NV
+New Hampshire: NH
+New Jersey: NJ
+New Mexico: NM
+New York: NY
+North Carolina: N Carolina, NC
+North Dakota: N Dakota, ND
+NOVA SCOTIA: NS
+Ohio: ohio #,OH
+Oklahoma: Oklahama #, OK
+Ontario: Ontario #,ON
+Oregon: Oregan #,OR
+Pennsylvania: PA
+QUEBEC: PQ
+Rhode Island: RI
+South Carolina: SC, S Carolina
+South Dakota: S Dakota, SD
+Tennessee: TN
+Texas: TX
+Utah: UT
+Vermont: VT
+Virginia: VA
+Washington: WA
+West Virgina: W Virgina
+WISCONSIN: WI
+WYOMING: WY
+
+
+
+
+
+
+
+
+
+

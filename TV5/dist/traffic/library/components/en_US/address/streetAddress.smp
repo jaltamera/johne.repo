@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<CASES CoreVersion="4.5.0.125 " SDKVersion="4.5.0.125 ">
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[123 aspen street, dublin, ca]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[123 aspen street, dublin, ca]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[123 aspen street, dublin, ca]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress type="object"&gt;
+      &lt;streetAddress:CityAddress type="relation" relevance="0"&gt;
+        &lt;address:Address xmlns:address="address"&gt;
+          &lt;address:City type="field"&gt;&lt;![CDATA[dublin]]&gt;&lt;/address:City&gt;
+          &lt;address:State type="field"&gt;&lt;![CDATA[ca]]&gt;&lt;/address:State&gt;
+        &lt;/address:Address&gt;
+      &lt;/streetAddress:CityAddress&gt;
+      &lt;streetAddress:StreetLocation type="object"&gt;
+        &lt;streetAddress:StreetNumber type="field"&gt;
+          &lt;integers:Integer xmlns:integers="integers"&gt;123&lt;/integers:Integer&gt;
+        &lt;/streetAddress:StreetNumber&gt;
+        &lt;streetAddress:Street type="field" explicit="true"&gt;&lt;![CDATA[aspen]]&gt;&lt;/streetAddress:Street&gt;
+      &lt;/streetAddress:StreetLocation&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[123 aspen street, dublin, ca]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[123 aspen street, dublin, ca]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress type="object"&gt;
+      &lt;streetAddress:CityAddress type="relation" relevance="0"&gt;
+        &lt;address:Address xmlns:address="address"&gt;
+          &lt;address:City type="field"&gt;&lt;![CDATA[dublin]]&gt;&lt;/address:City&gt;
+          &lt;address:State type="field"&gt;&lt;![CDATA[ca]]&gt;&lt;/address:State&gt;
+        &lt;/address:Address&gt;
+      &lt;/streetAddress:CityAddress&gt;
+      &lt;streetAddress:StreetLocation type="object"&gt;
+        &lt;streetAddress:StreetNumber type="field"&gt;
+          &lt;integers:Integer xmlns:integers="integers"&gt;123&lt;/integers:Integer&gt;
+        &lt;/streetAddress:StreetNumber&gt;
+        &lt;streetAddress:Street type="field" explicit="true"&gt;&lt;![CDATA[aspen]]&gt;&lt;/streetAddress:Street&gt;
+      &lt;/streetAddress:StreetLocation&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[1250 central expressway in san jose california]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[1250 central expressway in san jose california]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[1250 central expressway in san jose california]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress type="object"&gt;
+      &lt;streetAddress:CityAddress type="relation" relevance="0"&gt;
+        &lt;address:Address xmlns:address="address"&gt;
+          &lt;address:City type="field"&gt;&lt;![CDATA[san jose]]&gt;&lt;/address:City&gt;
+          &lt;address:State type="field"&gt;&lt;![CDATA[CA]]&gt;&lt;/address:State&gt;
+        &lt;/address:Address&gt;
+      &lt;/streetAddress:CityAddress&gt;
+      &lt;streetAddress:StreetLocation type="object"&gt;
+        &lt;streetAddress:StreetNumber type="field"&gt;
+          &lt;integers:Integer xmlns:integers="integers"&gt;1250&lt;/integers:Integer&gt;
+        &lt;/streetAddress:StreetNumber&gt;
+        &lt;streetAddress:Expressway type="field" explicit="true"&gt;&lt;![CDATA[central]]&gt;&lt;/streetAddress:Expressway&gt;
+      &lt;/streetAddress:StreetLocation&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[1250 central expressway in san jose california]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[1250 central expressway in san jose california]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress type="object"&gt;
+      &lt;streetAddress:CityAddress type="relation" relevance="0"&gt;
+        &lt;address:Address xmlns:address="address"&gt;
+          &lt;address:City type="field"&gt;&lt;![CDATA[san jose]]&gt;&lt;/address:City&gt;
+          &lt;address:State type="field"&gt;&lt;![CDATA[CA]]&gt;&lt;/address:State&gt;
+        &lt;/address:Address&gt;
+      &lt;/streetAddress:CityAddress&gt;
+      &lt;streetAddress:StreetLocation type="object"&gt;
+        &lt;streetAddress:StreetNumber type="field"&gt;
+          &lt;integers:Integer xmlns:integers="integers"&gt;1250&lt;/integers:Integer&gt;
+        &lt;/streetAddress:StreetNumber&gt;
+        &lt;streetAddress:Expressway type="field" explicit="true"&gt;&lt;![CDATA[central]]&gt;&lt;/streetAddress:Expressway&gt;
+      &lt;/streetAddress:StreetLocation&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[highway 101 in san jose, ca]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[highway 101 in san jose, ca]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[highway 101 in san jose, ca]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress type="object"&gt;
+      &lt;streetAddress:CityAddress type="relation" relevance="0"&gt;
+        &lt;address:Address xmlns:address="address"&gt;
+          &lt;address:City type="field"&gt;&lt;![CDATA[san jose]]&gt;&lt;/address:City&gt;
+          &lt;address:State type="field"&gt;&lt;![CDATA[ca]]&gt;&lt;/address:State&gt;
+        &lt;/address:Address&gt;
+      &lt;/streetAddress:CityAddress&gt;
+      &lt;streetAddress:StreetLocation type="object"&gt;
+        &lt;streetAddress:Highway type="field" explicit="true"&gt;&lt;![CDATA[101]]&gt;&lt;/streetAddress:Highway&gt;
+      &lt;/streetAddress:StreetLocation&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[highway 101 in san jose, ca]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[highway 101 in san jose, ca]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress type="object"&gt;
+      &lt;streetAddress:CityAddress type="relation" relevance="0"&gt;
+        &lt;address:Address xmlns:address="address"&gt;
+          &lt;address:City type="field"&gt;&lt;![CDATA[san jose]]&gt;&lt;/address:City&gt;
+          &lt;address:State type="field"&gt;&lt;![CDATA[ca]]&gt;&lt;/address:State&gt;
+        &lt;/address:Address&gt;
+      &lt;/streetAddress:CityAddress&gt;
+      &lt;streetAddress:StreetLocation type="object"&gt;
+        &lt;streetAddress:Highway type="field" explicit="true"&gt;&lt;![CDATA[101]]&gt;&lt;/streetAddress:Highway&gt;
+      &lt;/streetAddress:StreetLocation&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[120 W Santa Clara st #102, San Jose, CA 95113]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[120 W Santa Clara st #102, San Jose, CA 95113]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[120 W Santa Clara st #102, San Jose, CA 95113]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress type="object"&gt;
+      &lt;streetAddress:CityAddress type="relation" relevance="0"&gt;
+        &lt;address:Address xmlns:address="address"&gt;
+          &lt;address:City type="field"&gt;&lt;![CDATA[San Jose]]&gt;&lt;/address:City&gt;
+          &lt;address:PostCode type="field"&gt;&lt;![CDATA[95113]]&gt;&lt;/address:PostCode&gt;
+          &lt;address:State type="field"&gt;&lt;![CDATA[CA]]&gt;&lt;/address:State&gt;
+        &lt;/address:Address&gt;
+      &lt;/streetAddress:CityAddress&gt;
+      &lt;streetAddress:StreetLocation type="object"&gt;
+        &lt;streetAddress:StreetNumber type="field"&gt;
+          &lt;integers:Integer xmlns:integers="integers"&gt;120&lt;/integers:Integer&gt;
+        &lt;/streetAddress:StreetNumber&gt;
+        &lt;streetAddress:Street type="field" explicit="true"&gt;&lt;![CDATA[W Santa Clara]]&gt;&lt;/streetAddress:Street&gt;
+        &lt;streetAddress:AptNumber type="field"&gt;
+          &lt;integers:Integer xmlns:integers="integers"&gt;102&lt;/integers:Integer&gt;
+        &lt;/streetAddress:AptNumber&gt;
+      &lt;/streetAddress:StreetLocation&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[120 W Santa Clara st #102, San Jose, CA 95113]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[120 W Santa Clara st #102, San Jose, CA 95113]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress type="object"&gt;
+      &lt;streetAddress:CityAddress type="relation" relevance="0"&gt;
+        &lt;address:Address xmlns:address="address"&gt;
+          &lt;address:City type="field"&gt;&lt;![CDATA[San Jose]]&gt;&lt;/address:City&gt;
+          &lt;address:PostCode type="field"&gt;&lt;![CDATA[95113]]&gt;&lt;/address:PostCode&gt;
+          &lt;address:State type="field"&gt;&lt;![CDATA[CA]]&gt;&lt;/address:State&gt;
+        &lt;/address:Address&gt;
+      &lt;/streetAddress:CityAddress&gt;
+      &lt;streetAddress:StreetLocation type="object"&gt;
+        &lt;streetAddress:StreetNumber type="field"&gt;
+          &lt;integers:Integer xmlns:integers="integers"&gt;120&lt;/integers:Integer&gt;
+        &lt;/streetAddress:StreetNumber&gt;
+        &lt;streetAddress:Street type="field" explicit="true"&gt;&lt;![CDATA[W Santa Clara]]&gt;&lt;/streetAddress:Street&gt;
+        &lt;streetAddress:AptNumber type="field"&gt;
+          &lt;integers:Integer xmlns:integers="integers"&gt;102&lt;/integers:Integer&gt;
+        &lt;/streetAddress:AptNumber&gt;
+      &lt;/streetAddress:StreetLocation&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[1 sybase dr san jose, ca]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[1 sybase dr san jose, ca]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[1 sybase dr san jose, ca]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress type="object"&gt;
+      &lt;streetAddress:CityAddress type="relation" relevance="0"&gt;
+        &lt;address:Address xmlns:address="address"&gt;
+          &lt;address:City type="field"&gt;&lt;![CDATA[san jose]]&gt;&lt;/address:City&gt;
+          &lt;address:State type="field"&gt;&lt;![CDATA[ca]]&gt;&lt;/address:State&gt;
+        &lt;/address:Address&gt;
+      &lt;/streetAddress:CityAddress&gt;
+      &lt;streetAddress:StreetLocation type="object"&gt;
+        &lt;streetAddress:StreetNumber type="field"&gt;
+          &lt;integers:Integer xmlns:integers="integers"&gt;1&lt;/integers:Integer&gt;
+        &lt;/streetAddress:StreetNumber&gt;
+        &lt;streetAddress:Drive type="field" explicit="true"&gt;&lt;![CDATA[sybase]]&gt;&lt;/streetAddress:Drive&gt;
+      &lt;/streetAddress:StreetLocation&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[1 sybase dr san jose, ca]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[1 sybase dr san jose, ca]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress type="object"&gt;
+      &lt;streetAddress:CityAddress type="relation" relevance="0"&gt;
+        &lt;address:Address xmlns:address="address"&gt;
+          &lt;address:City type="field"&gt;&lt;![CDATA[san jose]]&gt;&lt;/address:City&gt;
+          &lt;address:State type="field"&gt;&lt;![CDATA[ca]]&gt;&lt;/address:State&gt;
+        &lt;/address:Address&gt;
+      &lt;/streetAddress:CityAddress&gt;
+      &lt;streetAddress:StreetLocation type="object"&gt;
+        &lt;streetAddress:StreetNumber type="field"&gt;
+          &lt;integers:Integer xmlns:integers="integers"&gt;1&lt;/integers:Integer&gt;
+        &lt;/streetAddress:StreetNumber&gt;
+        &lt;streetAddress:Drive type="field" explicit="true"&gt;&lt;![CDATA[sybase]]&gt;&lt;/streetAddress:Drive&gt;
+      &lt;/streetAddress:StreetLocation&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[south 3rd street san jose, ca]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[south 3rd street san jose, ca]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[south 3rd street san jose, ca]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress type="object"&gt;
+      &lt;streetAddress:CityAddress type="relation" relevance="0"&gt;
+        &lt;address:Address xmlns:address="address"&gt;
+          &lt;address:City type="field"&gt;&lt;![CDATA[san jose]]&gt;&lt;/address:City&gt;
+          &lt;address:State type="field"&gt;&lt;![CDATA[ca]]&gt;&lt;/address:State&gt;
+        &lt;/address:Address&gt;
+      &lt;/streetAddress:CityAddress&gt;
+      &lt;streetAddress:StreetLocation type="object"&gt;
+        &lt;streetAddress:Street type="field" explicit="true"&gt;&lt;![CDATA[south 3rd]]&gt;&lt;/streetAddress:Street&gt;
+      &lt;/streetAddress:StreetLocation&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;streetAddress:DejimaInterpretation xmlns:streetAddress="streetAddress" type="interpretation"&gt;
+  &lt;streetAddress:Input&gt;&lt;![CDATA[south 3rd street san jose, ca]]&gt;&lt;/streetAddress:Input&gt;
+  &lt;streetAddress:Understood&gt;&lt;![CDATA[south 3rd street san jose, ca]]&gt;&lt;/streetAddress:Understood&gt;
+  &lt;streetAddress:System type="intent"&gt;
+    &lt;streetAddress:StreetAddress type="object"&gt;
+      &lt;streetAddress:CityAddress type="relation" relevance="0"&gt;
+        &lt;address:Address xmlns:address="address"&gt;
+          &lt;address:City type="field"&gt;&lt;![CDATA[san jose]]&gt;&lt;/address:City&gt;
+          &lt;address:State type="field"&gt;&lt;![CDATA[ca]]&gt;&lt;/address:State&gt;
+        &lt;/address:Address&gt;
+      &lt;/streetAddress:CityAddress&gt;
+      &lt;streetAddress:StreetLocation type="object"&gt;
+        &lt;streetAddress:Street type="field" explicit="true"&gt;&lt;![CDATA[south 3rd]]&gt;&lt;/streetAddress:Street&gt;
+      &lt;/streetAddress:StreetLocation&gt;
+    &lt;/streetAddress:StreetAddress&gt;
+  &lt;/streetAddress:System&gt;
+&lt;/streetAddress:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<PRESENTATIONORDER>
+</PRESENTATIONORDER>
+</CASES>

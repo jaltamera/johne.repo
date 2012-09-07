@@ -1,0 +1,5 @@
+dollar
+cent
+euro
+pound
+yen

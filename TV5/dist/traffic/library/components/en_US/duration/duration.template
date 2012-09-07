@@ -1,0 +1,29 @@
+/** What is the tag used when elements are ORed. Usually you should not need to change the value of this property */
+String orTag = 'or';
+
+/** this template uses an actuation that returns a predefined explanation value */
+Boolean overridesExplanationValue = true;
+
+period: 
+   Period 
+	{attributes: 'private'}
+	{action: com.dejima.core.nlp.text.action.DurationActuation:
+	      setTag(this.tag), Period}
+;
+
+orPeriod:
+	'+' period
+	{attributes: 'private, atomic'}
+;
+
+orPeriods:
+	period ^ orPeriod
+	{attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.EntityActuation: 
+         setTag(this.orTag), setOR(true), period, orPeriod}   	
+;
+
+ranges:
+	(orPeriods|period)+
+	{action: orPeriods, period}
+;

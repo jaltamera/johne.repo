@@ -1,0 +1,13 @@
+extends library object.template;
+
+constant String type = '';
+
+/** 
+ * Handle joining different fields.
+ */
+fields:
+    fieldAmount | fieldCurrency | fieldAmount ~ fieldCurrency | fieldCurrency ~ fieldAmount
+    {attributes: 'private, atomic'}
+;
+
+

@@ -1,0 +1,126 @@
+/**
+  Light Weight command.template
+*/
+
+/** What is the keyword that identifies this command? */
+String keyword = this.tag;
+
+/** What is the role of this template/agent? This is going to be used as an XML attribute associated to the XML element created by this template*/
+constant String type = 'command';
+
+/** These flags are used to set or reset certain features in the polcies created by this template*/
+
+/** Should the policies support implicit matches? that is when an object is referenced in the input but this command
+    is not referenced (eg. users say 'dontact john' instead of 'find contact john'). */
+Boolean implicitMatch = true;
+/** Should the agent make a claim if a keyword is matched but no object is matched? */
+Boolean supportKeywordOnlyMatch = true;
+/** Should the policies support ambiguity? */
+Boolean supportAmbiguity = true;
+
+/** The condition used to match explicit claims on the command this agent is representing.<br>
+    Should be a combination of any string literal, kwd and theReference
+  */
+Condition equalsTo = kwd;
+
+/** Should the agent filter unvaluable (potentially problematic) down chain agent claims?
+  */
+Boolean enableFilterDownChainClaims = true;
+
+/** Should the agent filter non field down chain agent claims?
+  */
+Boolean enableFilterDownChainClaimsWithMoreRelations = true;
+
+/** Should the agent filter down chain agent claims that are a subset of other downchain claims?
+  */
+Boolean enableFilterSubsetDownChainClaims = true;
+
+/** Claims keywords used for this command */
+kwd:
+    this.keyword
+    {attributes: 'private, atomic'}
+    {action: addAttribute('explicit', 'true')}
+;
+
+/** Actuated when the user references this command without referencing any objects.
+    Makes a claim only if either supportKeywordOnlyMatch is true or if this agent is part of a previous ambiguity.
+*/
+onlyKwd:
+    this.supportKeywordOnlyMatch & kwd  | <check('previous_action', this)> & kwd
+    {attributes: 'private, atomic'}
+    {priority: topicScope(this, true)}
+    {action: com.dejima.core.nlp.text.action.CommandActuation: 
+        setTag(this.tag), addAttribute('type', this.type), kwd}
+;
+
+/** want to give high priority to a topic, if any. If its not a topic, then recency is used, which 
+ *  gives priority to recently discussed items  */
+topic(this.children):
+    this.children[.]
+    {attributes: 'private'}
+    {priority: topicScope(this.children[.], true)}
+    {action: this.children[.]}
+;
+
+object(this.children):
+    topic(this.children[.]) | (this.supportAmbiguity & (topic(this.children[.]) :: (topic(this.children[#]):op(|))))
+    {attributes: 'private'}
+    {ambiguity action: com.dejima.core.nlp.text.action.EntityActuation:  
+       setTag(this.ambiguityTag), topic(this.children)}
+;
+
+objects:
+    object(this.children):op(,)
+    {attributes: 'private'}
+    {action: object(this.children)}
+;
+
+equalsTo:
+    this.equalsTo
+    {attributes: 'private, atomic'}
+;
+
+
+/** This policy makes claims if the input explicitly refers to this seach command (search keywords are used in the input) */
+certainlyExplicit:
+    equalsTo ~ objects
+    {attributes: 'private, atomic'}
+    {priority: 10001}
+    {action: equalsTo, objects}
+;
+
+maybeExplicit:
+    equalsTo & objects
+    {attributes: 'private'}
+    {action: equalsTo, objects}
+;
+
+explicit: 
+   certainlyExplicit | maybeExplicit
+   {attributes: 'private'}
+;
+
+/** This policy makes claims if implicit matching is supported */
+implicit:
+    (this.implicitMatch|<check('previous_action',this)>) & objects
+    {attributes: 'private'}
+;
+
+aCommand:
+    explicit | implicit
+    {attributes: 'private'}
+;
+
+command:
+    aCommand
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.CommandActuation: 
+        setTag(this.tag), addAttribute('type', this.type), aCommand}
+;
+
+main:
+   (onlyKwd | command)+
+;
+
+
+

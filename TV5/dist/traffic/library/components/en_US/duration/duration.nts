@@ -1,0 +1,5 @@
+#
+# Network test suite
+#
+NETWORK=duration.opal
+CORPUS=duration.smp

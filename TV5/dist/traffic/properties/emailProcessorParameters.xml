@@ -1,0 +1,11 @@
+<EmailProcessorParameters>
+  <Host value = "mail.dejima.com"/>
+  <User value = "demotest" />
+  <Password value = "demotest" />
+  <FromAddress value = "demotest@dejima.com" />
+  <SendToHost value = "mail.dejima.com" />
+  <SleepInterval value = "30" /> <!-- in seconds -->
+  <OPALFile value = "c:/WorkingDirectory/cinemaFinance/currentFinance.opal" />
+  <IOFormat value = "com.dejima.core.io.EmailIOFormat" />
+  <EmailResponder value = "com.dejima.demos.cinemaFinance.CinemaFinancialEmailResponder" />
+</EmailProcessorParameters>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CASES>
+<CASE>
+<SCENARIO><![CDATA[open]]></SCENARIO>
+<CASENAME>show me open activities.</CASENAME>
+<INPUT><![CDATA[show me open activities.]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[open]]></FUNCTIONALPOINT>
+<EXPECTED parsing="no"><![CDATA[&lt;enum&gt;&lt;value&gt;open&lt;/value&gt;&lt;/enum&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[in process]]></SCENARIO>
+<CASENAME>show me opps in process.</CASENAME>
+<INPUT><![CDATA[show me opps in process.]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[in process]]></FUNCTIONALPOINT>
+<EXPECTED parsing="no"><![CDATA[&lt;enum&gt;&lt;value&gt;inProgress&lt;/value&gt;&lt;/enum&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[close]]></SCENARIO>
+<CASENAME>close opps.</CASENAME>
+<INPUT><![CDATA[close opps.]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[close]]></FUNCTIONALPOINT>
+<EXPECTED parsing="no"><![CDATA[&lt;enum&gt;&lt;value&gt;close&lt;/value&gt;&lt;/enum&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[pending]]></SCENARIO>
+<CASENAME>stopped opps.</CASENAME>
+<INPUT><![CDATA[stopped opps.]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[pending]]></FUNCTIONALPOINT>
+<EXPECTED parsing="no"><![CDATA[&lt;enum&gt;&lt;value&gt;pending&lt;/value&gt;&lt;/enum&gt;
+]]></EXPECTED>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[open, in process]]></SCENARIO>
+<CASENAME>not closed yet.</CASENAME>
+<INPUT><![CDATA[not closed yet.]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[open, in process]]></FUNCTIONALPOINT>
+<EXPECTED parsing="no"><![CDATA[&lt;enum&gt;&lt;value&gt;open&lt;/value&gt;&lt;value&gt;inProgress&lt;/value&gt;&lt;/enum&gt;
+]]></EXPECTED>
+</CASE>
+<PRESENTATIONORDER>
+</PRESENTATIONORDER>
+</CASES>

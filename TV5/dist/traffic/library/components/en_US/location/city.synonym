@@ -1,0 +1,20 @@
+city: city of
+
+#use comma as a preposition
+in: at, with, \, 
+
+#equals to synonyms:
+equal: =, :, equals, contains
+isEqualTo: =, :, equals, contains
+
+#synonyms for +
++: and, or
+
+Bali: Denpasar
+Brisbane: Brisbane\, QU
+Hong Kong: Hong Kong SAR
+Melbourne: Melbourne\, VT
+Perth: Perth\, WA
+Sydney: Sydney\, NS
+Taipei: Sungshan, Sungshan/Taipei
+Mumbai: Mumbai, Bombay, Mumbai (Bombay)

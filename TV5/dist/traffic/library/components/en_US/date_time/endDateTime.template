@@ -1,0 +1,42 @@
+extends library object.template;
+
+constant String type = '';
+
+/** this template uses an actuation that returns a predefined explanation value */
+Boolean overridesExplanationValue = true;
+
+/** Actuated when the user references this object without referencing any of its fields */
+onlyKwd:
+    this.supportKeywordOnlyMatch & ([preposition] kwd)
+    {attributes: 'private, atomic'}
+    {action: com.dejima.core.nlp.text.action.DateActuation: 
+         setTag(this.tag), setTableName(this.tableName), setColumnName(this.columnName), setPrimaryKey(this.primaryKey), addAttribute('type', this.type), addAttribute('groups', this.groups), addAttribute('preference', this.preference), kwd}
+;
+
+/** This policy is actuated when the user references this object using explicit references (eg. "it", "her", "him",...)  */
+onlyReference:
+    this.supportKeywordOnlyMatch & ([preposition] (explicitReference|adjacentReference))
+    {attributes: 'private, atomic'}
+    {action: com.dejima.core.nlp.text.action.DateActuation: 
+         setTag(this.tag), setTableName(this.tableName), setColumnName(this.columnName), setPrimaryKey(this.primaryKey), addAttribute('type', this.type), addAttribute('groups', this.groups), addAttribute('preference', this.preference), explicitReference, adjacentReference}
+;
+
+objectCandidate:
+    (fields)
+    {attributes: 'private'}
+    {action: fields}
+;
+
+explicitObject:
+    (equalsTo|isValueOf|reference) ~ (objectCandidate)
+    {attributes: 'private'}
+    {action: equalsTo, isValueOf, reference, objectCandidate}
+;
+
+object:
+    anObject
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.DateActuation: 
+         setTag(this.tag), addAttribute('type', this.type), addAttribute('groups', this.groups), addAttribute('preference', this.preference), setDefaultSlotFilling(this.defaultSlotFilling), setSingleSlot(this.singleSlot), anObject}
+;
+

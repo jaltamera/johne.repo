@@ -1,0 +1,35 @@
+extends library field.template;
+
+File specialCasesAbbrevDatabase = 'StateExceptions.txt';
+
+/** Claims keywords used for this field */
+kwd:
+    [preposition] <exact> this.keyword
+    {attributes: 'private, atomic'}
+    {action: addAttribute('explicit', 'true')}
+;
+
+/**
+States with potentially ambiguous abbreviations, such as oklohoma (ok), maine (me), etc.
+*/
+
+specialCaseData:
+   <exact> /F:LINE this.specialCasesAbbrevDatabase:3:''
+   {attributes: 'private, atomic'}
+   {action: addField(*, *.matched, *.target, this.fieldValueSelector)}
+;
+
+certainlyExplicit:
+    (equalsTo (data|specialCaseData)) | 
+    ([preposition] (data|specialCaseData) isValueOf) |
+    equalsTo variable |
+    [preposition] variable isValueOf |
+    (kwd|adjacentReference) (
+       gtValue | ltValue | geValue | leValue | 
+       ( ((gtValue|geValue) ['&'] [kwd|adjacentReference] (ltValue|leValue)) | 
+         ((ltValue|leValue) ['&'] [kwd|adjacentReference] (gtValue|geValue)) ) 
+    )
+   {attributes: 'private, atomic'}
+   {priority: 10001}
+   {action: equalsTo, isValueOf, kwd, data, specialCaseData, variable, adjacentReference, gtValue, ltValue, geValue, leValue}
+;

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<CASES CoreVersion="4.0.2.132 " SDKVersion="4.0.2.132 ">
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>1</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[first quarter of 2003]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:ge&gt;&lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[1]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2003]]&gt;&lt;/date:year&gt;&lt;/date:ge&gt;&lt;date:le&gt;&lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[3]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2003]]&gt;&lt;/date:year&gt;&lt;/date:le&gt;&lt;/date:Date&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:ge&gt;&lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[1]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2003]]&gt;&lt;/date:year&gt;&lt;/date:ge&gt;&lt;date:le&gt;&lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[3]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2003]]&gt;&lt;/date:year&gt;&lt;/date:le&gt;&lt;/date:Date&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>2</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[seccond quarter of 2000]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:ge&gt;&lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[4]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2000]]&gt;&lt;/date:year&gt;&lt;/date:ge&gt;&lt;date:le&gt;&lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[6]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2000]]&gt;&lt;/date:year&gt;&lt;/date:le&gt;&lt;/date:Date&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:ge&gt;&lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[4]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2000]]&gt;&lt;/date:year&gt;&lt;/date:ge&gt;&lt;date:le&gt;&lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[6]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2000]]&gt;&lt;/date:year&gt;&lt;/date:le&gt;&lt;/date:Date&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>3</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[forth quarter of 2001]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:ge&gt;&lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2001]]&gt;&lt;/date:year&gt;&lt;/date:ge&gt;&lt;date:le&gt;&lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[12]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2001]]&gt;&lt;/date:year&gt;&lt;/date:le&gt;&lt;/date:Date&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:ge&gt;&lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2001]]&gt;&lt;/date:year&gt;&lt;/date:ge&gt;&lt;date:le&gt;&lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[12]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2001]]&gt;&lt;/date:year&gt;&lt;/date:le&gt;&lt;/date:Date&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>4</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[first quarter]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:ge&gt;&lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[1]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/date:year&gt;&lt;/date:ge&gt;&lt;date:le&gt;&lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[3]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/date:year&gt;&lt;/date:le&gt;&lt;/date:Date&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:ge&gt;&lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[1]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2006]]&gt;&lt;/date:year&gt;&lt;/date:ge&gt;&lt;date:le&gt;&lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[3]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2006]]&gt;&lt;/date:year&gt;&lt;/date:le&gt;&lt;/date:Date&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>5</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[third quarter]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:ge&gt;&lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[7]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/date:year&gt;&lt;/date:ge&gt;&lt;date:le&gt;&lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[9]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/date:year&gt;&lt;/date:le&gt;&lt;/date:Date&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:ge&gt;&lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[7]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2006]]&gt;&lt;/date:year&gt;&lt;/date:ge&gt;&lt;date:le&gt;&lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[9]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2006]]&gt;&lt;/date:year&gt;&lt;/date:le&gt;&lt;/date:Date&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>6</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[seccond quarter]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:ge&gt;&lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[4]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/date:year&gt;&lt;/date:ge&gt;&lt;date:le&gt;&lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[6]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[{..}]]&gt;&lt;/date:year&gt;&lt;/date:le&gt;&lt;/date:Date&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:ge&gt;&lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[4]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2006]]&gt;&lt;/date:year&gt;&lt;/date:ge&gt;&lt;date:le&gt;&lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[6]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2006]]&gt;&lt;/date:year&gt;&lt;/date:le&gt;&lt;/date:Date&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>7</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[first quarter of 1990]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:ge&gt;&lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[1]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[1990]]&gt;&lt;/date:year&gt;&lt;/date:ge&gt;&lt;date:le&gt;&lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[3]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[1990]]&gt;&lt;/date:year&gt;&lt;/date:le&gt;&lt;/date:Date&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:ge&gt;&lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[1]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[1990]]&gt;&lt;/date:year&gt;&lt;/date:ge&gt;&lt;date:le&gt;&lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[3]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[1990]]&gt;&lt;/date:year&gt;&lt;/date:le&gt;&lt;/date:Date&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO><![CDATA[scenario 001]]></SCENARIO>
+<CASENAME>8</CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[seccond quarter of 2005]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:ge&gt;&lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[4]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2005]]&gt;&lt;/date:year&gt;&lt;/date:ge&gt;&lt;date:le&gt;&lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[6]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2005]]&gt;&lt;/date:year&gt;&lt;/date:le&gt;&lt;/date:Date&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date:Date xmlns:date="date"&gt;&lt;date:ge&gt;&lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[4]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2005]]&gt;&lt;/date:year&gt;&lt;/date:ge&gt;&lt;date:le&gt;&lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;&lt;date:month&gt;&lt;![CDATA[6]]&gt;&lt;/date:month&gt;&lt;date:year&gt;&lt;![CDATA[2005]]&gt;&lt;/date:year&gt;&lt;/date:le&gt;&lt;/date:Date&gt;
+]]></ACTUAL>
+</CASE>
+<PRESENTATIONORDER>
+</PRESENTATIONORDER>
+</CASES>

@@ -1,0 +1,125 @@
+<!ELEMENT Policy:ParserParameters (Policy:Alphabet,
+				Policy:Numeric,
+				Policy:Symbols,
+				Policy:SubstringConditions,
+				Policy:CommonWords,
+				Policy:TokenMatchers,
+				Policy:FuzzyMatchers,
+				Policy:Tokenizer,
+				Policy:ErrorLogger?,
+				Policy:CharacterEncoding?,
+				Policy:Accents?,
+				Policy:Joins?,
+				Policy:ComputationalExplosion?,
+				Policy:RecursiveCondition?,
+				Policy:ComboCondition?,
+				Policy:Actuation?,
+				Policy:Priority?)>
+
+<!ATTLIST Policy:ParserParameters
+	xmlns:Policy CDATA #REQUIRED
+>
+
+
+<!ELEMENT Policy:Alphabet (Policy:CharacterRange+) >
+<!ELEMENT Policy:Numeric (Policy:CharacterRange+) >
+<!ELEMENT Policy:Symbols (Policy:CharacterRange+) >
+
+
+<!ELEMENT Policy:CharacterRange EMPTY>
+<!ATTLIST Policy:CharacterRange
+	lowerLimit CDATA #REQUIRED
+	upperLimit CDATA #REQUIRED
+>
+
+<!ELEMENT Policy:TokenMatchers (Policy:TokenMatcher*)>
+<!ATTLIST Policy:TokenMatchers value (fast|flexible) #IMPLIED>
+
+<!ELEMENT Policy:TokenMatcher EMPTY>
+<!ATTLIST Policy:TokenMatcher 
+	type (exact|substring|fuzzy|numeric) #REQUIRED
+	parameter (ignoreAccent) #IMPLIED
+>
+
+<!ELEMENT Policy:FuzzyMatchers (Policy:FuzzyComparer+)>
+<!ELEMENT Policy:FuzzyComparer EMPTY>
+<!ATTLIST Policy:FuzzyComparer
+	name CDATA #REQUIRED
+	threshold CDATA #IMPLIED
+>
+
+<!ELEMENT Policy:CommonWords EMPTY>
+<!ATTLIST Policy:CommonWords
+	filename CDATA #REQUIRED
+	defaultMaxLength CDATA #IMPLIED
+	minimumNonNoiseTokenSize CDATA #IMPLIED
+>
+
+<!ELEMENT Policy:SubstringConditions EMPTY>
+<!ATTLIST Policy:SubstringConditions
+	threshold CDATA #REQUIRED
+	leastLength CDATA #REQUIRED
+>
+
+<!ELEMENT Policy:Tokenizer EMPTY>
+<!ATTLIST Policy:Tokenizer
+	className CDATA #REQUIRED
+>
+
+<!--************************************************************************* 
+ |  ErrorLogger was used in pre-2.5 to configure the error log manager.     |
+ |  However, this is no longer supported in 2.5 and beyond. The             |
+ |  element is left as optional for backward compatibility. If the          |
+ |  element exists it will be ignored and a warning will be logged.         |
+ **************************************************************************-->
+<!ELEMENT Policy:ErrorLogger EMPTY>
+<!ATTLIST Policy:ErrorLogger
+	className CDATA #REQUIRED
+>
+
+<!ELEMENT Policy:CharacterEncoding EMPTY>
+<!ATTLIST Policy:CharacterEncoding
+	encoding CDATA #REQUIRED
+>
+
+<!ELEMENT Policy:Accents (Policy:Accent+) >
+<!ELEMENT Policy:Accent EMPTY>
+<!ATTLIST Policy:Accent
+	character CDATA #REQUIRED
+	lowerLimit CDATA #REQUIRED
+	upperLimit CDATA #REQUIRED
+>
+
+<!--************************************************************************* 
+ |  Joins is not used anymore                                               |
+ **************************************************************************-->
+<!ELEMENT Policy:Joins (Policy:Join+) >
+<!ELEMENT Policy:Join EMPTY>
+<!ATTLIST Policy:Join
+	value CDATA #REQUIRED
+>
+
+<!ELEMENT Policy:ComputationalExplosion EMPTY>
+<!ATTLIST Policy:ComputationalExplosion 
+         threshold CDATA #REQUIRED
+>
+<!ELEMENT Policy:RecursiveCondition EMPTY>
+<!ATTLIST Policy:RecursiveCondition 
+         claimLimit CDATA #REQUIRED
+>
+<!ELEMENT Policy:ComboCondition EMPTY>
+<!ATTLIST Policy:ComboCondition 
+         claimLimit CDATA #REQUIRED
+>
+
+
+
+<!ELEMENT Policy:Actuation EMPTY>
+<!ATTLIST Policy:Actuation
+	class CDATA #REQUIRED
+>
+
+<!ELEMENT Policy:Priority EMPTY>
+<!ATTLIST Policy:Priority
+	class CDATA #REQUIRED
+>

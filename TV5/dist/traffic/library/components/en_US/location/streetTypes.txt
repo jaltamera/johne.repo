@@ -1,0 +1,14 @@
+Avenue
+Boulevard
+Circle
+Drive
+Expressway
+Highway
+Parkway
+Road
+Square
+Street
+Court
+Center
+Lane
+Bridgeway

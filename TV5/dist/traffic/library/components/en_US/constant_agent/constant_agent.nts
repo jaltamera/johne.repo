@@ -1,0 +1,5 @@
+#
+# Network test suite for constant_agent
+#
+NETWORK=constant1.opal
+CORPUS=constant1.smp

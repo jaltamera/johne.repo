@@ -1,0 +1,6 @@
+NETWORK=time.opal
+CORPUS=absolutetime.smp
+NETWORK=time.opal
+CORPUS=outofscopetime.smp
+NETWORK=time.opal
+CORPUS=relativesingletime.smp

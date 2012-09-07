@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<CASES CoreVersion="4.5.1.10 " SDKVersion="4.5.1.10 ">
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[1st]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;orinals:Top xmlns:orinals="orinals" type="interpretation"&gt;
+  &lt;orinals:Input&gt;&lt;![CDATA[1st]]&gt;&lt;/orinals:Input&gt;
+  &lt;orinals:Understood&gt;&lt;![CDATA[1st]]&gt;&lt;/orinals:Understood&gt;
+  &lt;orinals:System type="intent"&gt;
+    &lt;orinals:Ordinal&gt;1&lt;/orinals:Ordinal&gt;
+  &lt;/orinals:System&gt;
+&lt;/orinals:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;orinals:Top xmlns:orinals="orinals" type="interpretation"&gt;
+  &lt;orinals:Input&gt;&lt;![CDATA[1st]]&gt;&lt;/orinals:Input&gt;
+  &lt;orinals:Understood&gt;&lt;![CDATA[1st]]&gt;&lt;/orinals:Understood&gt;
+  &lt;orinals:System type="intent"&gt;
+    &lt;orinals:Ordinal&gt;1&lt;/orinals:Ordinal&gt;
+  &lt;/orinals:System&gt;
+&lt;/orinals:Top&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[twenty 1st]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;orinals:Top xmlns:orinals="orinals" type="interpretation"&gt;
+  &lt;orinals:Input&gt;&lt;![CDATA[twenty 1st]]&gt;&lt;/orinals:Input&gt;
+  &lt;orinals:Understood&gt;&lt;![CDATA[twenty 1st]]&gt;&lt;/orinals:Understood&gt;
+  &lt;orinals:System type="intent"&gt;
+    &lt;orinals:Ordinal&gt;21&lt;/orinals:Ordinal&gt;
+  &lt;/orinals:System&gt;
+&lt;/orinals:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;orinals:Top xmlns:orinals="orinals" type="interpretation"&gt;
+  &lt;orinals:Input&gt;&lt;![CDATA[twenty 1st]]&gt;&lt;/orinals:Input&gt;
+  &lt;orinals:Understood&gt;&lt;![CDATA[twenty 1st]]&gt;&lt;/orinals:Understood&gt;
+  &lt;orinals:System type="intent"&gt;
+    &lt;orinals:Ordinal&gt;21&lt;/orinals:Ordinal&gt;
+  &lt;/orinals:System&gt;
+&lt;/orinals:Top&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[two hundredth]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;orinals:Top xmlns:orinals="orinals" type="interpretation"&gt;
+  &lt;orinals:Input&gt;&lt;![CDATA[two hundredth]]&gt;&lt;/orinals:Input&gt;
+  &lt;orinals:Understood&gt;&lt;![CDATA[two hundredth]]&gt;&lt;/orinals:Understood&gt;
+  &lt;orinals:System type="intent"&gt;
+    &lt;orinals:Ordinal&gt;200&lt;/orinals:Ordinal&gt;
+  &lt;/orinals:System&gt;
+&lt;/orinals:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;orinals:Top xmlns:orinals="orinals" type="interpretation"&gt;
+  &lt;orinals:Input&gt;&lt;![CDATA[two hundredth]]&gt;&lt;/orinals:Input&gt;
+  &lt;orinals:Understood&gt;&lt;![CDATA[two hundredth]]&gt;&lt;/orinals:Understood&gt;
+  &lt;orinals:System type="intent"&gt;
+    &lt;orinals:Ordinal&gt;200&lt;/orinals:Ordinal&gt;
+  &lt;/orinals:System&gt;
+&lt;/orinals:Top&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[thirteenth]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;orinals:Top xmlns:orinals="orinals" type="interpretation"&gt;
+  &lt;orinals:Input&gt;&lt;![CDATA[thirteenth]]&gt;&lt;/orinals:Input&gt;
+  &lt;orinals:Understood&gt;&lt;![CDATA[thirteenth]]&gt;&lt;/orinals:Understood&gt;
+  &lt;orinals:System type="intent"&gt;
+    &lt;orinals:Ordinal&gt;13&lt;/orinals:Ordinal&gt;
+  &lt;/orinals:System&gt;
+&lt;/orinals:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;orinals:Top xmlns:orinals="orinals" type="interpretation"&gt;
+  &lt;orinals:Input&gt;&lt;![CDATA[thirteenth]]&gt;&lt;/orinals:Input&gt;
+  &lt;orinals:Understood&gt;&lt;![CDATA[thirteenth]]&gt;&lt;/orinals:Understood&gt;
+  &lt;orinals:System type="intent"&gt;
+    &lt;orinals:Ordinal&gt;13&lt;/orinals:Ordinal&gt;
+  &lt;/orinals:System&gt;
+&lt;/orinals:Top&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[thirty second]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;orinals:Top xmlns:orinals="orinals" type="interpretation"&gt;
+  &lt;orinals:Input&gt;&lt;![CDATA[thirty second]]&gt;&lt;/orinals:Input&gt;
+  &lt;orinals:Understood&gt;&lt;![CDATA[thirty second]]&gt;&lt;/orinals:Understood&gt;
+  &lt;orinals:System type="intent"&gt;
+    &lt;orinals:Ordinal&gt;32&lt;/orinals:Ordinal&gt;
+  &lt;/orinals:System&gt;
+&lt;/orinals:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;orinals:Top xmlns:orinals="orinals" type="interpretation"&gt;
+  &lt;orinals:Input&gt;&lt;![CDATA[thirty second]]&gt;&lt;/orinals:Input&gt;
+  &lt;orinals:Understood&gt;&lt;![CDATA[thirty second]]&gt;&lt;/orinals:Understood&gt;
+  &lt;orinals:System type="intent"&gt;
+    &lt;orinals:Ordinal&gt;32&lt;/orinals:Ordinal&gt;
+  &lt;/orinals:System&gt;
+&lt;/orinals:Top&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[twelve hundredth]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;orinals:Top xmlns:orinals="orinals" type="interpretation"&gt;
+  &lt;orinals:Input&gt;&lt;![CDATA[twelve hundredth]]&gt;&lt;/orinals:Input&gt;
+  &lt;orinals:Understood&gt;&lt;![CDATA[twelve hundredth]]&gt;&lt;/orinals:Understood&gt;
+  &lt;orinals:System type="intent"&gt;
+    &lt;orinals:Ordinal&gt;1200&lt;/orinals:Ordinal&gt;
+  &lt;/orinals:System&gt;
+&lt;/orinals:Top&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;orinals:Top xmlns:orinals="orinals" type="interpretation"&gt;
+  &lt;orinals:Input&gt;&lt;![CDATA[twelve hundredth]]&gt;&lt;/orinals:Input&gt;
+  &lt;orinals:Understood&gt;&lt;![CDATA[twelve hundredth]]&gt;&lt;/orinals:Understood&gt;
+  &lt;orinals:System type="intent"&gt;
+    &lt;orinals:Ordinal&gt;1200&lt;/orinals:Ordinal&gt;
+  &lt;/orinals:System&gt;
+&lt;/orinals:Top&gt;
+]]></ACTUAL>
+</CASE>
+<PRESENTATIONORDER>
+</PRESENTATIONORDER>
+</CASES>

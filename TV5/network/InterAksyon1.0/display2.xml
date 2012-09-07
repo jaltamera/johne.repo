@@ -1,0 +1,56 @@
+<DisplayProperties>
+  <Object name="Exit">
+    <DisplayFields>
+      <Path value="Exit/DatePub" />
+      <Displayable value="true" />
+      <FormField value="false" />
+    </DisplayFields>
+    <DisplayFields>
+      <Path value="Exit/Flow" />
+      <Displayable value="true" />
+      <FormField value="false" />
+    </DisplayFields>
+    <DisplayFields>
+      <Path value="Exit/ExitName" />
+      <Displayable value="true" />
+      <FormField value="false" />
+    </DisplayFields>
+    <DisplayFields>
+      <Path value="Exit/Bound" />
+      <Displayable value="true" />
+      <FormField value="false" />
+    </DisplayFields>
+  </Object>
+  <Object name="Road">
+    <DisplayFields>
+      <Path value="Road/RoadName" />
+      <Displayable value="false" />
+      <FormField value="false" />
+    </DisplayFields>
+    <DisplayFields>
+      <Path value="Road/DatePub" />
+      <Displayable value="true" />
+      <FormField value="false" />
+    </DisplayFields>
+    <DisplayFields>
+      <Path value="Road/ExitTo/Exit/Flow" />
+      <Displayable value="true" />
+      <FormField value="false" />
+    </DisplayFields>
+    <DisplayFields>
+      <Path value="Road/ExitTo/Exit/ExitName" />
+      <Displayable value="true" />
+      <FormField value="false" />
+    </DisplayFields>
+    <DisplayFields>
+      <Path value="Road/ExitTo/Exit/Bound" />
+      <Displayable value="true" />
+      <FormField value="false" />
+    </DisplayFields>
+    <DisplayFields>
+      <Path value="Road/More" />
+      <Displayable value="false" />
+      <FormField value="false" />
+    </DisplayFields>
+  </Object>
+</DisplayProperties>

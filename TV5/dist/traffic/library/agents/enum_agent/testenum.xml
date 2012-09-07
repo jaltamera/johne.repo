@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!--
+  The enum value definitions.
+-->
+<EnumList xmlns="http://www.dejima-japan.com/agent/EnumAgent">
+
+  <!-- order status -->
+  <Enum name="order_status">
+    <Value name="open">
+      <Phrase>
+        <Token>open</Token>
+        <Grammar><![CDATA['just' 'start']]></Grammar>
+      </Phrase>
+    </Value>
+
+    <Value name="inProgress">
+      <Phrase>
+        <Grammar><![CDATA['in' 'process']]></Grammar>
+        <Grammar><![CDATA['in' 'progress']]></Grammar>
+      </Phrase>
+    </Value>
+
+    <Value name="close">
+      <Phrase>
+        <Grammar><![CDATA['close'|'completed']]></Grammar>
+      </Phrase>
+    </Value>
+
+    <Value name="pending">
+      <Phrase>
+        <Grammar><![CDATA['pending'|'stopped'|'waiting']]></Grammar>
+      </Phrase>
+    </Value>
+
+    <Value name="notclosed">
+      <ValueRange>open, inProgress</ValueRange>
+      <Phrase>
+        <Grammar><![CDATA['not' & ('close'|'closed'|'completed')]]></Grammar>
+      </Phrase>
+    </Value>
+  </Enum>
+</EnumList>
+
+
+
+
+
+
+
+
+
+
+
+

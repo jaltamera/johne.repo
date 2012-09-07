@@ -1,0 +1,15 @@
+<SqlProperties>
+  <TableProperties>
+    <Table name="tbl_exit" agent="Exit.com.dejima.templates.TemplatizedAgent@x" tag="Exit" primaryKey="GUID">
+      <Column name="flow" datatype="STRING" useQuotes="true" path="Flow" />
+      <Column name="exit_name" datatype="STRING" useQuotes="true" path="ExitName" />
+      <Column name="bound" datatype="STRING" useQuotes="true" path="Bound" />
+      <JoinedTable name="tbl_main" agent="Road.com.dejima.templates.TemplatizedAgent@x" path="ExitTo/Road">
+        <JoinClause foreignColumn="main_id" joinColumn="ID" />
+      </JoinedTable>
+    </Table>
+    <Table name="tbl_main" agent="Road.com.dejima.templates.TemplatizedAgent@x" tag="Road" primaryKey="ID">
+      <Column name="road_name" datatype="STRING" useQuotes="true" path="RoadName" />
+    </Table>
+  </TableProperties>
+</SqlProperties>

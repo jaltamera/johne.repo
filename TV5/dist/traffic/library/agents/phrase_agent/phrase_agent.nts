@@ -1,0 +1,5 @@
+#
+# Network test suite
+#
+NETWORK=phrase1.opal
+CORPUS=phrase1.smp

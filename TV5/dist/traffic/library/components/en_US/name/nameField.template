@@ -1,0 +1,21 @@
+extends library field.template;
+
+/** This policy claims by matching inputs to data in file, sync file, live interpretation or context */
+baseData:
+    (this.supportContextLookup & /CONTEXT (this.tag)) | 
+    <exact> /F:LINE this.file:this.noiseMinTokenLength:this.noiseFile |
+    <exact> /F:LINE this.syncFile:this.noiseMinTokenLength:this.noiseFile |
+    /IDB this.liveInterpretationTable
+    {attributes: 'private, atomic'}
+;
+
+baseJoinData:
+ 	baseData | baseData~'-'~baseData | (baseData '-' /TOKEN('WORD')) | (/TOKEN('WORD') '-' baseData)
+    {attributes: 'private, atomic'}
+;
+
+dbData:
+ 	baseJoinData
+    {attributes: 'private, atomic'}
+    {action: addField(*, *.matched, *.target, this.fieldValueSelector)}
+;

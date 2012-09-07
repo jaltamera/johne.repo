@@ -1,0 +1,112 @@
+extends library object.template;
+
+/** 
+   This template is used on the agent that makes a relation between two agents with object templates.<br>
+   This template is the same as the ComponentProxy template except that it adds a type and relevance attribute to 
+   the intent XML. The type attribute defines the role of the agent and is set to 'relation' (you  should not change this value).
+   The relevance attribute defines the relevance of the two objects joint using this relation. <br>
+   This can be any integer between -100 and +100. 0 is default relevance.
+*/
+
+
+/** The relevance of the two objects joint using this relation.
+    This can be any integer between -100 and +100.
+    0 is default relevance.
+*/
+String relevance = '0';
+
+/** This attribute defines the role of the template (do not change the value) */
+constant String type = 'relation';
+
+/** Should the SQL value use single quotes 
+ * @deprecated 
+ */
+Boolean useQuotesInSql = false;
+
+/** The database name used for generating SQL 
+ * @deprecated 
+ */
+String tableName = '';
+
+/** All down chain claim filtering rules are turned off. Filtering should take place
+    only in objects and commands 
+Boolean enableFilterDownChainClaims = false;
+/** All down chain claim filtering rules are turned off. Filtering should take place
+    only in objects and commands */
+Boolean enableFilterDownChainAtomicSubclaims = false;
+/** All down chain claim filtering rules are turned off. Filtering should take place
+    only in objects and commands */
+Boolean enableFilterNonFieldSubclaims = false;
+/** All down chain claim filtering rules are turned off. Filtering should take place
+    only in objects and commands */
+Boolean enableFilterDownChainClaimsWithMoreRelations = false;
+
+
+/** How should the value of this field be used to narrow down the previous input? <br>
+    Valid values are: <i>add</i>, <i>addNew</i> and <i>replace</i> <br>
+    If replace (which is the default if no values is associated with this property) then the 
+    the old relation value will be removed when new relation value is added.<br>
+    If add then the new relation value will be added along with the old relation value.<br>
+    If addNew then a new command will be added and this relation will be part of the relation referenced in the new command (old command will be kept in the output as well)<p>
+
+    Example:<br>
+    for a pizza object the size and crust fields can be seen as fields that should always be replaced on followup (replace).<br>
+    for example: <br>
+    "small pizza"<br>
+    "..large pizza"<br>
+    you don't want to end up with a pizza which is both small and large<p>
+
+    However you may decide that new toppings should always be added to old toppigs when you followup (add):<br>
+    for example:<br>
+    "pepperoni pizza"<br>
+    "..ham"<br>
+    you want to end up with a "pepperoni and ham pizza"<p>
+
+    Then you may decide that the count for a pizza always means that a new order is coming (addNew):<br>
+    "1 pepperoni pizza"<br>
+    "..2 small ones"<br>
+    "..and one large pizza"<br>
+    in this case you want to end up with three orders for 5 pizzas (1 pepperoni, 2 small and one large)
+*/    
+String defaultSlotFilling;
+
+/**
+    By default this is not a single slot. But you can set this to true.
+*/
+Boolean singleSlot;
+
+
+/** Actuated when the user references this relation without referencing any of its fields.
+    Makes a claim only if either supportKeywordOnlyMatch is true or if this agent is part of a previous ambiguity.
+    */
+onlyKwd:
+    this.supportKeywordOnlyMatch & kwd | <check('previous_ambiguity', this)> & ([preposition] kwd)
+    {attributes: 'private, atomic'}
+    {priority: topicScope(this, this.supportRecency)}
+    {action: com.dejima.core.nlp.text.action.EntityActuation: 
+        setTag(this.tag), setColumnName(this.columnName), setUseSqlQuotes(this.useQuotesInSql), addAttribute('type', this.type), addAttribute('relevance', this.relevance), addAttribute('preference', this.preference), setDefaultSlotFilling(this.defaultSlotFilling), setSingleSlot(this.singleSlot)}
+;
+
+/** This policy is actuated when the user references this object using explicit references (eg. "it", "her", "him",...)  */
+onlyReference:
+    this.supportKeywordOnlyMatch & ([preposition] (explicitReference|adjacentReference))
+    {attributes: 'private, atomic'}
+    {action: com.dejima.core.nlp.text.action.EntityActuation: 
+        setTag(this.tag), setColumnName(this.columnName), setUseSqlQuotes(this.useQuotesInSql), addAttribute('type', this.type), addAttribute('relevance', this.relevance), addAttribute('preference', this.preference), setDefaultSlotFilling(this.defaultSlotFilling), setSingleSlot(this.singleSlot), explicitReference, adjacentReference}
+;
+
+/** 
+ * Handle joining different fields. fields are from different objects here... so we do not AND them together
+ */
+fields:
+    field(this.children)
+    {attributes: 'private'}
+    {action: field(this.children)}
+;
+
+object:
+    anObject
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.EntityActuation: 
+        setTag(this.tag), setColumnName(this.columnName), setUseSqlQuotes(this.useQuotesInSql), addAttribute('type', this.type), addAttribute('relevance', this.relevance), addAttribute('preference', this.preference), setDefaultSlotFilling(this.defaultSlotFilling), setSingleSlot(this.singleSlot), anObject}
+;

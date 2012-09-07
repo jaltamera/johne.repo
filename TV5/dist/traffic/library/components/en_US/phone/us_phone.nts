@@ -1,0 +1,5 @@
+#
+# Network test suite
+#
+NETWORK=us_phone.opal
+CORPUS=us_phone.smp

@@ -1,0 +1,46 @@
+extends library object.template;
+
+constant String type = '';
+
+/** this template uses an actuation that returns a predefined explanation value */
+Boolean overridesExplanationValue = true;
+
+/** Actuated when the user references this object without referencing any of its fields */
+onlyKwd:
+    this.supportKeywordOnlyMatch & ([preposition] kwd)
+    {attributes: 'private, atomic'}
+    {action: com.dejima.core.nlp.text.action.NameActuation: 
+         setTag(this.tag), setTableName(this.tableName), setPrimaryKey(this.primaryKey), addAttribute('type', this.type), addAttribute('groups', this.groups), addAttribute('preference', this.preference), kwd}
+;
+
+/** This policy is actuated when the user references this object using explicit references (eg. "it", "her", "him",...)  */
+onlyReference:
+    this.supportKeywordOnlyMatch & ([preposition] (explicitReference|adjacentReference))
+    {attributes: 'private, atomic'}
+    {action: com.dejima.core.nlp.text.action.NameActuation: 
+         setTag(this.tag), setTableName(this.tableName), setPrimaryKey(this.primaryKey), addAttribute('type', this.type), addAttribute('groups', this.groups), addAttribute('preference', this.preference), explicitReference, adjacentReference}
+;
+
+fields:
+    (fieldFirstName&|fieldLastName) | (fieldFirstName fieldLastName) | (fieldLastName fieldFirstName) | 
+			fieldFirstName ('a'|'b'|'c'|'d'|'e'|'f'|'g'|'h'|'i'|'j'|'k'|'l'|'m'|'n'|'o'|'p'|'q'|'r'|'s'|'t'|'u'|'v'|'w'|'x'|'y'|'z')['.'] fieldLastName
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.NameActuation:
+    	setFirstName(fieldFirstName), setLastName(fieldLastName), 
+    	fieldFirstName, fieldLastName}
+;
+
+object:
+    explicitObject | implicitObject | guess
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.NameActuation: 
+         setTag(this.tag), setTableName(this.tableName), setColumnName(this.columnName), setDefaultColumnName(this.defaultColumnName), setDownChainJoin(this.downChainJoin), setDownChainColumn(this.downChainColumn), setPrimaryKey(this.primaryKey), addAttribute('type', this.type), addAttribute('groups', this.groups), addAttribute('preference', this.preference), setDefaultSlotFilling(this.defaultSlotFilling), setSingleSlot(this.singleSlot), explicitObject, implicitObject, guess}
+;
+
+joinedObject:
+    this.supportJoin & (joinOperation anObject)
+    {attributes: 'private'}
+    {action: com.dejima.core.nlp.text.action.NameActuation: 
+         setTag(this.tag), setTableName(this.tableName), setColumnName(this.columnName), setDefaultColumnName(this.defaultColumnName), setDownChainJoin(this.downChainJoin), setDownChainColumn(this.downChainColumn), setPrimaryKey(this.primaryKey), addAttribute('type', this.type), addAttribute('groups', this.groups), addAttribute('preference', this.preference), setDefaultSlotFilling(this.defaultSlotFilling), setSingleSlot(this.singleSlot), joinOperation, anObject}
+;
+

@@ -1,0 +1,5 @@
+#
+# Network test suite
+#
+NETWORK=url.opal
+CORPUS=url.smp

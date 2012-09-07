@@ -1,0 +1,6 @@
+=: :, is, equals, equal, equals to, equal to, of, contain, contains, containing
+lt: before, earlier, earlier than, sooner than, sooner, prior to, <, less than, not >=
+gt: after,  later, later than, greater than, > , gtr , gt, > than, not <=, >
+ge: >=, after or on, on or after, not <, not lt, not before, not prior to, since, since past, since last, since the past, since the  last
+le: <=, before or on, on or before, no later than, not after, not greater than, not gt, by, not past, by, in, by next, in next, by the next, in the next, until
++: and, or, \, 

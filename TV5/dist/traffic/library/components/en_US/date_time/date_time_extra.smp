@@ -1,0 +1,1487 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<CASES CoreVersion="5.0.0.354 " SDKVersion="5.2.0.354 ">
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[past 2 days (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[past 2 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[past 2 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[28]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[past 2 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[past 2 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[28]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[last 2 days (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 2 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 2 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[28]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 2 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 2 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[28]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[past week (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[past week (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[past week (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[23]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[past week (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[past week (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[23]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[last week (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last week (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last week (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[20]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[26]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last week (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last week (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[20]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[26]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[last 7 days(currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 7 days(currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 7 days(currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[23]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 7 days(currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 7 days(currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[23]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[past 2 weeks (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[past 2 weeks (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[past 2 weeks (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[16]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[past 2 weeks (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[past 2 weeks (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[16]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[last 2 weeks (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 2 weeks (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 2 weeks (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[16]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 2 weeks (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 2 weeks (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[16]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[last 14 days (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 14 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 14 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[16]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 14 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 14 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[16]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[past month (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[past month (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[past month (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[9]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[past month (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[past month (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[9]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[last month (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last month (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last month (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[9]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[9]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last month (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last month (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[9]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[9]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[last 30 days (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 30 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 30 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[9]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 30 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 30 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[9]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[past 2 months (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[past 2 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[past 2 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[8]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[past 2 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[past 2 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[8]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[last 2 months (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 2 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 2 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[8]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 2 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 2 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[8]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[last 60 days (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 60 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 60 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[8]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 60 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 60 days (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[8]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[past quarter (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[past quarter (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[past quarter (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[8]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[past quarter (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[past quarter (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[8]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[last quarter (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last quarter (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last quarter (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[7]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[9]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last quarter (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last quarter (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[7]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[9]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[last 3 months (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 3 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 3 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[8]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 3 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 3 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[8]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[past 2 quarters (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[past 2 quarters (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[past 2 quarters (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[3]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[5]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[past 2 quarters (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[past 2 quarters (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[3]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[5]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[last 2 quarters (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 2 quarters (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 2 quarters (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[3]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[5]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 2 quarters (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 2 quarters (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[3]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[5]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[last 6 months (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 6 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 6 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[3]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[5]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 6 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 6 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[3]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[5]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[past year (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[past year (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[past year (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2007]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[past year (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[past year (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2007]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[last year (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last year (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last year (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[1]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2007]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[12]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2007]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last year (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last year (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[1]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[1]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2007]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[12]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2007]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[last 12 months (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 12 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 12 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[5]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[11]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2007]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 12 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 12 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[5]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[11]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2007]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[past 2 years (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[past 2 years (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[past 2 years (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2006]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[past 2 years (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[past 2 years (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2006]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[last 2 years (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 2 years (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 2 years (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2006]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 2 years (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 2 years (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[31]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2006]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[last 24 months (currentDate=10.30.2008 3:00 PM)]]></INPUT>
+<FUNCTIONALPOINT></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 24 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 24 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[10]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[11]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2006]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;date_time:DejimaInterpretation xmlns:date_time="date_time" type="interpretation"&gt;
+  &lt;date_time:Input&gt;&lt;![CDATA[last 24 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Input&gt;
+  &lt;date_time:Understood&gt;&lt;![CDATA[last 24 months (currentDate=10.30.2008 3:00 PM)]]&gt;&lt;/date_time:Understood&gt;
+  &lt;date_time:System type="intent"&gt;
+    &lt;date_time:DateTime&gt;
+      &lt;date:Date xmlns:date="date"&gt;
+        &lt;date:ge&gt;
+          &lt;date:day&gt;&lt;![CDATA[10]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[11]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2006]]&gt;&lt;/date:year&gt;
+        &lt;/date:ge&gt;
+        &lt;date:le&gt;
+          &lt;date:day&gt;&lt;![CDATA[30]]&gt;&lt;/date:day&gt;
+          &lt;date:month&gt;&lt;![CDATA[10]]&gt;&lt;/date:month&gt;
+          &lt;date:year&gt;&lt;![CDATA[2008]]&gt;&lt;/date:year&gt;
+        &lt;/date:le&gt;
+      &lt;/date:Date&gt;
+    &lt;/date_time:DateTime&gt;
+  &lt;/date_time:System&gt;
+&lt;/date_time:DejimaInterpretation&gt;
+]]></ACTUAL>
+</CASE>
+<PRESENTATIONORDER>
+</PRESENTATIONORDER>
+</CASES>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+  $Id: ConstantAgent.xsd,v 1.1 2007/09/19 18:42:27 siamak Exp $
+  Copyright 2002 - Dejima Japan, Inc.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.dejima-japan.com/agent/ConstantAgent"
+    targetNamespace="http://www.dejima-japan.com/agent/ConstantAgent"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+
+<xsd:annotation>
+  <xsd:documentation xml:lang="en">
+  This schema defines the structure of configuration file for the ConstantAgent.
+  </xsd:documentation>
+</xsd:annotation>
+
+<!-- constant name -->
+<xsd:simpleType name="nameType">
+  <xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+<!-- constant list -->
+<xsd:element name="ConstantList" type="constantListType"/>
+
+<xsd:complexType name="constantListType">
+  <xsd:sequence>
+    <xsd:element name="Constant" type="constantType" minOccurs="1" maxOccurs="unbounded"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+<!-- constant -->
+<xsd:complexType name="constantType">
+  <xsd:sequence>
+    <xsd:element name="Value" type="valueType" minOccurs="1" maxOccurs="unbounded"/>
+  </xsd:sequence>
+  <xsd:attribute name="name" type="nameType" use="required"/>
+</xsd:complexType>
+
+<!-- value -->
+<xsd:complexType name="valueType">
+  <xsd:simpleContent>
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleContent>  
+  <xsd:attribute name="name" type="nameType" use="required"/>
+</xsd:complexType>
+
+</xsd:schema>

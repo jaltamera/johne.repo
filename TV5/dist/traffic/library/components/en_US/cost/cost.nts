@@ -1,0 +1,5 @@
+#
+# Network test suite
+#
+NETWORK=cost.opal
+CORPUS=cost.smp

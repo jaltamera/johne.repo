@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<CASES CoreVersion="4.0.2.118 " SDKVersion="4.0.2.118 ">
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[costs 100 dollars]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;cost:Cost xmlns:cost="cost" explicit="true"&gt;&lt;cost:Amount type="componentProxy"&gt;&lt;decimals:Decimal xmlns:decimals="decimals"&gt;100&lt;/decimals:Decimal&gt;&lt;/cost:Amount&gt;&lt;cost:Currency type="field"&gt;&lt;![CDATA[dollar]]&gt;&lt;/cost:Currency&gt;&lt;/cost:Cost&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;cost:Cost xmlns:cost="cost" explicit="true"&gt;&lt;cost:Amount type="componentProxy"&gt;&lt;decimals:Decimal xmlns:decimals="decimals"&gt;100&lt;/decimals:Decimal&gt;&lt;/cost:Amount&gt;&lt;cost:Currency type="field"&gt;&lt;![CDATA[dollar]]&gt;&lt;/cost:Currency&gt;&lt;/cost:Cost&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[2355$]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;cost:Cost xmlns:cost="cost"&gt;&lt;cost:Amount type="componentProxy"&gt;&lt;decimals:Decimal xmlns:decimals="decimals"&gt;2355&lt;/decimals:Decimal&gt;&lt;/cost:Amount&gt;&lt;cost:Currency type="field"&gt;&lt;![CDATA[dollar]]&gt;&lt;/cost:Currency&gt;&lt;/cost:Cost&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;cost:Cost xmlns:cost="cost"&gt;&lt;cost:Amount type="componentProxy"&gt;&lt;decimals:Decimal xmlns:decimals="decimals"&gt;2355&lt;/decimals:Decimal&gt;&lt;/cost:Amount&gt;&lt;cost:Currency type="field"&gt;&lt;![CDATA[dollar]]&gt;&lt;/cost:Currency&gt;&lt;/cost:Cost&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[$434]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;cost:Cost xmlns:cost="cost"&gt;&lt;cost:Amount type="componentProxy"&gt;&lt;decimals:Decimal xmlns:decimals="decimals"&gt;434&lt;/decimals:Decimal&gt;&lt;/cost:Amount&gt;&lt;cost:Currency type="field"&gt;&lt;![CDATA[dollar]]&gt;&lt;/cost:Currency&gt;&lt;/cost:Cost&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;cost:Cost xmlns:cost="cost"&gt;&lt;cost:Amount type="componentProxy"&gt;&lt;decimals:Decimal xmlns:decimals="decimals"&gt;434&lt;/decimals:Decimal&gt;&lt;/cost:Amount&gt;&lt;cost:Currency type="field"&gt;&lt;![CDATA[dollar]]&gt;&lt;/cost:Currency&gt;&lt;/cost:Cost&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[costs > 100$ and less than 500 dollars]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;cost:Cost explicit="true" op="gt"&gt;&lt;cost:Amount type="componentProxy"&gt;&lt;decimals:Decimal xmlns:decimals="decimals"&gt;100&lt;/decimals:Decimal&gt;&lt;/cost:Amount&gt;&lt;cost:Currency type="field"&gt;&lt;![CDATA[dollar]]&gt;&lt;/cost:Currency&gt;&lt;/cost:Cost&gt;&lt;cost:Cost join="and" op="lt"&gt;&lt;cost:Amount type="componentProxy"&gt;&lt;decimals:Decimal xmlns:decimals="decimals"&gt;500&lt;/decimals:Decimal&gt;&lt;/cost:Amount&gt;&lt;cost:Currency type="field"&gt;&lt;![CDATA[dollar]]&gt;&lt;/cost:Currency&gt;&lt;/cost:Cost&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;cost:Cost explicit="true" op="gt"&gt;&lt;cost:Amount type="componentProxy"&gt;&lt;decimals:Decimal xmlns:decimals="decimals"&gt;100&lt;/decimals:Decimal&gt;&lt;/cost:Amount&gt;&lt;cost:Currency type="field"&gt;&lt;![CDATA[dollar]]&gt;&lt;/cost:Currency&gt;&lt;/cost:Cost&gt;&lt;cost:Cost join="and" op="lt"&gt;&lt;cost:Amount type="componentProxy"&gt;&lt;decimals:Decimal xmlns:decimals="decimals"&gt;500&lt;/decimals:Decimal&gt;&lt;/cost:Amount&gt;&lt;cost:Currency type="field"&gt;&lt;![CDATA[dollar]]&gt;&lt;/cost:Currency&gt;&lt;/cost:Cost&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer">1</PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean">false</DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[2 dollars and 25 cents]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;cost:Cost&gt;&lt;cost:Amount type="componentProxy"&gt;&lt;decimals:Decimal xmlns:decimals="decimals"&gt;2&lt;/decimals:Decimal&gt;&lt;/cost:Amount&gt;&lt;cost:Currency type="field"&gt;&lt;![CDATA[dollar]]&gt;&lt;/cost:Currency&gt;&lt;/cost:Cost&gt;&lt;cost:Cost join="and"&gt;&lt;cost:Amount type="componentProxy"&gt;&lt;decimals:Decimal xmlns:decimals="decimals"&gt;25&lt;/decimals:Decimal&gt;&lt;/cost:Amount&gt;&lt;cost:Currency type="field"&gt;&lt;![CDATA[cent]]&gt;&lt;/cost:Currency&gt;&lt;/cost:Cost&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;cost:Cost&gt;&lt;cost:Amount type="componentProxy"&gt;&lt;decimals:Decimal xmlns:decimals="decimals"&gt;2&lt;/decimals:Decimal&gt;&lt;/cost:Amount&gt;&lt;cost:Currency type="field"&gt;&lt;![CDATA[dollar]]&gt;&lt;/cost:Currency&gt;&lt;/cost:Cost&gt;&lt;cost:Cost join="and"&gt;&lt;cost:Amount type="componentProxy"&gt;&lt;decimals:Decimal xmlns:decimals="decimals"&gt;25&lt;/decimals:Decimal&gt;&lt;/cost:Amount&gt;&lt;cost:Currency type="field"&gt;&lt;![CDATA[cent]]&gt;&lt;/cost:Currency&gt;&lt;/cost:Cost&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer"></PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean"></DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[12.35 dollars]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;cost:Cost xmlns:cost="cost"&gt;&lt;cost:Amount type="componentProxy"&gt;&lt;decimals:Decimal xmlns:decimals="decimals"&gt;12.35&lt;/decimals:Decimal&gt;&lt;/cost:Amount&gt;&lt;cost:Currency type="field"&gt;&lt;![CDATA[dollar]]&gt;&lt;/cost:Currency&gt;&lt;/cost:Cost&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[&lt;cost:Cost xmlns:cost="cost"&gt;&lt;cost:Amount type="componentProxy"&gt;&lt;decimals:Decimal xmlns:decimals="decimals"&gt;12.35&lt;/decimals:Decimal&gt;&lt;/cost:Amount&gt;&lt;cost:Currency type="field"&gt;&lt;![CDATA[dollar]]&gt;&lt;/cost:Currency&gt;&lt;/cost:Cost&gt;
+]]></ACTUAL>
+</CASE>
+<CASE>
+<SCENARIO></SCENARIO>
+<CASENAME></CASENAME>
+<PRIORITY type="integer"></PRIORITY>
+<DESCRIPTIONHIDDEN type="boolean"></DESCRIPTIONHIDDEN>
+<DESCRIPTION parsing="no"></DESCRIPTION>
+<PROMPT></PROMPT>
+<BEFOREPIC></BEFOREPIC>
+<AFTERPIC></AFTERPIC>
+<USER></USER>
+<ADMIN></ADMIN>
+<INPUT><![CDATA[$63.45]]></INPUT>
+<FUNCTIONALPOINT><![CDATA[n/a]]></FUNCTIONALPOINT>
+<COMPLEXITY></COMPLEXITY>
+<EXPECTED parsing="no"><![CDATA[&lt;cost:Cost xmlns:cost="cost"&gt;&lt;cost:Amount type="componentProxy"&gt;&lt;decimals:Decimal xmlns:decimals="decimals"&gt;63.45&lt;/decimals:Decimal&gt;&lt;/cost:Amount&gt;&lt;cost:Currency type="field"&gt;&lt;![CDATA[dollar]]&gt;&lt;/cost:Currency&gt;&lt;/cost:Cost&gt;
+]]></EXPECTED>
+<ACTUAL parsing="no"><![CDATA[Unable to interpret input
+]]></ACTUAL>
+</CASE>
+<PRESENTATIONORDER>
+</PRESENTATIONORDER>
+</CASES>

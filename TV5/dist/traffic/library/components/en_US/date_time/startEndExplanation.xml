@@ -1,0 +1,10 @@
+<ExplanationProperites>
+  <ExplanationTranslation>
+    <Path><![CDATA[DateTimeRange/Start/DateTime]]></Path>
+    <Value><![CDATA[Starting]]></Value>
+  </ExplanationTranslation>
+  <ExplanationTranslation>
+    <Path><![CDATA[DateTimeRange/End/DateTime]]></Path>
+    <Value><![CDATA[Ending]]></Value>
+  </ExplanationTranslation>
+</ExplanationProperites>

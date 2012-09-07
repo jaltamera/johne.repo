@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<title>Components</title>
+</head>
+
+<body>
+
+<H1> Answers Anywhere Components Library</H1>
+
+<p>The Answers Anywhere Platform provides a number of component
+networks. These component networks provide interpretations for certain commonly
+encountered domains; for example names, numbers, dates, and addresses. Each
+component network comes with a corpus file that demonstrates the types of
+queries that the component network is able to handle, and a readme.txt file that
+contains additional information about the operation and integration of that
+component. </p>
+
+
+<p>The components library folder, which contains all the components described below, 
+is located under your installation folder at <b>\IDE\Library\Components</b>.</p>
+
+<p>You can find these files in each folder:</p>
+
+<ul>
+<li> The “readme.txt” file: This file is provided to aid in the understanding of the component networks. It describes the network and the various ways
+it can be used and integrated into your project.
+<li> The Network (OPAL) file: This is the basic component network file containing the agents and the policies.
+<li> The Sample (SMP) file: This file contains “pre-defined” inputs (with their “expected” results) and is used to show how the agent network works against specific samples.
+</ul>
+
+<H1>List of library components</H1>
+
+<ul>
+<li><a href="numbers\readme.txt">Integers</a>: The Integers component network can interpret integers in digits from 0 to 100,000 and integers
+expressed alpha-numerically from zero to ninety-nine hundred and ninety-nine.
+
+<li><a href="phone\readme.txt">Phone Numbers</a>: The Phone Number component network can interpret US phone numbers.
+
+<li><a href="url\readme.txt">URL</a>: The URL component network can interpret URLs (such as www.iAnywhere.com).
+
+<li><a href="cost\readme.txt">Cost</a>: The cost component network can interpret dollar amounts (such as $230).
+
+<li><a href="name\readme.txt">Names:</a> The Names component network interprets first and last names.
+
+<li><a href="duration\readme.txt">Durations</a>: The Durations component network interprets durations. Durations can be expressed in years, quarters, months,
+weeks, days, hours, and minutes.
+
+<li><a href="email\readme.txt">Email Address:</a> The Email Address component interprets email addresses. 
+
+<li><a href="location\readme.txt">Location:</a> Includes location and location sub-components; city address and street address. The city address component (address.opal) interprets city addresses. The fields recognized by this component are cities, states, countries, and postcodes. This component provides files for common world cities, US states, and countries. The street address recognizes streets and street numbers.
+
+<li><a href="address\readme.txt">Address:</a> Deprecated. Use location instead.
+
+<li><a href="date_time\readme.txt">Time and Date</a>: There are a number of date-time components provided with the Answers Anywhere Platform. The simplest are the Date and Time components, which interpret dates and times respectively. Dates can be explicitly defined (e.g. “<st1:date Year="2004" Day="2" Month="2">2/2/04</st1:date>”) or defined relatively (“last week”, “next month”). Dates can also be expressed in words (“june third”). The date fields that are interpreted are days, months, quarters, and years. The Time component interprets both explicit times (“12.32pm”) and relative time (“in three hours”). Times may be expressed numerically or alpha-numerically.
+
+<li><a href="open_ended_search\readme.txt">Open Ended Search</a>: This component handles queries to search the web, a dictionary, a thesaurus, general questions, or direct URLs.
+
+<li><a href="constant_agent\Readme.txt">Constant</a>: This component provides customizable constant value defined in an external configuration file.
+
+</ul>
+</html>

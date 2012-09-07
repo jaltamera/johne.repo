@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<AgentPropertiesList>
+<!--
+
+<AgentProperties> defines the agent class and the properties for that class.
+Any number of <Property> tags can be nested within the <AgentProperties>.
+For each property defined, make sure that the agent class has get and
+set methods defined for that property.  They should input/output Strings.
+
+For instance, below, the DefaultLogFileName is being defined as a property
+of the LogAgent.
+
+-->
+
+  <AgentProperties agentClass="com.dejima.demos.cinemaFinance.agents.CinemaFinanceActuationAgent">
+    <Property>ShowXML</Property>
+    <Property>DoDatabaseLookup</Property>
+    <Property>DatabaseName</Property>
+    <Property>DatabaseHostName</Property>
+  </AgentProperties>
+
+
+  <AgentProperties agentClass="com.dejima.demos.Cinema.CinemaDBAgent">
+<Property>DatabaseName</Property>
+  </AgentProperties>
+  <AgentProperties agentClass="com.dejima.demos.finance.FinanceDBAgent">
+    <Property>DatabaseName</Property>
+  </AgentProperties>
+
+
+  <AgentProperties agentClass="com.dejima.clients.sonera.interpretationServices.SoneraContentAgent">
+    <Property>ContentType</Property>
+    <Property>IntegratedContent</Property>
+    <Property>ContentDBFile</Property>
+  </AgentProperties>
+
+  <AgentProperties agentClass="com.dejima.clients.sonera.interpretationServices.SoneraActuator">
+    <Property>ProcessOutput</Property>
+  </AgentProperties>
+
+  <AgentProperties agentClass="com.dejima.sdk.agents.UserInputRecorderAgent">
+    <Property>UserLogging</Property>
+  </AgentProperties>
+
+</AgentPropertiesList>
