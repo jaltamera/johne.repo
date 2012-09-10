@@ -10,21 +10,21 @@ import java.security.Provider;
 import java.security.Security;
 import java.security.Signature;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import java.util.Date;
 
 import javax.xml.bind.DatatypeConverter;
 
+import org.apache.http.impl.cookie.DateUtils;
 import org.bouncycastle.openssl.PEMReader;
 
 import com.google.gson.Gson;
-
 
 public class AuthProcessor
 {
 	
 	private RequestObject r;
 	private String result;
-	private String date;
+	private Date date;
 
 	private static final String SIGNATURE_ALGORITHM 	= "SHA1withRSA";
 	//private static final String PRIVATE_KEY_FILE 		= "resources/exakt-pri.pem";
@@ -35,7 +35,7 @@ public class AuthProcessor
 	
 	private static Provider bc;
 	
-	public AuthProcessor(RequestObject r, String result, String date){
+	public AuthProcessor(RequestObject r, String result, Date date){
 		this.r = r;
 		this.result = result;
 		this.date = date;
@@ -87,14 +87,10 @@ public class AuthProcessor
 	}*/
 	
 	private static SimpleDateFormat ISO8601FORMAT = new SimpleDateFormat("yyyyMMdd'T'HHmmss");
-	//private static SimpleDateFormat RFC2822FORMAT = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss Z");
-	
-	
+	private static SimpleDateFormat RFC2822FORMAT = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz");
 	
 	public Object[] sign()throws Exception{
 		
-		java.util.Date current = Calendar.getInstance().getTime();
-				
 		//Instantiate GSON
 		Gson gson = new Gson();
 		
@@ -108,11 +104,13 @@ public class AuthProcessor
 							"\"date\":\"" + ISO8601FORMAT.format(current) + "\"" +	//parse DateTime to ISO8601 Compliant format		
 							"}");*/
 		
-		JSONModel jsonModel = new JSONModel("54535", r.getPhone(), "text/plain", result, ISO8601FORMAT.format(current), "MMDA_REPLY_FREE");
+		JSONModel jsonModel = new JSONModel("54535", r.getPhone(), "text/plain", result, ISO8601FORMAT.format(date), "MMDA_REPLY_FREE");
 		
         //JSONObject jsonObject = (JSONObject)JSONSerializer.toJSON(jsonString);
         String json = gson.toJson(jsonModel);
 		
+        System.out.println(json);
+        
         //Parse DateTime to RFC 2822 Compliant format
 		//String rfcDate = ISO8601FORMAT.format(ISO8601FORMAT.parse(ISO8601FORMAT.format(current)));
 		
@@ -131,12 +129,14 @@ public class AuthProcessor
 		
 		//Construct stringToSign for Base64Encoded Signature
 		String stringToSign = 	AuthProcessor.METHOD + "\n" +
-								"/TV5Web/InboundServlet" + "\n" +
-								date + "\n" +
+								"/messages" + "\n" +
+								DateUtils.formatDate(DateUtils.parseDate(DateUtils.formatDate(date))) + "\n" +
 								AuthProcessor.CONTENT_TYPE + "\n" +
 								contentLength + "\n" +
-								md5String;
+								md5String + "\n";
 				
+		System.out.println(stringToSign);
+		
 		AuthProcessor.init();
 		
 		//Load the Private-Key file for signing
@@ -149,7 +149,9 @@ public class AuthProcessor
 		
 		//The signature is finally Base64 encoded
 		String b64Signed = DatatypeConverter.printBase64Binary(byteSigned);
-
+		
+		System.out.println(b64Signed);
+		
 		return new Object[]{b64Signed, jsonModel};
 		
 	}

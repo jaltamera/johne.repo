@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.LinkedList;
 
+import aa.exception.AAException;
+import aa.exception.IGException;
 import aa.sql.ConnectionPoolManager;
 
 public class WorkQueue {
@@ -81,10 +83,22 @@ public class WorkQueue {
 						IGSender sender = new IGSender();
 						sender.send(r, result);
 					}else
-						throw new Exception();
+						throw new AAException();
 
-				}catch (Exception e) {
-					System.out.println("Error updating data | sending the request : WorQueue");
+				}catch (AAException e){	
+					
+					System.out.println(e.getError());
+					synchronized(queue) {
+						queue.addLast(r);
+						try {
+							queue.wait();
+						} catch (InterruptedException e1) {
+							e1.printStackTrace();
+						}
+					}
+				}catch (IGException e) {
+				
+					System.out.println(e.getError());
 					synchronized(queue) {
 						queue.addLast(r);
 						try {
@@ -94,12 +108,13 @@ public class WorkQueue {
 						}
 					}
 
+				} catch (Exception e) {
+					e.printStackTrace();
 				}finally{
 					try {
 						pstm.close();
 						con.close();
 					} catch (Exception e) {
-						// TODO Auto-generated catch block
 						//e.printStackTrace();
 						System.out.println("Error closing connection - 2 : WorkQueue");	
 					}
