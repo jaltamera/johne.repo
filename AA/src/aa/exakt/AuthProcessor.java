@@ -103,18 +103,18 @@ public class AuthProcessor
 							"\"body\":\"" + result + "\"," +						// output
 							"\"date\":\"" + ISO8601FORMAT.format(current) + "\"" +	//parse DateTime to ISO8601 Compliant format		
 							"}");*/
-		
 		JSONModel jsonModel = new JSONModel("54535", r.getPhone(), "text/plain", result, ISO8601FORMAT.format(date), "MMDA_REPLY_FREE");
 		
         //JSONObject jsonObject = (JSONObject)JSONSerializer.toJSON(jsonString);
         String json = gson.toJson(jsonModel);
-		
         //Parse DateTime to RFC 2822 Compliant format
 		//String rfcDate = ISO8601FORMAT.format(ISO8601FORMAT.parse(ISO8601FORMAT.format(current)));
 		
+        System.out.println(json);
+        
 		//MD5 digest of the JSON encoded message body
 		MessageDigest md = MessageDigest.getInstance("MD5");
-		md.update(json.getBytes(), 0,json.length());
+		md.update(json.getBytes("UTF-8"), 0, json.getBytes("UTF-8").length);
 		String md5String = DatatypeConverter.printBase64Binary(md.digest());
 		
 		int contentLength = json.getBytes("UTF-8").length;
@@ -150,7 +150,7 @@ public class AuthProcessor
 		
 		System.out.println(b64Signed);
 		
-		return new Object[]{b64Signed, jsonModel, new Integer(contentLength)};
+		return new Object[]{b64Signed, json , new Integer(contentLength)};
 	}
 	
 	private static void init(){

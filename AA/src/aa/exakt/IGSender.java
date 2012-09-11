@@ -1,10 +1,8 @@
 package aa.exakt;
 
-import java.io.BufferedReader;
+import java.io.BufferedOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Calendar;
@@ -30,8 +28,6 @@ public class IGSender {
 		}
 
 		HttpURLConnection connection = null;
-		
-
 		URL serverAddress = null;
 
 		serverAddress = new URL("http://api.ame22.wyrls.net/messages");
@@ -47,21 +43,29 @@ public class IGSender {
 
 		connection.setRequestProperty("Content-Type", AuthProcessor.CONTENT_TYPE);
 		connection.setRequestProperty("Host", "ismsteam.com");
-		connection.setRequestProperty("Authorization","MCWS u/4/exakt1:" + objectArray[0]); // CHANGE THE ID
+		connection.setRequestProperty("Authorization","MCWS u/4/mmda2:" + objectArray[0]); // CHANGE THE ID
 		connection.setRequestProperty("Date", DateUtils.formatDate(DateUtils.parseDate(DateUtils.formatDate(Calendar.getInstance().getTime()))));
 		connection.setRequestProperty("Method", "POST");
+		connection.setRequestProperty("Content-Length", ((Integer)objectArray[2]).toString());
 		//connection.setRequestProperty("User-Agent","Mozilla/5.0 ( compatible ) ");
 		//connection.setRequestProperty("Accept","*/*");
-		connection.setFixedLengthStreamingMode((Integer)objectArray[2]);
+		//connection.setFixedLengthStreamingMode((Integer)objectArray[2]);
 		
 		connection.connect();
 
-		JSONModel newJsonModel = (JSONModel)objectArray[1];
-
+		//JSONModel newJsonModel = (JSONModel)objectArray[1];
+		String json = (String)objectArray[1];
+		
+		System.out.println(json);
+		System.out.println(json.length());
+		
 		OutputStreamWriter writer = new OutputStreamWriter(connection.getOutputStream());
+		writer.write(json);
+		writer.flush();
+		writer.close();
 		//writer.println(...);
 
-		JsonWriter jw;
+		/*JsonWriter jw;
 
 		try {
 			jw = new JsonWriter(writer);
@@ -69,11 +73,11 @@ public class IGSender {
 			jw.beginObject(); // {
 			jw.name(JSONModel._FROM).value(newJsonModel.getFrom()); 
 			jw.name(JSONModel._TO).value(newJsonModel.getTo());
-			jw.name(JSONModel._CONTENT_TYPE).value(newJsonModel.getContentType()); 
+			jw.name(JSONModel._CONTENT_TYPE).value(newJsonModel.getContentType());
 			jw.name(JSONModel._BODY).value(newJsonModel.getBody()); 
 			jw.name(JSONModel._DATE).value(newJsonModel.getDate());
 			jw.name(JSONModel._USAGE_TYPE).value(newJsonModel.getUsage_type());
-
+			
 			jw.endObject(); // }
 			jw.close();
 			writer.close();
@@ -82,12 +86,12 @@ public class IGSender {
 
 		} catch (IOException e) {
 			System.out.println(e + ": Error in JsonWriter");
-		}
+		}*/
 		
 		//System.out.println(connection.getResponseCode());
 		
 		try{
-			String strServerResponse = "";
+			/*String strServerResponse = "";
 
 			BufferedReader inStream = null;
 			inStream = new BufferedReader(new InputStreamReader(connection.getInputStream()));
@@ -98,7 +102,10 @@ public class IGSender {
 				System.out.println(strServerResponse);
 			} // end while
 
-			inStream.close(); 
+			inStream.close(); */
+			
+			System.out.print(connection.getResponseCode());
+			
 		}catch(Exception e){
 			
 			/*String strServerResponse = "";

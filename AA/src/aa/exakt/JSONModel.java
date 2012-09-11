@@ -15,7 +15,7 @@ public class JSONModel {
 	private String content_type;
 	private String body;
 	private String date;
-	private String usage_type;
+	private String usagetype;
 	
 	public JSONModel(){
 		this.from = "";
@@ -23,7 +23,7 @@ public class JSONModel {
 		this.content_type = "";
 		this.body = "";
 		this.date = "";
-		this.usage_type = "";
+		this.usagetype = "";
 	}
 	
 	public JSONModel(String from,
@@ -51,7 +51,7 @@ public class JSONModel {
 		this.content_type = content_type;
 		this.body = body;
 		this.date = date;
-		this.usage_type = usage_type;
+		this.usagetype = usage_type;
 	}
 	
 	public void setFrom(String from){
@@ -95,11 +95,11 @@ public class JSONModel {
 	}
 
 	public String getUsage_type() {
-		return usage_type;
+		return usagetype;
 	}
 
 	public void setUsage_type(String usage_type) {
-		this.usage_type = usage_type;
+		this.usagetype = usage_type;
 	}
 	
 	/*@Override 
