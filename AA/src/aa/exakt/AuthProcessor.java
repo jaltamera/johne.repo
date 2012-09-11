@@ -109,8 +109,6 @@ public class AuthProcessor
         //JSONObject jsonObject = (JSONObject)JSONSerializer.toJSON(jsonString);
         String json = gson.toJson(jsonModel);
 		
-        System.out.println(json);
-        
         //Parse DateTime to RFC 2822 Compliant format
 		//String rfcDate = ISO8601FORMAT.format(ISO8601FORMAT.parse(ISO8601FORMAT.format(current)));
 		
@@ -119,7 +117,7 @@ public class AuthProcessor
 		md.update(json.getBytes(), 0,json.length());
 		String md5String = DatatypeConverter.printBase64Binary(md.digest());
 		
-		int contentLength = json.length();
+		int contentLength = json.getBytes("UTF-8").length;
 		
 		if(json.length() == 0 || json.equals(null))
 			contentLength = 0;
@@ -152,8 +150,7 @@ public class AuthProcessor
 		
 		System.out.println(b64Signed);
 		
-		return new Object[]{b64Signed, jsonModel};
-		
+		return new Object[]{b64Signed, jsonModel, new Integer(contentLength)};
 	}
 	
 	private static void init(){

@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Calendar;
@@ -11,30 +12,29 @@ import java.util.Date;
 
 import org.apache.http.impl.cookie.DateUtils;
 
-import aa.exception.IGException;
-
 import com.google.gson.stream.JsonWriter;
 
 public class IGSender {
-	
-	public void send(RequestObject r, String result)throws IGException, Exception{
-		
+
+	public void send(RequestObject r, String result)throws Exception{
+
 		Date current = Calendar.getInstance().getTime();
+
 		Object[] objectArray = null;
-		
+
 		try{
 			AuthProcessor auth = new AuthProcessor(r, result, current);
 			objectArray = auth.sign();
 		}catch(Exception e){
 			System.out.println("Error in signing : IGSender");
-			e.printStackTrace();
 		}
 
 		HttpURLConnection connection = null;
 		
+
 		URL serverAddress = null;
 
-		serverAddress = new URL("http://api.ame22.wyrls.net/messages");//"http://api.ame22.wyrls.net");
+		serverAddress = new URL("http://api.ame22.wyrls.net/messages");
 		//set up out communications stuff
 		connection = null;
 
@@ -47,17 +47,17 @@ public class IGSender {
 
 		connection.setRequestProperty("Content-Type", AuthProcessor.CONTENT_TYPE);
 		connection.setRequestProperty("Host", "ismsteam.com");
-		connection.setRequestProperty("Authorization","MCWS u/4/mmda2:" + objectArray[0]); // u/4/exakt1
-		connection.setRequestProperty("Date", DateUtils.formatDate(DateUtils.parseDate(DateUtils.formatDate(current))));
+		connection.setRequestProperty("Authorization","MCWS u/4/exakt1:" + objectArray[0]); // CHANGE THE ID
+		connection.setRequestProperty("Date", DateUtils.formatDate(DateUtils.parseDate(DateUtils.formatDate(Calendar.getInstance().getTime()))));
 		connection.setRequestProperty("Method", "POST");
-		connection.setRequestProperty("User-Agent","Mozilla/5.0 ( compatible ) ");
-		connection.setRequestProperty("Accept","*/*");
+		//connection.setRequestProperty("User-Agent","Mozilla/5.0 ( compatible ) ");
+		//connection.setRequestProperty("Accept","*/*");
+		connection.setFixedLengthStreamingMode((Integer)objectArray[2]);
 		
 		connection.connect();
 
 		JSONModel newJsonModel = (JSONModel)objectArray[1];
-		
-		/*PrintWriter writer = new PrintWriter(new OutputStreamWriter(connection.getOutputStream(), "UTF-8"));*/
+
 		OutputStreamWriter writer = new OutputStreamWriter(connection.getOutputStream());
 		//writer.println(...);
 
@@ -76,7 +76,8 @@ public class IGSender {
 
 			jw.endObject(); // }
 			jw.close();
-
+			writer.close();
+			
 			System.out.println("Done ");
 
 		} catch (IOException e) {
@@ -100,7 +101,7 @@ public class IGSender {
 			inStream.close(); 
 		}catch(Exception e){
 			
-			String strServerResponse = "";
+			/*String strServerResponse = "";
 			
 			BufferedReader inStream = null;
 			inStream = new BufferedReader(new InputStreamReader(connection.getErrorStream()));
@@ -111,9 +112,9 @@ public class IGSender {
 				System.out.println(strServerResponse);
 			} // end while
 
-			inStream.close(); 
+			inStream.close(); */
 			
-			
+			e.printStackTrace();
 		}
 
 		//close the connection, set all objects to null
