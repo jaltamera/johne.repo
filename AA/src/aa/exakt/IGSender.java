@@ -21,7 +21,7 @@ public class IGSender {
 		Object[] objectArray = null;
 
 		try{
-			AuthProcessor auth = new AuthProcessor(r, result, current);
+			AuthProcessor auth = new AuthProcessor(r, result.replaceAll("<br>", "\n"), current);
 			objectArray = auth.sign();
 		}catch(Exception e){
 			System.out.println("Error in signing : IGSender");
