@@ -1,4 +1,4 @@
-package model.sql.pool;
+package ph.com.exakt.sql.pool;
 
 import java.sql.Connection;
 import java.sql.Driver;

@@ -1,4 +1,4 @@
-package model.sql.pool;
+package ph.com.exakt.sql.pool;
 
 class ConnectionReaper extends Thread {
 

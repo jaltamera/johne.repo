@@ -1,11 +1,10 @@
-package model.com;
+package ph.com.exakt.model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.LinkedList;
 
-import model.sql.pool.ConnectionPoolManager;
+import ph.com.exakt.sql.pool.ConnectionPoolManager;
 
 public class WorkQueue {
 
@@ -18,6 +17,7 @@ public class WorkQueue {
 		this.nThreads = nThreads;
 		queue = new LinkedList();
 		threads = new PoolWorker[nThreads];
+		new DatabasePoller().start();
 
 		for (int i=0; i<nThreads; i++) {
 			threads[i] = new PoolWorker();
@@ -31,7 +31,30 @@ public class WorkQueue {
 			queue.notify();
 		}
 	}
-
+	
+	private class DatabasePoller extends Thread{
+		public void run(){
+			while(true){
+				synchronized(queue){
+					Connection con = null;
+					try{
+						con = ConnectionPoolManager.getConnection();
+						
+						if(con.getMetaData() != null && !queue.isEmpty()){
+							queue.notify();
+						}
+					}catch(Exception e){
+					}finally{
+						try{
+							con.close();
+						}catch(Exception e){
+						}
+					}
+				}
+			}
+		}
+	}
+	
 	private class PoolWorker extends Thread {
 		public void run() {
 			RequestObject r;
@@ -78,8 +101,6 @@ public class WorkQueue {
 						try {
 							queue.wait();
 						} catch (InterruptedException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
 						}
 
 						System.out.println(queue.size());

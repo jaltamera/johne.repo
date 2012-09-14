@@ -1,4 +1,4 @@
-package model.sql.pool;
+package ph.com.exakt.sql.pool;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ public class ConnectionPoolManager {
 	
 	static {
 		try{
-			new model.sql.pool.JDCConnectionDriver("sybase.jdbc.sqlanywhere.IDriver","jdbc:sqlanywhere:uid=DBA;pwd=sql;eng=mmda");
+			new ph.com.exakt.sql.pool.JDCConnectionDriver("sybase.jdbc.sqlanywhere.IDriver","jdbc:sqlanywhere:uid=DBA;pwd=sql;eng=mmda");
 		}catch(Exception e){
 			e.printStackTrace();
 		}

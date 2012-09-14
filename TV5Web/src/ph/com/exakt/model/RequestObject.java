@@ -1,6 +1,8 @@
-package model.com;
+package ph.com.exakt.model;
 
-public class RequestObject {
+import java.io.Serializable;
+
+public class RequestObject implements Serializable{
 
 	private String input;
 	private String phone;

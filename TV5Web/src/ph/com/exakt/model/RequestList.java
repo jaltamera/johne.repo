@@ -1,4 +1,4 @@
-package model.com;
+package ph.com.exakt.model;
 
 import java.util.ArrayList;
 import java.util.List;

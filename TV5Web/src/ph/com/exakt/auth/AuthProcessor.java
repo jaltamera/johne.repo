@@ -1,4 +1,4 @@
-package model.auth;
+package ph.com.exakt.auth;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -70,9 +70,6 @@ public class AuthProcessor
 		}
 		return valid;
 	}
-	
-	private static SimpleDateFormat ISO8601FORMAT = new SimpleDateFormat("yyyyMMdd'T'HHmmss");
-	private static SimpleDateFormat RFC2822FORMAT = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss Z");
 	
 	/*
 	
@@ -155,7 +152,6 @@ public class AuthProcessor
 		
 		// Cast HTTPServletRequest to InboundServletWrapper
 		
-		String rfcDate = RFC2822FORMAT.format(RFC2822FORMAT.parse(RFC2822FORMAT.format(RFC2822FORMAT.parse(request.getDate()))));  
 		//MD5 digest of the JSON encoded message body
 		MessageDigest md = MessageDigest.getInstance("MD5");
 		md.update(request.getBody().getBytes(), 0, request.getBody().length());

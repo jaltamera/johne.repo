@@ -13,7 +13,7 @@
     <description></description>
     <display-name>smsInterfaceServlet</display-name>
     <servlet-name>smsInterfaceServlet</servlet-name>
-    <servlet-class>controller.smsInterfaceServlet</servlet-class>
+    <servlet-class>ph.com.exakt.controller.smsInterfaceServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>smsInterfaceServlet</servlet-name>
@@ -23,7 +23,7 @@
     <description></description>
     <display-name>InboundServlet</display-name>
     <servlet-name>InboundServlet</servlet-name>
-    <servlet-class>controller.InboundServlet</servlet-class>
+    <servlet-class>ph.com.exakt.controller.InboundServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>InboundServlet</servlet-name>
@@ -33,7 +33,7 @@
     <description></description>
     <display-name>TestServlet</display-name>
     <servlet-name>TestServlet</servlet-name>
-    <servlet-class>controller.TestServlet</servlet-class>
+    <servlet-class>ph.com.exakt.controller.TestServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>TestServlet</servlet-name>
@@ -42,7 +42,7 @@
   
   <filter>
 	<filter-name>ServletFilter</filter-name>
-	<filter-class>model.filter.ServletFilter</filter-class>
+	<filter-class>ph.com.exakt.filter.ServletFilter</filter-class>
   </filter>
   
   <filter-mapping>

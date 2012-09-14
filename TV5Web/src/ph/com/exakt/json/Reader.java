@@ -1,4 +1,4 @@
-package model.json;
+package ph.com.exakt.json;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

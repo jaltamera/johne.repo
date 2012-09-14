@@ -1,4 +1,4 @@
-package model.sql;
+package ph.com.exakt.sql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

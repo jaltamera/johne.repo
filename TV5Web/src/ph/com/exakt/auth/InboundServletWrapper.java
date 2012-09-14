@@ -1,4 +1,4 @@
-package model.auth;
+package ph.com.exakt.auth;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;

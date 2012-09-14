@@ -1,29 +1,33 @@
-package controller;
+package ph.com.exakt.controller;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.StringTokenizer;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.auth.AuthProcessor;
-import model.auth.InboundServletWrapper;
-import model.com.RequestObject;
-import model.com.WorkQueue;
-import model.com.WorkQueueFactory;
-import model.json.JSONModel;
-import model.json.Reader;
-
 import org.json.simple.parser.ContainerFactory;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+
+import ph.com.exakt.auth.AuthProcessor;
+import ph.com.exakt.auth.InboundServletWrapper;
+import ph.com.exakt.json.JSONModel;
+import ph.com.exakt.json.Reader;
+import ph.com.exakt.model.RequestObject;
+import ph.com.exakt.model.WorkQueue;
+import ph.com.exakt.model.WorkQueueFactory;
 
 import com.google.gson.Gson;
 
@@ -33,6 +37,11 @@ import com.google.gson.Gson;
 public class InboundServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	static WorkQueue workQueue;
+	
+	static{
+		workQueue = WorkQueueFactory.getQueueInstance();
+	}
 	//private static Logger logger = Logger.getLogger(InboundServlet.class);
 
 	/**
@@ -57,27 +66,13 @@ public class InboundServlet extends HttpServlet {
 	}
 	
 	public void processRequest(HttpServletRequest request, HttpServletResponse response){
-		//System.out.println("Hello World!");
-
-		/*System.out.println(request.getMethod() + " " + request.getRequestURI() + " " + request.getProtocol());
-		//System.out.println(request.getRemoteHost());
-		System.out.println(request.getHeader("Authorization"));
-		System.out.println(request.getHeader("Date"));
-		System.out.println(request.getHeader("Content-Type"));
-		System.out.println(request.getHeader("Content-Length"));
-		System.out.println();*/
 
 		try{
-			//RequestObject requestObject = new RequestObject(request);
-
-			//Reader jsonReader = new Reader(requestObject.getBufferedReader());
-			//JSONModel jsonModel = jsonReader.parse();
 			
 			InboundServletWrapper wrapper = new InboundServletWrapper(request);
 			Reader jsonReader = new Reader(wrapper.getReader());
 
 			JSONModel jsonModel = jsonReader.parse();
-			/*     Authorization    */
 
 			Gson gson = new Gson();
 
@@ -85,14 +80,18 @@ public class InboundServlet extends HttpServlet {
 			String password = "";
 			String phone = "";
 			String input = "";
+			
 			String jsonString = gson.toJson(jsonModel);
 			
 			boolean valid = false;
 
 			String authHeader = request.getHeader("Authorization");
 			if (authHeader != null) {
-				java.util.StringTokenizer st = new java.util.StringTokenizer(authHeader);
+				
+				StringTokenizer st = new StringTokenizer(authHeader);
+				
 				if (st.hasMoreTokens()) {
+					
 					String authType = st.nextToken();
 
 					// We only handle HTTP Basic authentication
@@ -132,9 +131,13 @@ public class InboundServlet extends HttpServlet {
 									
 								//System.out.println(stringToSign);
 								
+								DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+								Date date = new Date();
+								
 								valid = AuthProcessor.verify(password, stringToSign);		
-
-								System.out.println("Result: " + valid);
+								
+								// TODO move from here
+								System.out.println("\n" + dateFormat.format(date) + " : " + valid);
 
 								//assertion: verification successful
 								if(valid){
@@ -163,7 +166,6 @@ public class InboundServlet extends HttpServlet {
 											input = entry.getValue().toString();
 									}
 									
-								WorkQueue workQueue = WorkQueueFactory.getQueueInstance();
 								workQueue.execute(new RequestObject(input, phone));
 										
 								}

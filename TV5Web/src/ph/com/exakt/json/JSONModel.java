@@ -1,4 +1,4 @@
-package model.json;
+package ph.com.exakt.json;
 
 
 public class JSONModel {

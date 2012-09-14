@@ -1,4 +1,4 @@
-package model.filter;
+package ph.com.exakt.filter;
 
 import java.io.IOException;
 
@@ -10,7 +10,8 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
-import model.auth.InboundServletWrapper;
+import ph.com.exakt.auth.InboundServletWrapper;
+
 
 public class ServletFilter implements Filter{
 
