@@ -83,7 +83,7 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 	@Override
 	protected void addResults(InterpretationActuation interpretationActuation, Context context, StringBuffer output){
 					
-		if((interpretationActuation.unableToInterpret() && context.getNarrowDownTopic() == null) || interpretationActuation.explicitReset() || interpretationActuation.getInputString().equalsIgnoreCase("lines"))
+		if((interpretationActuation.unableToInterpret() && context.getNarrowDownTopic() == null) || interpretationActuation.explicitReset() || interpretationActuation.getInputString().equalsIgnoreCase("help"))
 		{
 			this.propertiesInit("tv5/menu.properties");//C:/Program Files/Answers Anywhere Platform 5.2.0/IDE/include/classes/com/interaksyon/formatter/menu.properties");
 			
@@ -369,7 +369,6 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 					interpretation.findAndRemoveXml("Ambiguity");
 					interpretation.findAndRemoveXml("Ambiguities");
 					
-					
 					context.clear();
 					return;
 				}
@@ -410,10 +409,9 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 			super.addAmbiguousObjectsQuestions(interpretation, context, output);
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			logger.error(e);
+			logger.error(e + " #SMSF1");
 		} catch (Exception ex) {
-			logger.error(ex);
+			logger.error(ex + " #SMSF2");
 		}
 	}
 	
@@ -421,13 +419,9 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 		try {
 			props.load(new FileInputStream(path));
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			logger.error(e);
-			e.printStackTrace();
+			logger.error(e + " #SMSF3");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			logger.error(e);
-			e.printStackTrace();
+			logger.error(e + " #SMSF4");
 		}
 	}
 	

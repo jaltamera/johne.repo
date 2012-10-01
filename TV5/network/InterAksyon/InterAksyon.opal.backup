@@ -334,15 +334,15 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.StringTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[liveInterpretationTable]]></Name>
-                <Value Type="java.lang.String"><![CDATA[Bound]]></Value>
-              </Properties>
-            </Value>
-            <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[leCondition]]></Name>
                 <Value Type="java.lang.String"><![CDATA[(['is'] ~ ('le'|'&lt;=') ~ value)]]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.StringTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[liveInterpretationTable]]></Name>
+                <Value Type="java.lang.String"><![CDATA[Bound]]></Value>
               </Properties>
             </Value>
             <Value>
@@ -358,27 +358,27 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.StringTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[preference]]></Name>
-                <Value Type="java.lang.String" />
-              </Properties>
-            </Value>
-            <Value>
               <Properties Type="com.dejima.templates.IntegerTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[maxVariableSize]]></Name>
                 <Value Type="java.lang.Integer"><![CDATA[3]]></Value>
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.IntegerTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[minVariableNonNoiseTokenSize]]></Name>
-                <Value Type="java.lang.Integer"><![CDATA[1]]></Value>
+              <Properties Type="com.dejima.templates.StringTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[preference]]></Name>
+                <Value Type="java.lang.String" />
               </Properties>
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[startsWith]]></Name>
                 <Value Type="java.lang.String"><![CDATA[[preposition] ~ (kwd|adjacentReference) ~ ('startsWith'|'starts with'|'starting with'|'which start with'|'that start with'|'which starts with'|'that starts with')]]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.IntegerTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[minVariableNonNoiseTokenSize]]></Name>
+                <Value Type="java.lang.Integer"><![CDATA[1]]></Value>
               </Properties>
             </Value>
             <Value>
@@ -669,13 +669,13 @@
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[explicitReference]]></Name>
+                <Name Type="java.lang.String"><![CDATA[afterValue]]></Name>
                 <Value Type="java.lang.String"><![CDATA['']]></Value>
               </Properties>
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[afterValue]]></Name>
+                <Name Type="java.lang.String"><![CDATA[explicitReference]]></Name>
                 <Value Type="java.lang.String"><![CDATA['']]></Value>
               </Properties>
             </Value>
@@ -806,15 +806,15 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.StringTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[tableName]]></Name>
-                <Value Type="java.lang.String"><![CDATA[Exit]]></Value>
-              </Properties>
-            </Value>
-            <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[andKeyword]]></Name>
                 <Value Type="java.lang.String"><![CDATA['and']]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.StringTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[tableName]]></Name>
+                <Value Type="java.lang.String"><![CDATA[Exit]]></Value>
               </Properties>
             </Value>
             <Value>
@@ -825,26 +825,26 @@
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.StringTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[groups]]></Name>
-                <Value Type="java.lang.String" />
-              </Properties>
-            </Value>
-            <Value>
-              <Properties Type="com.dejima.templates.StringTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[defaultColumnName]]></Name>
                 <Value Type="java.lang.String" />
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[orKeyword]]></Name>
-                <Value Type="java.lang.String"><![CDATA['or']]></Value>
+              <Properties Type="com.dejima.templates.StringTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[groups]]></Name>
+                <Value Type="java.lang.String" />
               </Properties>
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.BooleanTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[enableFilterDownChainClaims]]></Name>
                 <Value Type="java.lang.Boolean"><![CDATA[true]]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.ConditionTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[orKeyword]]></Name>
+                <Value Type="java.lang.String"><![CDATA['or']]></Value>
               </Properties>
             </Value>
             <Value>
@@ -1457,13 +1457,13 @@
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[explicitReference]]></Name>
+                <Name Type="java.lang.String"><![CDATA[afterValue]]></Name>
                 <Value Type="java.lang.String"><![CDATA['']]></Value>
               </Properties>
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[afterValue]]></Name>
+                <Name Type="java.lang.String"><![CDATA[explicitReference]]></Name>
                 <Value Type="java.lang.String"><![CDATA['']]></Value>
               </Properties>
             </Value>
@@ -1564,15 +1564,15 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.StringTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[type]]></Name>
-                <Value Type="java.lang.String"><![CDATA[relation]]></Value>
-              </Properties>
-            </Value>
-            <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[isValueOf]]></Name>
                 <Value Type="java.lang.String"><![CDATA[('isValueOf' | ('is' ~ ['the'] ~ 'value of')) ~ (kwd|adjacentReference)]]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.StringTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[type]]></Name>
+                <Value Type="java.lang.String"><![CDATA[relation]]></Value>
               </Properties>
             </Value>
             <Value>
@@ -1600,15 +1600,15 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.StringTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[tableName]]></Name>
-                <Value Type="java.lang.String" />
-              </Properties>
-            </Value>
-            <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[andKeyword]]></Name>
                 <Value Type="java.lang.String"><![CDATA['and']]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.StringTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[tableName]]></Name>
+                <Value Type="java.lang.String" />
               </Properties>
             </Value>
             <Value>
@@ -1619,26 +1619,26 @@
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.StringTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[groups]]></Name>
-                <Value Type="java.lang.String" />
-              </Properties>
-            </Value>
-            <Value>
-              <Properties Type="com.dejima.templates.StringTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[defaultColumnName]]></Name>
                 <Value Type="java.lang.String" />
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[orKeyword]]></Name>
-                <Value Type="java.lang.String"><![CDATA['or']]></Value>
+              <Properties Type="com.dejima.templates.StringTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[groups]]></Name>
+                <Value Type="java.lang.String" />
               </Properties>
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.BooleanTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[enableFilterDownChainClaims]]></Name>
                 <Value Type="java.lang.Boolean"><![CDATA[true]]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.ConditionTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[orKeyword]]></Name>
+                <Value Type="java.lang.String"><![CDATA['or']]></Value>
               </Properties>
             </Value>
             <Value>
@@ -1843,13 +1843,13 @@
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[explicitReference]]></Name>
+                <Name Type="java.lang.String"><![CDATA[afterValue]]></Name>
                 <Value Type="java.lang.String"><![CDATA['']]></Value>
               </Properties>
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[afterValue]]></Name>
+                <Name Type="java.lang.String"><![CDATA[explicitReference]]></Name>
                 <Value Type="java.lang.String"><![CDATA['']]></Value>
               </Properties>
             </Value>
@@ -1938,15 +1938,15 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.IntegerTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[minVariableNonNoiseTokenSize]]></Name>
-                <Value Type="java.lang.Integer"><![CDATA[1]]></Value>
-              </Properties>
-            </Value>
-            <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[startsWith]]></Name>
                 <Value Type="java.lang.String"><![CDATA[[preposition] ~ (kwd|adjacentReference) ~ ('startsWith'|'starts with'|'starting with'|'which start with'|'that start with'|'which starts with'|'that starts with')]]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.IntegerTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[minVariableNonNoiseTokenSize]]></Name>
+                <Value Type="java.lang.Integer"><![CDATA[1]]></Value>
               </Properties>
             </Value>
             <Value>
@@ -1962,15 +1962,15 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.StringTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[type]]></Name>
-                <Value Type="java.lang.String"><![CDATA[field]]></Value>
-              </Properties>
-            </Value>
-            <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[isValueOf]]></Name>
                 <Value Type="java.lang.String"><![CDATA[('isValueOf' | ('is' ~ ['the'] ~ 'value of')) (kwd|adjacentReference)]]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.StringTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[type]]></Name>
+                <Value Type="java.lang.String"><![CDATA[field]]></Value>
               </Properties>
             </Value>
             <Value>
@@ -2034,15 +2034,15 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.StringTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[columnName]]></Name>
-                <Value Type="java.lang.String" />
-              </Properties>
-            </Value>
-            <Value>
               <Properties Type="com.dejima.templates.BooleanTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[maybeExplicitMatch]]></Name>
                 <Value Type="java.lang.Boolean"><![CDATA[false]]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.StringTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[columnName]]></Name>
+                <Value Type="java.lang.String" />
               </Properties>
             </Value>
             <Value>
@@ -2236,9 +2236,9 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[orKeyword]]></Name>
-                <Value Type="java.lang.String"><![CDATA['or']]></Value>
+              <Properties Type="com.dejima.templates.BooleanTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[singleSlot]]></Name>
+                <Value Type="java.lang.Boolean"><![CDATA[false]]></Value>
               </Properties>
             </Value>
             <Value>
@@ -2248,21 +2248,21 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.BooleanTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[singleSlot]]></Name>
-                <Value Type="java.lang.Boolean"><![CDATA[false]]></Value>
-              </Properties>
-            </Value>
-            <Value>
-              <Properties Type="com.dejima.templates.StringTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[preference]]></Name>
-                <Value Type="java.lang.String" />
+              <Properties Type="com.dejima.templates.ConditionTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[orKeyword]]></Name>
+                <Value Type="java.lang.String"><![CDATA['or']]></Value>
               </Properties>
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.IntegerTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[maxVariableSize]]></Name>
                 <Value Type="java.lang.Integer"><![CDATA[3]]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.StringTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[preference]]></Name>
+                <Value Type="java.lang.String" />
               </Properties>
             </Value>
             <Value>
@@ -2624,9 +2624,9 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[followupCondition]]></Name>
-                <Value Type="java.lang.String"><![CDATA[true]]></Value>
+              <Properties Type="com.dejima.templates.IntegerTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[maxLearningVariableSize]]></Name>
+                <Value Type="java.lang.Integer"><![CDATA[20]]></Value>
               </Properties>
             </Value>
             <Value>
@@ -2636,9 +2636,9 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.IntegerTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[maxLearningVariableSize]]></Name>
-                <Value Type="java.lang.Integer"><![CDATA[20]]></Value>
+              <Properties Type="com.dejima.templates.ConditionTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[followupCondition]]></Name>
+                <Value Type="java.lang.String"><![CDATA[true]]></Value>
               </Properties>
             </Value>
             <Value>
@@ -2996,13 +2996,13 @@
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[explicitReference]]></Name>
+                <Name Type="java.lang.String"><![CDATA[afterValue]]></Name>
                 <Value Type="java.lang.String"><![CDATA['']]></Value>
               </Properties>
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[afterValue]]></Name>
+                <Name Type="java.lang.String"><![CDATA[explicitReference]]></Name>
                 <Value Type="java.lang.String"><![CDATA['']]></Value>
               </Properties>
             </Value>
@@ -3133,15 +3133,15 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.StringTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[tableName]]></Name>
-                <Value Type="java.lang.String"><![CDATA[Road]]></Value>
-              </Properties>
-            </Value>
-            <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[andKeyword]]></Name>
                 <Value Type="java.lang.String"><![CDATA['and']]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.StringTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[tableName]]></Name>
+                <Value Type="java.lang.String"><![CDATA[Road]]></Value>
               </Properties>
             </Value>
             <Value>
@@ -3152,26 +3152,26 @@
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.StringTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[groups]]></Name>
-                <Value Type="java.lang.String" />
-              </Properties>
-            </Value>
-            <Value>
-              <Properties Type="com.dejima.templates.StringTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[defaultColumnName]]></Name>
                 <Value Type="java.lang.String" />
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[orKeyword]]></Name>
-                <Value Type="java.lang.String"><![CDATA['or']]></Value>
+              <Properties Type="com.dejima.templates.StringTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[groups]]></Name>
+                <Value Type="java.lang.String" />
               </Properties>
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.BooleanTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[enableFilterDownChainClaims]]></Name>
                 <Value Type="java.lang.Boolean"><![CDATA[true]]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.ConditionTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[orKeyword]]></Name>
+                <Value Type="java.lang.String"><![CDATA['or']]></Value>
               </Properties>
             </Value>
             <Value>
@@ -3404,13 +3404,13 @@
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[explicitReference]]></Name>
+                <Name Type="java.lang.String"><![CDATA[afterValue]]></Name>
                 <Value Type="java.lang.String"><![CDATA['']]></Value>
               </Properties>
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[afterValue]]></Name>
+                <Name Type="java.lang.String"><![CDATA[explicitReference]]></Name>
                 <Value Type="java.lang.String"><![CDATA['']]></Value>
               </Properties>
             </Value>
@@ -3499,15 +3499,15 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.IntegerTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[minVariableNonNoiseTokenSize]]></Name>
-                <Value Type="java.lang.Integer"><![CDATA[1]]></Value>
-              </Properties>
-            </Value>
-            <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[startsWith]]></Name>
                 <Value Type="java.lang.String"><![CDATA[[preposition] ~ (kwd|adjacentReference) ~ ('startsWith'|'starts with'|'starting with'|'which start with'|'that start with'|'which starts with'|'that starts with')]]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.IntegerTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[minVariableNonNoiseTokenSize]]></Name>
+                <Value Type="java.lang.Integer"><![CDATA[1]]></Value>
               </Properties>
             </Value>
             <Value>
@@ -3523,15 +3523,15 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.StringTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[type]]></Name>
-                <Value Type="java.lang.String"><![CDATA[field]]></Value>
-              </Properties>
-            </Value>
-            <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[isValueOf]]></Name>
                 <Value Type="java.lang.String"><![CDATA[('isValueOf' | ('is' ~ ['the'] ~ 'value of')) (kwd|adjacentReference)]]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.StringTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[type]]></Name>
+                <Value Type="java.lang.String"><![CDATA[field]]></Value>
               </Properties>
             </Value>
             <Value>
@@ -3595,15 +3595,15 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.StringTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[columnName]]></Name>
-                <Value Type="java.lang.String" />
-              </Properties>
-            </Value>
-            <Value>
               <Properties Type="com.dejima.templates.BooleanTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[maybeExplicitMatch]]></Name>
                 <Value Type="java.lang.Boolean"><![CDATA[false]]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.StringTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[columnName]]></Name>
+                <Value Type="java.lang.String" />
               </Properties>
             </Value>
             <Value>

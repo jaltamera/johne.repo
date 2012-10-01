@@ -46,12 +46,16 @@
 		}
 		
 		//Parse the request to retrieve the user input request
-		String input = request.getParameter("message");
+		String input = request.getParameter("message").replaceAll("[^0-9a-zA-Z]+", " ").replaceAll("Ñ", "N").replaceAll("ñ", "N");
         String phone = request.getParameter("phone");
 
 
-
 		// Process request
+		
+		if(input.equals(null) || input.trim().equals("")){
+			input = "help";
+		}
+		
 		UserSessionManager userSessMgr = UserSessionManager.getUserSessionManager();		
         if(agentNetwork.getOpalName() != null && input != null && input.length() > 0){   
 		//if (input != null && input.length() > 0){
@@ -90,7 +94,7 @@
 <div style="width: 252px; height:448px;">
 <img src="bigphone.jpg"/>
 	<div style="margin: -356px 0px 0px 46px; 
-			overflow: auto; overflow-x: hidden; 
+			overflow: auto; overflow-x: auto; 
 			height: 220px; width: 164px; 
 			font-family: arial; font-size: 70%;
 			font-weight: bold; white-space: -moz-pre-wrap; 

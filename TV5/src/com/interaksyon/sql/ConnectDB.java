@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.Vector;
 
 import com.dejima.core.nlp.text.action.FieldActuation;
+import com.dejima.utils.log.LogManager;
+import com.interaksyon.formatter.SMSFormatter;
 
 
 public class ConnectDB {
@@ -20,6 +22,8 @@ public class ConnectDB {
 	private ResultSet rs = null;
 	private PreparedStatement pstm = null;
 	private Statement stm = null;
+	
+	protected static final LogManager logger = new LogManager(ConnectDB.class);
 	
 	public List executeCustomSQL(String query, List paramList) throws Exception{
 			
@@ -90,7 +94,6 @@ public class ConnectDB {
         
 		query += " (";
 		
-		
 		for(int y = 0; y < list.size(); y++){
 			query += "t1.exit_name like ?";
 			if(y != list.size()-1) query += " or ";
@@ -104,16 +107,16 @@ public class ConnectDB {
 		if(!flow.equals(""))
 			query += " and t1.flow = '" + flow + "'";
 		
-		if(!road.equals("")){
+		if(road.size() > 0/*!road.equals("")*/){
 			query += " and (";
 			
 			for(int a = 0; a < road.size(); a++){
 				query += "t2.road_name like ?";
 				if(a != road.size()-1) query += " or ";
 			}
+			
+			query += " )";
 		}
-		
-		query += " )";
 		
 		query += " and t2.ID = t1.main_id order by t2.road_name desc";
 		

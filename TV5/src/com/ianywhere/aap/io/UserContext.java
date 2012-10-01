@@ -18,7 +18,6 @@ public class UserContext
 		context = ctx;
 	}
 	public UserContext() {
-		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() 

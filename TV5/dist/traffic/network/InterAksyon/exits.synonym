@@ -1,146 +1,148 @@
-NORTH AVE: veterans, agham, NHA, national housing authority, wildlife, SM, S.M.
-F B HARRISON: sheraton
-ALABANG EXIT: Alabang
-SUCAT EXIT: Loyola Manila Memorial Park, Loyola Manila Memorial 
-BICUTAN EXIT: SM Bicutan, SM
-MERVILLE EXIT: Subdivision, subd.
-C5 ON RAMP: Market Market, Heritage Memorial Park, heritage
-NICHOLS: Villamor airbase, Resorts world, NAIA Terminal 3, NAIA, NAIA3, villamor
-MAGALLANES: flyover
-#COASTAL ROAD:
-#AIRPORT ROAD:
-#BACLARAN:
-#EDSA EXTENSION SERVICE ROAD
-#EDSA EXTENSION:
-#BUENDIA SERVICE ROAD
-BUENDIA: mrt, Star City
-PABLO OCAMPO: Central bank, Sheraton, Harrison, Rizal Memorial, Colliseum, La Salle
-#QUIRINO:
-#RAJAH SULAYMAN:
-#PEDRO GIL:
-#U N AVENUE:
-#FINANCE ROAD:
-#ANDA CIRCLE:
-#SAN BENILDO SCHOOL:
-#F MARIANO AVE:
-AMANG RODRIGUEZ: Ligaya
-#DONA JUANA:
-#LRT 2 STATION:
-SM CITY MARIKINA: River Banks
-C5 FLYOVER: rosario, IPI
-GREENMEADOWS AVE: Acropolis, Green Meadows, Valle 6, Valle 7
-#LANUZA AVE:
-MEDICAL CITY: Rockwell, MERALCO, Valle 4, Valle 7
-#MERALCO AVE:
-#SAN MIGUEL AVE:
-EDSA SHRINE: Galleria, robinson, robinsons, shrine, corinthian, eton
-POEA: Wack Wack
-LA SALLE GREENHILLS: SEC, POEA, Wack Wack, Greenhills, GH, LSGH
-CONNECTICUT: Gate 5, East, Shopping center
-WILSON: Cardinal, GCSH, Abad Santos, P. Guevarra, guevarra
-CLUB FILIPINO: Greenhills mall
-#ROOSEVELT:
-MADISON: West, Xavier, School
-SANTOLAN: crame, Granada , Petron, San Juan Cemetery, PSBMB
-MARKET MARKET: Global City, University Parkway, the fort
-#KALAYAAN:
-#BAGONG ILOG:
-#LANUZA: 
-J VARGAS: Valle 3, Valle 4, Valle 5, shell
-ORTIGAS AVE: Rosario, IPI, transcom, tiendesitas
-GREEN MEADOWS: Valle Verde 6, Acropolis
-EASTWOOD: Bagumbayan, Acropolis
-LIBIS FLYOVER: Blue Ridge
-BONNY SERRANO: Project 4, Crame, 20th
-P TUAZON: cubao, p.tuazon, MLQ, Labor
-AURORA BOULEVARD: BSBA
-XAVIERVILLE: Loyola Heights
-ATENEO DE MANILA UNIVERSITY: ADMU, Ateneo
-MIRIAM COLLEGE: Pansol
-#C P GARCIA: 
-UNIVERSITY OF THE PHILIPPINES: UP
-#CAPITOL HILLS:
-TANDANG SORA: MWSS
+MAYON:
+KANLAON:
+APO AVENUE:
+SPEAKER PEREZ:
+D TUAZON:
+CORDILLERA:
+BANAWE:
+BIAK NA BATO:
+STO DOMINGO:
+C5 FLYOVER: rosario, IPI, unison, i p i, international pipe, int l pipe, pipe industries, transcom
+GREENMEADOWS AVE: Green Meadows, valle 6, verde 6
+LANUZA AVE: Luntala, MFI, meralco foundation, foundation, valle 2, verde 2
+MEDICAL CITY: Valle 4, rockwell ortigas, rockwell business, rockwell pasig, ortigas rockwell
+MERALCO AVE: Ortigas Bldg, MC Home Depot, metrowalk, unionbank, easywood, home depot
+SAN MIGUEL AVE: San Miguel Corp, ADB, podium, crowne plaza, zalameda, a d b
+EDSA SHRINE: Galleria, corinthian, eton, poveda
+POEA: columbia, uno, u n o, overseas
+LA SALLE GREENHILLS: LSGH, la salle
+WILSON: greenhills, green hills, gh
+CONNECTICUT: 
+CLUB FILIPINO: ICS
+ROOSEVELT: greenhills shopping, shopping center, delifrance
+MADISON: panorama, e nopi
+SANTOLAN: annapolis, afp, armed forces, crame, granada, pnp, p n p
+G ARANETA AVE: 
+SCOUT CHUATOCO:
+DR GARCIA SR:
+ROOSEVELT AVENUE:
+ROCES AVENUE:
+SCOUT MAGBANUA:
+SCOUT REYES:
+TIMOG: east ave, vliner, v liner, victory liner, jam, jac, gma, gma-kamuning, gma kamuning
+SCOUT SANTIAGO:
+SCOUT BORROMEO:
+SCOUT ALBANO:
+SGT ESGUERA:
+EDSA SERVICE ROAD:
+EDSA: epifanio
 LERMA: UE, University belt, u belt, u-belt
 P NOVAL: UST
 GOV FORBES LACSON: UST hospital
-#VICENTE CRUZ:
-#ANTIPOLO:
-#A MACEDA:
-#BLUMENTRITT:
-#WELCOME ROTUNDA:
-#MAYON:
-#KANLAON:
-#APO AVENUE:
-#SPEAKER PEREZ:
-#D TUAZON:
-#CORDILLERA:
-#BANAWE:
-#BIAK NA BATO:
-#STO DOMINGO:
-#G ARANETA AVE: 
-#SCOUT CHUATOCO:
-#DR GARCIA SR: 
-#ROOSEVELT AVENUE:
-#ROCES AVENUE:
-#SCOUT MAGBANUA:
-#SCOUT REYES:
-#TIMOG:
-#SCOUT SANTIAGO:
-#SCOUT BORROMEO:
-#SCOUT ALBANO:
-#SGT ESGUERA:
-#EDSA SERVICE ROAD
-EDSA: ABS CBN
-#BANTAYOG ROAD:
-AGHAM ROAD: Philippine Children Hospital, children hospital, pch
-#ELLIPTICAL ROAD
-#PHILCOA:
-#UNIVERSITY AVE:
-#MAGSAYSAY AVE:
-#CENTRAL AVE:
-TANDANG SORA WESTSIDE: Iglesia Ni Cristo, inc, iglesia
-TANDANG SORA EASTSIDE: Robinson Supermarket, robinsons supermarket
-GENERAL MALVAR HOSPITAL: Luzon
-ZUZUAREGI: caltex
-DILIMAN PREPARATORY SCHOOL:  Puregold
-EVER GOTESCO: don antonio
-BATASAN: sandigan bayan
-MALL OF ASIA: moa
-MACAPAGAL AVE: remate, PNB, philippine national bank 
-ROXAS BOULEVARD: rizal park, US embassy, diamond hotel, traders hotel, PICC
-TAFT AVE: rotonda 
-#TRAMO:
-MALIBAY: philtranco, victory bus terminal
-ARNAIZ   PASAY ROAD: dusit hotel
-#AYALA AVE SERVICE ROAD
-AYALA AVE: intercon, rustans, makati PSE, ayala triangle, paseo de roxas, dela costa, herrera 
-#KALAYAAN   ESTRELLA:
-ORENSE: strella, MMDA
-GUADALUPE: loyola memorial chapel, loyola memorial
-#PIONEER   BONI:
-RELIANCE: RICOA factory, potenciano hospital
-#SHAW BLVD SERVICE ROAD
-SHAW BLVD: crossing, starmall, shangrila, shangri-la
-SM MEGAMALL: megamall
-#ORTIGAS AVE SERVICE ROAD
-WHITE PLAINS   CONNECTICUT: crame
-#SANTOLAN SERVICE ROAD
-MAIN AVE: P.A., GHQ, philippine army ghq
-#P TUAZON SERVICE ROAD
-#MC ARTHUR FARMERS SERVICE ROAD
-MC ARTHUR FARMERS: araneta
-#AURORA BLVD SERVICE ROAD
-#AURORA BLVD: crossing
-#MONTE DE PIEDAD: 
-NEW YORK   NEPA Q MART: magsaysay high school, new york, nepa, q mart
-#KAMUNING SERVICE ROAD:
-KAMUNING: kamias
-#TIMOG SERVICE ROAD:
-NIA ROAD: BIR, LRA, NEA, post office, po, bureau of internal revenue, land registration authority, National Endowment for the Arts
-#QUEZON AVE: mrt station, MRT
-TRINOMA: B.F., bf, lifehomes
-#BANSALANGIN:
-MUNOZ: congressional, project 7
-#KAINGIN ROAD:
-BALINTAWAK: market, cloverleaf, toyota
+VICENTE CRUZ:
+ANTIPOLO:
+A MACEDA:
+BLUEMENTRITT: Blumentritt
+WELCOME ROTUNDA
+COASTAL ROAD:
+AIRPORT ROAD: 
+BACLARAN: farmacia, redemptorist, bayanihan, opena, seaside, wet market, bradco
+EDSA EXTENSION SERVICE ROAD:
+EDSA EXTENSION:
+BUENDIA SERVICE ROAD:
+BUENDIA: cyberone, cyber 1, cyber1, gil puyat, jwd, diokno
+PABLO OCAMPO: c c p, CCP, cultural center of the phillipines, pnh, phillipine navy, navy, central bank of the phillipines, cbp, pedro bukaneg
+QUIRINO: psa, p s a
+RAJAH SULAYMAN: san andres, remedios, aristocrat
+PEDRO GIL: diamond hotel, denr, d e n r, environment and natural, cuarteles
+U N AVENUE: un avenue, un a, united nation, united nations, museo pambata, bayview park
+FINANCE ROAD: katigbak, padre burgos, bonifacio
+ANDA CIRCLE: 13th st, andres soriano, fort santiago, red cross, bir, b i r, bureau of internal revenue
+MARKET MARKET: Global City, University Parkway, the fort
+KALAYAAN:
+BAGONG ILOG: JA, danny floro, king arthur, kamagong, eugenio mejia, robina, pasig blvd, yakal
+LANUZA: epictech, casa verde, valle 1, verde 1, st martin
+J VARGAS: valle 3, verde 3, spcp, st paul, tiendesitas, tiende, sm hypermarket, sm supercenter, pe antonio, p e antonio
+ORTIGAS AVE: Rosario, IPI, transcom, tiendesitas
+GREEN MEADOWS: Valle Verde 6, Acropolis
+EASTWOOD: IBM plaza
+LIBIS: astoria
+BONNY SERRANO: bonny serrano, bonny, serrano, fvr
+P TUAZON: cubao, santrans, center for health, chd, quirino memorial
+AURORA BOULEVARD: PSBA, A bonifacio, good shepherd
+XAVIERVILLE: xavier, kostka
+ATENEO DE MANILA UNIVERSITY: ADMU, Ateneo, f dela rosa
+MIRIAM COLLEGE: shoppersville, mangyan, thornton, escaler
+C P GARCIA: pansol, cp garcia
+UNIVERSITY OF THE PHILIPPINES: UP, katipunan, nawasa
+CAPITOL HILLS: sunny hill
+TANDANG SORA: new era
+BANTAYOG ROAD: 
+AGHAM ROAD: Philippine Children Hospital, children hospital, pch, p c h, office of the ombudsman, ombudsman, bir rd, b i r rd, bir road, b i r road, transco
+ELLIPTICAL ROAD: visayas ave, maharlika, quezon memorial circle, quezon circle, memorial circle
+MALL OF ASIA: moa, globe rotunda, globe rotonda, pacific
+MACAPAGAL AVE: diosdado 
+ROXAS BOULEVARD: edsa flyover, casino filipino, heritage hotel
+F B HARRISON: fb harrison, fb, sinta court
+TAFT AVE: 
+TRAMO: philtranco, winston
+MALIBAY: evangelista
+MAGALLANES: mantrade, alpha land, alphaland
+ARNAIZ PASAY ROAD: dusit hotel, pasay rd
+AYALA AVE SERVICE ROAD
+AYALA AVE: intercon, intercontinental, inter continental, mckinley, recoletos, makati
+KALAYAAN ESTRELLA: rockwell, agutaya
+ORENSE: MMDA, pet plans
+GUADALUPE: loyola memorial chapel, loyola memorial, trace college, jp rizal, j p rizal
+PIONEER BONI: light residences, robinsons forum, bonie, cybergate, cyber gate, go hotel, globe telecom
+RELIANCE: abbott, RICOA, potenciano, euromed, paragon, pcdc, caritas, p c d c
+SHAW BLVD SERVICE ROAD
+SHAW BLVD: crossing, starmall, shangrila, shangri-la, edsa central, public market, teleperformance
+SM MEGAMALL: highway 54, hw 54
+ORTIGAS AVE SERVICE ROAD
+WHITE PLAINS CONNECTICUT: whiteplains, white plain, whiteplain, people power, shell edsa
+SANTOLAN SERVICE ROAD
+MAIN AVE: n rd, shooters, sm hypermarket cubao
+P TUAZON SERVICE ROAD
+MC ARTHUR FARMERS SERVICE ROAD
+MC ARTHUR FARMERS: araneta, expo, arayat, session rd
+AURORA BLVD SERVICE ROAD
+AURORA BLVD: cpg hs, cpghs, carlos p garcia high school, carlos p garcia hs
+MONTE DE PIEDAD: maryland, HM transport, baliwag, montreal
+NEW YORK NEPA Q MART: magsaysay high school, new york, nepa, q mart, magsaysay hs, genesis, dominion, viron, dagupan
+KAMUNING SERVICE ROAD
+KAMUNING: kamias, qc jail, quezon city jail, q c jail
+TIMOG SERVICE ROAD
+NIA ROAD: national irrigation, npo, po, printing office, national printing, bfa, nea, dpwh, d p w h, n e a, b f a, n p o
+QUEZON AVE: centris, mrt quezon, quezon ave mrt, cyberpod, m r t quezon, quezon m r t
+TRINOMA: paramount, pedrollo, mrt north, north mrt, mindanao ave, m r t north, north m r t
+NORTH AVE: sm north, sm city north, pcs, p c s, phillipines college of surgeons, annex, sky garden, west ave, sky dome, wedding library, lrt north, north lrt, s m north
+BANSALANGIN: corregidor, axis, toyota north, toyota balintawak, north toyota
+MUNOZ: congressional, munoz market, lemon square, walter mart, tritran, lemon sqr
+KAINGIN ROAD: howmart, wilcon
+BALINTAWAK: market, cloverleaf, camachile, old samson
+ALABANG EXIT: south station
+SUCAT EXIT: meralco road, meralco rd
+BICUTAN EXIT: SM Bicutan, dona soledad, general santos
+MERVILLE EXIT: TUP, balagbag, civil aviation, bliss
+C5 ON RAMP: sun valley
+NICHOLS: villamor, norwegian
+SAN BENILDO SCHOOL: narra ave, morning dew, dew montessori
+ROBINSON S METRO EAST: robinsons, sta lucia, imelda ave
+F MARIANO AVE: shoe avenue, shoe ave, barrio fiesta
+AMANG RODRIGUEZ: Ligaya
+DONA JUANA:
+LRT 2 STATION: santolan station, lrt santolan
+SM CITY MARIKINA: River Banks, riverbank, riverbanks, river bank, sm marikina
+PHILCOA: 
+UNIVERSITY AVE: university avenue, u ave, u avenue, u a
+MAGSAYSAY AVE:
+CENTRAL AVE: yanan
+TANDANG SORA WESTSIDE: i n c, iglesia ni cristo, inc, iglesia
+TANDANG SORA EASTSIDE: 
+GENERAL MALVAR HOSPITAL: Luzon, villanueva, puregold commonwealth, isuzu commonwealth
+ZUZUAREGI: toyota commonwealth, old balara
+DILIMAN PREPARATORY SCHOOL: samonte, dupax
+EVER GOTESCO: don antonio, amsterdam, holy spirit
+ST PETER S CHURCH: don diosdado
+BATASAN: sandigan bayan, sandiganbayan, b f homes
