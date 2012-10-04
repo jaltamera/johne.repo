@@ -102,8 +102,6 @@ public class WorkQueue {
 							queue.wait();
 						} catch (InterruptedException e1) {
 						}
-
-						System.out.println(queue.size());
 					}
 
 				}finally{
@@ -111,8 +109,6 @@ public class WorkQueue {
 						pstm.close();
 						con.close();
 					} catch (Exception e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
 					}
 
 				}

@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
 import org.json.simple.parser.ContainerFactory;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -35,6 +36,9 @@ import com.google.gson.Gson;
  * Servlet implementation class InboundServlet
  */
 public class InboundServlet extends HttpServlet {
+	
+	private static Logger logger = Logger.getLogger(InboundServlet.class);
+	
 	private static final long serialVersionUID = 1L;
 
 	static WorkQueue workQueue;
@@ -136,9 +140,6 @@ public class InboundServlet extends HttpServlet {
 								
 								valid = AuthProcessor.verify(password, stringToSign);		
 								
-								// TODO move from here
-								System.out.println("\n" + dateFormat.format(date) + " : " + valid);
-
 								//assertion: verification successful
 								if(valid){
 
@@ -169,6 +170,10 @@ public class InboundServlet extends HttpServlet {
 								workQueue.execute(new RequestObject(input, phone));
 										
 								}
+								
+								//log 
+								logger.info("\n" + dateFormat.format(date) + " " + input + " " + phone + " " + valid);
+								
 							}
 						}
 					}
@@ -179,15 +184,19 @@ public class InboundServlet extends HttpServlet {
 
 		}catch(IOException ioe){
 			ioe.printStackTrace();
+			logger.error(ioe);
 			//logger.error(ioe);
 		}catch(ParseException pe){
 			pe.printStackTrace();
+			logger.error(pe);
 			//logger.error(pe);
 		}catch(NoSuchAlgorithmException nsae){
 			nsae.printStackTrace();
+			logger.error(nsae);
 			//logger.error(nsae);
 		}catch(Exception e){
 			e.printStackTrace();
+			logger.error(e);
 			//logger.fatal("Wild error appeared while reading processing the request: " + e);
 		}
 
