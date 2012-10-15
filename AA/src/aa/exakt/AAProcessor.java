@@ -105,8 +105,8 @@ public class AAProcessor {
 								workQueue.enqueue(this);
 							} finally{
 								try {
-									pstm.close();
-									con.close();
+									if(pstm != null)pstm.close();
+									if(con != null) con.close();
 								} catch (Exception e) {
 								}
 							}
@@ -120,9 +120,9 @@ public class AAProcessor {
 				cur_status = 0;
 			}finally{
 				try{
-					rs.close();
-					stm.close();
-					con.close();
+					if(rs != null)rs.close();
+					if(stm != null)stm.close();
+					if(con != null)con.close();
 				}catch(Exception e){
 				}
 			}
