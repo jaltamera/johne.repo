@@ -9,6 +9,10 @@ import java.sql.SQLFeatureNotSupportedException;
 import java.util.Properties;
 import java.util.logging.Logger;
 
+/*
+ * @author : Johne Altamera
+ */
+
 public class JDCConnectionDriver implements Driver {
 
     public static final String URL_PREFIX = "jdbc:jdc:";

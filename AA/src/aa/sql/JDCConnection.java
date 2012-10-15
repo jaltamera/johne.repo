@@ -19,6 +19,10 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.Executor;
 
+/*
+ * @author : Johne Altamera
+ */
+
 public class JDCConnection implements Connection {
 
     private JDCConnectionPool pool;

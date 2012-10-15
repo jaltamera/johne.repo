@@ -1,5 +1,12 @@
 package aa.exakt;
 
+/*
+ * @author : Johne Altamera 
+ */
+
+/*
+ * the JSONModel Bean 
+ */
 
 public class JSONModel {
 

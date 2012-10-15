@@ -6,6 +6,10 @@ import java.sql.SQLException;
 import java.util.Enumeration;
 import java.util.Vector;
 
+/*
+ * @author : Johne Altamera
+ */
+
 public class JDCConnectionPool {
 
 	private Vector connections;

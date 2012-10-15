@@ -1,4 +1,6 @@
-package aa.exakt;
+package aa.exakt.io;
+
+import aa.exakt.RequestObject;
 
 public class SampleSender {
 	

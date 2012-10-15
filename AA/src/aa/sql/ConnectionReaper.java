@@ -1,5 +1,9 @@
 package aa.sql;
 
+/*
+ * @author : Johne Altamera
+ */
+
 class ConnectionReaper extends Thread {
 
     private JDCConnectionPool pool;

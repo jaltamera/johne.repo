@@ -13,7 +13,7 @@
    limitations under the License.
 */
 
-package aa.exakt;
+package aa.exakt.io;
 
 import java.io.FilterOutputStream;
 import java.io.IOException;

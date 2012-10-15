@@ -1,10 +1,17 @@
-package aa.exakt;
+package aa.exakt.io;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.Hashtable;
+
+import aa.exakt.RequestObject;
+import aa.exception.AAException;
+
+/*
+ * @author : Johne Altamera
+ */
 
 public class AASender{
 
@@ -14,7 +21,7 @@ public class AASender{
 		this.requestObject = requestObject;
 	}
 
-	public String getAAResult(){
+	public String getAAResult()throws AAException{
 		
 		String result = "";
 		
@@ -40,7 +47,7 @@ public class AASender{
 			// send your data to the servlet
 			//String s = "Some object I am sending to the server";
 
-			Hashtable ht = new Hashtable();
+			Hashtable<String, String> ht = new Hashtable<String, String>();
 			ht.put("input", this.requestObject.getInput());
 			ht.put("phone", this.requestObject.getPhone());
 
@@ -58,7 +65,7 @@ public class AASender{
 			result = (String) o;
 
 		}catch(Exception e){
-			System.out.println("Error connecting to smsSimulator_jsp_interface");
+			throw new AAException();
 		}
 		
 		return result;

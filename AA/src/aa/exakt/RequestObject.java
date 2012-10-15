@@ -1,5 +1,13 @@
 package aa.exakt;
 
+/*
+ * @author : Johne Altamear
+ */
+
+/*
+ * the RequestObject Bean
+ */
+
 public class RequestObject {
 
 	private String input;

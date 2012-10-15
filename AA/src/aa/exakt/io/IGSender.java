@@ -1,7 +1,5 @@
-package aa.exakt;
+package aa.exakt.io;
 
-import java.io.BufferedOutputStream;
-import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -10,14 +8,22 @@ import java.util.Date;
 
 import org.apache.http.impl.cookie.DateUtils;
 
-import com.google.gson.stream.JsonWriter;
+import aa.exakt.AuthProcessor;
+import aa.exakt.RequestObject;
+import aa.exception.IGException;
+
+/*
+ * @author : Johne Altamera
+ */
 
 public class IGSender {
 
-	public void send(RequestObject r, String result)throws Exception{
+	public int send(RequestObject r, String result)throws IGException, Exception{
 
+		// this variable of type Date will be used as the Date header and JSON date param
 		Date current = Calendar.getInstance().getTime();
 
+		//consist of Base64-Signed String, JSON String and Content Length
 		Object[] objectArray = null;
 
 		try{
@@ -39,7 +45,6 @@ public class IGSender {
 		connection.setRequestMethod("POST");
 		connection.setDoOutput(true);
 		connection.setDoInput(true);
-		//connection.setReadTimeout(10000);
 
 		connection.setRequestProperty("Content-Type", AuthProcessor.CONTENT_TYPE);
 		connection.setRequestProperty("Host", "ismsteam.com");
@@ -47,24 +52,17 @@ public class IGSender {
 		connection.setRequestProperty("Date", DateUtils.formatDate(DateUtils.parseDate(DateUtils.formatDate(Calendar.getInstance().getTime()))));
 		connection.setRequestProperty("Method", "POST");
 		connection.setRequestProperty("Content-Length", ((Integer)objectArray[2]).toString());
-		//connection.setRequestProperty("User-Agent","Mozilla/5.0 ( compatible ) ");
-		//connection.setRequestProperty("Accept","*/*");
-		//connection.setFixedLengthStreamingMode((Integer)objectArray[2]);
-		
+
 		connection.connect();
 
-		//JSONModel newJsonModel = (JSONModel)objectArray[1];
 		String json = (String)objectArray[1];
-		
-		System.out.println(json);
-		System.out.println(json.length());
-		
+
 		OutputStreamWriter writer = new OutputStreamWriter(connection.getOutputStream());
 		writer.write(json);
 		writer.flush();
 		writer.close();
-		//writer.println(...);
 
+		//JsonWriter not used because we're unable to calculate the content length
 		/*JsonWriter jw;
 
 		try {
@@ -77,39 +75,26 @@ public class IGSender {
 			jw.name(JSONModel._BODY).value(newJsonModel.getBody()); 
 			jw.name(JSONModel._DATE).value(newJsonModel.getDate());
 			jw.name(JSONModel._USAGE_TYPE).value(newJsonModel.getUsage_type());
-			
+
 			jw.endObject(); // }
 			jw.close();
 			writer.close();
-			
+
 			System.out.println("Done ");
 
 		} catch (IOException e) {
 			System.out.println(e + ": Error in JsonWriter");
 		}*/
+
+		int responseCode = 0;
+
+		responseCode = connection.getResponseCode();
+
+		if(responseCode < 200 || responseCode > 299)
+			throw new IGException();
 		
-		//System.out.println(connection.getResponseCode());
-		
-		try{
-			/*String strServerResponse = "";
+		/*String strServerResponse = "";
 
-			BufferedReader inStream = null;
-			inStream = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-
-			System.out.println("Server says: ");
-			while ((strServerResponse = inStream.readLine()) != null)
-			{
-				System.out.println(strServerResponse);
-			} // end while
-
-			inStream.close(); */
-			
-			System.out.print(connection.getResponseCode());
-			
-		}catch(Exception e){
-			
-			/*String strServerResponse = "";
-			
 			BufferedReader inStream = null;
 			inStream = new BufferedReader(new InputStreamReader(connection.getErrorStream()));
 
@@ -120,14 +105,12 @@ public class IGSender {
 			} // end while
 
 			inStream.close(); */
-			
-			e.printStackTrace();
-		}
+
 
 		//close the connection, set all objects to null
 		connection.disconnect();
 		connection = null;
 
-
+		return responseCode;
 	}
 }

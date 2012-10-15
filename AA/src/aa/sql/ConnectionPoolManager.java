@@ -4,9 +4,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/*
+ * @author : Johne Altamera
+ */
+
 public class ConnectionPoolManager {
-	//Static class instantiation
 	
+	//Static class instantiation
 	static {
 		try{
 			new aa.sql.JDCConnectionDriver("sybase.jdbc.sqlanywhere.IDriver","jdbc:sqlanywhere:uid=DBA;pwd=sql;eng=mmda");

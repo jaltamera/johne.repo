@@ -9,6 +9,7 @@ public class AAException extends Exception {
 	{
 		super();             // call superclass constructor
 		mistake = "Error connecting to AA";
+		System.out.println(mistake);
 	}
 
 	//-----------------------------------------------

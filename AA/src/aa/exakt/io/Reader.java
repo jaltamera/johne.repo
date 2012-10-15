@@ -1,4 +1,4 @@
-package aa.exakt;
+package aa.exakt.io;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -6,6 +6,8 @@ import java.io.IOException;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+
+import aa.exakt.JSONModel;
 
 import com.google.gson.stream.JsonReader;
 
