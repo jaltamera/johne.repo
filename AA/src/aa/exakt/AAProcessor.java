@@ -102,7 +102,7 @@ public class AAProcessor {
 								}
 
 							}catch (Exception e){	
-								workQueue.enqueue(this);
+								//workQueue.enqueue(this);
 							} finally{
 								try {
 									if(pstm != null)pstm.close();

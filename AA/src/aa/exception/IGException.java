@@ -9,7 +9,7 @@ public class IGException extends Exception {
 	{
 		super();             // call superclass constructor
 		mistake = "Error connecting to IG";
-		System.out.println(mistake);
+		System.out.println(Thread.currentThread().getName() + ": " + mistake);
 	}
 
 	//-----------------------------------------------
