@@ -1,21 +1,18 @@
 package aa.exakt.queue;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.util.LinkedList;
+import java.util.Observable;
+import java.util.Observer;
 
-import aa.exakt.RequestObject;
-import aa.exakt.io.AASender;
-import aa.exakt.io.IGSender;
-import aa.exception.AAException;
-import aa.exception.IGException;
-import aa.sql.ConnectionPoolManager;
+import aa.exakt.AARunnable;
 
 public class WorkQueue {
 
 	private final int nThreads;
 	private final PoolWorker[] threads;
 	private final LinkedList queue;
+	
+	public static volatile int QUEUE_SIZE;
 
 	public WorkQueue(int nThreads)
 	{
@@ -23,12 +20,11 @@ public class WorkQueue {
 		queue = new LinkedList();
 		threads = new PoolWorker[nThreads];
 
-		for (int i=0; i<nThreads; i++) {
+		for (int i=0; i < nThreads; i++) {
 			threads[i] = new PoolWorker("Worker-"+(i+1));
 			threads[i].start();
 		}
-	}
-
+	}	
 	public void execute(/*RequestObject r*/Runnable r) {
 		synchronized(queue) {
 			queue.addLast(r);
@@ -39,6 +35,7 @@ public class WorkQueue {
 	public void enqueue(Runnable r){
 		synchronized(queue) {
 			queue.addLast(r);
+			System.out.println("Enqueued: " + queue.size());
 			try {
 				queue.wait();
 			} catch (InterruptedException e1) {
@@ -47,7 +44,7 @@ public class WorkQueue {
 		}
 	}
 	
-	private class PoolWorker extends Thread {
+	private class PoolWorker extends Thread implements Observer{
 		
 		public PoolWorker(String name){
 			super(name);
@@ -55,8 +52,8 @@ public class WorkQueue {
 		
 		public void run() {
 			
-			Runnable r;
-
+			AARunnable r;
+			
 			while (true) {
 				synchronized(queue) {
 					while (queue.isEmpty()) {
@@ -69,26 +66,29 @@ public class WorkQueue {
 						}
 					}
 
-					r = (Runnable) queue.removeFirst();
+					r = (AARunnable) queue.remove(0);
+					r.addObserver(this);
 				}
 
 				// If we don't catch RuntimeException, 
 				// the pool could leak threads
 
                 try {
+                	System.out.println("\n==============LF===============\n");
+                	
                     r.run();
                 }
                 catch (RuntimeException e) {
-                	
                 	System.out.println(e);
-					
                 }
                 catch (Exception e) {
-                	
                 	System.out.println(e);
-					
                 }
 			}
+		}
+
+		public void update(Observable arg0, Object arg1) {
+			WorkQueueFactory.getQueueInstance().enqueue((Runnable)arg0);
 		}
 	}
 }

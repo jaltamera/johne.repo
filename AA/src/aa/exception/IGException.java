@@ -5,11 +5,11 @@ public class IGException extends Exception {
 	String mistake;
 	//----------------------------------------------
 	// Default constructor - initializes instance variable to unknown
-	public IGException()
+	public IGException(int responseCode)
 	{
 		super();             // call superclass constructor
 		mistake = "Error connecting to IG";
-		System.out.println(Thread.currentThread().getName() + ": " + mistake);
+		System.out.println(Thread.currentThread().getName() + ": " + mistake + " with response code: " + responseCode);
 	}
 
 	//-----------------------------------------------

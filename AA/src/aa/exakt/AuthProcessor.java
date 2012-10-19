@@ -89,7 +89,7 @@ public class AuthProcessor
 	}
 
 	private static SimpleDateFormat ISO8601FORMAT = new SimpleDateFormat("yyyyMMdd'T'HHmmss");
-	private static SimpleDateFormat RFC2822FORMAT = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz");
+	//private static SimpleDateFormat RFC2822FORMAT = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz");
 
 	public Object[] sign()throws Exception{
 
@@ -97,8 +97,9 @@ public class AuthProcessor
 		Gson gson = new Gson();
 
 		//Construct the JSON Object from the JSON Model object using GSON API
-		JSONModel jsonModel = new JSONModel("54535", r.getPhone(), "text/plain", result, ISO8601FORMAT.format(date), "MMDA_REPLY_FREE");
-
+		JSONModel jsonModel = new JSONModel("5453", r.getPhone(), "text/plain", result, ISO8601FORMAT.format(date), "MMDA_REPLY_FREE");
+		// TODO replace "54535" with 5453
+		
 		String json = gson.toJson(jsonModel);
 		System.out.println("JSON: " + json);
 
@@ -140,8 +141,8 @@ public class AuthProcessor
 		//The signature is finally Base64 encoded
 		String b64Signed = DatatypeConverter.printBase64Binary(byteSigned);
 
-		System.out.println(b64Signed);
-
+		System.out.println("Base64 Signed: " + b64Signed);
+		
 		return new Object[]{b64Signed, json , new Integer(contentLength)};
 	}
 
