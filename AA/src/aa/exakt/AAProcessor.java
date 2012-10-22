@@ -17,7 +17,7 @@ public class AAProcessor {
 	public AAProcessor(int seconds) {
 		timer = new Timer();
 		timer.scheduleAtFixedRate(new RemindTask(), 0, seconds*1000);
-		//schedule(new RemindTask(), seconds*1000);//
+		//timer.schedule(new RemindTask(), seconds*1000);//
 	}
 
 	class RemindTask extends TimerTask {
@@ -37,20 +37,18 @@ public class AAProcessor {
 
 				//get a connection from the connection pool
 				con = ConnectionPoolManager.getConnection(); 
-
+				
 				// TODO insert this into sql.properties file
 				String query = "SELECT * from tbl_transaction where flag = 0 order by ID asc";
 
 				stm = con.createStatement();
 				rs = stm.executeQuery(query);
 				
-				ctr = rs.getFetchSize();
-				
 				//get the singleton object of WorkQueue (the thread pool)
 				final WorkQueue workQueue = WorkQueueFactory.getQueueInstance();
 				
 				while(rs.next()){
-
+					
 					//create the RequestObject w/c contains the message and mobile number
 					final RequestObject r = new RequestObject(rs.getString("t_message"), rs.getString("t_number"), rs.getInt("ID"));
 
@@ -82,6 +80,6 @@ public class AAProcessor {
 	}
 
 	public static void main(String args[])throws Exception{
-		new AAProcessor(5);
+		new AAProcessor(1);
 	}
 }
