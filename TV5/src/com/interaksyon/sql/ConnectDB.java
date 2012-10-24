@@ -12,7 +12,6 @@ import java.util.Vector;
 
 import com.dejima.core.nlp.text.action.FieldActuation;
 import com.dejima.utils.log.LogManager;
-import com.interaksyon.formatter.SMSFormatter;
 
 
 public class ConnectDB {
@@ -29,7 +28,7 @@ public class ConnectDB {
 			
 		List records = new ArrayList();
 		
-		con = ConnectionManager.getConnectionMgrInstance().getConnection();
+		con = ConnectionPoolManager.getConnection();
 		stm = con.createStatement();
 		rs = stm.executeQuery(query);
 				
@@ -54,6 +53,10 @@ public class ConnectDB {
 			//records.add(record);
 		}
 		
+		if(rs != null) rs.close();
+		if(stm != null) stm.close();
+		if(con != null) con.close();
+		
 		return records;
 	}
 	
@@ -61,7 +64,7 @@ public class ConnectDB {
 		
 		List records = new ArrayList();
 					
-			con = ConnectionManager.getConnectionMgrInstance().getConnection();
+			con = ConnectionPoolManager.getConnection();
 			
 			cstm = con.prepareCall(query);
 			
@@ -79,7 +82,11 @@ public class ConnectDB {
 				record.add(rs.getString("bound"));
 				records.add(record);
 			}
-						
+		
+		if(rs != null) rs.close();	
+		if(cstm != null) cstm.close();
+		if(con != null) con.close();
+			
 		return records;
 		
 	}
@@ -88,7 +95,7 @@ public class ConnectDB {
 		
 		List records = new ArrayList();
 		
-		con = ConnectionManager.getConnectionMgrInstance().getConnection();
+		con = ConnectionPoolManager.getConnection();
 		
 		String query = "SELECT t2.road_name, t1.flow, t1.exit_name, t1.bound from tbl_exit t1, tbl_main t2 where"; 
         
@@ -142,6 +149,10 @@ public class ConnectDB {
 			record.add(rs.getString("bound"));
 			records.add(record);
 		}
+		
+		if(rs != null) rs.close();
+		if(pstm != null) stm.close();
+		if(con != null) con.close();
 		
 		return records;
 	}

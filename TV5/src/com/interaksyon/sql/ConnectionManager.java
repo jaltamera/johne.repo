@@ -8,7 +8,7 @@ import org.apache.log4j.Logger;
 
 public class ConnectionManager {
 
-	Connection con;
+	private Connection con;
 	
 	private static Logger logger = LogManager.getLogger(ConnectionManager.class);
 

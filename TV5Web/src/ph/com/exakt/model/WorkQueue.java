@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.LinkedList;
 
+import org.apache.log4j.Logger;
+
+import ph.com.exakt.controller.InboundServlet;
 import ph.com.exakt.sql.pool.ConnectionPoolManager;
 
 public class WorkQueue {
@@ -11,7 +14,7 @@ public class WorkQueue {
 	private final int nThreads;
 	private final PoolWorker[] threads;
 	private final LinkedList queue;
-
+	
 	public WorkQueue(int nThreads)
 	{
 		this.nThreads = nThreads;
@@ -76,42 +79,44 @@ public class WorkQueue {
 
 				// If we don't catch RuntimeException, 
 				// the pool could leak threads
+				
+				//if(r != null){
+					
+					PreparedStatement pstm = null;
+					Connection con = null;
 
-				PreparedStatement pstm = null;
-				Connection con = null;
+					try {
 
-				try {
+						con = ConnectionPoolManager.getConnection();
 
-					con = ConnectionPoolManager.getConnection();
+						// TODO put this into properties file
+						String query = "INSERT INTO tbl_transaction(t_message, t_number, flag) VALUES(?,?,0)";
 
-					// TODO put this into properties file
-					String query = "INSERT INTO tbl_transaction(t_message, t_number, flag) VALUES(?,?,0)";
+						pstm = con.prepareStatement(query);
 
-					pstm = con.prepareStatement(query);
+						pstm.setString(1, r.getInput());
+						pstm.setString(2, r.getPhone());
 
-					pstm.setString(1, r.getInput());
-					pstm.setString(2, r.getPhone());
+						pstm.executeUpdate();
+					}
 
-					pstm.executeUpdate();
-				}
+					catch (Exception e) {
+						synchronized(queue) {
+							queue.addLast(r);
+							try {
+								queue.wait();
+							} catch (InterruptedException e1) {
+							}
+						}
 
-				catch (Exception e) {
-					synchronized(queue) {
-						queue.addLast(r);
+					}finally{
 						try {
-							queue.wait();
-						} catch (InterruptedException e1) {
+							pstm.close();
+							con.close();
+						} catch (Exception e) {
 						}
 					}
-
-				}finally{
-					try {
-						pstm.close();
-						con.close();
-					} catch (Exception e) {
-					}
-
-				}
+				//}
 			}
 		}
 	}

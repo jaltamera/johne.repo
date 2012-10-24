@@ -49,7 +49,6 @@
 		String input = request.getParameter("message").replaceAll("[^0-9a-zA-Z]+", " ").replaceAll("Ñ", "N").replaceAll("ñ", "N");
         String phone = request.getParameter("phone");
 
-
 		// Process request
 		
 		if(input.equals(null) || input.trim().equals("")){
