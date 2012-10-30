@@ -97,7 +97,7 @@ public class AuthProcessor
 		Gson gson = new Gson();
 
 		//Construct the JSON Object from the JSON Model object using GSON API
-		JSONModel jsonModel = new JSONModel("54535", r.getPhone(), "text/plain", result, ISO8601FORMAT.format(date), "MMDA_REPLY_FREE");
+		JSONModel jsonModel = new JSONModel("5453", r.getPhone(), "text/plain", result, ISO8601FORMAT.format(date), "MMDA_REPLY_FREE");
 		// TODO replace "54535" with 5453
 		
 		String json = gson.toJson(jsonModel);

@@ -5,6 +5,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 import aa.exakt.AARunnable;
+import aa.exakt.io.LogPrinter;
 
 public class WorkQueue {
 
@@ -25,6 +26,7 @@ public class WorkQueue {
 			threads[i].start();
 		}
 	}	
+	
 	public void execute(/*RequestObject r*/Runnable r) {
 		synchronized(queue) {
 			queue.addLast(r);
@@ -74,8 +76,6 @@ public class WorkQueue {
 				// the pool could leak threads
 
                 try {
-                	System.out.println("\n==============LF===============\n");
-                	
                     r.run();
                 }
                 catch (RuntimeException e) {

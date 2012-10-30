@@ -6,6 +6,7 @@ import java.sql.Statement;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import aa.exakt.io.LogPrinter;
 import aa.exakt.queue.WorkQueue;
 import aa.exakt.queue.WorkQueueFactory;
 import aa.sql.ConnectionPoolManager;
@@ -54,7 +55,7 @@ public class AAProcessor {
 
 					//add a runnable object w/c executes the send and update to the synchronized queue
 
-					workQueue.execute(new AARunnable(r));
+					workQueue.execute(new AARunnable(r, LogPrinter.getPrinter()));
 				}
 
 				cur_status = 1;

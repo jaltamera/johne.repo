@@ -21,7 +21,7 @@ public class AASender{
 		this.requestObject = requestObject;
 	}
 
-	public String getAAResult()throws AAException{
+	public String getAAResult(LogPrinter printer)throws AAException{
 		
 		String result = "";
 		
@@ -55,7 +55,7 @@ public class AASender{
 			os.flush();
 			os.close();
 
-			System.out.println("Message Sent!");
+			/*System.out.println*/printer.print("Message Sent!");
 
 			ObjectInputStream is = new ObjectInputStream(servletConnection.getInputStream());
 
