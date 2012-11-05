@@ -27,8 +27,6 @@ import com.google.gson.Gson;
 public class AuthProcessor
 {
 
-	private RequestObject r;
-	private String result;
 	private Date date;
 
 	private static final String SIGNATURE_ALGORITHM 	= "SHA1withRSA";
@@ -37,9 +35,7 @@ public class AuthProcessor
 
 	private static Provider bc;
 
-	public AuthProcessor(RequestObject r, String result, Date date){
-		this.r = r;
-		this.result = result;
+	public AuthProcessor(Date date){
 		this.date = date;
 	}
 
@@ -91,7 +87,7 @@ public class AuthProcessor
 	private static SimpleDateFormat ISO8601FORMAT = new SimpleDateFormat("yyyyMMdd'T'HHmmss");
 	//private static SimpleDateFormat RFC2822FORMAT = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz");
 
-	public Object[] sign()throws Exception{
+	public Object[] sign(RequestObject r, String result)throws Exception{
 
 		//Instantiate GSON
 		Gson gson = new Gson();

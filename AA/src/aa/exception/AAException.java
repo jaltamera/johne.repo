@@ -2,9 +2,14 @@ package aa.exception;
 
 public class AAException extends Exception {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1329626990089742669L;
 	String mistake;
 	//----------------------------------------------
 	// Default constructor - initializes instance variable to unknown
+	
 	public AAException()
 	{
 		super();             // call superclass constructor

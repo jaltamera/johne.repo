@@ -2,6 +2,11 @@ package aa.exception;
 
 public class IGException extends Exception {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1932887033826944180L;
+	
 	String mistake;
 	//----------------------------------------------
 	// Default constructor - initializes instance variable to unknown

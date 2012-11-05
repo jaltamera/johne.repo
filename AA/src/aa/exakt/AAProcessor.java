@@ -6,7 +6,6 @@ import java.sql.Statement;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import aa.exakt.io.LogPrinter;
 import aa.exakt.queue.WorkQueue;
 import aa.exakt.queue.WorkQueueFactory;
 import aa.sql.ConnectionPoolManager;
@@ -46,16 +45,16 @@ public class AAProcessor {
 				rs = stm.executeQuery(query);
 				
 				//get the singleton object of WorkQueue (the thread pool)
-				final WorkQueue workQueue = WorkQueueFactory.getQueueInstance();
+				WorkQueue workQueue = WorkQueueFactory.getQueueInstance();
 				
 				while(rs.next()){
 					
 					//create the RequestObject w/c contains the message and mobile number
-					final RequestObject r = new RequestObject(rs.getString("t_message"), rs.getString("t_number"), rs.getInt("ID"));
+					RequestObject r = new RequestObject(rs.getString("t_message"), rs.getString("t_number"), rs.getInt("ID"));
 
 					//add a runnable object w/c executes the send and update to the synchronized queue
 
-					workQueue.execute(new AARunnable(r, LogPrinter.getPrinter()));
+					workQueue.execute(new AARunnable(r));
 				}
 
 				cur_status = 1;

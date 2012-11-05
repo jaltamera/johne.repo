@@ -15,13 +15,13 @@ import aa.exception.AAException;
 
 public class AASender{
 
-	private final RequestObject requestObject;
+	private RequestObject requestObject;
 	
 	public AASender(RequestObject requestObject){
 		this.requestObject = requestObject;
 	}
 
-	public String getAAResult(LogPrinter printer)throws AAException{
+	public String getAAResult()throws AAException{
 		
 		String result = "";
 		
@@ -55,7 +55,7 @@ public class AASender{
 			os.flush();
 			os.close();
 
-			/*System.out.println*/printer.print("Message Sent!");
+			System.out.println("Message Sent!");
 
 			ObjectInputStream is = new ObjectInputStream(servletConnection.getInputStream());
 

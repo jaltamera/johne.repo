@@ -2,6 +2,10 @@ package aa.exception;
 
 public class DBException extends Exception {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1072715956731222395L;
 	String mistake;
 	//----------------------------------------------
 	// Default constructor - initializes instance variable to unknown

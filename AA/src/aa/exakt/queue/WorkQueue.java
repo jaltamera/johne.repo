@@ -5,7 +5,6 @@ import java.util.Observable;
 import java.util.Observer;
 
 import aa.exakt.AARunnable;
-import aa.exakt.io.LogPrinter;
 
 public class WorkQueue {
 
@@ -38,6 +37,9 @@ public class WorkQueue {
 		synchronized(queue) {
 			queue.addLast(r);
 			System.out.println("Enqueued: " + queue.size());
+			for(int x = 0; x < queue.size(); x++){
+				System.out.println(((AARunnable)queue.get(x)).getRequestObject().getInput());
+			}
 			try {
 				queue.wait();
 			} catch (InterruptedException e1) {
@@ -68,7 +70,8 @@ public class WorkQueue {
 						}
 					}
 
-					r = (AARunnable) queue.remove(0);
+					r = (AARunnable) queue.removeFirst();
+					System.out.println("Removed: " + r.getRequestObject().getInput());
 					r.addObserver(this);
 				}
 
@@ -76,6 +79,7 @@ public class WorkQueue {
 				// the pool could leak threads
 
                 try {
+                	System.out.println("\n==============LF===============\n");
                     r.run();
                 }
                 catch (RuntimeException e) {
