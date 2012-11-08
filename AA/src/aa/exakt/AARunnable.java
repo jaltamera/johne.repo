@@ -1,5 +1,6 @@
 package aa.exakt;
 
+import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,7 +11,7 @@ import aa.exakt.io.AASender;
 import aa.exakt.io.IGSender;
 import aa.sql.ConnectionPoolManager;
 
-public class AARunnable extends Observable implements Runnable {
+public class AARunnable extends Observable implements Runnable, Serializable {
 	
 	RequestObject requestObject;
 	
@@ -29,6 +30,7 @@ public class AARunnable extends Observable implements Runnable {
 
 			con = ConnectionPoolManager.getConnection();
 			con.setAutoCommit(false);
+			con.setTransactionIsolation(2);
 			
 			//if unable to connect to database, throw DBException
 			if(con != null){
@@ -48,7 +50,7 @@ public class AARunnable extends Observable implements Runnable {
 					String result = "";
 
 					//send http request to localhost:80/AA_Web
-					System.out.println("Input: " + requestObject.getInput());
+					
 					AASender aa = new AASender(requestObject);
 					result = aa.getAAResult();
 
@@ -60,22 +62,26 @@ public class AARunnable extends Observable implements Runnable {
 						responseCode = sender.send(requestObject, result);
 						System.out.println("Response Code: " + responseCode);
 						
-						con.commit();
+						if(responseCode < 300 || responseCode > 199){
+							con.commit(); System.out.println("Commit");
+						}else
+							con.rollback(savepoint); System.out.println("Rollback");
 					}
-				}else
-					con.rollback(savepoint);
+				}
 			}
 			
 		}catch (Exception e){
-			setChanged();
-			notifyObservers(AARunnable.this);
-			System.out.println(e);
-		}finally{
+			
 			try {
+				//con.commit();
 				if(pstm != null)pstm.close();
 				if(con != null) con.close();
-			} catch (Exception e) {
+			} catch (Exception ex) {
+				ex.printStackTrace();
 			}
+			
+			//setChanged();
+			//notifyObservers();
 		}
 	}
 	
