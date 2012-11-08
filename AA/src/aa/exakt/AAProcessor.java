@@ -39,7 +39,7 @@ public class AAProcessor {
 				con = ConnectionPoolManager.getConnection(); 
 				
 				// TODO insert this into sql.properties file
-				String query = "SELECT * from tbl_transaction where flag = 0 order by ID asc FOR UPDATE";//"SELECT * from tbl_transaction readpast where flag = 0 order by ID asc ";//
+				String query = "SELECT * from tbl_transaction where flag = 0 order by ID asc";
 
 				stm = con.createStatement();
 				rs = stm.executeQuery(query);
@@ -51,10 +51,9 @@ public class AAProcessor {
 					
 					//create the RequestObject w/c contains the message and mobile number
 					RequestObject r = new RequestObject(rs.getString("t_message"), rs.getString("t_number"), rs.getInt("ID"));
-					
+
 					//add a runnable object w/c executes the send and update to the synchronized queue
-					
-					System.out.println("Input: " + r.getInput());
+
 					workQueue.execute(new AARunnable(r));
 				}
 
@@ -81,6 +80,6 @@ public class AAProcessor {
 	}
 
 	public static void main(String args[])throws Exception{
-		new AAProcessor(2);
+		new AAProcessor(1);
 	}
 }

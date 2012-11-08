@@ -10,14 +10,14 @@ public class WorkQueue {
 
 	private final int nThreads;
 	private final PoolWorker[] threads;
-	private final LinkedList<AARunnable> queue;
+	private final LinkedList queue;
 	
 	public static volatile int QUEUE_SIZE;
 
 	public WorkQueue(int nThreads)
 	{
 		this.nThreads = nThreads;
-		queue = new LinkedList<AARunnable>();
+		queue = new LinkedList();
 		threads = new PoolWorker[nThreads];
 
 		for (int i=0; i < nThreads; i++) {
@@ -28,19 +28,18 @@ public class WorkQueue {
 	
 	public void execute(/*RequestObject r*/Runnable r) {
 		synchronized(queue) {
-			queue.addLast((AARunnable)r);
+			queue.addLast(r);
 			queue.notify();
 		}
 	}
 	
 	public void enqueue(Runnable r){
 		synchronized(queue) {
-			queue.addLast((AARunnable)r);
+			queue.addLast(r);
 			System.out.println("Enqueued: " + queue.size());
 			for(int x = 0; x < queue.size(); x++){
 				System.out.println(((AARunnable)queue.get(x)).getRequestObject().getInput());
 			}
-				
 			try {
 				queue.wait();
 			} catch (InterruptedException e1) {
@@ -72,7 +71,7 @@ public class WorkQueue {
 					}
 
 					r = (AARunnable) queue.removeFirst();
-					System.out.println("Running: " + r.getRequestObject().getInput());
+					System.out.println("Removed: " + r.getRequestObject().getInput());
 					r.addObserver(this);
 				}
 
@@ -93,8 +92,7 @@ public class WorkQueue {
 		}
 
 		public void update(Observable arg0, Object arg1) {
-				System.out.println(((AARunnable)arg0).getRequestObject().getID());
-				WorkQueueFactory.getQueueInstance().enqueue((AARunnable)arg0);
+			WorkQueueFactory.getQueueInstance().enqueue((Runnable)arg0);
 		}
 	}
 }

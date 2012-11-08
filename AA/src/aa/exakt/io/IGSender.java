@@ -5,10 +5,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import org.apache.http.impl.cookie.DateUtils;
 
@@ -95,22 +91,8 @@ public class IGSender {
 
 		responseCode = connection.getResponseCode();
 
-	    /*Map responseMap = connection.getHeaderFields();
-	    for (Iterator iterator = responseMap.keySet().iterator(); iterator.hasNext();) {
-	      String key = (String) iterator.next();
-	      System.out.println(key + " = ");
-
-	      List values = (List) responseMap.get(key);
-	      for (int i = 0; i < values.size(); i++) {
-	        Object o = values.get(i);
-	        System.out.println(o + ", ");
-	      }
-	    }*/
-		
-		if(responseCode < 200 || responseCode > 299){
-			
+		if(responseCode < 200 || responseCode > 299)
 			throw new IGException(responseCode);
-		}
 			
 		/*String strServerResponse = "";
 
