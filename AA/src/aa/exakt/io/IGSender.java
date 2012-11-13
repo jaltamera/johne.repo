@@ -50,7 +50,7 @@ public class IGSender {
 		connection.setRequestProperty("Content-Type", AuthProcessor.CONTENT_TYPE);
 		connection.setRequestProperty("Host", "ismsteam.com");
 		connection.setRequestProperty("Authorization","MCWS u/4/mmda2:" + objectArray[0]); // CHANGE THE ID
-		connection.setRequestProperty("Date", DateUtils.formatDate(DateUtils.parseDate(DateUtils.formatDate(Calendar.getInstance().getTime()))));
+		connection.setRequestProperty("Date", DateUtils.formatDate(DateUtils.parseDate(DateUtils.formatDate(current))));
 		connection.setRequestProperty("Method", "POST");
 		connection.setRequestProperty("Content-Length", ((Integer)objectArray[2]).toString());
 

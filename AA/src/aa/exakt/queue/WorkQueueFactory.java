@@ -12,7 +12,7 @@ public class WorkQueueFactory {
 
 	public static synchronized WorkQueue getQueueInstance() {
 		if (workQueue == null) {
-			workQueue = new WorkQueue(10);
+			workQueue = new WorkQueue(1);
 		}
 		return workQueue;
 	}
