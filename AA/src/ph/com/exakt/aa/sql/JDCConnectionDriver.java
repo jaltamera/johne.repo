@@ -1,4 +1,4 @@
-package aa.sql;
+package ph.com.exakt.aa.sql;
 
 import java.sql.Connection;
 import java.sql.Driver;
@@ -26,7 +26,6 @@ public class JDCConnectionDriver implements Driver {
                                InstantiationException, IllegalAccessException,
                                 SQLException
     {
-
 
         DriverManager.registerDriver(this);
         Class.forName(driver).newInstance();

@@ -1,4 +1,4 @@
-package aa.exception;
+package ph.com.exakt.aa.exception;
 
 public class AAException extends Exception {
 	

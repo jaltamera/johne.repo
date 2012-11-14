@@ -1,4 +1,4 @@
-package aa.exakt.queue;
+package ph.com.exakt.aa.queue;
 
 
 public class WorkQueueFactory {

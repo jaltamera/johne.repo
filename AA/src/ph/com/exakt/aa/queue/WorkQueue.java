@@ -1,10 +1,11 @@
-package aa.exakt.queue;
+package ph.com.exakt.aa.queue;
 
 import java.util.LinkedList;
 import java.util.Observable;
 import java.util.Observer;
 
-import aa.exakt.AARunnable;
+import ph.com.exakt.aa.bom.AARunnable;
+
 
 public class WorkQueue {
 

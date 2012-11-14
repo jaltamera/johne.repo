@@ -1,4 +1,4 @@
-package aa.exakt.io;
+package ph.com.exakt.aa.io;
 
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
@@ -8,9 +8,10 @@ import java.util.Date;
 
 import org.apache.http.impl.cookie.DateUtils;
 
-import aa.exakt.AuthProcessor;
-import aa.exakt.RequestObject;
-import aa.exception.IGException;
+import ph.com.exakt.aa.bom.RequestObject;
+import ph.com.exakt.aa.exception.IGException;
+import ph.com.exakt.auth.AuthProcessor;
+
 
 /*
  * @author : Johne Altamera

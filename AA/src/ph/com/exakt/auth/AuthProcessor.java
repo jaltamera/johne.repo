@@ -1,4 +1,4 @@
-package aa.exakt;
+package ph.com.exakt.auth;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -17,6 +17,9 @@ import javax.xml.bind.DatatypeConverter;
 
 import org.apache.http.impl.cookie.DateUtils;
 import org.bouncycastle.openssl.PEMReader;
+
+import ph.com.exakt.aa.bom.JSONModel;
+import ph.com.exakt.aa.bom.RequestObject;
 
 import com.google.gson.Gson;
 

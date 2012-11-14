@@ -1,10 +1,10 @@
-package aa.exakt;
+package ph.com.exakt.aa.bom;
 
 import java.util.Observable;
 import java.util.Observer;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 
-import aa.exakt.AAProcessor.InnerAARunnable;
+import ph.com.exakt.aa.bom.AAProcessor.InnerAARunnable;
 
 public class AAScheduledThreadPoolExecutor extends ScheduledThreadPoolExecutor implements Observer{
 
@@ -13,7 +13,6 @@ public class AAScheduledThreadPoolExecutor extends ScheduledThreadPoolExecutor i
 	}
 
 	public void update(Observable observable, Object arg1) {
-		System.out.println("Dumaan dito");
 		this.execute((InnerAARunnable) observable);
 	}
 }

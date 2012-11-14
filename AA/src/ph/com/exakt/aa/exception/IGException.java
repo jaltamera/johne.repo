@@ -1,24 +1,25 @@
-package aa.exception;
+package ph.com.exakt.aa.exception;
 
-public class DBException extends Exception {
+public class IGException extends Exception {
 	
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -1072715956731222395L;
+	private static final long serialVersionUID = -1932887033826944180L;
+	
 	String mistake;
 	//----------------------------------------------
 	// Default constructor - initializes instance variable to unknown
-	public DBException()
+	public IGException(int responseCode)
 	{
 		super();             // call superclass constructor
-		mistake = "Error connecting to DB";
-		System.out.println(Thread.currentThread().getName() + ": " + mistake);
+		mistake = "Error connecting to IG";
+		System.out.println(Thread.currentThread().getName() + ": " + mistake + " with response code: " + responseCode);
 	}
 
 	//-----------------------------------------------
 	// Constructor receives some kind of message that is saved in an instance variable.
-	public DBException(String err)
+	public IGException(String err)
 	{
 		super(err);     // call super class constructor
 		mistake = err;  // save message

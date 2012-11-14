@@ -1,4 +1,4 @@
-package aa.exakt;
+package ph.com.exakt.aa.bom;
 
 /*
  * @author : Johne Altamera 

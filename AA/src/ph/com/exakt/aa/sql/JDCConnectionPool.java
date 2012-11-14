@@ -1,4 +1,4 @@
-package aa.sql;
+package ph.com.exakt.aa.sql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

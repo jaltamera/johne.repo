@@ -1,4 +1,4 @@
-package aa.exakt.io;
+package ph.com.exakt.aa.io;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -6,8 +6,9 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.Hashtable;
 
-import aa.exakt.RequestObject;
-import aa.exception.AAException;
+import ph.com.exakt.aa.bom.RequestObject;
+import ph.com.exakt.aa.exception.AAException;
+
 
 /*
  * @author : Johne Altamera

@@ -1,4 +1,4 @@
-package aa.exakt;
+package ph.com.exakt.aa.bom;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,9 +6,10 @@ import java.sql.ResultSet;
 import java.sql.Savepoint;
 import java.util.Observable;
 
-import aa.exakt.io.AASender;
-import aa.exakt.io.IGSender;
-import aa.sql.ConnectionPoolManager;
+import ph.com.exakt.aa.io.AASender;
+import ph.com.exakt.aa.io.IGSender;
+import ph.com.exakt.aa.sql.ConnectionPoolManager;
+
 
 public class AARunnable extends Observable implements Runnable {
 	

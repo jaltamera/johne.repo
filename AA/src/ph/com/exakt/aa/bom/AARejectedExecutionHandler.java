@@ -1,4 +1,4 @@
-package aa.exakt;
+package ph.com.exakt.aa.bom;
 
 import java.util.concurrent.RejectedExecutionHandler;
 import java.util.concurrent.ThreadPoolExecutor;

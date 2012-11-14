@@ -1,6 +1,6 @@
-package aa.exakt.io;
+package ph.com.exakt.aa.io;
 
-import aa.exakt.RequestObject;
+import ph.com.exakt.aa.bom.RequestObject;
 
 public class SampleSender {
 	
