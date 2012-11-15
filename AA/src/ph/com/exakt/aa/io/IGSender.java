@@ -92,9 +92,6 @@ public class IGSender {
 
 		responseCode = connection.getResponseCode();
 
-		if(responseCode < 200 || responseCode > 299)
-			throw new IGException(responseCode);
-			
 		/*String strServerResponse = "";
 
 			BufferedReader inStream = null;

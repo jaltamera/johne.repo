@@ -1,99 +1,61 @@
 package ph.com.exakt.aa.queue;
 
 import java.util.LinkedList;
-import java.util.Observable;
-import java.util.Observer;
 
-import ph.com.exakt.aa.bom.AARunnable;
+public class WorkQueue
+{
+    private final int nThreads;
+    private final PoolWorker[] threads;
+    private final LinkedList queue;
 
+    public WorkQueue(int nThreads)
+    {
+        this.nThreads = nThreads;
+        queue = new LinkedList();
+        threads = new PoolWorker[nThreads];
 
-public class WorkQueue {
+        for (int i=0; i<nThreads; i++) {
+            threads[i] = new PoolWorker();
+            threads[i].start();
+        }
+    }
 
-	private final int nThreads;
-	private final PoolWorker[] threads;
-	private final LinkedList queue;
-	
-	public static volatile int QUEUE_SIZE;
+    public void execute(Runnable r) {
+        synchronized(queue) {
+            queue.addLast(r);
+            queue.notify();
+        }
+    }
 
-	public WorkQueue(int nThreads)
-	{
-		this.nThreads = nThreads;
-		queue = new LinkedList();
-		threads = new PoolWorker[nThreads];
+    private class PoolWorker extends Thread {
+        public void run() {
+        	
+            Runnable r;
 
-		for (int i=0; i < nThreads; i++) {
-			threads[i] = new PoolWorker("Worker-"+(i+1));
-			threads[i].start();
-		}
-	}	
-	
-	public void execute(/*RequestObject r*/Runnable r) {
-		synchronized(queue) {
-			queue.addLast(r);
-			queue.notify();
-		}
-	}
-	
-	public void enqueue(Runnable r){
-		synchronized(queue) {
-			queue.addLast(r);
-			System.out.println("Enqueued: " + queue.size());
-			for(int x = 0; x < queue.size(); x++){
-				System.out.println(((AARunnable)queue.get(x)).getRequestObject().getInput());
-			}
-			try {
-				queue.wait();
-			} catch (InterruptedException e1) {
-				e1.printStackTrace();
-			}
-		}
-	}
-	
-	private class PoolWorker extends Thread implements Observer{
-		
-		public PoolWorker(String name){
-			super(name);
-		}
-		
-		public void run() {
-			
-			AARunnable r;
-			
-			while (true) {
-				synchronized(queue) {
-					while (queue.isEmpty()) {
-						try
-						{
-							queue.wait();
-						}
-						catch (InterruptedException ignored)
-						{
-						}
-					}
+            while (true) {
+                synchronized(queue) {
+                    while (queue.isEmpty()) {
+                        try
+                        {
+                            queue.wait();
+                        }
+                        catch (InterruptedException ignored)
+                        {
+                        }
+                    }
+                    
+                    r = (Runnable) queue.removeFirst();
+                }
 
-					r = (AARunnable) queue.removeFirst();
-					System.out.println("Removed: " + r.getRequestObject().getInput());
-					r.addObserver(this);
-				}
-
-				// If we don't catch RuntimeException, 
-				// the pool could leak threads
-
+                // If we don't catch RuntimeException, 
+                // the pool could leak threads
                 try {
-                	System.out.println("\n==============LF===============\n");
                     r.run();
                 }
                 catch (RuntimeException e) {
-                	System.out.println(e);
+                    // You might want to log something here
                 }
-                catch (Exception e) {
-                	System.out.println(e);
-                }
-			}
-		}
-
-		public void update(Observable arg0, Object arg1) {
-			WorkQueueFactory.getQueueInstance().enqueue((Runnable)arg0);
-		}
-	}
+            }
+        }
+    }
 }

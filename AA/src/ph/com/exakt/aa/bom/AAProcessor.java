@@ -6,9 +6,9 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Observable;
 import java.util.Timer;
-import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+import ph.com.exakt.aa.exception.IGException;
 import ph.com.exakt.aa.io.AASender;
 import ph.com.exakt.aa.io.IGSender;
 import ph.com.exakt.aa.sql.ConnectionPoolManager;
@@ -18,8 +18,10 @@ public class AAProcessor {
 	Timer timer;
 	
 	public AAProcessor(int seconds) {
-		ScheduledThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(100, new AARejectedExecutionHandler());
-		executor.scheduleWithFixedDelay(new InnerAARunnable(), 0, 2L, TimeUnit.SECONDS);
+		AAScheduledThreadPoolExecutor executor = new AAScheduledThreadPoolExecutor(100, new AARejectedExecutionHandler());
+		InnerAARunnable aaRunnable = new InnerAARunnable();
+		aaRunnable.addObserver(executor);
+		executor.scheduleWithFixedDelay(aaRunnable, 0, 2L, TimeUnit.SECONDS);
 		System.out.println("Started\n-------");
 	}
 	
@@ -75,14 +77,16 @@ public class AAProcessor {
 								//send http request to IG
 								IGSender sender = new IGSender();
 								responseCode = sender.send(r, result);
-								System.out.println("Response Code: " + responseCode);
+								
+								if(responseCode < 200 || responseCode > 299)
+									throw new IGException(responseCode);
+								
 							}
 						}
 					}
 				}
 				
 			}catch (Exception e){
-				e.printStackTrace();
 			}finally{
 				try {
 					if(rs != null)rs.close(); 
