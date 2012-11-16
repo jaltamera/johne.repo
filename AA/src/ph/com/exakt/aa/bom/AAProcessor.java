@@ -6,11 +6,13 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Observable;
 import java.util.Timer;
-import java.util.concurrent.TimeUnit;
+import java.util.TimerTask;
 
 import ph.com.exakt.aa.exception.IGException;
 import ph.com.exakt.aa.io.AASender;
 import ph.com.exakt.aa.io.IGSender;
+import ph.com.exakt.aa.queue.WorkQueue;
+import ph.com.exakt.aa.queue.WorkQueueFactory;
 import ph.com.exakt.aa.sql.ConnectionPoolManager;
 
 public class AAProcessor {
@@ -18,11 +20,74 @@ public class AAProcessor {
 	Timer timer;
 	
 	public AAProcessor(int seconds) {
-		AAScheduledThreadPoolExecutor executor = new AAScheduledThreadPoolExecutor(100, new AARejectedExecutionHandler());
-		InnerAARunnable aaRunnable = new InnerAARunnable();
-		aaRunnable.addObserver(executor);
-		executor.scheduleWithFixedDelay(aaRunnable, 0, 2L, TimeUnit.SECONDS);
-		System.out.println("Started\n-------");
+		
+		timer = new Timer();
+		timer.scheduleAtFixedRate(new RemindTask(), 0, seconds*1000);
+	}
+	
+	class RemindTask extends TimerTask {
+
+		int cur_status = 0;
+		int new_status = 0;
+
+		public void run() {
+
+			Connection con = null;
+			PreparedStatement pstm = null;
+			Statement stm = null;
+			ResultSet rs = null;
+
+			try{
+
+				//get a connection from the connection pool
+				con = ConnectionPoolManager.getConnection(); 
+
+				// TODO insert this into sql.properties file
+				String query = "SELECT * from tbl_transaction readpast where flag = 0 order by ID asc FOR UPDATE";//"SELECT * from tbl_transaction where flag = 0 order by ID asc";
+
+				stm = con.createStatement();
+				rs = stm.executeQuery(query);
+
+				//get the singleton object of WorkQueue (the thread pool)
+				WorkQueue workQueue = WorkQueueFactory.getQueueInstance();
+
+				while(rs.next()){
+
+					//create the RequestObject w/c contains the message and mobile number
+					RequestObject r = new RequestObject(rs.getString("t_message"), rs.getString("t_number"), rs.getInt("ID"));
+					
+					query = "UPDATE tbl_transaction SET flag = 1 WHERE ID = ?";
+					
+					pstm = con.prepareStatement(query);
+					pstm.setInt(1, r.getID());
+					
+					if(pstm.executeUpdate() == 1){
+						//add a runnable object w/c executes the send and update to the synchronized queue
+						workQueue.execute(new AARunnable(r));
+					}
+				}
+
+				cur_status = 1;
+
+			}catch(Exception e){
+				cur_status = 0;
+			}finally{
+				try{
+					if(rs != null)	rs.close();
+					if(pstm != null)pstm.close();
+					if(stm != null)	stm.close();
+					if(con != null)	con.close();
+				}catch(Exception e){
+				}
+			}
+
+			if(new_status != cur_status){
+				String display = (cur_status == 1) ? "Connected" : "Unable to Connect";
+				System.out.println(display);
+			}
+
+			new_status = cur_status;
+		}
 	}
 	
 	class InnerAARunnable extends Observable implements Runnable{
