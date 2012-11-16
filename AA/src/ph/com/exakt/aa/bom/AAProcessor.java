@@ -170,6 +170,6 @@ public class AAProcessor {
 	}
 	
 	public static void main(String args[])throws Exception{
-		new AAProcessor(1);
+		new AAProcessor(2);
 	}
 }

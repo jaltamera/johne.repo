@@ -1,4 +1,4 @@
-package ph.com.exakt.auth;
+package ph.com.exakt.aa.auth;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
