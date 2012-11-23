@@ -16,21 +16,45 @@ public class JSONModel {
 	public static final String _BODY = "body";
 	public static final String _DATE = "date";
 	public static final String _USAGE_TYPE = "usagetype";
+	public static final String _ID = "id";
+	public static final String _DELIVERY_RECEIPT_URL = "delivery_receipt_url";
+	public static final String _THREAD = "thread";
+	public static final String _TELCO = "telco";
 
 	private String from;
 	private String to;
-	private String content_type;
+	private String contentType;
 	private String body;
 	private String date;
-	private String usagetype;
+	private String usageType;
+	private String deliveryReceiptUrl;
+	private String thread;
+	private String telco;
+	private String id;
+	
+	public JSONModel(String from, String to, String contentType, String body,
+			String date, String usageType, String deliveryReceiptUrl,
+			String thread, String telco, String id) {
+		super();
+		this.from = from;
+		this.to = to;
+		this.contentType = contentType;
+		this.body = body;
+		this.date = date;
+		this.usageType = usageType;
+		this.deliveryReceiptUrl = deliveryReceiptUrl;
+		this.thread = thread;
+		this.telco = telco;
+		this.id = id;
+	}
 	
 	public JSONModel(){
 		this.from = "";
 		this.to = "";
-		this.content_type = "";
+		this.contentType = "";
 		this.body = "";
 		this.date = "";
-		this.usagetype = "";
+		this.usageType = "";
 	}
 	
 	public JSONModel(String from,
@@ -41,7 +65,7 @@ public class JSONModel {
 
 		this.from = from;
 		this.to = to;
-		this.content_type = content_type;
+		this.contentType = content_type;
 		this.body = body;
 		this.date = date;
 	}
@@ -55,10 +79,10 @@ public class JSONModel {
 
 		this.from = from;
 		this.to = to;
-		this.content_type = content_type;
+		this.contentType = content_type;
 		this.body = body;
 		this.date = date;
-		this.usagetype = usage_type;
+		this.usageType = usage_type;
 	}
 	
 	public void setFrom(String from){
@@ -69,8 +93,8 @@ public class JSONModel {
 		this.to = to;
 	}
 
-	public void setContentType(String content_type){
-		this.content_type = content_type;
+	public void setContentType(String contentType){
+		this.contentType = contentType;
 	}
 
 	public void setBody(String body){
@@ -90,7 +114,7 @@ public class JSONModel {
 	}
 	
 	public String getContentType(){
-		return this.content_type;
+		return this.contentType;
 	}
 	
 	public String getBody(){
@@ -101,12 +125,44 @@ public class JSONModel {
 		return this.date;
 	}
 
-	public String getUsage_type() {
-		return usagetype;
+	public String getUsageType() {
+		return usageType;
 	}
 
-	public void setUsage_type(String usage_type) {
-		this.usagetype = usage_type;
+	public void setUsageType(String usageType) {
+		this.usageType = usageType;
+	}
+	
+	public String getDeliveryReceiptUrl() {
+		return deliveryReceiptUrl;
+	}
+
+	public void setDeliveryReceiptUrl(String deliveryReceiptUrl) {
+		this.deliveryReceiptUrl = deliveryReceiptUrl;
+	}
+
+	public String getThread() {
+		return thread;
+	}
+
+	public void setThread(String thread) {
+		this.thread = thread;
+	}
+
+	public String getTelco() {
+		return telco;
+	}
+
+	public void setTelco(String telco) {
+		this.telco = telco;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 	
 	/*@Override 

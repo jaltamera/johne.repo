@@ -8,9 +8,9 @@ import java.util.Date;
 
 import org.apache.http.impl.cookie.DateUtils;
 
-import ph.com.exakt.aa.auth.AuthProcessor;
 import ph.com.exakt.aa.bom.RequestObject;
 import ph.com.exakt.aa.exception.IGException;
+import ph.com.exakt.auth.AuthProcessor;
 
 
 /*

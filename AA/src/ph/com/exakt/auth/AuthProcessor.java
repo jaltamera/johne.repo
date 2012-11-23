@@ -1,4 +1,4 @@
-package ph.com.exakt.aa.auth;
+package ph.com.exakt.auth;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -87,7 +87,7 @@ public class AuthProcessor
 		return valid;
 	}
 
-	private static SimpleDateFormat ISO8601FORMAT = new SimpleDateFormat("yyyyMMdd'T'HHmmssZ");
+	private static SimpleDateFormat ISO8601FORMAT = new SimpleDateFormat("yyyyMMdd'T'HHmmss");
 	//private static SimpleDateFormat RFC2822FORMAT = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz");
 
 	public Object[] sign(RequestObject r, String result)throws Exception{
