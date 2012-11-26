@@ -12,11 +12,19 @@ public class RequestObject {
 
 	private String input;
 	private String phone;
+	private String thread;
 	private int ID;
 	
-	public RequestObject(String arg0, String arg1, int id){
-		this.input = arg0;
-		this.phone = arg1;
+	public RequestObject(String input, String phone, int id, String thread){
+		this.input = input;
+		this.phone = phone;
+		this.ID = id;
+		this.thread = thread;
+	}
+	
+	public RequestObject(String input, String phone, int id){
+		this.input = input;
+		this.phone = phone;
 		this.ID = id;
 	}
 
@@ -47,6 +55,14 @@ public class RequestObject {
 
 	public void setID(int id) {
 		this.ID = id;
+	}
+
+	public String getThread() {
+		return thread;
+	}
+
+	public void setThread(String thread) {
+		this.thread = thread;
 	}
 	
 }

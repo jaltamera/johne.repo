@@ -33,7 +33,7 @@ public class AuthProcessor
 	private Date date;
 
 	private static final String SIGNATURE_ALGORITHM 	= "SHA1withRSA";
-	public static final String CONTENT_TYPE 			= "application/vnd.net.wyrls.Message-v1+json";
+	public static final String CONTENT_TYPE 			= "application/vnd.net.wyrls.Document-v3+json"; //"application/vnd.net.wyrls.Message-v1+json";
 	public static final String METHOD 					= "POST";
 
 	private static Provider bc;
@@ -96,8 +96,7 @@ public class AuthProcessor
 		Gson gson = new Gson();
 
 		//Construct the JSON Object from the JSON Model object using GSON API
-		JSONModel jsonModel = new JSONModel("5453", r.getPhone(), "text/plain", result, ISO8601FORMAT.format(date), "MMDA_REPLY_FREE");
-		// TODO replace "54535" with 5453
+		JSONModel jsonModel = new JSONModel("5453", r.getPhone(), "text/plain", result, ISO8601FORMAT.format(date), "MMDA_REPLY_PREMIUM", r.getThread());
 		
 		String json = gson.toJson(jsonModel);
 		System.out.println("JSON: " + json);

@@ -10,31 +10,8 @@ package ph.com.exakt.aa.bom;
 
 public class JSONModel {
 
-	public static final String _FROM = "from";
-	public static final String _TO = "to";
-	public static final String _CONTENT_TYPE = "content_type";
-	public static final String _BODY = "body";
-	public static final String _DATE = "date";
-	public static final String _USAGE_TYPE = "usagetype";
-	public static final String _ID = "id";
-	public static final String _DELIVERY_RECEIPT_URL = "delivery_receipt_url";
-	public static final String _THREAD = "thread";
-	public static final String _TELCO = "telco";
-
-	private String from;
-	private String to;
-	private String contentType;
-	private String body;
-	private String date;
-	private String usageType;
-	private String deliveryReceiptUrl;
-	private String thread;
-	private String telco;
-	private String id;
-	
 	public JSONModel(String from, String to, String contentType, String body,
-			String date, String usageType, String deliveryReceiptUrl,
-			String thread, String telco, String id) {
+			String date, String usageType, String thread) {
 		super();
 		this.from = from;
 		this.to = to;
@@ -42,11 +19,34 @@ public class JSONModel {
 		this.body = body;
 		this.date = date;
 		this.usageType = usageType;
-		this.deliveryReceiptUrl = deliveryReceiptUrl;
 		this.thread = thread;
-		this.telco = telco;
-		this.id = id;
 	}
+
+	public static final String _FROM = "from";
+	public static final String _TO = "to";
+	public static final String _CONTENT_TYPE = "content_type";
+	public static final String _BODY = "body";
+	public static final String _DATE = "date";
+	public static final String _USAGE_TYPE = "usagetype";
+	
+	private String from;
+	private String to;
+	private String contentType;
+	private String body;
+	private String date;
+	private String usageType;
+
+	// additional Document fields
+	
+	public static final String _ID = "id";
+	public static final String _DELIVERY_RECEIPT_URL = "delivery_receipt_url";
+	public static final String _THREAD = "thread";
+	public static final String _TELCO = "telco";
+	
+	private String id;
+	private String deliveryReceiptUrl;
+	private String thread;
+	private String telco;
 	
 	public JSONModel(){
 		this.from = "";
@@ -59,30 +59,30 @@ public class JSONModel {
 	
 	public JSONModel(String from,
 			String to,
-			String content_type,
+			String contentType,
 			String body,
 			String date){
 
 		this.from = from;
 		this.to = to;
-		this.contentType = content_type;
+		this.contentType = contentType;
 		this.body = body;
 		this.date = date;
 	}
 	
 	public JSONModel(String from,
 					 String to,
-					 String content_type,
+					 String contentType,
 					 String body,
 					 String date,
-					 String usage_type){
+					 String usageType){
 
 		this.from = from;
 		this.to = to;
-		this.contentType = content_type;
+		this.contentType = contentType;
 		this.body = body;
 		this.date = date;
-		this.usageType = usage_type;
+		this.usageType = usageType;
 	}
 	
 	public void setFrom(String from){
@@ -132,7 +132,15 @@ public class JSONModel {
 	public void setUsageType(String usageType) {
 		this.usageType = usageType;
 	}
-	
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
 	public String getDeliveryReceiptUrl() {
 		return deliveryReceiptUrl;
 	}
@@ -155,14 +163,6 @@ public class JSONModel {
 
 	public void setTelco(String telco) {
 		this.telco = telco;
-	}
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
 	}
 	
 	/*@Override 
