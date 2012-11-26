@@ -90,12 +90,14 @@ public class WorkQueue {
 						con = ConnectionPoolManager.getConnection();
 
 						// TODO put this into properties file
-						String query = "INSERT INTO tbl_transaction(t_message, t_number, flag) VALUES(?,?,0)";
+						String query = "INSERT INTO tbl_transaction(t_message, t_number, flag, thread, date_pub) VALUES(?,?,0,?,?)";
 
 						pstm = con.prepareStatement(query);
 
 						pstm.setString(1, r.getInput());
 						pstm.setString(2, r.getPhone());
+						pstm.setString(3, r.getThread());
+						pstm.setString(4, r.getDate());
 
 						pstm.executeUpdate();
 					}

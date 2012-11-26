@@ -84,6 +84,8 @@ public class InboundServlet extends HttpServlet {
 			String password = "";
 			String phone = "";
 			String input = "";
+			String thread = "";
+			String datePub = "";
 			
 			String jsonString = gson.toJson(jsonModel);
 			
@@ -162,14 +164,20 @@ public class InboundServlet extends HttpServlet {
 									while(iter.hasNext()){
 										Map.Entry entry = (Map.Entry)iter.next();
 										//System.out.println(entry.getKey() + "=>" + entry.getValue());
-										if(entry.getKey().toString().equals("from"))
+										if(entry.getKey().toString().equals(JSONModel._FROM))
 											phone = entry.getValue().toString();
 
-										if(entry.getKey().toString().equals("body"))
+										if(entry.getKey().toString().equals(JSONModel._BODY))
 											input = entry.getValue().toString();
+										
+										if(entry.getKey().toString().equals(JSONModel._THREAD))
+											thread = entry.getValue().toString();
+										
+										if(entry.getKey().toString().equals(JSONModel._DATE))
+											datePub = entry.getValue().toString();
 									}
 									
-								workQueue.execute(new RequestObject(input, phone));
+								workQueue.execute(new RequestObject(input, phone, thread, datePub));
 										
 								}
 								

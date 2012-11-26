@@ -2,12 +2,11 @@ package ph.com.exakt.auth;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class RequestObject {
+public class HttpRequestObject {
 	
 	private String method;
 	private String requestURI;
@@ -18,9 +17,9 @@ public class RequestObject {
 	private int contentLength;
 	private BufferedReader br;
 	
-	public RequestObject(){}
+	public HttpRequestObject(){}
 	
-	public RequestObject(HttpServletRequest request) throws IOException{
+	public HttpRequestObject(HttpServletRequest request) throws IOException{
 		
 		this.br = new BufferedReader(new InputStreamReader(request.getInputStream()));
 		
@@ -31,7 +30,7 @@ public class RequestObject {
 		this.contentLength = request.getContentLength();
 	}
 	
-	public RequestObject(String method, String requestURI, String date,
+	public HttpRequestObject(String method, String requestURI, String date,
 			String contentType, String requestBody, int contentLength) {
 		super();
 		this.method = method;

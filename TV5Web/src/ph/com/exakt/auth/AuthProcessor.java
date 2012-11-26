@@ -148,7 +148,7 @@ public class AuthProcessor
 		Security.addProvider(bc);
 	}
 	
-	public static String getStringToSign(InboundServletWrapper request/*RequestObject request*//*, Object jsonObject*/) throws ParseException, NoSuchAlgorithmException, IOException{
+	public static String getStringToSign(InboundServletWrapper request/*HttpRequestObject request*//*, Object jsonObject*/) throws ParseException, NoSuchAlgorithmException, IOException{
 		
 		/*Gson gson = new Gson();
 		String jsonString = gson.toJson((JSONModel)jsonObject);*/

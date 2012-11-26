@@ -4,8 +4,18 @@ import java.io.Serializable;
 
 public class RequestObject implements Serializable{
 
+	public RequestObject(String input, String phone, String thread, String date) {
+		super();
+		this.input = input;
+		this.phone = phone;
+		this.thread = thread;
+		this.date = date;
+	}
+
 	private String input;
 	private String phone;
+	private String thread;
+	private String date;
 	
 	public RequestObject(String arg0, String arg1){
 		this.input = arg0;
@@ -31,6 +41,22 @@ public class RequestObject implements Serializable{
 	@Override
 	public String toString(){
 		return "[" + input + "," + phone + "]";
+	}
+
+	public String getThread() {
+		return thread;
+	}
+
+	public void setThread(String thread) {
+		this.thread = thread;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
 	}
 	
 }
