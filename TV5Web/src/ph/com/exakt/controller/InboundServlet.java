@@ -87,6 +87,8 @@ public class InboundServlet extends HttpServlet {
 			
 			String jsonString = gson.toJson(jsonModel);
 			
+			System.out.println("JSON: " + jsonString);
+			
 			boolean valid = false;
 
 			String authHeader = request.getHeader("Authorization");

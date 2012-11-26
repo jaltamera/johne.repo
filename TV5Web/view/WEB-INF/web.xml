@@ -39,15 +39,22 @@
     <servlet-name>TestServlet</servlet-name>
     <url-pattern>/TestServlet</url-pattern>
   </servlet-mapping>
-  
   <filter>
-	<filter-name>ServletFilter</filter-name>
-	<filter-class>ph.com.exakt.filter.ServletFilter</filter-class>
+    <filter-name>ServletFilter</filter-name>
+    <filter-class>ph.com.exakt.filter.ServletFilter</filter-class>
   </filter>
-  
   <filter-mapping>
     <filter-name>ServletFilter</filter-name>
     <url-pattern>/InboundServlet</url-pattern>
   </filter-mapping>
-  
+  <servlet>
+    <description></description>
+    <display-name>SampleServlet</display-name>
+    <servlet-name>SampleServlet</servlet-name>
+    <servlet-class>ph.com.exakt.controller.SampleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SampleServlet</servlet-name>
+    <url-pattern>/SampleServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -36,27 +36,47 @@ public class Reader {
 			  
 			  //sb.append(reader.nextName() + " " + reader.nextString());
 			  
-			  if (attribute.equals("from")) {
+			  if (attribute.equals(JSONModel._FROM)) {
 				
 				newJsonModel.setFrom(reader.nextString());
 		 
-			  } else if (attribute.equals("to")) {
+			  } else if (attribute.equals(JSONModel._TO)) {
 				  	
 				newJsonModel.setTo(reader.nextString());
 
-			  } else if (attribute.equals("content_type")) {
+			  } else if (attribute.equals(JSONModel._CONTENT_TYPE)) {
 		 
 				newJsonModel.setContentType(reader.nextString());
 		 
-			  }else if (attribute.equals("body")) {
+			  }else if (attribute.equals(JSONModel._BODY)) {
 		 
 				newJsonModel.setBody(reader.nextString());
 		 
-			  }else if (attribute.equals("date")) {
+			  }else if (attribute.equals(JSONModel._DATE)) {
 		 
 				newJsonModel.setDate(reader.nextString());
 		 
-			  } else {
+			  }else if (attribute.equals(JSONModel._ID)) {
+					 
+					newJsonModel.setId(reader.nextString());
+			 
+			  }else if (attribute.equals(JSONModel._DELIVERY_RECEIPT_URL)) {
+					 
+					newJsonModel.setDeliveryReceiptUrl(reader.nextString());
+			 
+			  }else if (attribute.equals(JSONModel._TELCO)) {
+					 
+					newJsonModel.setTelco(reader.nextString());
+			 
+			  }else if (attribute.equals(JSONModel._THREAD)) {
+					 
+					newJsonModel.setThread(reader.nextString());
+			 
+			  }else if (attribute.equals(JSONModel._USAGE_TYPE)) {
+					 
+					newJsonModel.setUsageType(reader.nextString());
+			 
+			  }else {
 				reader.skipValue(); //avoid some unhandle events
 			  }
 			}

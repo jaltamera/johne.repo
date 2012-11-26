@@ -30,7 +30,7 @@ public class AuthProcessor
 	//private static final String PRIVATE_KEY_FILE 		= "resources/exakt-pri.pem";
 	//private static final String PUBLIC_KEY_FILE		= "exakt-key.pem";//"resources/xyber1.pkcs1.pub.pem";
 	
-	public static final String CONTENT_TYPE 			= "application/vnd.net.wyrls.Message-v1+json";
+	public static final String CONTENT_TYPE 			= "application/vnd.net.wyrls.Document-v3+json"; //"application/vnd.net.wyrls.Message-v1+json";
 	public static final String METHOD 					= "POST";
 	
 	private static Provider bc;
