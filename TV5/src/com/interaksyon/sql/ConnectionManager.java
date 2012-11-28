@@ -22,7 +22,6 @@ public class ConnectionManager {
 
 			con = DriverManager.getConnection("jdbc:sqlanywhere:uid=DBA;pwd=sql;eng=mmda");
             
-
 		}catch(Exception e){
 	
 			logger.error("Error loading jdbc driver: " + e);

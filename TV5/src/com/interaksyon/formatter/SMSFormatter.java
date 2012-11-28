@@ -317,7 +317,7 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 	protected void addAmbiguousObjectsQuestions(InterpretationActuation interpretation,
             Context context,
             java.lang.StringBuffer output){
-					
+		
 		try {
 			
 			ConnectDB cdb = new ConnectDB();
@@ -335,32 +335,36 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 					
 					output.append(props.getProperty("header") + MessageFormat.format(props.getProperty("asOf"), new Object[]{Calendar.getInstance().getTime()}) + "<br>");				
 					
-														
 					String query = "call proc_retrieveResult(?,?)";
 										
 					List records = cdb.executeCallStatementQuery(query, interpretation.findXmlElement("ExitName"));
 					
 					if(records.size() < 1){
 						
-						String query1 = "SELECT top 1 tbl1.main_id FROM (select * from tbl_exit where exit_name like '%"+((FieldActuation)interpretation.findXmlElement("ExitName").get(0)).getText().getValue().toUpperCase()+"%') as tbl1, (select * from tbl_exit where exit_name like '%"+((FieldActuation)interpretation.findXmlElement("ExitName").get(1)).getText().getValue().toUpperCase()+"%') as tbl2 WHERE tbl1.main_id = tbl2.main_id";
-						
-						List paramList = new ArrayList();
-						
-						List record = cdb.executeCustomSQL(query1, paramList);
-						
-						if(record.size() < 1)
+						if(interpretation.findXmlElement("RoadName").size() > 1){
 							output.append(props.getProperty("diffPts"));
-						else
-							output.append(MessageFormat.format(props.getProperty("roadOk"), new Object[]{((FieldActuation)interpretation.findXmlElement("ExitName").get(0)).getText().getValue().toUpperCase(),((FieldActuation)interpretation.findXmlElement("ExitName").get(1)).getText().getValue().toUpperCase()}));						
-						
+						}else{
+							String query1 = "SELECT top 1 tbl1.main_id FROM (select * from tbl_exit where exit_name like '%"+((FieldActuation)interpretation.findXmlElement("ExitName").get(0)).getText().getValue().toUpperCase()+"%') as tbl1, (select * from tbl_exit where exit_name like '%"+((FieldActuation)interpretation.findXmlElement("ExitName").get(1)).getText().getValue().toUpperCase()+"%') as tbl2 WHERE tbl1.main_id = tbl2.main_id";
+							
+							List paramList = new ArrayList();
+							
+							List record = cdb.executeCustomSQL(query1, paramList);
+							
+							if(record.size() < 1)
+								{output.append(props.getProperty("diffPts")); logger.error("10"); }
+							else
+								if(interpretation.findXmlElement("RoadName").get(0) != null)
+									output.append(MessageFormat.format(props.getProperty("roadOk"), new Object[]{((FieldActuation)interpretation.findXmlElement("ExitName").get(0)).getText().getValue().toUpperCase(),((FieldActuation)interpretation.findXmlElement("ExitName").get(1)).getText().getValue().toUpperCase()}));
+						}
 					}else{
-					
+						
 						output.append("<br>(" + ((FieldActuation)interpretation.findXmlElement("ExitName").get(0)).getText().getValue().toUpperCase() + " - " + ((FieldActuation)interpretation.findXmlElement("ExitName").get(1)).getText().getValue().toUpperCase() + ")");
 												
 						for(int x = 0 ; x < records.size(); x++){
 							addResultsTableRecord(null, (List)records.get(x) , output);	
 						}	
 						records.clear();
+						
 					}
 					output.append("<br>" + props.getProperty("footer"));
 					
@@ -377,13 +381,13 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 			Vector exitVector = interpretation.findXmlElement("ExitName");
 			
 			if(exitVector.size() > 1){
+				
 				List records = cdb.getRecords(exitVector, flow, bound, interpretation.findXmlElement("RoadName"));
 			
 				output.replace(0, output.length(), "");
 				this.propertiesInit("tv5/explanation.properties");//C:/Program Files/Answers Anywhere Platform 5.2.0/IDE/include/classes/com/interaksyon/formatter/explanation.properties");
 				
 				output.append(props.getProperty("header") + MessageFormat.format(props.getProperty("asOf"), new Object[]{Calendar.getInstance().getTime()}) + "<br>");				
-				
 				
 				if(records.size() < 1){
 					output.append(props.getProperty("diffPts"));
@@ -393,6 +397,7 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 						addResultsTableRecord(null, (List)records.get(x) , output);	
 					}	
 					records.clear();
+					
 				}
 				output.append("<br>" + props.getProperty("footer"));
 				
@@ -400,7 +405,6 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 				interpretation.setAmbiguous(false);
 				interpretation.findAndRemoveXml("Ambiguity");
 				interpretation.findAndRemoveXml("Ambiguities");
-				
 				
 				context.clear();
 				return;
