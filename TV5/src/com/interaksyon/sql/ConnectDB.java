@@ -65,29 +65,32 @@ public class ConnectDB {
 		List records = new ArrayList();
 
 		if(exits.size() != 0){
-			
+
 			con = ConnectionPoolManager.getConnection();
 
 			cstm = con.prepareCall(query);
 
-			for(int x = 1; x <= 2; x++){
-				cstm.setString(x, ((FieldActuation)exits.get(x-1)).getText().getValue());
+			if(exits.size() > 1){
+				for(int x = 1; x <= 2; x++){
+					cstm.setString(x, ((FieldActuation)exits.get(x-1)).getText().getValue());
+				}
+
+				rs = cstm.executeQuery();
+
+				while(rs.next()){				
+					List record = new ArrayList();
+					record.add(rs.getString("road_name"));
+					record.add(rs.getString("flow"));
+					record.add(rs.getString("exit_name"));
+					record.add(rs.getString("bound"));
+					records.add(record);
+				}
+
+				if(rs != null) rs.close();	
+				if(cstm != null) cstm.close();
+				if(con != null) con.close();
 			}
 
-			rs = cstm.executeQuery();
-
-			while(rs.next()){				
-				List record = new ArrayList();
-				record.add(rs.getString("road_name"));
-				record.add(rs.getString("flow"));
-				record.add(rs.getString("exit_name"));
-				record.add(rs.getString("bound"));
-				records.add(record);
-			}
-
-			if(rs != null) rs.close();	
-			if(cstm != null) cstm.close();
-			if(con != null) con.close();
 		}
 
 		return records;
@@ -116,19 +119,20 @@ public class ConnectDB {
 		if(!flow.equals(""))
 			query += " and t1.flow = '" + flow + "'";
 
-		if(road.size() > 0/*!road.equals("")*/){
-			query += " and (";
+		if(road != null)
+			if(road.size() > 0/*!road.equals("")*/){
+				query += " and (";
 
-			for(int a = 0; a < road.size(); a++){
-				query += "t2.road_name like ?";
-				if(a != road.size()-1) query += " or ";
+				for(int a = 0; a < road.size(); a++){
+					query += "t2.road_name like ?";
+					if(a != road.size()-1) query += " or ";
+				}
+
+				query += " )";
 			}
 
-			query += " )";
-		}
-
 		query += " and t2.ID = t1.main_id order by t2.road_name desc";
-
+		
 		pstm = con.prepareStatement(query);
 
 		for(int x = 0; x < list.size(); x++){
@@ -140,7 +144,7 @@ public class ConnectDB {
 			FieldActuation roadFieldActuation = (FieldActuation) road.get(b);
 			pstm.setString((b+1)+(list.size()), "%"+roadFieldActuation.getText().getValue()+"%");
 		}
-
+		
 		rs = pstm.executeQuery();
 
 		while(rs.next()){
@@ -151,9 +155,9 @@ public class ConnectDB {
 			record.add(rs.getString("bound"));
 			records.add(record);
 		}
-
+		
 		if(rs != null) rs.close();
-		if(pstm != null) stm.close();
+		if(pstm != null) pstm.close();
 		if(con != null) con.close();
 
 		return records;

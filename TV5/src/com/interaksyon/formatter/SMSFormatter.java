@@ -317,10 +317,18 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 	protected void addAmbiguousObjectsQuestions(InterpretationActuation interpretation,
             Context context,
             java.lang.StringBuffer output){
+
+		Vector roadVector = interpretation.findXmlElement("RoadName");
+		Vector exitVector = interpretation.findXmlElement("ExitName");
 		
 		try {
 			
 			ConnectDB cdb = new ConnectDB();
+			
+			/*	
+			 * 	check if the input string has conjunction keywords
+			 * 	br - contains the list of conjunction keywords
+			 */
 			
 			BufferedReader br = new BufferedReader(new FileReader(new File("tv5/to_synonyms.text")));
 			String toSynonyms = "";
@@ -328,6 +336,7 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 			while((toSynonyms = br.readLine()) != null){
 				
 				if(interpretation.getInputString().matches("(?i).* "+toSynonyms+" .*")){
+					
 					roadName = "";
 					
 					output.replace(0, output.length(), "");
@@ -335,50 +344,65 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 					
 					output.append(props.getProperty("header") + MessageFormat.format(props.getProperty("asOf"), new Object[]{Calendar.getInstance().getTime()}) + "<br>");				
 					
-					String query = "call proc_retrieveResult(?,?)";
-										
-					List records = cdb.executeCallStatementQuery(query, interpretation.findXmlElement("ExitName"));
-					
-					if(records.size() < 1){
+					if(roadVector.size() <= 1){
 						
-						if(interpretation.findXmlElement("RoadName").size() > 1){
-							output.append(props.getProperty("diffPts"));
-						}else{
-							String query1 = "SELECT top 1 tbl1.main_id FROM (select * from tbl_exit where exit_name like '%"+((FieldActuation)interpretation.findXmlElement("ExitName").get(0)).getText().getValue().toUpperCase()+"%') as tbl1, (select * from tbl_exit where exit_name like '%"+((FieldActuation)interpretation.findXmlElement("ExitName").get(1)).getText().getValue().toUpperCase()+"%') as tbl2 WHERE tbl1.main_id = tbl2.main_id";
+						if(exitVector.size() > 1){
 							
-							List paramList = new ArrayList();
+							String query = "call proc_retrieveResult(?,?)";
 							
-							List record = cdb.executeCustomSQL(query1, paramList);
+							List records = cdb.executeCallStatementQuery(query, interpretation.findXmlElement("ExitName"));
 							
-							if(record.size() < 1)
-								{output.append(props.getProperty("diffPts")); logger.error("10"); }
-							else
-								if(interpretation.findXmlElement("RoadName").get(0) != null)
-									output.append(MessageFormat.format(props.getProperty("roadOk"), new Object[]{((FieldActuation)interpretation.findXmlElement("ExitName").get(0)).getText().getValue().toUpperCase(),((FieldActuation)interpretation.findXmlElement("ExitName").get(1)).getText().getValue().toUpperCase()}));
+							if(records.size() < 1){
+								
+								if(roadVector.size() > 1){
+									output.append(props.getProperty("diffPts"));
+								}else{
+									String query1 = "SELECT top 1 tbl1.main_id FROM (select * from tbl_exit where exit_name like '%"+((FieldActuation)interpretation.findXmlElement("ExitName").get(0)).getText().getValue().toUpperCase()+"%') as tbl1, (select * from tbl_exit where exit_name like '%"+((FieldActuation)interpretation.findXmlElement("ExitName").get(1)).getText().getValue().toUpperCase()+"%') as tbl2 WHERE tbl1.main_id = tbl2.main_id";
+									
+									List paramList = new ArrayList();
+									
+									List record = cdb.executeCustomSQL(query1, paramList);
+									
+									if(record.size() < 1)
+										output.append(props.getProperty("diffPts"));
+									else
+										//if(interpretation.findXmlElement("RoadName").get(0) != null)
+										output.append(MessageFormat.format(props.getProperty("roadOk"), new Object[]{((FieldActuation)interpretation.findXmlElement("ExitName").get(0)).getText().getValue().toUpperCase(),((FieldActuation)interpretation.findXmlElement("ExitName").get(1)).getText().getValue().toUpperCase()}));
+								}
+							}else{
+								
+								output.append("<br>(" + ((FieldActuation)interpretation.findXmlElement("ExitName").get(0)).getText().getValue().toUpperCase() + " - " + ((FieldActuation)interpretation.findXmlElement("ExitName").get(1)).getText().getValue().toUpperCase() + ")");
+														
+								for(int x = 0 ; x < records.size(); x++){
+									addResultsTableRecord(null, (List)records.get(x) , output);	
+								}	
+								records.clear();
+								
+							}
+							output.append("<br>" + props.getProperty("footer"));
+							
+							//context.setAmbiguousObjectsTopic(null, null);
+							interpretation.setAmbiguous(false);
+							interpretation.findAndRemoveXml("Ambiguity");
+							interpretation.findAndRemoveXml("Ambiguities");
+							
+							context.clear();
+							return;
 						}
+						
 					}else{
 						
-						output.append("<br>(" + ((FieldActuation)interpretation.findXmlElement("ExitName").get(0)).getText().getValue().toUpperCase() + " - " + ((FieldActuation)interpretation.findXmlElement("ExitName").get(1)).getText().getValue().toUpperCase() + ")");
-												
-						for(int x = 0 ; x < records.size(); x++){
-							addResultsTableRecord(null, (List)records.get(x) , output);	
-						}	
-						records.clear();
-						
 					}
-					output.append("<br>" + props.getProperty("footer"));
-					
-					//context.setAmbiguousObjectsTopic(null, null);
-					interpretation.setAmbiguous(false);
-					interpretation.findAndRemoveXml("Ambiguity");
-					interpretation.findAndRemoveXml("Ambiguities");
-					
-					context.clear();
-					return;
 				}
 			}
 			
-			Vector exitVector = interpretation.findXmlElement("ExitName");
+			
+			
+			
+			
+			
+			
+			
 			
 			if(exitVector.size() > 1){
 				
