@@ -133,6 +133,8 @@ public class ConnectDB {
 
 		query += " and t2.ID = t1.main_id order by t2.road_name desc";
 		
+		logger.error(query);
+		
 		pstm = con.prepareStatement(query);
 
 		for(int x = 0; x < list.size(); x++){
