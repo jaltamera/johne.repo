@@ -167,8 +167,13 @@ public class InboundServlet extends HttpServlet {
 										if(entry.getKey().toString().equals(JSONModel._FROM))
 											phone = entry.getValue().toString();
 
-										if(entry.getKey().toString().equals(JSONModel._BODY))
+										if(entry.getKey().toString().equals(JSONModel._BODY)){
 											input = entry.getValue().toString();
+											
+											if(input.trim().equals("")){
+												input = "NULL";
+											}
+										}
 										
 										if(entry.getKey().toString().equals(JSONModel._THREAD))
 											thread = entry.getValue().toString();
