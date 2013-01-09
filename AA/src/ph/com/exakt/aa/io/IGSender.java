@@ -19,7 +19,7 @@ import ph.com.exakt.auth.AuthProcessor;
 
 public class IGSender {
 
-	public int send(RequestObject r, String result)throws IGException, Exception{
+	public int send(RequestObject r, String result, int tariff)throws IGException, Exception{
 
 		// this variable of type Date will be used as the Date header and JSON date param
 		Date current = Calendar.getInstance().getTime();
@@ -29,7 +29,7 @@ public class IGSender {
 
 		try{
 			AuthProcessor auth = new AuthProcessor(current);
-			objectArray = auth.sign(r, result.replaceAll("<br>", "\n"));
+			objectArray = auth.sign(r, result.replaceAll("<br>", "\n"), tariff);
 		}catch(Exception e){
 			System.out.println("Error in signing : IGSender");
 		}
@@ -104,7 +104,6 @@ public class IGSender {
 			} // end while
 
 			inStream.close(); */
-
 
 		//close the connection, set all objects to null
 		connection.disconnect();

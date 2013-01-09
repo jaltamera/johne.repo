@@ -15,10 +15,10 @@ public class JSONModel {
 		super();
 		this.from = from;
 		this.to = to;
-		this.contentType = contentType;
+		this.content_type = contentType;
 		this.body = body;
 		this.date = date;
-		this.usageType = usageType;
+		this.usagetype = usageType;
 		this.thread = thread;
 	}
 
@@ -31,10 +31,10 @@ public class JSONModel {
 	
 	private String from;
 	private String to;
-	private String contentType;
+	private String content_type;
 	private String body;
 	private String date;
-	private String usageType;
+	private String usagetype;
 
 	// additional Document fields
 	
@@ -51,10 +51,10 @@ public class JSONModel {
 	public JSONModel(){
 		this.from = "";
 		this.to = "";
-		this.contentType = "";
+		this.content_type = "";
 		this.body = "";
 		this.date = "";
-		this.usageType = "";
+		this.usagetype = "";
 	}
 	
 	public JSONModel(String from,
@@ -65,7 +65,7 @@ public class JSONModel {
 
 		this.from = from;
 		this.to = to;
-		this.contentType = contentType;
+		this.content_type = contentType;
 		this.body = body;
 		this.date = date;
 	}
@@ -79,10 +79,10 @@ public class JSONModel {
 
 		this.from = from;
 		this.to = to;
-		this.contentType = contentType;
+		this.content_type = contentType;
 		this.body = body;
 		this.date = date;
-		this.usageType = usageType;
+		this.usagetype = usageType;
 	}
 	
 	public void setFrom(String from){
@@ -94,7 +94,7 @@ public class JSONModel {
 	}
 
 	public void setContentType(String contentType){
-		this.contentType = contentType;
+		this.content_type = contentType;
 	}
 
 	public void setBody(String body){
@@ -114,7 +114,7 @@ public class JSONModel {
 	}
 	
 	public String getContentType(){
-		return this.contentType;
+		return this.content_type;
 	}
 	
 	public String getBody(){
@@ -126,11 +126,11 @@ public class JSONModel {
 	}
 
 	public String getUsageType() {
-		return usageType;
+		return usagetype;
 	}
 
 	public void setUsageType(String usageType) {
-		this.usageType = usageType;
+		this.usagetype = usageType;
 	}
 
 	public String getId() {
