@@ -17,6 +17,7 @@
     <property name="project.network" value="${project.dir}/network" />
     <property name="project.scripts" value="${project.dir}/scripts" />
     <property name="project.lib" value="${project.dir}/lib" />
+	<property name="project.bin" value="${project.dir}/bin" />
 	
 	<property name="build.dir" location="${root.dir}/build/${project.name}"/>
 	<property name="build.jar.file"  value="${build.dir}/lib/${project.name}.jar"/>
@@ -34,7 +35,10 @@
     <property name="aap.properties" value="${aap.home}/IDE/properties" />
     <property name="aap.lib" value="${aap.home}/IDE/include/lib" />
     <property name="aap.classes" value="${aap.home}/IDE/include/classes" />
-
+	<property name="tomcat.home" value="${env.TOMCAT_HOME}" />
+	<property name="tomcat.bin" value="${tomcat.home}/bin" />
+	<property name="tomcat.properties" value="${tomcat.home}/bin/tv5" />
+	
 	<!-- Compiler configurations -->
 	<property name="build.compiler" value="modern"/>
 	<property name="compile.debug" value="on"/>
@@ -50,9 +54,14 @@
       description="deletes the dist folder">
       <delete dir="${build.dir}" />
       <delete dir="${dist.dir}" />
+      <delete dir="${aap.classes}/com" />
+      <delete dir="${tomcat.bin}/tv5" />
+      <delete dir="${tomcat.home}/webapps/traffic" />    	
       <delete file="${dist.war.file}" />
+      <delete file="${tomcat.home}/webapps/${war.name}.war" />
     </target>
-
+	
+	
    <!-- ================================= 
           target: compile  (project)
          ================================= -->
@@ -82,7 +91,7 @@
     </javac>
     </target>
 
-
+	
     <!-- ================================= 
           target: build              
          ================================= -->         
@@ -175,6 +184,23 @@
           <copy todir="${webinf.dir}/lib">
 		     <fileset dir="${project.lib}"/>
 		  </copy>
+    	
+    	<!-- ================================= 
+	          description: copy all .properties files to tomcat/bin/tv5 dir
+	         ================================= -->
+    	
+    	 <copy todir="${tomcat.properties}">
+		     <fileset dir="${project.lib}/tv5"/>
+		  </copy>
+    	
+    	<!-- ================================= 
+	          description: copy all .class files to aap/include/classes
+	         ================================= -->
+    	
+    	 <copy todir="${aap.classes}">
+		     <fileset dir="${project.bin}"/>
+		  </copy>
+
 	</target>
 
     <!-- ================================= 
@@ -185,5 +211,8 @@
 		<war destfile="${dist.war.file}" webxml="${project.scripts}/web.xml" duplicate="preserve">
           <fileset dir="${dist.dir}"/>
 		</war>
+    	<war destfile="${tomcat.home}/webapps/${war.name}.war" webxml="${project.scripts}/web.xml" duplicate="preserve">
+    	  <fileset dir="${dist.dir}"/>
+    	</war>
     </target>
 </project>

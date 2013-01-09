@@ -81,11 +81,18 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 	}
 
 	@Override
-	protected void addResults(InterpretationActuation interpretationActuation, Context context, StringBuffer output){
-
-		if((interpretationActuation.unableToInterpret() && context.getNarrowDownTopic() == null) || interpretationActuation.explicitReset() || interpretationActuation.getInputString().equalsIgnoreCase("help"))
-		{
-			this.propertiesInit("tv5/menu.properties");//C:/Program Files/Answers Anywhere Platform 5.2.0/IDE/include/classes/com/interaksyon/formatter/menu.properties");
+	protected void addResults(InterpretationActuation interpretationActuation, Context context, StringBuffer output){		
+		
+		/*
+		 * catch all reply
+		 */
+		if((interpretationActuation.unableToInterpret() && 
+				context.getNarrowDownTopic() == null) || 
+				interpretationActuation.explicitReset() || 
+				interpretationActuation.getInputString().equalsIgnoreCase("help") || 
+				interpretationActuation.getInputString().trim().equals("")){
+			
+			this.propertiesInit("tv5/menu.properties");			// absoulte path --> C:/Program Files/Answers Anywhere Platform 5.2.0/IDE/include/classes/com/interaksyon/formatter/menu.properties");
 
 			output.replace(0, output.length(), "");
 
@@ -96,7 +103,7 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 			}
 
 			output.append(props.getProperty("footer"));
-
+			
 			context.clear();
 			road = "";
 			return;
@@ -104,25 +111,9 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 
 		if(!interpretationActuation.unableToInterpret() &&
 				context.getNarrowDownTopic() == null &&
-				!interpretationActuation.explicitReset()){ context.clear(); }
-
-		//		Vector roadVector = interpretationActuation.findXmlElement("RoadName");
-		//		Vector prevVector = context.getPreviousActuation().find("RoadName");
-		//		
-		//		if(roadVector != null &&  roadVector.size() > 0){
-		//			FieldActuation roadFieldActuation = (FieldActuation) roadVector.get(0);
-		//			logger.info(roadFieldActuation.getText().getValue());
-		//		}
-		//		
-		//		if(prevVector != null &&  prevVector.size() > 0){
-		//			FieldActuation prevFieldActuation = (FieldActuation) prevVector.get(0);
-		//			logger.info(prevFieldActuation.getText().getValue());
-		//		}
-		//		
-		//		logger.info(context.getPreviousActuation());
-
-		//		if(context.getNarrowDownTopic() == null)
-		//			context.clear();
+				!interpretationActuation.explicitReset()){ 			
+			context.clear(); 
+		}
 
 		if(output.toString().equals(""))
 			super.addResults(interpretationActuation, context, output);
@@ -130,7 +121,7 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 
 	@Override
 	protected void addResultsTable(ObjectResults objectResults, StringBuffer output){
-
+		
 		if(objectResults.getMissingFields().size() == 0){
 
 			output.replace(0, output.length(), "");
@@ -295,7 +286,6 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 	@Override
 	protected void addResultsTableRecord(FieldInfo[] fieldInfo, List record, StringBuffer output){
 
-
 		if(!roadName.equals(record.get(0)) ){
 
 			roadName = record.get(0).toString();
@@ -316,6 +306,8 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 	protected void addAmbiguousObjectsQuestions(InterpretationActuation interpretation,
 			Context context,
 			java.lang.StringBuffer output){
+		
+		int tariff = 0;
 		
 		try {
 
@@ -360,8 +352,10 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 
 							List record = cdb.executeCustomSQL(query1, paramList);
 
-							if(record.size() < 1)
+							if(record.size() < 1){
 								output.append(props.getProperty("diffPts"));
+								tariff = 1;
+							}
 							else
 								//if(interpretation.findXmlElement("RoadName").get(0) != null)
 								output.append(MessageFormat.format(props.getProperty("roadOk"), new Object[]{((FieldActuation)exitVector.get(0)).getText().getValue().toUpperCase(),((FieldActuation)exitVector.get(1)).getText().getValue().toUpperCase()}));
@@ -382,10 +376,20 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 						interpretation.findAndRemoveXml("Ambiguity");
 						interpretation.findAndRemoveXml("Ambiguities");
 
-					}else
+					}else{
 						output.append(props.getProperty("diffPts"));
-
-					output.append("<br>" + props.getProperty("footer"));
+						tariff = 1;
+					}
+						
+					
+					
+					if(tariff == 1){
+						output.append(tariff);
+						output.append("<br>" + props.getProperty("freeFooter"));
+					}else{
+						output.append("<br>" + props.getProperty("footer"));
+					}
+					
 					context.clear();
 					return;
 				}
@@ -404,6 +408,7 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 
 				if(records.size() < 1){
 					output.append(props.getProperty("diffPts"));
+					tariff = 1;
 				}else{
 
 					for(int x = 0 ; x < records.size(); x++){
@@ -412,7 +417,13 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 					records.clear();
 
 				}
-				output.append("<br>" + props.getProperty("footer"));
+				
+				if(tariff == 1){
+					output.append(tariff);
+					output.append("<br>" + props.getProperty("freeFooter"));
+				}else{
+					output.append("<br>" + props.getProperty("footer"));
+				}
 
 				//context.setAmbiguousObjectsTopic(null, null);
 				interpretation.setAmbiguous(false);
@@ -420,6 +431,7 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 				interpretation.findAndRemoveXml("Ambiguities");
 
 				context.clear();
+				
 				return;
 			}
 			
@@ -432,7 +444,9 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 					output.append(props.getProperty("header") + MessageFormat.format(props.getProperty("asOf"), new Object[]{Calendar.getInstance().getTime()}) + "<br>");				
 
 					output.append(props.getProperty("diffPts"));
-					output.append("<br>" + props.getProperty("footer"));
+					output.append("<br>" + props.getProperty("freeFooter"));
+					tariff = 1;
+					output.append(tariff);
 				}
 			}
 					

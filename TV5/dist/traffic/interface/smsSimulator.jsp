@@ -69,6 +69,7 @@
 			input = (String) hashTable.get("input");
 			phone = (String) hashTable.get("phone");
 			
+			System.out.println("\n===================");
 			System.out.println("Message Received");
 			
 			objectInputStream.close();
@@ -76,9 +77,7 @@
 
 			UserSessionManager userSessMgr = UserSessionManager
 					.getUserSessionManager();
-			if (agentNetwork.getOpalName() != null && input != null
-					&& input.length() > 0) {
-				//if (input != null && input.length() > 0){
+			if (agentNetwork.getOpalName() != null && input != null) {
 
 				//if(agentNetworkOutput.getChainID() == null){
 				ChainIdentifier cid = userSessMgr.getChainID(phone);
@@ -103,8 +102,6 @@
 				System.out.println("\nAA output: " + resultString);
 
 			}
-
-		
 
 				OutputStream outputStream = response.getOutputStream();
 				ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
