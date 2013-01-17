@@ -1105,13 +1105,13 @@
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[explicitReference]]></Name>
+                <Name Type="java.lang.String"><![CDATA[afterValue]]></Name>
                 <Value Type="java.lang.String"><![CDATA['']]></Value>
               </Properties>
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[afterValue]]></Name>
+                <Name Type="java.lang.String"><![CDATA[explicitReference]]></Name>
                 <Value Type="java.lang.String"><![CDATA['']]></Value>
               </Properties>
             </Value>
@@ -1200,15 +1200,15 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.IntegerTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[minVariableNonNoiseTokenSize]]></Name>
-                <Value Type="java.lang.Integer"><![CDATA[1]]></Value>
-              </Properties>
-            </Value>
-            <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[startsWith]]></Name>
                 <Value Type="java.lang.String"><![CDATA[[preposition] ~ (kwd|adjacentReference) ~ ('startsWith'|'starts with'|'starting with'|'which start with'|'that start with'|'which starts with'|'that starts with')]]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.IntegerTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[minVariableNonNoiseTokenSize]]></Name>
+                <Value Type="java.lang.Integer"><![CDATA[1]]></Value>
               </Properties>
             </Value>
             <Value>
@@ -1224,15 +1224,15 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.StringTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[type]]></Name>
-                <Value Type="java.lang.String"><![CDATA[field]]></Value>
-              </Properties>
-            </Value>
-            <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[isValueOf]]></Name>
                 <Value Type="java.lang.String"><![CDATA[('isValueOf' | ('is' ~ ['the'] ~ 'value of')) (kwd|adjacentReference)]]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.StringTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[type]]></Name>
+                <Value Type="java.lang.String"><![CDATA[field]]></Value>
               </Properties>
             </Value>
             <Value>
@@ -1262,7 +1262,7 @@
             <Value>
               <Properties Type="com.dejima.templates.IntegerTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[fieldValueSelector]]></Name>
-                <Value Type="java.lang.Integer"><![CDATA[3]]></Value>
+                <Value Type="java.lang.Integer"><![CDATA[2]]></Value>
               </Properties>
             </Value>
             <Value>
@@ -1296,15 +1296,15 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.StringTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[columnName]]></Name>
-                <Value Type="java.lang.String" />
-              </Properties>
-            </Value>
-            <Value>
               <Properties Type="com.dejima.templates.BooleanTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[maybeExplicitMatch]]></Name>
                 <Value Type="java.lang.Boolean"><![CDATA[false]]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.StringTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[columnName]]></Name>
+                <Value Type="java.lang.String" />
               </Properties>
             </Value>
             <Value>
@@ -3404,13 +3404,13 @@
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[afterValue]]></Name>
+                <Name Type="java.lang.String"><![CDATA[explicitReference]]></Name>
                 <Value Type="java.lang.String"><![CDATA['']]></Value>
               </Properties>
             </Value>
             <Value>
               <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[explicitReference]]></Name>
+                <Name Type="java.lang.String"><![CDATA[afterValue]]></Name>
                 <Value Type="java.lang.String"><![CDATA['']]></Value>
               </Properties>
             </Value>
@@ -3499,15 +3499,15 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[startsWith]]></Name>
-                <Value Type="java.lang.String"><![CDATA[[preposition] ~ (kwd|adjacentReference) ~ ('startsWith'|'starts with'|'starting with'|'which start with'|'that start with'|'which starts with'|'that starts with')]]></Value>
-              </Properties>
-            </Value>
-            <Value>
               <Properties Type="com.dejima.templates.IntegerTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[minVariableNonNoiseTokenSize]]></Name>
                 <Value Type="java.lang.Integer"><![CDATA[1]]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.ConditionTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[startsWith]]></Name>
+                <Value Type="java.lang.String"><![CDATA[[preposition] ~ (kwd|adjacentReference) ~ ('startsWith'|'starts with'|'starting with'|'which start with'|'that start with'|'which starts with'|'that starts with')]]></Value>
               </Properties>
             </Value>
             <Value>
@@ -3523,15 +3523,15 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.ConditionTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[isValueOf]]></Name>
-                <Value Type="java.lang.String"><![CDATA[('isValueOf' | ('is' ~ ['the'] ~ 'value of')) (kwd|adjacentReference)]]></Value>
-              </Properties>
-            </Value>
-            <Value>
               <Properties Type="com.dejima.templates.StringTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[type]]></Name>
                 <Value Type="java.lang.String"><![CDATA[field]]></Value>
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.ConditionTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[isValueOf]]></Name>
+                <Value Type="java.lang.String"><![CDATA[('isValueOf' | ('is' ~ ['the'] ~ 'value of')) (kwd|adjacentReference)]]></Value>
               </Properties>
             </Value>
             <Value>
@@ -3595,15 +3595,15 @@
               </Properties>
             </Value>
             <Value>
-              <Properties Type="com.dejima.templates.BooleanTemplateProperty">
-                <Name Type="java.lang.String"><![CDATA[maybeExplicitMatch]]></Name>
-                <Value Type="java.lang.Boolean"><![CDATA[false]]></Value>
-              </Properties>
-            </Value>
-            <Value>
               <Properties Type="com.dejima.templates.StringTemplateProperty">
                 <Name Type="java.lang.String"><![CDATA[columnName]]></Name>
                 <Value Type="java.lang.String" />
+              </Properties>
+            </Value>
+            <Value>
+              <Properties Type="com.dejima.templates.BooleanTemplateProperty">
+                <Name Type="java.lang.String"><![CDATA[maybeExplicitMatch]]></Name>
+                <Value Type="java.lang.Boolean"><![CDATA[false]]></Value>
               </Properties>
             </Value>
             <Value>
