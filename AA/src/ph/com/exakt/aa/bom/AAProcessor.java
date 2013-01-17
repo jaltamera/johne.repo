@@ -71,19 +71,13 @@ public class AAProcessor {
 							System.out.println("Input: " + r.getInput());
 							AASender aa = new AASender(r);
 							result = aa.getAAResult();
-							int tariff = 0;
-							
-							if(Character.toString(result.charAt(result.length()-1)).equals("1")){
-								 result = result.substring(0, result.length()-2);
-								 tariff = 1;
-							}
 
 							//if AA result is null, throw AAException
 							if(!result.equals("")){
 
 								//send http request to IG
 								IGSender sender = new IGSender();
-								responseCode = sender.send(r, result, tariff);
+								responseCode = sender.send(r, result);
 								
 								if(responseCode < 200 || responseCode > 299)
 									throw new IGException(responseCode);

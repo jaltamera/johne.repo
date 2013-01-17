@@ -87,18 +87,16 @@ public class AuthProcessor
 		return valid;
 	}
 
-	private static SimpleDateFormat ISO8601FORMAT = new SimpleDateFormat("yyyyMMdd'T'HHmmssZ");
+	private static SimpleDateFormat ISO8601FORMAT = new SimpleDateFormat("yyyyMMdd'T'HHmmss");
 	//private static SimpleDateFormat RFC2822FORMAT = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz");
 
-	public Object[] sign(RequestObject r, String result, int tariff)throws Exception{
+	public Object[] sign(RequestObject r, String result)throws Exception{
 
 		//Instantiate GSON
 		Gson gson = new Gson();
-		
-		String tariffStr = (tariff == 1) ? "MMDA_REPLY_FREE" : "MMDA_REPLY_PREMIUM";
-		
+
 		//Construct the JSON Object from the JSON Model object using GSON API
-		JSONModel jsonModel = new JSONModel("5453", r.getPhone(), "text/plain", result, ISO8601FORMAT.format(date), tariffStr, r.getThread());
+		JSONModel jsonModel = new JSONModel("5453", r.getPhone(), "text/plain", result, ISO8601FORMAT.format(date), "MMDA_REPLY_PREMIUM", r.getThread());
 		
 		String json = gson.toJson(jsonModel);
 		System.out.println("JSON: " + json);
