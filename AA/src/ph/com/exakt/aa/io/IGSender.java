@@ -1,5 +1,7 @@
 package ph.com.exakt.aa.io;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -92,7 +94,7 @@ public class IGSender {
 
 		responseCode = connection.getResponseCode();
 
-		/*String strServerResponse = "";
+		String strServerResponse = "";
 
 			BufferedReader inStream = null;
 			inStream = new BufferedReader(new InputStreamReader(connection.getErrorStream()));
@@ -103,7 +105,7 @@ public class IGSender {
 				System.out.println(strServerResponse);
 			} // end while
 
-			inStream.close(); */
+			inStream.close(); 
 
 
 		//close the connection, set all objects to null

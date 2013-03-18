@@ -13,13 +13,15 @@ public class RequestObject {
 	private String input;
 	private String phone;
 	private String thread;
+	private String telco;
 	private int ID;
 	
-	public RequestObject(String input, String phone, int id, String thread){
+	public RequestObject(String input, String phone, int id, String thread, String telco){
 		this.input = input;
 		this.phone = phone;
 		this.ID = id;
 		this.thread = thread;
+		this.telco = telco;
 	}
 	
 	public RequestObject(String input, String phone, int id){
@@ -63,6 +65,14 @@ public class RequestObject {
 
 	public void setThread(String thread) {
 		this.thread = thread;
+	}
+
+	public String getTelco() {
+		return telco;
+	}
+
+	public void setTelco(String telco) {
+		this.telco = telco;
 	}
 	
 }

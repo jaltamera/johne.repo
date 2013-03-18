@@ -54,7 +54,7 @@ public class AAProcessor {
 						System.out.println("\n===========================LF===========================\n");
 						
 						//RequestObject r = new RequestObject(rs.getString("t_message"), rs.getString("t_number"), rs.getInt("ID"));
-						RequestObject r = new RequestObject(rs.getString("t_message"), rs.getString("t_number"), rs.getInt("ID"), rs.getString("thread"));
+						RequestObject r = new RequestObject(rs.getString("t_message"), rs.getString("t_number"), rs.getInt("ID"), rs.getString("thread"), rs.getString("telco"));
 						
 						// TODO put this into properties file
 						query = "UPDATE tbl_transaction SET flag = 1 WHERE ID = ?";

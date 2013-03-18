@@ -51,6 +51,7 @@ public class AASender{
 			Hashtable<String, String> ht = new Hashtable<String, String>();
 			ht.put("input", this.requestObject.getInput());
 			ht.put("phone", this.requestObject.getPhone());
+			ht.put("telco", this.requestObject.getTelco());
 
 			os.writeObject(ht);
 			os.flush();
@@ -66,6 +67,7 @@ public class AASender{
 			result = (String) o;
 
 		}catch(Exception e){
+			e.printStackTrace();
 			throw new AAException();
 		}
 		

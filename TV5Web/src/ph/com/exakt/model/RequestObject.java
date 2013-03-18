@@ -4,18 +4,25 @@ import java.io.Serializable;
 
 public class RequestObject implements Serializable{
 
-	public RequestObject(String input, String phone, String thread, String date) {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7795166185467119980L;
+
+	public RequestObject(String input, String phone, String thread, String date, String telco) {
 		super();
 		this.input = input;
 		this.phone = phone;
 		this.thread = thread;
 		this.date = date;
+		this.telco = telco;
 	}
 
 	private String input;
 	private String phone;
 	private String thread;
 	private String date;
+	private String telco;
 	
 	public RequestObject(String arg0, String arg1){
 		this.input = arg0;
@@ -57,6 +64,14 @@ public class RequestObject implements Serializable{
 
 	public void setDate(String date) {
 		this.date = date;
+	}
+
+	public String getTelco() {
+		return telco;
+	}
+
+	public void setTelco(String telco) {
+		this.telco = telco;
 	}
 	
 }

@@ -193,6 +193,10 @@
 		     <fileset dir="${project.lib}/tv5"/>
 		  </copy>
     	
+    	<copy todir="${aap.home}/IDE">
+	 	    <fileset dir="${project.lib}/tv5"/>
+		  </copy>
+    	
     	<!-- ================================= 
 	          description: copy all .class files to aap/include/classes
 	         ================================= -->

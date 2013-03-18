@@ -35,9 +35,10 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 	private String exitName = "";
 	private String flow = "";
 	private String bound = "";
+	private String tariff = "";
 
 	protected static final LogManager logger = new LogManager(SMSFormatter.class);
-
+	
 	@Override
 	protected void addMissingFieldQuestions(InterpretationActuation interpretationActuation,Context context, ObjectResults objectResults, StringBuffer output){
 
@@ -72,7 +73,7 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 			}else
 				output.append("<br>" + props.getProperty("maxResults") + "<br><br>");			
 
-			output.append(props.getProperty("footer"));
+			output.append(MessageFormat.format(props.getProperty("footer"), tariff));
 		}else{
 			logger.warn("Displaying all possible values");
 			objectResults.setMissingFields(new ArrayList());
@@ -101,8 +102,8 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 			for(int x = 1; x <= 9; x++){
 				output.append(x + ". " + props.getProperty("opt"+x) + "<br>");
 			}
-
-			output.append(props.getProperty("footer"));
+			
+			output.append(MessageFormat.format(props.getProperty("footer"), tariff));
 			
 			context.clear();
 			road = "";
@@ -279,7 +280,7 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 			}
 
 			//			 Display the footer
-			output.append("<br>" + props.getProperty("footer"));
+			output.append("<br>" + MessageFormat.format(props.getProperty("footer"), tariff));
 		}
 
 	}
@@ -379,7 +380,7 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 						output.append(props.getProperty("diffPts"));
 					}
 						
-					output.append("<br>" + props.getProperty("footer"));
+					output.append("<br>" + MessageFormat.format(props.getProperty("footer"), tariff));
 					
 					context.clear();
 					return;
@@ -408,7 +409,7 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 
 				}
 				
-				output.append("<br>" + props.getProperty("footer"));
+				output.append("<br>" + MessageFormat.format(props.getProperty("footer"), tariff));
 
 				//context.setAmbiguousObjectsTopic(null, null);
 				interpretation.setAmbiguous(false);
@@ -456,7 +457,11 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 		exitName = "";
 		bound = "";
 		flow = "";
-
+		
+		int inputSize = objectResults.getObjectActuation().getInputString().length();
+		tariff = (Integer.parseInt(objectResults.getObjectActuation().getInputString().
+									substring(inputSize - 1), inputSize) == 1) ? "2.00" : "2.50";
+		
 		Vector roadVector = objectResults.getObjectActuation().findXmlElement("RoadName");
 		if(roadVector != null &&  roadVector.size() > 0){
 			FieldActuation roadFieldActuation = (FieldActuation) roadVector.get(0);
@@ -483,7 +488,11 @@ public class SMSFormatter extends HTMLPresentationFormatter{
 	}
 
 	private void fieldsInit(InterpretationActuation interpretation){
-
+		
+		int inputSize = interpretation.getInputString().length();
+		tariff = (Integer.parseInt(interpretation.getInputString().
+									substring(inputSize - 1), inputSize) == 1) ? "2.00" : "2.50";
+		
 		Vector roadVector = interpretation.findXmlElement("RoadName");
 		if(roadVector != null &&  roadVector.size() > 0){
 			FieldActuation roadFieldActuation = (FieldActuation) roadVector.get(0);

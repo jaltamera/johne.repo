@@ -86,6 +86,7 @@ public class InboundServlet extends HttpServlet {
 			String input = "";
 			String thread = "";
 			String datePub = "";
+			String telco = "";
 			
 			String jsonString = gson.toJson(jsonModel);
 			
@@ -175,14 +176,20 @@ public class InboundServlet extends HttpServlet {
 											}
 										}
 										
-										if(entry.getKey().toString().equals(JSONModel._THREAD))
+										if(entry.getKey().toString().equals(JSONModel._THREAD)){
 											thread = entry.getValue().toString();
+										}
 										
-										if(entry.getKey().toString().equals(JSONModel._DATE))
+										if(entry.getKey().toString().equals(JSONModel._DATE)){
 											datePub = entry.getValue().toString();
+										}
+										
+										if(entry.getKey().toString().equals(JSONModel._TELCO)){
+											telco = entry.getValue().toString();
+										}
 									}
 									
-								workQueue.execute(new RequestObject(input, phone, thread, datePub));
+								workQueue.execute(new RequestObject(input, phone, thread, datePub, telco));
 										
 								}
 								

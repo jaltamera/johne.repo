@@ -15,6 +15,7 @@ public class AAException extends Exception {
 		super();             // call superclass constructor
 		mistake = "Error connecting to AA";
 		System.out.println(Thread.currentThread().getName() + ": " + mistake);
+		super.printStackTrace();
 	}
 
 	//-----------------------------------------------

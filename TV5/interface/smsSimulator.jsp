@@ -15,7 +15,6 @@
 <%@ page import="java.io.*"%>
 <%@ page import="java.util.*"%>
 
-
 <jsp:useBean id="agentNetwork" class="com.dejima.sdk.AgentNetwork"
 	scope="application" />
 <jsp:useBean id="agentNetworkOutput"
@@ -57,6 +56,7 @@
 		//Parse the request to retrieve the user input request
 		String input = "";//request.getParameter("message");
 		String phone = "";//request.getParameter("phone");
+		String telco = "";
 
 		try {
 
@@ -68,6 +68,21 @@
 			Hashtable hashTable = (Hashtable) objectInputStream.readObject();
 			input = (String) hashTable.get("input");
 			phone = (String) hashTable.get("phone");
+			telco = (String) hashTable.get("telco");
+			
+			try{
+				
+				if(telco.equalsIgnoreCase("sun")){
+					input += " 1";
+				}else if(telco.equalsIgnoreCase("globe")){
+					input += " 2";
+				}else if(telco.equalsIgnoreCase("smart")){
+					input += " 3";
+				}
+				
+			}catch(Exception e){
+				e.printStackTrace();
+			}
 			
 			System.out.println("\n===================");
 			System.out.println("Message Received");
